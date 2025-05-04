@@ -282,7 +282,7 @@ class DNSSettings(Setup):
 		Setup.createSetup(self)
 		dnsList = self["config"].getList()
 		self.dnsStart = len(dnsList)
-		items = [NoSave(ConfigIP(default=x)) for x in self.dnsServers if isinstance(x, list)] + [NoSave(ConfigText(default=x)) for x in self.dnsServers if isinstance(x, str)]
+		items = [NoSave(ConfigIP(default=x)) for x in self.dnsServers if isinstance(x, list)] + [NoSave(ConfigText(default=x, fixed_size=False)) for x in self.dnsServers if isinstance(x, str)]
 		for item, entry in enumerate(items, start=1):
 			dnsList.append(getConfigListEntry(_("Name server %d") % item, entry, _("Enter DNS (Dynamic Name Server) %d's IP address.") % item))
 		self.dnsLength = item
@@ -2120,6 +2120,11 @@ class NetworkMiniDLNASetup(Setup):
 			if selectedFiles:
 				self.selectedFiles = selectedFiles
 		self.session.openWithCallback(selectSharesCallBack, uShareSelection, self.selectedFiles)
+
+
+class NetworkSambaSetup(Setup):
+	def __init__(self, session):
+		Setup.__init__(self, session=session, setup="NetworkSamba")
 
 
 class NetworkPassword(Setup):

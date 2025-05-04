@@ -3,20 +3,21 @@
 # Mr.Servo <mrservo@gmx.de>, 2021, 2022.
 # JPierre <jpcoquelle@gmail.com>, 2023.
 # "Mr.Servo" <mrservo@gmx.de>, 2024.
+# Mathieu13006 <llapaca@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenATV\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-26 16:11+0000\n"
-"PO-Revision-Date: 2024-02-19 11:02+0000\n"
-"Last-Translator: \"Mr.Servo\" <mrservo@gmx.de>\n"
+"POT-Creation-Date: 2024-12-31 15:16+0000\n"
+"PO-Revision-Date: 2024-12-24 18:34+0000\n"
+"Last-Translator: Mathieu13006 <llapaca@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/openatv/enigma2-7-0-po/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Weblate 5.4\n"
+"X-Generator: Weblate 5.10-dev\n"
 "X-Poedit-SourceCharset: iso-8859-15\n"
 
 msgid ""
@@ -97,6 +98,9 @@ msgstr " mis à jour"
 
 msgid "!! Boot loader Upgrade !!"
 msgstr "!! Boot loader Upgrade !!"
+
+msgid "# = Reboot Required"
+msgstr ""
 
 msgid "%-H:%M"
 msgstr "%-H:%M"
@@ -1554,24 +1558,24 @@ msgid "A file from media is in use!"
 msgstr "Un fichier du média est en cours d'utilisation !"
 
 #, python-format
-msgid "A finished PowerTimer wants to reboot your %s %s. Do that now?"
+msgid "A finished scheduled timer wants to reboot your %s %s. Do that now?"
 msgstr ""
 "Un timer d'alimentation terminé désire redémarrer votre %s %s.\n"
 "Êtes-vous d'accord?"
 
-msgid "A finished PowerTimer wants to restart the user interface. Do that now?"
+msgid "A finished scheduled timer wants to restart the user interface. Do that now?"
 msgstr ""
 "Un timer d'alimentation terminé désire redémarrer l'interface utilisateur.\n"
 "Êtes-vous d'accord?"
 
 #, python-format
-msgid "A finished PowerTimer wants to set your %s %s to standby. Do that now?"
+msgid "A finished scheduled timer wants to set your %s %s to standby. Do that now?"
 msgstr ""
 "Un timer d'alimentation terminé désire mettre votre\n"
 " %s %s en veille. Êtes-vous d'accord?"
 
 #, python-format
-msgid "A finished PowerTimer wants to shut down your %s %s. Do that now?"
+msgid "A finished scheduled timer wants to shut down your %s %s. Do that now?"
 msgstr ""
 "Un timer d'alimentation terminé désire éteindre votre %s %s.\n"
 "Êtes-vous d'accord?"
@@ -1594,6 +1598,9 @@ msgstr ""
 
 msgid "A highlight on the remote control image shows which button the help refers to. If more than one button performs the indicated function, more than one highlight will be shown. Text below the list lists the active buttons and whether the function requires a long press or SHIFT of the button(s)."
 msgstr "Une surbrillance sur l'image de la télécommande montre à quel bouton l'aide fait référence. Si plus d'un bouton effectue la fonction indiquée, plus d'un point culminant sera affiché. Le texte sous la liste répertorie les boutons actifs et indique si la fonction nécessite un appui long ou SHIFT du ou des boutons."
+
+msgid "A new storage device has been connected:"
+msgstr ""
 
 #, python-format
 msgid ""
@@ -1621,7 +1628,7 @@ msgstr "Un enregistrement est en cours. Veuillez arrêter l'enregistrement avant
 
 #, python-format
 msgid ""
-"A recording, recording timer or power timer is running or will begin within 15 minutes. %s extended to 30 minutes. Your %s %s will go to Deep Standby after the recording or power timer event.\n"
+"A recording, recording timer or scheduled task is running or will begin within 15 minutes. %s extended to 30 minutes. Your %s %s will go to Deep Standby after the recording or scheduled task.\n"
 "\n"
 "Go to Deep Standby now?"
 msgstr ""
@@ -1752,7 +1759,7 @@ msgstr "Abandon d'un service de streaming.\n"
 msgid "About"
 msgstr "A propos"
 
-msgid "About openATV"
+msgid "About OpenATV"
 msgstr "À propos d'openATV"
 
 msgid "About to start"
@@ -1784,6 +1791,9 @@ msgstr "Action appui long sur touche mise sous tension"
 
 msgid "Action on short POWER button press"
 msgstr "Action appui court sur touche mise sous tension"
+
+msgid "Actions"
+msgstr ""
 
 msgid "Activate"
 msgstr "Activer"
@@ -2713,6 +2723,9 @@ msgstr "Etiquette de résolution automatique"
 msgid "Automatic scan for services"
 msgstr "Scan automatique des services"
 
+msgid "Automatic shares access"
+msgstr ""
+
 msgid "Automatically put the TV in standby whenever the receiver goes into standby or deep standby."
 msgstr "Mettre automatiquement le téléviseur en veille lorsque le récepteur passe en veille ou en veille profonde."
 
@@ -2798,14 +2811,23 @@ msgstr "USB arrière"
 msgid "Back USB 3.0"
 msgstr "USB 3.0 arrière"
 
+msgid "Back USB-C"
+msgstr ""
+
 msgid "Back, inner USB"
 msgstr "USB arrière interne"
+
+msgid "Back, left USB"
+msgstr ""
 
 msgid "Back, lower USB"
 msgstr "A l'arrière, USB du bas"
 
 msgid "Back, outer USB"
 msgstr "USB arrière externe"
+
+msgid "Back, right USB"
+msgstr "Prise USB arrière droite"
 
 msgid "Back, upper USB"
 msgstr "A l'arrière, USB du haut"
@@ -2820,7 +2842,7 @@ msgid "Background color"
 msgstr "Couleur de fond"
 
 msgid "Background delete option"
-msgstr "Option de suppression en arrière-plan"
+msgstr "Option de suppression de l'arrière-plan"
 
 msgid "Background delete speed"
 msgstr "Vitesse de suppression en arrière-plan"
@@ -3770,14 +3792,6 @@ msgstr "Changer vers bouquet"
 msgid "Changed"
 msgstr ""
 
-#, python-format
-msgid ""
-"Changes need a system restart to take effect.\n"
-"Restart your %s %s now?"
-msgstr ""
-"Les modifications nécessites un redémarrage pour être effectives.\n"
-"Redémarrer votre %s%s maintenant ?"
-
 msgid "Channel"
 msgstr "Chaîne"
 
@@ -3914,12 +3928,6 @@ msgstr "Dispositif de caractère"
 
 msgid "Chechen"
 msgstr "Tchétchène"
-
-msgid "Check"
-msgstr "Vérification"
-
-msgid "Check HDD"
-msgstr "Vérification du disque dur"
 
 msgid "Check for PDC"
 msgstr ""
@@ -4203,6 +4211,9 @@ msgstr "Dupliquer l'écran TV sur le LCD"
 msgid "Close"
 msgstr "Fermer"
 
+msgid "Close CA device at programm end"
+msgstr ""
+
 msgid "Close PiP on exit"
 msgstr "Ferme le PiP avec la touche exit"
 
@@ -4223,6 +4234,12 @@ msgstr "Fermer le dialogue"
 
 msgid "Close screen"
 msgstr "Fermer l'écran"
+
+msgid "Close the Device Manager screen"
+msgstr ""
+
+msgid "Close the Device Manager screen and exit all menus"
+msgstr ""
 
 msgid "Close the Kexec MultiBoot Manager"
 msgstr ""
@@ -4547,7 +4564,7 @@ msgstr "Configure le comportement du curseur dans la liste de sélection des cha
 msgid "Configure the display resolution and the font used for teletext."
 msgstr "Configure la résolution d'écran et la police de caractères utilisée pour le télétexte."
 
-msgid "Configure the duration in minutes before the screen saver will be displayed."
+msgid "Select the duration of inactivity before the screen saver will be displayed."
 msgstr "Configure la durée en minutes de l'économiseur d'écran."
 
 msgid "Configure the duration, in minutes, before the EnergySaver timer activates."
@@ -4933,12 +4950,6 @@ msgstr "Contrôlez vos softcams"
 msgid "Controlled by HDMI"
 msgstr "Contrôlé par HDMI"
 
-msgid "Convert EXT3 File System to EXT4"
-msgstr "Convertir le système de fichiers ext3 vers ext4"
-
-msgid "Convert ext3 to ext4"
-msgstr "Convertir ext3 vers ext4"
-
 msgid "Convert file system ext3 to ext4"
 msgstr "Convertir le système de fichiers ext3 vers ext4"
 
@@ -5281,6 +5292,9 @@ msgstr ""
 msgid "Custom"
 msgstr "Personnalisé(e)"
 
+msgid "Custom mountpoint"
+msgstr ""
+
 msgid "Custom skip time for '1'/'3' buttons"
 msgstr "Personnaliser délai saut pour touches '1'/'3'"
 
@@ -5310,6 +5324,9 @@ msgstr "Éditeur de montage vidéo"
 
 msgid "Cutlist editor..."
 msgstr "Éditeur monter/couper..."
+
+msgid "Cyan"
+msgstr ""
 
 msgid "Cycle PiP(zap)"
 msgstr "Cycle PiP(zap)"
@@ -5356,6 +5373,9 @@ msgstr ""
 msgid "DNS mode"
 msgstr ""
 
+msgid "DNS name or IP address"
+msgstr ""
+
 msgid "DNS suffix"
 msgstr ""
 
@@ -5389,6 +5409,9 @@ msgstr "PID Sous-titres DVB - lang"
 
 msgid "DVB subtitle black transparency"
 msgstr "Transparence des sous-titres DVB"
+
+msgid "DVB subtitles color"
+msgstr ""
 
 msgid "DVB-C"
 msgstr "DVB-C"
@@ -5727,6 +5750,12 @@ msgstr "Définir un délai supplémentaire en millisecondes avant le début des 
 msgid "Define the DNS suffix."
 msgstr ""
 
+msgid "Define the custom mountpoint for the device."
+msgstr ""
+
+msgid "Define the file system mount options."
+msgstr ""
+
 msgid "Defined / Active"
 msgstr ""
 
@@ -5994,6 +6023,9 @@ msgstr "Profondeur"
 msgid "Descending"
 msgstr ""
 
+msgid "Descrambling options"
+msgstr ""
+
 msgid "Description"
 msgstr "Description"
 
@@ -6037,8 +6069,14 @@ msgstr ""
 msgid "Development Packages"
 msgstr ""
 
+msgid "Device"
+msgstr ""
+
 msgid "Device Manager"
 msgstr "Gestionnaire des périphériques"
+
+msgid "Device Manager Actions"
+msgstr ""
 
 msgid "Device Settings"
 msgstr "Paramètres du périphérique"
@@ -6055,9 +6093,6 @@ msgstr "Nom du périphérique :"
 
 msgid "Device number"
 msgstr ""
-
-msgid "Device: "
-msgstr "Périphérique : "
 
 msgid "Devices"
 msgstr "Périphériques"
@@ -6190,6 +6225,9 @@ msgstr "Désactiver downmix numérique"
 
 msgid "Disable intro screen"
 msgstr "Désactiver l'écran d'accueil"
+
+msgid "Disable operator profiles"
+msgstr ""
 
 msgid "Disable the HDD Process on VFD."
 msgstr "Désactivé l'activité du disque dur sur le VFD"
@@ -7006,6 +7044,9 @@ msgstr "Activer le scan rapide automatique"
 msgid "Enable auto fast scan for %s"
 msgstr "Activer le scan rapide automatique pour %s"
 
+msgid "Enable automatic shares"
+msgstr ""
+
 msgid "Enable autorefresh templates."
 msgstr ""
 
@@ -7683,7 +7724,7 @@ msgstr "Ethiopie"
 msgid "Even if TV has another input active?"
 msgstr "Même si la TV a une autre entrée active ?"
 
-msgid "Even if a 'Wakeup' PowerTimer starting?"
+msgid "Even if a 'Wakeup' scheduled task starting?"
 msgstr "Même si une minuterie de réveil démarre ?"
 
 msgid "Even if a 'Zap and Record' recording timer starting?"
@@ -8213,6 +8254,9 @@ msgstr ""
 msgid "File Commander settings"
 msgstr "Paramètres de File Commander"
 
+msgid "File system"
+msgstr ""
+
 msgid "File System Check"
 msgstr "Vérification du système de fichiers"
 
@@ -8241,8 +8285,8 @@ msgstr "Nom de fichier"
 msgid "Files/folders to exclude from backup"
 msgstr "Fichiers/répertoires à exclure de la sauvegarde"
 
-msgid "Filesystem check your hard drive"
-msgstr "Vérification du système de fichiers de votre disque dur"
+msgid "Filesystem"
+msgstr ""
 
 msgid "Fill in channel EPGs from the broadcast EPG where there is no IceTV EPG for the channel"
 msgstr "Remplir les EPG des chaînes à partir de l'EPG de diffusion lorsqu'il n'existe pas d'EPG IceTV pour la chaîne"
@@ -8326,7 +8370,7 @@ msgstr ""
 msgid "Flash Image"
 msgstr "Flasher image"
 
-#. TRANSLATORS: The variable is the name of a distribution.  E.g. "openATV".
+#. TRANSLATORS: The variable is the name of a distribution.  E.g. "OpenATV".
 #, python-format
 msgid "Flash Manager - %s Images"
 msgstr ""
@@ -8443,14 +8487,11 @@ msgstr "Format"
 msgid "Format Disk"
 msgstr ""
 
-msgid "Format HDD"
-msgstr "Formater le disque dur"
-
 msgid "Format Storage Device"
 msgstr ""
 
-msgid "Format your hard drive"
-msgstr "Formater le disque dur"
+msgid "Formatting storage device..."
+msgstr ""
 
 msgid "Forward Error Correction (FEC)"
 msgstr ""
@@ -8571,9 +8612,6 @@ msgstr "Test FullHD"
 
 msgid "G"
 msgstr "G"
-
-msgid "GB"
-msgstr "GB"
 
 msgid "GCC version"
 msgstr ""
@@ -8791,6 +8829,9 @@ msgid "GotoX calibration"
 msgstr "Aller sur X calibration"
 
 msgid "Grab"
+msgstr ""
+
+msgid "Graphical DVB subtitles will be displayed in the selected color, instead of the original colors."
 msgstr ""
 
 msgid "Graphical EPG"
@@ -9204,7 +9245,16 @@ msgstr "Horreur"
 msgid "Horse Racing"
 msgstr "Course de chevaux"
 
+msgid "Host"
+msgstr ""
+
 msgid "Hostname"
+msgstr ""
+
+msgid "Hostname cannot be resolved to IP address!"
+msgstr ""
+
+msgid "Hostname or IP address"
 msgstr ""
 
 msgid "Hostname: "
@@ -9296,6 +9346,9 @@ msgstr ""
 
 msgid "IP address"
 msgstr "Adresse IP"
+
+msgid "IP address is invalid!"
+msgstr ""
 
 msgid "IP address of the Stream Relay server used to descramble services that can only be decrypted via Stream Relay."
 msgstr ""
@@ -9738,9 +9791,6 @@ msgstr "Vitesse initiale de retour rapide"
 
 msgid "Initial scroll delay"
 msgstr "Retard initial du défilement"
-
-msgid "Initialization"
-msgstr "Initialisation"
 
 msgid "Initialize"
 msgstr "Initialiser"
@@ -10356,6 +10406,9 @@ msgstr "Liban"
 msgid "Left"
 msgstr "Gauche"
 
+msgid "Left USB"
+msgstr ""
+
 msgid "Left column"
 msgstr ""
 
@@ -10367,6 +10420,12 @@ msgstr ""
 
 msgid "Left from service name"
 msgstr "À la gauche du nom du service"
+
+msgid "Left, back USB"
+msgstr ""
+
+msgid "Left, front USB"
+msgstr ""
 
 msgid "Left, wrapped"
 msgstr "Gauche, enveloppé"
@@ -10719,9 +10778,6 @@ msgstr ""
 msgid "MAC-address"
 msgstr "Adresse MAC"
 
-msgid "MB"
-msgstr "Mo"
-
 msgid "MENU"
 msgstr "MENU"
 
@@ -10760,6 +10816,9 @@ msgstr "Macédoine"
 
 msgid "Madagascar"
 msgstr "Madagascar"
+
+msgid "Magenta"
+msgstr ""
 
 msgid "Magic"
 msgstr "Magie"
@@ -11064,6 +11123,9 @@ msgstr ""
 msgid "Mexico"
 msgstr "Mexique"
 
+msgid "Micro SD"
+msgstr ""
+
 msgid "Micronesia, Federated States of"
 msgstr "Micronésie, États fédérés de"
 
@@ -11214,6 +11276,9 @@ msgstr "Gestionnaire de montage"
 msgid "Mount Menu Actions"
 msgstr ""
 
+msgid "Mount Point"
+msgstr ""
+
 msgid "Mount Settings"
 msgstr ""
 
@@ -11223,17 +11288,14 @@ msgstr "Paramètre de montage"
 msgid "Mount failed"
 msgstr "Echec du montage"
 
+msgid "Mount point"
+msgstr ""
+
 msgid "Mount root file system."
 msgstr ""
 
-msgid "Mount: "
-msgstr "Montage : "
-
 msgid "Mounts"
 msgstr "Montages"
-
-msgid "Mounts Devices"
-msgstr "Périphérique de montages"
 
 msgid "Move"
 msgstr "Déplacer"
@@ -11875,6 +11937,9 @@ msgstr "Nouveau PIN"
 msgid "New Setting DXAndy "
 msgstr "Nouveau Paramètre DXAndy "
 
+msgid "New Storage Device"
+msgstr ""
+
 msgid "New Zealand"
 msgstr "Nouvelle Zélande"
 
@@ -12089,6 +12154,9 @@ msgstr ""
 
 msgid "No suitable sat tuner found!"
 msgstr "Aucun tuner satellite convenable trouvé !"
+
+msgid "No system softcam configured!"
+msgstr ""
 
 msgid "No tags are set on these movies."
 msgstr "Aucune étiquette définie sur ces films."
@@ -12455,6 +12523,12 @@ msgstr "Arrêt"
 msgid "Offline decode delay (ms)"
 msgstr "Délai décodage hors ligne (ms)"
 
+msgid "Offset CA device index"
+msgstr ""
+
+msgid "Offset and close CA device"
+msgstr ""
+
 msgid "Ojibwa"
 msgstr "Ojibwa"
 
@@ -12663,6 +12737,9 @@ msgid "Option to enable the Hardware Standby Timer."
 msgstr "Option pour activer les programmations de mise en veille matérielles"
 
 msgid "Optional parameter"
+msgstr ""
+
+msgid "Options"
 msgstr ""
 
 msgid "Orbital position"
@@ -12921,6 +12998,9 @@ msgstr "Parlement"
 msgid "Partition"
 msgstr ""
 
+msgid "Partition Type"
+msgstr ""
+
 msgid "Partitions"
 msgstr "Partitions"
 
@@ -12947,6 +13027,9 @@ msgstr "Configuration du mot de passe"
 
 msgid "Password changed."
 msgstr "Mot de passe changé."
+
+msgid "Path"
+msgstr ""
 
 #, python-format
 msgid "Path '%s' missing!"
@@ -12993,6 +13076,13 @@ msgstr ""
 
 msgid "Permanently delete all recordings in the trash can?"
 msgstr "Supprimer définitivement tous les enregistrements dans la poubelle ?"
+
+msgid "Permanently ignore this device"
+msgstr ""
+
+#, python-format
+msgid "Permanently mount as %s"
+msgstr ""
 
 msgid "Permanently remove all deleted items"
 msgstr "Supprimer définitivement tous les éléments supprimés"
@@ -13423,9 +13513,6 @@ msgstr ""
 msgid "Please wait, swap is is being created. This could take a few minutes to complete."
 msgstr ""
 
-msgid "Please wait."
-msgstr "Veuillez patienter."
-
 msgid "Please wait..."
 msgstr "Veuillez patienter..."
 
@@ -13525,6 +13612,9 @@ msgstr "Portugal"
 msgid "Portuguese"
 msgstr "Portugais"
 
+msgid "Position"
+msgstr ""
+
 msgid "Position of finished Timers in Timerlist"
 msgstr "Position des programmations terminées dans la liste"
 
@@ -13575,30 +13665,6 @@ msgstr "Activer l'affichage"
 
 msgid "Power threshold in mA"
 msgstr "Seuil de puissance en mA"
-
-msgid "PowerTimer"
-msgstr "Programmations d'alimentation"
-
-msgid "PowerTimer Actions"
-msgstr ""
-
-msgid "PowerTimer Overview"
-msgstr "Aperçu des programmations d'alimentation"
-
-msgid "PowerTimer Settings"
-msgstr ""
-
-msgid "PowerTimer Standby"
-msgstr "Programmations d'alimentation de veille"
-
-msgid "PowerTimer deep standby"
-msgstr "Programmations d'alimentation de veille profonde"
-
-msgid "PowerTimer log"
-msgstr "Log du gestionnaire d'alimentation"
-
-msgid "PowerTimers"
-msgstr "Programmations d'alimentation"
 
 msgid "Predefined"
 msgstr "Prédéfini"
@@ -14168,8 +14234,14 @@ msgstr "Classification indéfini"
 msgid "Re-enter new PIN"
 msgstr "Ressaisir nouveau PIN"
 
+msgid "Read Only"
+msgstr ""
+
 msgid "Read Userdata from oscam.conf"
 msgstr "Lecture des données utilisateur depuis oscam.conf"
+
+msgid "Read/Write"
+msgstr ""
 
 msgid "Reader"
 msgstr "Lecteur"
@@ -14219,6 +14291,9 @@ msgstr "Tu redémarres vraiment maintenant ?"
 msgid "Really shutdown now?"
 msgstr "On arrête vraiment maintenant ?"
 
+msgid "Really start Kodi and stop user interface now?"
+msgstr ""
+
 msgid "Really upgrade the front panel and reboot now?"
 msgstr "Voulez-vous vraiment mettre à jour l'afficheur VFD et rebooter maintenant ?"
 
@@ -14234,6 +14309,10 @@ msgstr ""
 
 msgid "Reboot"
 msgstr "Redémarrer"
+
+#, python-format
+msgid "Reboot %s %s now?"
+msgstr ""
 
 msgid "Rec"
 msgstr "Enr"
@@ -14818,10 +14897,6 @@ msgstr ""
 msgid "Restart"
 msgstr "Redémarrer le récepteur"
 
-#, python-format
-msgid "Restart %s %s."
-msgstr "Relancer %s %s."
-
 msgid "Restart GUI"
 msgstr "Relancer l'IGU"
 
@@ -14985,6 +15060,9 @@ msgstr "Envelopper les sous-titres"
 msgid "Right"
 msgstr "Droite"
 
+msgid "Right USB"
+msgstr ""
+
 msgid "Right column"
 msgstr ""
 
@@ -14996,6 +15074,12 @@ msgstr ""
 
 msgid "Right from service name"
 msgstr "À la droite du nom de service"
+
+msgid "Right, back USB"
+msgstr ""
+
+msgid "Right, front USB"
+msgstr ""
 
 msgid "Right, wrapped"
 msgstr "droite, enveloppé"
@@ -15108,6 +15192,12 @@ msgstr "SAT"
 msgid "SATA"
 msgstr "SATA"
 
+msgid "SATA BACK"
+msgstr ""
+
+msgid "SATA FRONT"
+msgstr ""
+
 msgid "SATPI"
 msgstr "SATPI"
 
@@ -15191,6 +15281,9 @@ msgid "Samba Client"
 msgstr ""
 
 msgid "Samba Server"
+msgstr ""
+
+msgid "Samba Settings"
 msgstr ""
 
 msgid "Same as in active"
@@ -15439,6 +15532,27 @@ msgstr "Chargement programmé de epg.dat"
 msgid "Scheduled save of epg.dat"
 msgstr "Sauvegarde programmée de epg.dat"
 
+msgid "Scheduler"
+msgstr ""
+
+msgid "Scheduler Actions"
+msgstr ""
+
+msgid "Scheduler Overview"
+msgstr "Aperçu des programmations d'alimentation"
+
+msgid "Scheduler Settings"
+msgstr ""
+
+msgid "Scheduler Standby"
+msgstr "Programmations d'alimentation de veille"
+
+msgid "Scheduler deep standby"
+msgstr "Programmations d'alimentation de veille profonde"
+
+msgid "Scheduler log"
+msgstr "Log du gestionnaire d'alimentation"
+
 msgid "Sci-Fi"
 msgstr "Sci-Fi"
 
@@ -15610,7 +15724,7 @@ msgstr ""
 msgid "Select 'Yes' if you are using a multi-switch which requires a DiSEqC Port-A command signal. Select 'No' for all other setups."
 msgstr "Choisir ‘oui’ uniquement si vous utilisez un multiswitch qui requière un signal de commande DiSEqC Port-A. Pour toutes les autres configuration choisir ‘non’."
 
-msgid "Select 'Yes' if you want to wake the TV for a 'Wakeup' power timer is starting."
+msgid "Select 'Yes' if you want to wake the TV when a 'Wakeup' scheduled task is starting."
 msgstr ""
 
 msgid "Select 'Yes' if you want to wake the TV for a 'Zap and Record' recording timer is starting."
@@ -15621,6 +15735,9 @@ msgstr ""
 
 msgid "Select 'Yes' the keep the InfoBar displayed, with no timeout, while media playback is paused."
 msgstr "Si défini sur 'oui' : l'infobarre reste affichée en permanence 'en pause' (aucun délai d'attente)."
+
+msgid "Select 'Yes' to allow each storage device detected to be automatically exported as samba share."
+msgstr ""
 
 msgid "Select 'Yes' to allow use of the seek bar to jump to a selected point within the event."
 msgstr "Si mis à 'oui' cela permets à la barre de recherche de sauter à un point d'un évènement."
@@ -15712,7 +15829,7 @@ msgstr ""
 msgid "Select 'Yes' to remove all settings, tuning data, timers, resume pointers etc. Selecting this option will restore the configuration to the initial settings before any configuration settings were applied. This is the most reliable form of Factory Reset."
 msgstr ""
 
-msgid "Select 'Yes' to remove all timer configuration data. Selecting this option will clear all timers, autotimers and power timers."
+msgid "Select 'Yes' to remove all timer configuration data. Selecting this option will clear all timers, autotimers and schedules."
 msgstr ""
 
 msgid "Select 'Yes' to remove all tuning data. Selecting this option will remove all tuning and bouquet data and will make timers non functional until the receiver is retuned."
@@ -15853,9 +15970,6 @@ msgstr "Sélectionner Fast DiSEqC si votre système aérien le supporte. Si vous
 msgid "Select Folders"
 msgstr "Choisir les répertoires"
 
-msgid "Select HDD"
-msgstr "Sélectionner le disque dur"
-
 msgid "Select Lan/Wlan"
 msgstr "Sélection LAN/WiFi"
 
@@ -15932,6 +16046,12 @@ msgstr "Sélectionner un film"
 msgid "Select a network adapter"
 msgstr "Sélectionner un adaptateur réseau"
 
+msgid "Select a permanent mount point for all devices"
+msgstr ""
+
+msgid "Select a permanent mount point for the current device"
+msgstr ""
+
 msgid "Select a repository commit log to view:"
 msgstr ""
 
@@ -15961,6 +16081,9 @@ msgid "Select all lines"
 msgstr ""
 
 msgid "Select all related files"
+msgstr ""
+
+msgid "Select an action for the current device"
 msgstr ""
 
 msgid "Select an action to perform when the task has completed."
@@ -16154,6 +16277,9 @@ msgstr "Sélectionnez la fréquence de la bande utilisateur à attribuer à ce t
 msgid "Select the Yes / True response"
 msgstr "Sélectionnez la réponse Oui / Vrai"
 
+msgid "Select the access mode for the automatically exported samba shares."
+msgstr ""
+
 #, python-format
 msgid "Select the action for '%s'"
 msgstr ""
@@ -16249,6 +16375,9 @@ msgstr ""
 msgid "Select the file sort order for the %s column:"
 msgstr ""
 
+msgid "Select the file system for the device."
+msgstr ""
+
 msgid "Select the first item in list or move to the start of text"
 msgstr ""
 
@@ -16303,6 +16432,12 @@ msgstr ""
 msgid "Select the model number of your Unicable device. If the model number is not listed, set 'SCR' to 'User defined' and enter the device parameters manually according to its specifications."
 msgstr "Sélectionnez le numéro de modèle de votre appareil Unicable. Si le numéro de modèle n'est pas répertorié, définissez « SCR » sur « défini par l'utilisateur » et entrez les paramètres de l'appareil manuellement en fonction de sa fiche technique."
 
+msgid "Select the mount points"
+msgstr ""
+
+msgid "Select the mountpoint for the device."
+msgstr ""
+
 msgid "Select the movie path"
 msgstr "Sélectionner le chemin d’accès au film"
 
@@ -16313,6 +16448,10 @@ msgid ""
 "Select the network interface to be used for the Internet connection.\n"
 "\n"
 "Press OK to continue."
+msgstr ""
+
+#, python-format
+msgid "Select the new mount point for: '%s'"
 msgstr ""
 
 msgid "Select the next item in list or move the cursor right"
@@ -17024,9 +17163,6 @@ msgstr "Configurer le périphérique d'entrée"
 
 msgid "Setup MiniDLNA"
 msgstr "Configurer MiniDLNA"
-
-msgid "Setup Mounts"
-msgstr "Configurer montages"
 
 msgid "Setup Network Services"
 msgstr "Configurer les services réseaux"
@@ -17764,7 +17900,7 @@ msgstr "Afficher la liste des satellites"
 msgid "Show screen menu path"
 msgstr "Afficher le chemin du menu de l'écran"
 
-msgid "Show screensaver"
+msgid "Show screen saver"
 msgstr "Afficher l'économiseur d'écran"
 
 msgid "Show script messages"
@@ -17866,8 +18002,8 @@ msgstr ""
 msgid "Show the OSCam information screen"
 msgstr ""
 
-msgid "Show the PowerTimer"
-msgstr "Afficher la minuterie d'alimentation"
+msgid "Show the Scheduler"
+msgstr ""
 
 msgid "Show the SleepTimer"
 msgstr "Afficher la minuterie de veille"
@@ -18023,6 +18159,9 @@ msgstr "Force du signal :"
 
 msgid "Signal: "
 msgstr "Signal : "
+
+msgid "Signed by"
+msgstr ""
 
 msgid "Similar"
 msgstr "Similaire"
@@ -18420,7 +18559,7 @@ msgstr "Désolé, %s n'a pas été installé !"
 msgid "Sorry, no backups found!"
 msgstr "Désolé, aucune sauvegarde n'a été trouvée !"
 
-msgid "Sorry, no physical devices that supports SWAP attached. Can't create Swapfile on network or fat32 filesystems"
+msgid "Sorry, no physical devices that supports SWAP attached. Can't create swap file on network or FAT32 file systems"
 msgstr "Désolé, aucun périphérique physique qui supporte SWAP n'est branché. Impossible de créer un fichier swap sur le réseau ou sur un système de fichier FAT32"
 
 msgid "Sorry, there was a problem:"
@@ -18993,6 +19132,9 @@ msgstr "Svalbard et Jan Mayen"
 msgid "Swahili"
 msgstr "Swahili"
 
+msgid "Swap"
+msgstr ""
+
 msgid "Swap File Manager"
 msgstr "Gestionnaire du fichier de swap"
 
@@ -19133,6 +19275,9 @@ msgstr ""
 msgid "Switch to the left column"
 msgstr ""
 
+msgid "Switch to the other column"
+msgstr ""
+
 msgid "Switch to the right column"
 msgstr ""
 
@@ -19214,9 +19359,6 @@ msgstr "T2MI PLP ID"
 
 msgid "T2MI RAW Mode"
 msgstr "T2MI mode RAW"
-
-msgid "TB"
-msgstr "TB"
 
 msgid "TEXT"
 msgstr "TEXTE"
@@ -19379,6 +19521,10 @@ msgstr "Telugu"
 
 #, python-format
 msgid "Temp directory (%s)"
+msgstr ""
+
+#, python-format
+msgid "Temporarily mount as %s"
 msgstr ""
 
 msgid "Temporary directory"
@@ -19763,6 +19909,10 @@ msgstr ""
 "L'interface de votre %s %s redémarre\n"
 "à cause d'une erreur dans StartEnigma.py"
 
+#, python-format
+msgid "The user interface of your %s %s will be stopped to run Kodi"
+msgstr ""
+
 msgid "The width of the picture. The input will be scaled to match this value."
 msgstr "La largeur de l'image. L'entrée sera mise à l'échelle pour correspondre à cette valeur."
 
@@ -19840,9 +19990,6 @@ msgstr "Le %s %s ne peut décoder les flux %s !"
 
 msgid "This DVD RW medium is already formatted - reformatting will erase all content on the disc."
 msgstr "Ce support DVD RW est déjà formaté - le reformater effacera tout le contenu sur le disque."
-
-msgid "This Device is already mounted as HDD."
-msgstr "Ce périphérique est déjà monté comme disque dur."
 
 msgid "This Option allows you to switch Audio to BT Speakers."
 msgstr "Cette option vous permet de basculer l’audio vers les haut-parleurs BT."
@@ -20461,6 +20608,9 @@ msgstr "Basculer l'image dans graphique"
 msgid "Toggle a cut mark at the current position"
 msgstr "Commuter un marqueur coupé à cette position"
 
+msgid "Toggle a temporary mount for the current device"
+msgstr ""
+
 msgid "Toggle all related files"
 msgstr ""
 
@@ -20966,6 +21116,9 @@ msgstr "LNB universel"
 msgid "Unknown"
 msgstr "Inconnu"
 
+msgid "Unknown Devices"
+msgstr ""
+
 msgid ""
 "Unknown Error creating Skin.\n"
 "Please check after reboot MyMetrixLite-Plugin and apply your settings."
@@ -21123,9 +21276,6 @@ msgstr "Mises à jour disponible :"
 msgid "Updating"
 msgstr "Mise à jour en cours"
 
-msgid "Updating mount locations."
-msgstr "Mise à jour des points de montage."
-
 msgid "Updating package list."
 msgstr ""
 
@@ -21208,6 +21358,9 @@ msgstr "Utiliser la géolocalisation"
 msgid "Use HDMI-preemphasis"
 msgstr "Utiliser la préemphase (préaccentuation) HDMI"
 
+msgid "Use HTTPS protocol"
+msgstr ""
+
 msgid "Use Harddisk Hardware Standby Timer"
 msgstr "Utiliser le timer de mise en veille du disque dur"
 
@@ -21249,9 +21402,6 @@ msgstr ""
 
 msgid "Use an alternative smaller screen."
 msgstr "Utiliser l'écran alternatif"
-
-msgid "Use as HDD"
-msgstr "Utiliser comme disque dur"
 
 msgid "Use automatic mode detection"
 msgstr ""
@@ -21574,6 +21724,9 @@ msgstr "Venezuela, République bolivarienne du"
 msgid "Verbose"
 msgstr ""
 
+msgid "Verify WebIf SSL certificate"
+msgstr ""
+
 msgid "Version"
 msgstr ""
 
@@ -21863,13 +22016,6 @@ msgstr "Attendre la synchronisation au démarrage"
 msgid "Wait please while creating swap file..."
 msgstr "Veuillez patienter, création du fichier de swap…"
 
-msgid "Wait please while scanning for devices..."
-msgstr "Veuillez patienter pendant le scan des périphériques…"
-
-#, python-format
-msgid "Wait please while scanning your %s %s devices..."
-msgstr "Veuillez patienter pendant l'analyse en cours de votre %s %s…"
-
 msgid "Wait please while scanning..."
 msgstr "Veuillez patienter pendant l'analyse en cours…"
 
@@ -21982,7 +22128,7 @@ msgid "Welcome to IceTV"
 msgstr "Bienvenue sur IceTV"
 
 msgid ""
-"Welcome to openATV.\n"
+"Welcome to OpenATV.\n"
 "\n"
 "Use the UP/DOWN buttons on your remote control to select an option. Use the LEFT/RIGHT buttons to change the values of a configurable option. After that, press OK to proceed to the next screen."
 msgstr ""
@@ -22135,9 +22281,6 @@ msgstr "Lorsqu'elle est activée, les sous-titres graphiques DVB seront préfér
 msgid "When enabled, graphical DVB subtitles will be displayed at their original position."
 msgstr "Lorsqu'elle est activée, les sous-titres graphiques DVB seront affichés à leur position d'origine."
 
-msgid "When enabled, graphical DVB subtitles will be displayed in yellow, instead of the original color."
-msgstr "Lorsqu'elle est activée, les sous-titres graphiques DVB seront affichés en jaune, au lieu de la couleur d'origine."
-
 msgid "When enabled, it is possible to leave the movie player with exit."
 msgstr "Lorsqu'elle est activée, il est possible de quitter le lecteur de film avec exit."
 
@@ -22282,6 +22425,12 @@ msgstr "Sports d’hiver"
 msgid "Wipe"
 msgstr ""
 
+msgid "Wipe Storage Device"
+msgstr ""
+
+msgid "Wiping storage device..."
+msgstr ""
+
 msgid "Wireless LAN"
 msgstr "LAN sans fil"
 
@@ -22408,9 +22557,6 @@ msgstr "Année"
 
 msgid "Yellow"
 msgstr "Jaune"
-
-msgid "Yellow DVB subtitles"
-msgstr "Sous-titres DVB jaune"
 
 msgid "Yemen"
 msgstr "Yémen"
@@ -23848,6 +23994,100 @@ msgstr "Oui (garder feeds)"
 
 msgid "®"
 msgstr "®"
+
+#~ msgid "PowerTimer"
+#~ msgstr "Programmations d'alimentation"
+
+#~ msgid "PowerTimers"
+#~ msgstr "Programmations d'alimentation"
+
+#~ msgid "Show the PowerTimer"
+#~ msgstr "Afficher la minuterie d'alimentation"
+
+#, python-format
+#~ msgid ""
+#~ "Changes need a system restart to take effect.\n"
+#~ "Restart your %s %s now?"
+#~ msgstr ""
+#~ "Les modifications nécessites un redémarrage pour être effectives.\n"
+#~ "Redémarrer votre %s%s maintenant ?"
+
+#~ msgid "Check"
+#~ msgstr "Vérification"
+
+#~ msgid "Check HDD"
+#~ msgstr "Vérification du disque dur"
+
+#~ msgid "Convert EXT3 File System to EXT4"
+#~ msgstr "Convertir le système de fichiers ext3 vers ext4"
+
+#~ msgid "Convert ext3 to ext4"
+#~ msgstr "Convertir ext3 vers ext4"
+
+#~ msgid "Device: "
+#~ msgstr "Périphérique : "
+
+#~ msgid "Filesystem check your hard drive"
+#~ msgstr "Vérification du système de fichiers de votre disque dur"
+
+#~ msgid "Format HDD"
+#~ msgstr "Formater le disque dur"
+
+#~ msgid "Format your hard drive"
+#~ msgstr "Formater le disque dur"
+
+#~ msgid "GB"
+#~ msgstr "GB"
+
+#~ msgid "Initialization"
+#~ msgstr "Initialisation"
+
+#~ msgid "MB"
+#~ msgstr "Mo"
+
+#~ msgid "Mount: "
+#~ msgstr "Montage : "
+
+#~ msgid "Mounts Devices"
+#~ msgstr "Périphérique de montages"
+
+#~ msgid "Please wait."
+#~ msgstr "Veuillez patienter."
+
+#, python-format
+#~ msgid "Restart %s %s."
+#~ msgstr "Relancer %s %s."
+
+#~ msgid "Select HDD"
+#~ msgstr "Sélectionner le disque dur"
+
+#~ msgid "Setup Mounts"
+#~ msgstr "Configurer montages"
+
+#~ msgid "TB"
+#~ msgstr "TB"
+
+#~ msgid "This Device is already mounted as HDD."
+#~ msgstr "Ce périphérique est déjà monté comme disque dur."
+
+#~ msgid "Updating mount locations."
+#~ msgstr "Mise à jour des points de montage."
+
+#~ msgid "Use as HDD"
+#~ msgstr "Utiliser comme disque dur"
+
+#~ msgid "Wait please while scanning for devices..."
+#~ msgstr "Veuillez patienter pendant le scan des périphériques…"
+
+#, python-format
+#~ msgid "Wait please while scanning your %s %s devices..."
+#~ msgstr "Veuillez patienter pendant l'analyse en cours de votre %s %s…"
+
+#~ msgid "When enabled, graphical DVB subtitles will be displayed in yellow, instead of the original color."
+#~ msgstr "Lorsqu'elle est activée, les sous-titres graphiques DVB seront affichés en jaune, au lieu de la couleur d'origine."
+
+#~ msgid "Yellow DVB subtitles"
+#~ msgstr "Sous-titres DVB jaune"
 
 #~ msgid "E "
 #~ msgstr "E "

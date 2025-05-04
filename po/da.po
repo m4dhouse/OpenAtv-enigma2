@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenATV\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-26 16:11+0000\n"
+"POT-Creation-Date: 2024-12-31 15:16+0000\n"
 "PO-Revision-Date: 2021-11-04 23:53+0000\n"
 "Last-Translator: T. Rylle <dk-translation@pm.me>\n"
 "Language-Team: Danish <https://hosted.weblate.org/projects/openatv/enigma2-7-0-po/da/>\n"
@@ -93,6 +93,9 @@ msgstr " Opdateret"
 
 msgid "!! Boot loader Upgrade !!"
 msgstr "!! Bootloader Opgradering !!"
+
+msgid "# = Reboot Required"
+msgstr ""
 
 msgid "%-H:%M"
 msgstr "%-H:%M"
@@ -1550,24 +1553,24 @@ msgid "A file from media is in use!"
 msgstr ""
 
 #, python-format
-msgid "A finished PowerTimer wants to reboot your %s %s. Do that now?"
+msgid "A finished scheduled timer wants to reboot your %s %s. Do that now?"
 msgstr ""
 "En gennemført StrømTimer vil genstarte din %s %s.\n"
 "Gør det nu ?"
 
-msgid "A finished PowerTimer wants to restart the user interface. Do that now?"
+msgid "A finished scheduled timer wants to restart the user interface. Do that now?"
 msgstr ""
 "En afslutter StrømTimer ønsker at genstarte brugergrænsefladen.\n"
 "Gøre det nu ?"
 
 #, python-format
-msgid "A finished PowerTimer wants to set your %s %s to standby. Do that now?"
+msgid "A finished scheduled timer wants to set your %s %s to standby. Do that now?"
 msgstr ""
 "En gennemført StrømTimer ønsker at sætte\n"
 "din %s %s i Standby. Gør det nu ?"
 
 #, python-format
-msgid "A finished PowerTimer wants to shut down your %s %s. Do that now?"
+msgid "A finished scheduled timer wants to shut down your %s %s. Do that now?"
 msgstr ""
 "En gennemført StrømTimer ønsker at slukke din %s %s.\n"
 "Gør det nu ?"
@@ -1589,6 +1592,9 @@ msgstr ""
 "din %s %s. Sluk nu ?"
 
 msgid "A highlight on the remote control image shows which button the help refers to. If more than one button performs the indicated function, more than one highlight will be shown. Text below the list lists the active buttons and whether the function requires a long press or SHIFT of the button(s)."
+msgstr ""
+
+msgid "A new storage device has been connected:"
 msgstr ""
 
 #, python-format
@@ -1617,7 +1623,7 @@ msgstr "En optagelse er lige nu i gang. Stop venligst denne optagelse før fors�
 
 #, python-format
 msgid ""
-"A recording, recording timer or power timer is running or will begin within 15 minutes. %s extended to 30 minutes. Your %s %s will go to Deep Standby after the recording or power timer event.\n"
+"A recording, recording timer or scheduled task is running or will begin within 15 minutes. %s extended to 30 minutes. Your %s %s will go to Deep Standby after the recording or scheduled task.\n"
 "\n"
 "Go to Deep Standby now?"
 msgstr ""
@@ -1745,7 +1751,7 @@ msgstr "Afbrød en streaming-tjeneste.\n"
 msgid "About"
 msgstr "Om"
 
-msgid "About openATV"
+msgid "About OpenATV"
 msgstr ""
 
 msgid "About to start"
@@ -1777,6 +1783,9 @@ msgstr "Handling ved lang tænd-knap tryk"
 
 msgid "Action on short POWER button press"
 msgstr "Handling ved kort tænd-knap tryk"
+
+msgid "Actions"
+msgstr ""
 
 msgid "Activate"
 msgstr "Aktiver"
@@ -2708,6 +2717,9 @@ msgstr "Automatisk opløsningsmærke"
 msgid "Automatic scan for services"
 msgstr "Automatisk søgning efter kanaler"
 
+msgid "Automatic shares access"
+msgstr ""
+
 msgid "Automatically put the TV in standby whenever the receiver goes into standby or deep standby."
 msgstr ""
 
@@ -2793,14 +2805,23 @@ msgstr "USB Port bagside"
 msgid "Back USB 3.0"
 msgstr "USB 3.0 Port bagside"
 
+msgid "Back USB-C"
+msgstr ""
+
 msgid "Back, inner USB"
 msgstr "Bagside, inderste USB Port"
+
+msgid "Back, left USB"
+msgstr ""
 
 msgid "Back, lower USB"
 msgstr "Bagside, nederste USB Port"
 
 msgid "Back, outer USB"
 msgstr "Bagside, yderste USB Port"
+
+msgid "Back, right USB"
+msgstr ""
 
 msgid "Back, upper USB"
 msgstr "Bagside, øverste USB Port"
@@ -3766,14 +3787,6 @@ msgstr "Skift til Buket"
 msgid "Changed"
 msgstr ""
 
-#, python-format
-msgid ""
-"Changes need a system restart to take effect.\n"
-"Restart your %s %s now?"
-msgstr ""
-"Ændringer kræver en systemgenstart for at få virkning.\n"
-" Genstart din %s %s ny ?"
-
 msgid "Channel"
 msgstr "Kanal"
 
@@ -3909,12 +3922,6 @@ msgstr "Tegnenhed"
 #, fuzzy
 msgid "Chechen"
 msgstr "Kontroller"
-
-msgid "Check"
-msgstr "Kontroller"
-
-msgid "Check HDD"
-msgstr "Kontroller harddisk"
 
 msgid "Check for PDC"
 msgstr ""
@@ -4197,6 +4204,9 @@ msgstr "Klon TV-skærm til LCD"
 msgid "Close"
 msgstr "Afslut"
 
+msgid "Close CA device at programm end"
+msgstr ""
+
 msgid "Close PiP on exit"
 msgstr "Luk PiP med EXIT"
 
@@ -4216,6 +4226,12 @@ msgid "Close dialog"
 msgstr "Lukker vindue"
 
 msgid "Close screen"
+msgstr ""
+
+msgid "Close the Device Manager screen"
+msgstr ""
+
+msgid "Close the Device Manager screen and exit all menus"
 msgstr ""
 
 msgid "Close the Kexec MultiBoot Manager"
@@ -4542,7 +4558,7 @@ msgstr "Konfigurer markøropførslen i kanalvalgslisten. Når kanalvalgslisten �
 msgid "Configure the display resolution and the font used for teletext."
 msgstr "Konfigurer den skærmopløsning og skrifttype der skal bruges til Tekst-TV."
 
-msgid "Configure the duration in minutes before the screen saver will be displayed."
+msgid "Select the duration of inactivity before the screen saver will be displayed."
 msgstr "Konfigurer varigheden i minutter for pauseskærm."
 
 msgid "Configure the duration, in minutes, before the EnergySaver timer activates."
@@ -4928,12 +4944,6 @@ msgstr "Styr din Softcams"
 msgid "Controlled by HDMI"
 msgstr "Styret af HDMI"
 
-msgid "Convert EXT3 File System to EXT4"
-msgstr "Konverter ext3 filsystem til ext4"
-
-msgid "Convert ext3 to ext4"
-msgstr "Konverter ext3 til ext4"
-
 msgid "Convert file system ext3 to ext4"
 msgstr "Konverter filsystemet ext3 til ext4"
 
@@ -5277,6 +5287,9 @@ msgstr ""
 msgid "Custom"
 msgstr "Brugerdefineret"
 
+msgid "Custom mountpoint"
+msgstr ""
+
 msgid "Custom skip time for '1'/'3' buttons"
 msgstr "Brugerdefineret hop tid for '1'/'3' knapper"
 
@@ -5306,6 +5319,9 @@ msgstr "Klipliste redigering"
 
 msgid "Cutlist editor..."
 msgstr "Klipliste redigering..."
+
+msgid "Cyan"
+msgstr ""
 
 msgid "Cycle PiP(zap)"
 msgstr ""
@@ -5352,6 +5368,9 @@ msgstr ""
 msgid "DNS mode"
 msgstr ""
 
+msgid "DNS name or IP address"
+msgstr ""
+
 msgid "DNS suffix"
 msgstr ""
 
@@ -5385,6 +5404,9 @@ msgstr "DVB Undertekster PID & sprog"
 
 msgid "DVB subtitle black transparency"
 msgstr "DVB undertekst sort gennmemsigtighed"
+
+msgid "DVB subtitles color"
+msgstr ""
 
 msgid "DVB-C"
 msgstr "DVB-C"
@@ -5723,6 +5745,12 @@ msgstr ""
 msgid "Define the DNS suffix."
 msgstr ""
 
+msgid "Define the custom mountpoint for the device."
+msgstr ""
+
+msgid "Define the file system mount options."
+msgstr ""
+
 msgid "Defined / Active"
 msgstr ""
 
@@ -5990,6 +6018,9 @@ msgstr "Dybde"
 msgid "Descending"
 msgstr ""
 
+msgid "Descrambling options"
+msgstr ""
+
 msgid "Description"
 msgstr "Beskrivelse"
 
@@ -6033,8 +6064,14 @@ msgstr ""
 msgid "Development Packages"
 msgstr ""
 
+msgid "Device"
+msgstr ""
+
 msgid "Device Manager"
 msgstr "Enhedshåndtering"
+
+msgid "Device Manager Actions"
+msgstr ""
 
 msgid "Device Settings"
 msgstr "Enhedsopsætning"
@@ -6050,9 +6087,6 @@ msgstr "Enhedsnavn:"
 
 msgid "Device number"
 msgstr ""
-
-msgid "Device: "
-msgstr "Enhed: "
 
 msgid "Devices"
 msgstr "Enheder"
@@ -6184,6 +6218,9 @@ msgstr "Deaktiver digital downmix"
 
 msgid "Disable intro screen"
 msgstr "Deaktiver introskærm"
+
+msgid "Disable operator profiles"
+msgstr ""
 
 msgid "Disable the HDD Process on VFD."
 msgstr "Deaktiver harddsik processen på VFD"
@@ -6995,6 +7032,9 @@ msgstr "Aktiver auto hurtigsøg"
 msgid "Enable auto fast scan for %s"
 msgstr "Aktiver auto hurtigsøg for %s"
 
+msgid "Enable automatic shares"
+msgstr ""
+
 msgid "Enable autorefresh templates."
 msgstr ""
 
@@ -7670,7 +7710,7 @@ msgstr "Etiopien"
 msgid "Even if TV has another input active?"
 msgstr "Selv hvis TV har en anden aktiv indgang ?"
 
-msgid "Even if a 'Wakeup' PowerTimer starting?"
+msgid "Even if a 'Wakeup' scheduled task starting?"
 msgstr "Selv hvis en 'Væk' StrømTimer starter ?"
 
 msgid "Even if a 'Zap and Record' recording timer starting?"
@@ -8205,6 +8245,9 @@ msgstr ""
 msgid "File Commander settings"
 msgstr "File Commander indstillinger"
 
+msgid "File system"
+msgstr ""
+
 msgid "File System Check"
 msgstr "Kontroller filsystem"
 
@@ -8233,8 +8276,8 @@ msgstr "filnavn"
 msgid "Files/folders to exclude from backup"
 msgstr "Filer/mapper udelukkes fra kopiering"
 
-msgid "Filesystem check your hard drive"
-msgstr "Kontroller filsystem på din harddisk"
+msgid "Filesystem"
+msgstr ""
 
 msgid "Fill in channel EPGs from the broadcast EPG where there is no IceTV EPG for the channel"
 msgstr "Udfyld kanal EPGer fra udsendt EPG hvor der ikke er nogen IceTV EPG for kanalen"
@@ -8318,7 +8361,7 @@ msgstr ""
 msgid "Flash Image"
 msgstr "Flash Image"
 
-#. TRANSLATORS: The variable is the name of a distribution.  E.g. "openATV".
+#. TRANSLATORS: The variable is the name of a distribution.  E.g. "OpenATV".
 #, python-format
 msgid "Flash Manager - %s Images"
 msgstr ""
@@ -8437,14 +8480,11 @@ msgstr "Formater"
 msgid "Format Disk"
 msgstr ""
 
-msgid "Format HDD"
-msgstr "Format harddisk"
-
 msgid "Format Storage Device"
 msgstr ""
 
-msgid "Format your hard drive"
-msgstr "Formater din harddisk"
+msgid "Formatting storage device..."
+msgstr ""
 
 msgid "Forward Error Correction (FEC)"
 msgstr ""
@@ -8566,9 +8606,6 @@ msgstr "Fuld HD Test"
 
 msgid "G"
 msgstr "G"
-
-msgid "GB"
-msgstr "GB"
 
 msgid "GCC version"
 msgstr ""
@@ -8785,6 +8822,9 @@ msgid "GotoX calibration"
 msgstr "GotoX kalibrering"
 
 msgid "Grab"
+msgstr ""
+
+msgid "Graphical DVB subtitles will be displayed in the selected color, instead of the original colors."
 msgstr ""
 
 msgid "Graphical EPG"
@@ -9199,7 +9239,16 @@ msgstr "Guser"
 msgid "Horse Racing"
 msgstr "Hestevæddeløb"
 
+msgid "Host"
+msgstr ""
+
 msgid "Hostname"
+msgstr ""
+
+msgid "Hostname cannot be resolved to IP address!"
+msgstr ""
+
+msgid "Hostname or IP address"
 msgstr ""
 
 msgid "Hostname: "
@@ -9292,6 +9341,9 @@ msgstr ""
 
 msgid "IP address"
 msgstr "IP adresse"
+
+msgid "IP address is invalid!"
+msgstr ""
 
 msgid "IP address of the Stream Relay server used to descramble services that can only be decrypted via Stream Relay."
 msgstr ""
@@ -9740,9 +9792,6 @@ msgstr "Indledende tilbagespolingshastighed"
 
 msgid "Initial scroll delay"
 msgstr "Indlendende rulleforsinkelse"
-
-msgid "Initialization"
-msgstr "Initialisering"
 
 msgid "Initialize"
 msgstr "Initialiser"
@@ -10371,6 +10420,9 @@ msgstr "Libanon"
 msgid "Left"
 msgstr "Venstre"
 
+msgid "Left USB"
+msgstr ""
+
 msgid "Left column"
 msgstr ""
 
@@ -10382,6 +10434,12 @@ msgstr ""
 
 msgid "Left from service name"
 msgstr "Til venstre for kanalnavn"
+
+msgid "Left, back USB"
+msgstr ""
+
+msgid "Left, front USB"
+msgstr ""
 
 msgid "Left, wrapped"
 msgstr "Venstre, ombrudt"
@@ -10740,9 +10798,6 @@ msgstr ""
 msgid "MAC-address"
 msgstr "MAC-adresse"
 
-msgid "MB"
-msgstr "MB"
-
 msgid "MENU"
 msgstr "MENU"
 
@@ -10782,6 +10837,9 @@ msgstr "Ny Kaledonien"
 
 msgid "Madagascar"
 msgstr "Madagaskar"
+
+msgid "Magenta"
+msgstr ""
 
 msgid "Magic"
 msgstr "Magisk"
@@ -11099,6 +11157,9 @@ msgstr ""
 msgid "Mexico"
 msgstr "Mexico"
 
+msgid "Micro SD"
+msgstr ""
+
 #, fuzzy
 msgid "Micronesia, Federated States of"
 msgstr "Mikronesiens (Forenede Stater)"
@@ -11252,6 +11313,9 @@ msgstr "Mount-håndtering"
 msgid "Mount Menu Actions"
 msgstr ""
 
+msgid "Mount Point"
+msgstr ""
+
 msgid "Mount Settings"
 msgstr ""
 
@@ -11261,17 +11325,14 @@ msgstr "Mount-opsætning"
 msgid "Mount failed"
 msgstr "Mount mislykkedes"
 
+msgid "Mount point"
+msgstr ""
+
 msgid "Mount root file system."
 msgstr ""
 
-msgid "Mount: "
-msgstr "Mount: "
-
 msgid "Mounts"
 msgstr "Mounts"
-
-msgid "Mounts Devices"
-msgstr "Mounts Enheder"
 
 msgid "Move"
 msgstr "Flyt"
@@ -11923,6 +11984,9 @@ msgstr "Ny PIN"
 msgid "New Setting DXAndy "
 msgstr "Ny indstillling DXAndy "
 
+msgid "New Storage Device"
+msgstr ""
+
 msgid "New Zealand"
 msgstr "New Zealand"
 
@@ -12139,6 +12203,9 @@ msgstr ""
 
 msgid "No suitable sat tuner found!"
 msgstr "Ingen passende sat Tuner fundet!"
+
+msgid "No system softcam configured!"
+msgstr ""
 
 msgid "No tags are set on these movies."
 msgstr "Ingen etiketter er sat på disse film."
@@ -12508,6 +12575,12 @@ msgstr "Slukket"
 msgid "Offline decode delay (ms)"
 msgstr "Offline afkodningsforsinkelse (ms)"
 
+msgid "Offset CA device index"
+msgstr ""
+
+msgid "Offset and close CA device"
+msgstr ""
+
 msgid "Ojibwa"
 msgstr ""
 
@@ -12721,6 +12794,9 @@ msgid "Option to enable the Hardware Standby Timer."
 msgstr "Mulighed for at aktivere hardware Standby-timer"
 
 msgid "Optional parameter"
+msgstr ""
+
+msgid "Options"
 msgstr ""
 
 msgid "Orbital position"
@@ -12982,6 +13058,9 @@ msgstr "Parlament"
 msgid "Partition"
 msgstr ""
 
+msgid "Partition Type"
+msgstr ""
+
 msgid "Partitions"
 msgstr "Partitioner"
 
@@ -13008,6 +13087,9 @@ msgstr "Adgangskode opsætning"
 
 msgid "Password changed."
 msgstr "Adgangskode ændret."
+
+msgid "Path"
+msgstr ""
 
 #, python-format
 msgid "Path '%s' missing!"
@@ -13055,6 +13137,13 @@ msgstr ""
 
 msgid "Permanently delete all recordings in the trash can?"
 msgstr "Slet alle optagelser i papirkurven permanent ?"
+
+msgid "Permanently ignore this device"
+msgstr ""
+
+#, python-format
+msgid "Permanently mount as %s"
+msgstr ""
 
 msgid "Permanently remove all deleted items"
 msgstr "Fjerne alle slettede filer permanent"
@@ -13488,9 +13577,6 @@ msgstr ""
 msgid "Please wait, swap is is being created. This could take a few minutes to complete."
 msgstr ""
 
-msgid "Please wait."
-msgstr "Vent venligst."
-
 msgid "Please wait..."
 msgstr "Vent venligst..."
 
@@ -13590,6 +13676,9 @@ msgstr "Portugal"
 msgid "Portuguese"
 msgstr "Portugisisk"
 
+msgid "Position"
+msgstr ""
+
 msgid "Position of finished Timers in Timerlist"
 msgstr "Placering af gennemførte Timere i Timerliste"
 
@@ -13640,30 +13729,6 @@ msgstr "Tænd skærm"
 
 msgid "Power threshold in mA"
 msgstr "Strømforbrug tærskelværdi i mA"
-
-msgid "PowerTimer"
-msgstr "StrømTimer"
-
-msgid "PowerTimer Actions"
-msgstr ""
-
-msgid "PowerTimer Overview"
-msgstr "StrømTimer overblik"
-
-msgid "PowerTimer Settings"
-msgstr ""
-
-msgid "PowerTimer Standby"
-msgstr "StrømTimer Standby"
-
-msgid "PowerTimer deep standby"
-msgstr "StrømTimer Dyb Standby"
-
-msgid "PowerTimer log"
-msgstr "Strømhåndteringslog"
-
-msgid "PowerTimers"
-msgstr "StrømTimere"
 
 msgid "Predefined"
 msgstr "Foruddefineret"
@@ -14238,8 +14303,14 @@ msgstr "Vurdering ubestemt"
 msgid "Re-enter new PIN"
 msgstr "Genindtast ny PIN"
 
+msgid "Read Only"
+msgstr ""
+
 msgid "Read Userdata from oscam.conf"
 msgstr "Læs brugerdata fra oscam.conf"
+
+msgid "Read/Write"
+msgstr ""
 
 msgid "Reader"
 msgstr "Læser"
@@ -14289,6 +14360,9 @@ msgstr "Vil du Genstarte nu ?"
 msgid "Really shutdown now?"
 msgstr "Vil du Slukke nu ?"
 
+msgid "Really start Kodi and stop user interface now?"
+msgstr ""
+
 msgid "Really upgrade the front panel and reboot now?"
 msgstr "Opgrader virkelig foront panelet og genstart nu ?"
 
@@ -14304,6 +14378,10 @@ msgstr ""
 
 msgid "Reboot"
 msgstr "Genstart"
+
+#, python-format
+msgid "Reboot %s %s now?"
+msgstr ""
 
 msgid "Rec"
 msgstr "REC"
@@ -14885,10 +14963,6 @@ msgstr ""
 msgid "Restart"
 msgstr "Genstart"
 
-#, python-format
-msgid "Restart %s %s."
-msgstr "Genstart %s %s."
-
 msgid "Restart GUI"
 msgstr "Genstart GUI"
 
@@ -15052,6 +15126,9 @@ msgstr "Ombryd undertekster"
 msgid "Right"
 msgstr "Højre"
 
+msgid "Right USB"
+msgstr ""
+
 msgid "Right column"
 msgstr ""
 
@@ -15063,6 +15140,12 @@ msgstr ""
 
 msgid "Right from service name"
 msgstr "Til højre for kanalnavn"
+
+msgid "Right, back USB"
+msgstr ""
+
+msgid "Right, front USB"
+msgstr ""
 
 msgid "Right, wrapped"
 msgstr "Højre, ombrudt"
@@ -15177,6 +15260,12 @@ msgstr "SAT"
 msgid "SATA"
 msgstr "SATA"
 
+msgid "SATA BACK"
+msgstr ""
+
+msgid "SATA FRONT"
+msgstr ""
+
 msgid "SATPI"
 msgstr ""
 
@@ -15261,6 +15350,9 @@ msgid "Samba Client"
 msgstr ""
 
 msgid "Samba Server"
+msgstr ""
+
+msgid "Samba Settings"
 msgstr ""
 
 msgid "Same as in active"
@@ -15512,6 +15604,27 @@ msgstr "Skemalæg indlæsning af epg.dat"
 msgid "Scheduled save of epg.dat"
 msgstr "Skemalæg gemning af epg.dat"
 
+msgid "Scheduler"
+msgstr ""
+
+msgid "Scheduler Actions"
+msgstr ""
+
+msgid "Scheduler Overview"
+msgstr "StrømTimer overblik"
+
+msgid "Scheduler Settings"
+msgstr ""
+
+msgid "Scheduler Standby"
+msgstr "StrømTimer Standby"
+
+msgid "Scheduler deep standby"
+msgstr "StrømTimer Dyb Standby"
+
+msgid "Scheduler log"
+msgstr "Strømhåndteringslog"
+
 msgid "Sci-Fi"
 msgstr ""
 
@@ -15688,7 +15801,7 @@ msgstr ""
 msgid "Select 'Yes' if you are using a multi-switch which requires a DiSEqC Port-A command signal. Select 'No' for all other setups."
 msgstr "Vælg kun 'Ja' hvid du bruger en multiswitch som kræver en DiSEqC Port-A kommandosignal. Til alle andre opsætninger vælges 'Nej'."
 
-msgid "Select 'Yes' if you want to wake the TV for a 'Wakeup' power timer is starting."
+msgid "Select 'Yes' if you want to wake the TV when a 'Wakeup' scheduled task is starting."
 msgstr ""
 
 msgid "Select 'Yes' if you want to wake the TV for a 'Zap and Record' recording timer is starting."
@@ -15699,6 +15812,9 @@ msgstr ""
 
 msgid "Select 'Yes' the keep the InfoBar displayed, with no timeout, while media playback is paused."
 msgstr "Hvis sat til 'Ja' bliver Infobjælken vist vedvarende i 'pauset' tilstand (ingen tidsudløb)."
+
+msgid "Select 'Yes' to allow each storage device detected to be automatically exported as samba share."
+msgstr ""
 
 msgid "Select 'Yes' to allow use of the seek bar to jump to a selected point within the event."
 msgstr "Hvis sat til'Ja' kan du bruge Søgebjælken til at hoppe til et sted indenfor begivenheden."
@@ -15790,7 +15906,7 @@ msgstr ""
 msgid "Select 'Yes' to remove all settings, tuning data, timers, resume pointers etc. Selecting this option will restore the configuration to the initial settings before any configuration settings were applied. This is the most reliable form of Factory Reset."
 msgstr ""
 
-msgid "Select 'Yes' to remove all timer configuration data. Selecting this option will clear all timers, autotimers and power timers."
+msgid "Select 'Yes' to remove all timer configuration data. Selecting this option will clear all timers, autotimers and schedules."
 msgstr ""
 
 msgid "Select 'Yes' to remove all tuning data. Selecting this option will remove all tuning and bouquet data and will make timers non functional until the receiver is retuned."
@@ -15931,9 +16047,6 @@ msgstr "Vælg Hurtig DiSEqC hvis dit antennesystem understøtter dette. Vælg 'N
 msgid "Select Folders"
 msgstr "Vælg mapper"
 
-msgid "Select HDD"
-msgstr "Vælg harddisk"
-
 msgid "Select Lan/Wlan"
 msgstr "Vælg LAN/WLAN"
 
@@ -16010,6 +16123,12 @@ msgstr "Vælg en film"
 msgid "Select a network adapter"
 msgstr "Vælg en netværksadapter"
 
+msgid "Select a permanent mount point for all devices"
+msgstr ""
+
+msgid "Select a permanent mount point for the current device"
+msgstr ""
+
 msgid "Select a repository commit log to view:"
 msgstr ""
 
@@ -16039,6 +16158,9 @@ msgid "Select all lines"
 msgstr ""
 
 msgid "Select all related files"
+msgstr ""
+
+msgid "Select an action for the current device"
 msgstr ""
 
 msgid "Select an action to perform when the task has completed."
@@ -16232,6 +16354,9 @@ msgstr "Vælg bruger frekvensbånd der skal tildeles til denne Tuner. Detter er 
 msgid "Select the Yes / True response"
 msgstr ""
 
+msgid "Select the access mode for the automatically exported samba shares."
+msgstr ""
+
 #, python-format
 msgid "Select the action for '%s'"
 msgstr ""
@@ -16327,6 +16452,9 @@ msgstr ""
 msgid "Select the file sort order for the %s column:"
 msgstr ""
 
+msgid "Select the file system for the device."
+msgstr ""
+
 msgid "Select the first item in list or move to the start of text"
 msgstr ""
 
@@ -16382,6 +16510,12 @@ msgstr ""
 msgid "Select the model number of your Unicable device. If the model number is not listed, set 'SCR' to 'User defined' and enter the device parameters manually according to its specifications."
 msgstr "Vælg model nummeret for din Unicable enhed. Sæt 'SRC' til 'brugerdefineret' og indtast enhedsparametre manuelt i henhold til dens datablad, hvis model nummeret ikke er listet."
 
+msgid "Select the mount points"
+msgstr ""
+
+msgid "Select the mountpoint for the device."
+msgstr ""
+
 msgid "Select the movie path"
 msgstr "Vælg sti til film"
 
@@ -16392,6 +16526,10 @@ msgid ""
 "Select the network interface to be used for the Internet connection.\n"
 "\n"
 "Press OK to continue."
+msgstr ""
+
+#, python-format
+msgid "Select the new mount point for: '%s'"
 msgstr ""
 
 msgid "Select the next item in list or move the cursor right"
@@ -17111,9 +17249,6 @@ msgstr "Sæt InddataEnhed op"
 
 msgid "Setup MiniDLNA"
 msgstr "Sæt MiniDLNA op"
-
-msgid "Setup Mounts"
-msgstr "Sæt Mounts op"
 
 msgid "Setup Network Services"
 msgstr "Sæt Netværkstjenester op"
@@ -17855,7 +17990,7 @@ msgstr "Vis satellitliste"
 msgid "Show screen menu path"
 msgstr "Vis pauseskærm"
 
-msgid "Show screensaver"
+msgid "Show screen saver"
 msgstr "Vis pauseskærm"
 
 msgid "Show script messages"
@@ -17959,9 +18094,8 @@ msgstr ""
 msgid "Show the OSCam information screen"
 msgstr ""
 
-#, fuzzy
-msgid "Show the PowerTimer"
-msgstr "Vis StrømTimeren..."
+msgid "Show the Scheduler"
+msgstr ""
 
 #, fuzzy
 msgid "Show the SleepTimer"
@@ -18121,6 +18255,9 @@ msgstr "Signalstyrke:"
 
 msgid "Signal: "
 msgstr "Signal: "
+
+msgid "Signed by"
+msgstr ""
 
 msgid "Similar"
 msgstr "Lignende"
@@ -18523,7 +18660,7 @@ msgstr "Desværre, %s er ikke installeret!"
 msgid "Sorry, no backups found!"
 msgstr "Desværre, ingen sikkerhedskopier fundet!"
 
-msgid "Sorry, no physical devices that supports SWAP attached. Can't create Swapfile on network or fat32 filesystems"
+msgid "Sorry, no physical devices that supports SWAP attached. Can't create swap file on network or FAT32 file systems"
 msgstr "Desværre, ingen tilsluttede fysiske enheder understøtter SWAP. Kan ikke oprette swap-fil på netværks- eller fat32-filsystemer."
 
 msgid "Sorry, there was a problem:"
@@ -19096,6 +19233,9 @@ msgstr "Svalbard og Jan Mayen"
 msgid "Swahili"
 msgstr ""
 
+msgid "Swap"
+msgstr ""
+
 msgid "Swap File Manager"
 msgstr "Swap-filshåndtering"
 
@@ -19240,6 +19380,9 @@ msgstr ""
 msgid "Switch to the left column"
 msgstr ""
 
+msgid "Switch to the other column"
+msgstr ""
+
 msgid "Switch to the right column"
 msgstr ""
 
@@ -19320,9 +19463,6 @@ msgstr "T2MI PLP ID"
 
 msgid "T2MI RAW Mode"
 msgstr "T2MI RAW Mode"
-
-msgid "TB"
-msgstr "TB"
 
 msgid "TEXT"
 msgstr "TEXT"
@@ -19490,6 +19630,10 @@ msgstr ""
 
 #, python-format
 msgid "Temp directory (%s)"
+msgstr ""
+
+#, python-format
+msgid "Temporarily mount as %s"
 msgstr ""
 
 msgid "Temporary directory"
@@ -19874,6 +20018,10 @@ msgstr ""
 "Brugergrænsefladen på din %s %s genstartes\n"
 "pga. en fejl i StartEnigma.py"
 
+#, python-format
+msgid "The user interface of your %s %s will be stopped to run Kodi"
+msgstr ""
+
 msgid "The width of the picture. The input will be scaled to match this value."
 msgstr "Bredden af billedet. Inddata bliver skaleret til passe til denne værdi."
 
@@ -19950,9 +20098,6 @@ msgstr "%s %s kan ikke afkode %s Streams!"
 
 msgid "This DVD RW medium is already formatted - reformatting will erase all content on the disc."
 msgstr "Denne DVD RW er allerede formatteret - reformattering vil slette alt indhold på disken."
-
-msgid "This Device is already mounted as HDD."
-msgstr "Enheden er allerede mounted som Harddisk."
 
 msgid "This Option allows you to switch Audio to BT Speakers."
 msgstr "Denne mulighed tillader dig at skifte lyd til BT højtalere."
@@ -20563,6 +20708,9 @@ msgstr "Ombyt Billede i Grafik"
 msgid "Toggle a cut mark at the current position"
 msgstr "Skift et klipmærke på den aktuelle position"
 
+msgid "Toggle a temporary mount for the current device"
+msgstr ""
+
 msgid "Toggle all related files"
 msgstr ""
 
@@ -21070,6 +21218,9 @@ msgstr "Universal LNB"
 msgid "Unknown"
 msgstr "Ukendt"
 
+msgid "Unknown Devices"
+msgstr ""
+
 msgid ""
 "Unknown Error creating Skin.\n"
 "Please check after reboot MyMetrixLite-Plugin and apply your settings."
@@ -21227,9 +21378,6 @@ msgstr "Opdateringer tilgængelig:"
 msgid "Updating"
 msgstr "Opdaterer"
 
-msgid "Updating mount locations."
-msgstr "Opdatere mount placering."
-
 msgid "Updating package list."
 msgstr ""
 
@@ -21315,6 +21463,9 @@ msgstr "Brug Geolokation"
 msgid "Use HDMI-preemphasis"
 msgstr "Brug HDMI-preemphasis"
 
+msgid "Use HTTPS protocol"
+msgstr ""
+
 msgid "Use Harddisk Hardware Standby Timer"
 msgstr "Brug harddisk hardware Standby-timer"
 
@@ -21356,9 +21507,6 @@ msgstr ""
 
 msgid "Use an alternative smaller screen."
 msgstr "Brug den alternative skærm."
-
-msgid "Use as HDD"
-msgstr "Brug som harddsik"
 
 msgid "Use automatic mode detection"
 msgstr ""
@@ -21683,6 +21831,9 @@ msgstr "Venezuela (Den Bolivariske Republik)"
 msgid "Verbose"
 msgstr ""
 
+msgid "Verify WebIf SSL certificate"
+msgstr ""
+
 msgid "Version"
 msgstr ""
 
@@ -21974,13 +22125,6 @@ msgstr "Vent på tidssynk under opstart"
 msgid "Wait please while creating swap file..."
 msgstr "Vent mens der oprettes en swapfil..."
 
-msgid "Wait please while scanning for devices..."
-msgstr "Vent mens søger der søges efter enheder..."
-
-#, python-format
-msgid "Wait please while scanning your %s %s devices..."
-msgstr "Vent mens dine %s %s enheder gennemsøges..."
-
 msgid "Wait please while scanning..."
 msgstr "Vent mens der søges..."
 
@@ -22093,7 +22237,7 @@ msgid "Welcome to IceTV"
 msgstr "Velkommen til IceTV"
 
 msgid ""
-"Welcome to openATV.\n"
+"Welcome to OpenATV.\n"
 "\n"
 "Use the UP/DOWN buttons on your remote control to select an option. Use the LEFT/RIGHT buttons to change the values of a configurable option. After that, press OK to proceed to the next screen."
 msgstr ""
@@ -22247,9 +22391,6 @@ msgstr "Når dette aktiveres, foretrækkes grafiske undertekster frem for Tekst-
 msgid "When enabled, graphical DVB subtitles will be displayed at their original position."
 msgstr "Når dette aktiveres, vil grafiske undertekster blive vist på deres originale position."
 
-msgid "When enabled, graphical DVB subtitles will be displayed in yellow, instead of the original color."
-msgstr "Når dette aktiveres, vil grafiske undertekster blive vist i gul i stedet for den originale farve."
-
 msgid "When enabled, it is possible to leave the movie player with exit."
 msgstr "Når dette aktiveres, er det muligt at forlade Filmafspilleren med EXIT."
 
@@ -22394,6 +22535,12 @@ msgstr "Vintersport"
 msgid "Wipe"
 msgstr ""
 
+msgid "Wipe Storage Device"
+msgstr ""
+
+msgid "Wiping storage device..."
+msgstr ""
+
 msgid "Wireless LAN"
 msgstr "Trådløs LAN"
 
@@ -22520,9 +22667,6 @@ msgstr "År"
 
 msgid "Yellow"
 msgstr "Gul"
-
-msgid "Yellow DVB subtitles"
-msgstr "Gule DVB undertekster"
 
 msgid "Yemen"
 msgstr "Yemen"
@@ -23975,6 +24119,101 @@ msgstr "ja (behold feeds)"
 
 msgid "®"
 msgstr "®"
+
+#~ msgid "PowerTimer"
+#~ msgstr "StrømTimer"
+
+#~ msgid "PowerTimers"
+#~ msgstr "StrømTimere"
+
+#, fuzzy
+#~ msgid "Show the PowerTimer"
+#~ msgstr "Vis StrømTimeren..."
+
+#, python-format
+#~ msgid ""
+#~ "Changes need a system restart to take effect.\n"
+#~ "Restart your %s %s now?"
+#~ msgstr ""
+#~ "Ændringer kræver en systemgenstart for at få virkning.\n"
+#~ " Genstart din %s %s ny ?"
+
+#~ msgid "Check"
+#~ msgstr "Kontroller"
+
+#~ msgid "Check HDD"
+#~ msgstr "Kontroller harddisk"
+
+#~ msgid "Convert EXT3 File System to EXT4"
+#~ msgstr "Konverter ext3 filsystem til ext4"
+
+#~ msgid "Convert ext3 to ext4"
+#~ msgstr "Konverter ext3 til ext4"
+
+#~ msgid "Device: "
+#~ msgstr "Enhed: "
+
+#~ msgid "Filesystem check your hard drive"
+#~ msgstr "Kontroller filsystem på din harddisk"
+
+#~ msgid "Format HDD"
+#~ msgstr "Format harddisk"
+
+#~ msgid "Format your hard drive"
+#~ msgstr "Formater din harddisk"
+
+#~ msgid "GB"
+#~ msgstr "GB"
+
+#~ msgid "Initialization"
+#~ msgstr "Initialisering"
+
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Mount: "
+#~ msgstr "Mount: "
+
+#~ msgid "Mounts Devices"
+#~ msgstr "Mounts Enheder"
+
+#~ msgid "Please wait."
+#~ msgstr "Vent venligst."
+
+#, python-format
+#~ msgid "Restart %s %s."
+#~ msgstr "Genstart %s %s."
+
+#~ msgid "Select HDD"
+#~ msgstr "Vælg harddisk"
+
+#~ msgid "Setup Mounts"
+#~ msgstr "Sæt Mounts op"
+
+#~ msgid "TB"
+#~ msgstr "TB"
+
+#~ msgid "This Device is already mounted as HDD."
+#~ msgstr "Enheden er allerede mounted som Harddisk."
+
+#~ msgid "Updating mount locations."
+#~ msgstr "Opdatere mount placering."
+
+#~ msgid "Use as HDD"
+#~ msgstr "Brug som harddsik"
+
+#~ msgid "Wait please while scanning for devices..."
+#~ msgstr "Vent mens søger der søges efter enheder..."
+
+#, python-format
+#~ msgid "Wait please while scanning your %s %s devices..."
+#~ msgstr "Vent mens dine %s %s enheder gennemsøges..."
+
+#~ msgid "When enabled, graphical DVB subtitles will be displayed in yellow, instead of the original color."
+#~ msgstr "Når dette aktiveres, vil grafiske undertekster blive vist i gul i stedet for den originale farve."
+
+#~ msgid "Yellow DVB subtitles"
+#~ msgstr "Gule DVB undertekster"
 
 #~ msgid "E "
 #~ msgstr "E "

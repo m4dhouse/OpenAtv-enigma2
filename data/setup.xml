@@ -334,7 +334,7 @@
 			<item level="0" text="Remove all resume point data" description="Select 'Yes' to remove all media player resume data. Selecting this option will remove the data used to allow playback of media files to resume from the position where playback was last stopped. Playback position of recordings is not affected." conditional="self.resumePoints">config.factory.resetResumePoints</item>
 			<item level="0" text="Remove all settings data" description="Select 'Yes' to remove all main settings configuration data. Selecting this option will set all Enigma2 settings back to their default values. This will also cause Enigma2 to run the Welcome Wizard on restart." conditional="self.settings">config.factory.resetSettings</item>
 			<item level="0" text="Remove all skin data" description="Select 'Yes' to remove all user customizations of skin data. Selecting this option will remove all user based skin customizations. All affected skins will return to their standard settings. This will also clear any customized boot logos and backdrops." conditional="self.skins">config.factory.resetSkins</item>
-			<item level="0" text="Remove all timer data" description="Select 'Yes' to remove all timer configuration data. Selecting this option will clear all timers, autotimers and power timers." conditional="len(self.timers)">config.factory.resetTimers</item>
+			<item level="0" text="Remove all timer data" description="Select 'Yes' to remove all timer configuration data. Selecting this option will clear all timers, autotimers and schedules." conditional="len(self.timers)">config.factory.resetTimers</item>
 			<item level="0" text="Remove all other data" description="Select 'Yes' to remove all other files and directories not covered by the options above." conditional="len(self.others)">config.factory.resetOthers</item>
 		</if>
 	</setup>
@@ -409,6 +409,7 @@
 		<item level="0" text="Hard disk standby after" description="Configure the hard disk drive to go to standby after the specified idle time.">config.usage.hdd_standby</item>
 		<item level="0" text="Hard disk standby in box standby after" description="Configure the hard disk drive to go to standby after the specified idle time when the box is in standby.">config.usage.hdd_standby_in_standby</item>
 		<item level="0" text="Use Harddisk Hardware Standby Timer" description="Option to enable the Hardware Standby Timer.">config.usage.hdd_timer</item>
+		<item level="2" text="Show unknown devices" description="Enable this option to show unknown storage devices in device manager.">config.usage.showUnknownDevices</item>
 	</setup>
 	<setup key="HDMICEC" title="HDMI-CEC Settings">
 		<item level="0" text="Enabled" description="Enable or disable using HDMI-CEC.">config.hdmicec.enabled</item>
@@ -422,7 +423,7 @@
 			<if conditional="config.hdmicec.advanced_settings.value and config.hdmicec.control_tv_wakeup.value">
 				<item level="0" text="Even if a 'Zap' recording timer starting?" description="Select 'Yes' if you want to wake the TV for a 'Zap' recording timer is starting.">config.hdmicec.tv_wakeup_zaptimer</item>
 				<item level="0" text="Even if a 'Zap and Record' recording timer starting?" description="Select 'Yes' if you want to wake the TV for a 'Zap and Record' recording timer is starting.">config.hdmicec.tv_wakeup_zapandrecordtimer</item>
-				<item level="0" text="Even if a 'Wakeup' PowerTimer starting?" description="Select 'Yes' if you want to wake the TV for a 'Wakeup' power timer is starting.">config.hdmicec.tv_wakeup_wakeuppowertimer</item>
+				<item level="0" text="Even if a 'Wakeup' scheduled task starting?" description="Select 'Yes' if you want to wake the TV when a 'Wakeup' scheduled task is starting.">config.hdmicec.tv_wakeup_wakeuppowertimer</item>
 			</if>
 			<item level="0" text="Switch TV to correct input" description="When receiver wakes from standby it will command the TV to switch to the HDMI input to which the receiver is connected.">config.hdmicec.report_active_source</item>
 			<item level="0" text="Switch off the TV to correct input" description="Some TVs can't switch to the correct input if another HDMI port is active. This setting sets the TV to standby before the switch. (If the TV does not turn back on it may require a slower transmission interval or the repetition of the wake-up command.)" conditional="config.hdmicec.advanced_settings.value and config.hdmicec.report_active_source.value">config.hdmicec.workaround_activesource</item>
@@ -499,6 +500,7 @@
 		<item level="2" text="Include DVB timesync data" description="Enable this option to add extra DVB time sync data to the debug log file.">config.crash.debugDVBTime</item>
 		<item level="2" text="Include DVB details" description="Enable this option to add extra DVB details to the debug log file.">config.crash.debugDVB</item>
 		<item level="2" text="Include teletext details" description="Enable this option to add extra teletext details to the debug log file.">config.crash.debugTeletext</item>
+		<item level="2" text="Include storage device data" description="Enable this option to add storage device information detected during system boot and hot plug events to the debug log file.">config.crash.debugStorage</item>
 		<item level="2" text="Limit debug log size (MB)" description="Allows you to set the maximum size of the Debug log size (MB). When that size is reached, a new file will be created.">config.crash.debugloglimit</item>
 		<item level="2" text="Show Log Manager in Extension Menu" description="Allows you to show/hide Log Manager in the Extension Menu screen (BLUE button).">config.logmanager.showinextensions</item>
 		<item level="2" text="Maximum no of days" description="Logs older then the set no of days will be deleted.">config.crash.daysloglimit</item>
@@ -561,12 +563,16 @@
 		<item text="Nameserver" description="Configure the name server (DNS).">config.network.dns</item>
 		<item text="Activate network settings" description="Activate the configured network settings.">config.network.activate</item>
 	</setup>
+	<setup key="NetworkSamba" title="Samba Settings" allowDefault="1">
+		<item text="Enable automatic shares" description="Select 'Yes' to allow each storage device detected to be automatically exported as samba share.">config.samba.enableAutoShare</item>
+		<item text="Automatic shares access" description="Select the access mode for the automatically exported samba shares." conditional="config.samba.enableAutoShare.value">config.samba.autoShareAccess</item>
+	</setup>
 	<setup key="OSCamInfoSetup" title="OSCam Information Settings">
 		<item level="0" text="Read Userdata from oscam.conf" description="Read Userdata from oscam.conf">config.oscaminfo.userDataFromConf</item>
 		<if conditional="not config.oscaminfo.userDataFromConf.value">
 			<item level="0" text="Username (httpuser)" description="Username (httpuser)">config.oscaminfo.username</item>
 			<item level="0" text="Password (httpwd)" description="Password (httpuser)">config.oscaminfo.password</item>
-			<item level="0" text="DNS name or IP address" description="DNS name or IP address">config.oscaminfo.ip</item>
+			<item level="0" text="Hostname or IP address" description="DNS name or IP address">config.oscaminfo.ip</item>
 			<item level="0" text="Port" description="Port">config.oscaminfo.port</item>
 			<item level="0" text="Use HTTPS protocol" description="Use HTTPS protocol">config.oscaminfo.usessl</item>
 		</if>
@@ -574,12 +580,12 @@
 		<item level="0" text="Automatically update Client/Server View" description="Automatically update Client/Server View">config.oscaminfo.autoUpdate</item>
 		<item level="0" text="Automatically update Log-Fullscreen View" description="Automatically update Log-Fullscreen View">config.oscaminfo.autoUpdateLog</item>
 	</setup>
-	<setup key="OSD3DCalibration" title="OSD 3D Settings" showOpenWebif="1" allowDefault="1">
+	<setup key="OSD3DCalibration" title="OSD 3D Settings" allowDefault="1" showOpenWebif="1">
 		<item level="0" text="3D Mode" description="This option lets you choose the 3D mode of the OSD.">config.osd.threeDmode</item>
 		<item level="0" text="Depth" description="This option lets you adjust the 3D depth of the OSD.">config.osd.threeDznorm</item>
 		<item level="0" text="Show in Extension Menu" description="This option lets you show the 3D OSD menu option in the Extension Menu screen.">config.osd.show3dextensions</item>
 	</setup>
-	<setup key="OSDCalibration" title="OSD Calibration Settings" showOpenWebif="1" allowDefault="1">
+	<setup key="OSDCalibration" title="OSD Calibration Settings" allowDefault="1" showOpenWebif="1">
 		<if requires="CanChangeOsdPositionAML">
 			<item level="0" text="Left" description="Use the LEFT/RIGHT buttons on your remote to move the OSD left.">config.osd.dst_left</item>
 			<item level="0" text="Top" description="Use the LEFT/RIGHT buttons on your remote to move the OSD top.">config.osd.dst_top</item>
@@ -659,60 +665,6 @@
 		<item level="2" text="Show Development packages" description="Select 'Yes' to show 'dev', 'staticdev', 'dbg' and 'doc' packages in the Download Plugins screen.">config.pluginfilter.extraopkgpackages</item>
 		<item level="0" text="User Feed URL" description="Enter your personal feed URL to allow you to select packages from your personal feed.">config.pluginfilter.userfeed</item>
 		<item level="0" text="Use alternate GitHub DNS" description="Select 'Yes' to use alternate GitHub feed IP addresses. This can be helpful if you use a VPN and the normal feeds can't be accessed via the published DNS names.">config.usage.alternateGitHubDNS</item>
-	</setup>
-	<setup key="PowerTimer" title="PowerTimer Settings">
-		<item level="0" text="Timer type" description="Select the type of this timer.">self.timerType</item>
-		<!--item level="0" text="Description" description="Enter a description for this timer.">self.timerDescription</item-->
-		<if conditional="self.timerType.value in ('autostandby', 'autodeepstandby')">
-			<item level="0" text="Execution condition" description="The setting 'Without query' is the same as 'Standard' without additional confirmation query. All other dependencies (e.g. recordings, time range) persist." conditional="self.timerType.value == 'autodeepstandby'">self.timerActiveInStandby</item>
-			<item level="0" text="Sleep delay" description="Select the delay before the timer activates.">self.timerSleepDelay</item>
-			<item level="0" text="Repeat type" description="Select if this timer is to be repeated.">self.timerAutoSleepRepeat</item>
-			<item level="0" text="Restrict the active time range" description="Select if there is to be a time window within which this timer can be active.">self.timerSleepWindow</item>
-			<if conditional="self.timerSleepWindow.value">
-				<item level="0" text="Start time" description="Select the time after which this timer can start.">self.timerSleepStart</item>
-				<item level="0" text="End time" description="Select the time before which this timer should end.">self.timerSleepEnd</item>
-			</if>
-			<if conditional="self.timerType.value == 'autodeepstandby'">
-				<item level="0" text="Show advanced settings" description="Select 'Yes' to show the advanced setting options.">self.timerShowExtended</item>
-				<if conditional="self.timerShowExtended.value">
-					<item level="0" text="Enable network traffic check" description="Select 'Yes' if network traffic should be checked before activating the timer.">self.timerNetTraffic</item>
-					<item level="0" text="Lower limit (in kilobits per seconds)" description="Select the network data rate below which the timer should activate as specified. Traffic above this rate with deactivate the timer." conditional="self.timerNetTraffic.value">self.timerNetTrafficLimit</item>
-					<item level="0" text="Enable Network IP address check" description="Select 'Yes' to check if network connections are coming from nominated IP Addresses at the activation time of the timer. If so, the timer will be deactivated.">self.timerNetIP</item>
-					<item level="0" text="Number of IP Addresses" description="Nominate how many IP Addresses are to be checked for active connections." conditional="self.timerNetIP.value">self.timerNetIPCount</item>
-					<item level="0" text="IP Address 1" description="IP Address to be checked on timer activation." conditional="self.timerNetIP.value and self.timerNetIPCount.value > 0">self.timerIPAddress[0]</item>
-					<item level="0" text="IP Address 2" description="IP Address to be checked on timer activation." conditional="self.timerNetIP.value and self.timerNetIPCount.value > 1">self.timerIPAddress[1]</item>
-					<item level="0" text="IP Address 3" description="IP Address to be checked on timer activation." conditional="self.timerNetIP.value and self.timerNetIPCount.value > 2">self.timerIPAddress[2]</item>
-					<item level="0" text="IP Address 4" description="IP Address to be checked on timer activation." conditional="self.timerNetIP.value and self.timerNetIPCount.value > 3">self.timerIPAddress[3]</item>
-					<item level="0" text="IP Address 5" description="IP Address to be checked on timer activation." conditional="self.timerNetIP.value and self.timerNetIPCount.value > 4">self.timerIPAddress[4]</item>
-				</if>
-			</if>
-		<else />
-			<item level="0" text="Repeat type" description="Select if this timer is to be repeated.">self.timerRepeat</item>
-			<if conditional="self.timerRepeat.value == 'once'">
-				<item level="0" text="Date" description="Select the date when this timer will activate.">self.timerRepeatStartDate</item>
-			<else />
-				<item level="0" text="Repeats" description="Select how often this timer is to be repeated.">self.timerRepeatPeriod</item>
-				<item level="0" text="Starting date" description="Select the date from which this timer will become active.">self.timerRepeatStartDate</item>
-				<if conditional="self.timerRepeatPeriod.value == 'weekly'">
-					<item level="0" text="Day of week" description="Select the day of the week that this timer will activate.">self.timerWeekday</item>
-				</if>
-				<if conditional="self.timerRepeatPeriod.value == 'user'">
-					<item level="0" text="Monday" description="Select if this timer activates on a Monday.">self.timerDay['Mon']</item>
-					<item level="0" text="Tuesday" description="Select if this timer activates on a Tuesday.">self.timerDay['Tue']</item>
-					<item level="0" text="Wednesday" description="Select if this timer activates on a Wednesday.">self.timerDay['Wed']</item>
-					<item level="0" text="Thursday" description="Select if this timer activates on a Thursday.">self.timerDay['Thu']</item>
-					<item level="0" text="Friday" description="Select if this timer activates on a Friday.">self.timerDay['Fri']</item>
-					<item level="0" text="Saturday" description="Select if this timer activates on a Saturday.">self.timerDay['Sat']</item>
-					<item level="0" text="Sunday" description="Select if this timer activates on a Sunday.">self.timerDay['Sun']</item>
-				</if>
-			</if>
-			<item level="0" text="Start time" description="Select the time when this timer will start.">self.timerStartTime</item>
-			<item level="0" text="Set end time" description="Select 'Yes' if an end time is required for this timer.">self.timerSetEndTime</item>
-			<if conditional="self.timerSetEndTime.value">
-				<item level="0" text="End time" description="Select the time when this timer should end.">self.timerEndTime</item>
-				<item level="0" text="After event" description="Select the action to perform when the timer ends.">self.timerAfterEvent</item>
-			</if>
-		</if>
 	</setup>
 	<setup key="Recording" title="Recording Settings" showOpenWebif="1">
 		<item level="2" text="Timer recording location" description="Set the default recording location for your timers. Press 'OK' to add new locations, press 'LEFT'/'RIGHT' to select from previously defined locations.">config.usage.timer_path</item>
@@ -835,6 +787,60 @@
 		<item text="Latitude" description="Configure the latitude of your location.">config.sat.diseqcb</item>
 		<item text="Use power measurement" description="When enabled, measure power consumption to detect when the rotor stops turning (when supported by the tuner).">config.sat.diseqcc</item>
 	</setup>
+	<setup key="Scheduler" title="Scheduler Settings">
+		<item level="0" text="Timer type" description="Select the type of this timer.">self.timerType</item>
+		<!--item level="0" text="Description" description="Enter a description for this timer.">self.timerDescription</item-->
+		<if conditional="self.timerType.value in ('autostandby', 'autodeepstandby')">
+			<item level="0" text="Execution condition" description="The setting 'Without query' is the same as 'Standard' without additional confirmation query. All other dependencies (e.g. recordings, time range) persist." conditional="self.timerType.value == 'autodeepstandby'">self.timerActiveInStandby</item>
+			<item level="0" text="Sleep delay" description="Select the delay before the timer activates.">self.timerSleepDelay</item>
+			<item level="0" text="Repeat type" description="Select if this timer is to be repeated.">self.timerAutoSleepRepeat</item>
+			<item level="0" text="Restrict the active time range" description="Select if there is to be a time window within which this timer can be active.">self.timerSleepWindow</item>
+			<if conditional="self.timerSleepWindow.value">
+				<item level="0" text="Start time" description="Select the time after which this timer can start.">self.timerSleepStart</item>
+				<item level="0" text="End time" description="Select the time before which this timer should end.">self.timerSleepEnd</item>
+			</if>
+			<if conditional="self.timerType.value == 'autodeepstandby'">
+				<item level="0" text="Show advanced settings" description="Select 'Yes' to show the advanced setting options.">self.timerShowExtended</item>
+				<if conditional="self.timerShowExtended.value">
+					<item level="0" text="Enable network traffic check" description="Select 'Yes' if network traffic should be checked before activating the timer.">self.timerNetTraffic</item>
+					<item level="0" text="Lower limit (in kilobits per seconds)" description="Select the network data rate below which the timer should activate as specified. Traffic above this rate with deactivate the timer." conditional="self.timerNetTraffic.value">self.timerNetTrafficLimit</item>
+					<item level="0" text="Enable Network IP address check" description="Select 'Yes' to check if network connections are coming from nominated IP Addresses at the activation time of the timer. If so, the timer will be deactivated.">self.timerNetIP</item>
+					<item level="0" text="Number of IP Addresses" description="Nominate how many IP Addresses are to be checked for active connections." conditional="self.timerNetIP.value">self.timerNetIPCount</item>
+					<item level="0" text="IP Address 1" description="IP Address to be checked on timer activation." conditional="self.timerNetIP.value and self.timerNetIPCount.value > 0">self.timerIPAddress[0]</item>
+					<item level="0" text="IP Address 2" description="IP Address to be checked on timer activation." conditional="self.timerNetIP.value and self.timerNetIPCount.value > 1">self.timerIPAddress[1]</item>
+					<item level="0" text="IP Address 3" description="IP Address to be checked on timer activation." conditional="self.timerNetIP.value and self.timerNetIPCount.value > 2">self.timerIPAddress[2]</item>
+					<item level="0" text="IP Address 4" description="IP Address to be checked on timer activation." conditional="self.timerNetIP.value and self.timerNetIPCount.value > 3">self.timerIPAddress[3]</item>
+					<item level="0" text="IP Address 5" description="IP Address to be checked on timer activation." conditional="self.timerNetIP.value and self.timerNetIPCount.value > 4">self.timerIPAddress[4]</item>
+				</if>
+			</if>
+		<else />
+			<item level="0" text="Repeat type" description="Select if this timer is to be repeated.">self.timerRepeat</item>
+			<if conditional="self.timerRepeat.value == 'once'">
+				<item level="0" text="Date" description="Select the date when this timer will activate.">self.timerRepeatStartDate</item>
+			<else />
+				<item level="0" text="Repeats" description="Select how often this timer is to be repeated.">self.timerRepeatPeriod</item>
+				<item level="0" text="Starting date" description="Select the date from which this timer will become active.">self.timerRepeatStartDate</item>
+				<if conditional="self.timerRepeatPeriod.value == 'weekly'">
+					<item level="0" text="Day of week" description="Select the day of the week that this timer will activate.">self.timerWeekday</item>
+				</if>
+				<if conditional="self.timerRepeatPeriod.value == 'user'">
+					<item level="0" text="Monday" description="Select if this timer activates on a Monday.">self.timerDay['Mon']</item>
+					<item level="0" text="Tuesday" description="Select if this timer activates on a Tuesday.">self.timerDay['Tue']</item>
+					<item level="0" text="Wednesday" description="Select if this timer activates on a Wednesday.">self.timerDay['Wed']</item>
+					<item level="0" text="Thursday" description="Select if this timer activates on a Thursday.">self.timerDay['Thu']</item>
+					<item level="0" text="Friday" description="Select if this timer activates on a Friday.">self.timerDay['Fri']</item>
+					<item level="0" text="Saturday" description="Select if this timer activates on a Saturday.">self.timerDay['Sat']</item>
+					<item level="0" text="Sunday" description="Select if this timer activates on a Sunday.">self.timerDay['Sun']</item>
+				</if>
+			</if>
+			<item level="0" text="Start time" description="Select the time when this timer will start.">self.timerStartTime</item>
+			<item level="0" text="Set end time" description="Select 'Yes' if an end time is required for this timer.">self.timerSetEndTime</item>
+			<if conditional="self.timerSetEndTime.value">
+				<item level="0" text="End time" description="Select the time when this timer should end.">self.timerEndTime</item>
+				<item level="0" text="After event" description="Select the action to perform when the timer ends.">self.timerAfterEvent</item>
+			</if>
+		</if>
+	</setup>
 	<setup key="Skin" title="Skin Settings">
 		<item text="GUI Skin *" description="Choose the skin to be used for the GUI interface. Press 'GREEN' to activate the skin.">config.skin.guiSkin</item>
 		<item text="LCD/Front panel *" description="Choose the skin to be used for the LCD/front panel interface. Press 'GREEN' to activate the skin." requires="LCDSKINSetup">config.skin.lcdSkin</item>
@@ -893,7 +899,7 @@
 		<item level="0" text="Subtitle black transparency" description="Configure the transparency of the black background of subtitles.">config.subtitles.subtitles_backtrans</item>
 		<item level="2" text="Subtitle font size" description="Configure the font size of the subtitles.">config.subtitles.subtitle_fontsize</item>
 		<item level="2" text="Subtitle delay when timing lacks" description="Configure the subtitle delay when timing information is not available.">config.subtitles.subtitle_noPTSrecordingdelay</item>
-		<item level="2" text="Yellow DVB subtitles" description="When enabled, graphical DVB subtitles will be displayed in yellow, instead of the original color.">config.subtitles.dvb_subtitles_yellow</item>
+		<item level="2" text="DVB subtitles color" description="Graphical DVB subtitles will be displayed in the selected color, instead of the original colors.">config.subtitles.dvb_subtitles_color</item>
 		<item level="2" text="Use original DVB subtitle position" description="When enabled, graphical DVB subtitles will be displayed at their original position.">config.subtitles.dvb_subtitles_original_position</item>
 		<item level="2" text="Subtitle delay when timing is bad" description="Configure an additional delay to improve subtitle synchronization.">config.subtitles.subtitle_bad_timing_delay</item>
 		<item level="2" text="DVB subtitle black transparency" description="Configure the transparency of the black background of graphical DVB subtitles.">config.subtitles.dvb_subtitles_backtrans</item>
@@ -983,7 +989,7 @@
 		<item level="2" text="Enable cut file support for non *.ts files" description="Enable cut file support for non *.ts files, e.g. mp4.">config.usage.useVideoCuesheet</item>
 		<item level="2" text="Enable cut file support for audio files" description="Enable cut file support for audio files, e.g. mp3.">config.usage.useAudioCuesheet</item>
 		<item level="2" text="Enable chapter support for video files" description="Show chapter positions for supported video files. (gstreamer version must be greather than 1)">config.usage.useChapterInfo</item>
-		<!--<item level="2" text="Enable new GStreamer playback" description="If enabled, the new GStreamer playback engine will be used.">config.misc.usegstplaybin3</item-->
+		<!--item level="2" text="Enable new GStreamer playback" description="If enabled, the new GStreamer playback engine will be used.">config.misc.usegstplaybin3</item-->
 	</setup>
 	<setup key="UserInterface" title="OSD Settings" showOpenWebif="1">
 		<item level="0" text="Menu style" description="Select the display design for menus.">config.usage.menuType</item>
@@ -1001,7 +1007,8 @@
 		<item level="0" text="Help animation speed" description="Select the animation speed of the button indicators in the help screens. 'Disabled' turns off animation so that indicators jump between buttons.">config.usage.helpAnimationSpeed</item>
 		<item level="0" text="Button error timeout" description="Select how long to display the button error pop up. Button input is still permitted while the pop up is displayed.">config.usage.unhandledKeyTimeout</item>
 		<item level="0" text="Show animation while busy" description="Show a spinning logo when the system is busy.">config.usage.show_spinner</item>
-		<item level="2" text="Show screensaver" description="Configure the duration in minutes before the screen saver will be displayed.">config.usage.screen_saver</item>
+		<item level="2" text="Show screen saver" description="Select the duration of inactivity before the screen saver will be displayed.">config.usage.screenSaverStartTimer</item>
+		<item level="2" text="Screen saver movement" description="Select how long the screen saver image will stay in the same location on the screen before it will be moved." conditional="config.usage.screenSaverStartTimer.value">config.usage.screenSaverMoveTimer</item>
 		<item level="2" text="Show all Information screens" description="Enable this option to show all the available Information screens in the Information menu item list.">config.usage.informationShowAllMenuScreens</item>
 		<item level="2" text="Show extra spacing in Information" description="Enable to add some extra spacing to the Information screens. This can improve readability.">config.usage.informationExtraSpacing</item>
 		<item level="0" text="1st InfoBar timeout" description="Set the time to hide the infobar.">config.usage.infobar_timeout</item>

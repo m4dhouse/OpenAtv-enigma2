@@ -1,10 +1,10 @@
-# openATV 7.4
+# OpenATV 7.5.1
 
 ## Build status
 
 [![enigma2 build](https://github.com/openatv/enigma2/actions/workflows/enigma2.yml/badge.svg)](https://github.com/openatv/enigma2/actions/workflows/enigma2.yml)
 
-[Active Build Status](https://images.mynonpublic.com/openatv/build_status_arm_74.html "Active Build Status") - shows which box is currently being built 
+[Active Build Status](https://images.mynonpublic.com/openatv/build_status_arm_751.html "Active Build Status") - shows which box is currently being built 
 
 ## SonarCloud status
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=openatv_enigma2&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=openatv_enigma2)
@@ -22,7 +22,7 @@
 
 ## Current OS
 
-> Ubuntu 24.04 LTS (GNU/Linux 6.8.0-31-generic x86_64)
+> Ubuntu 24.04.01 LTS (GNU/Linux 6.8.0-51-generic x86_64)
 
 ## Hardware requirements
 
@@ -36,21 +36,25 @@
 
 ## Git repositories involved
 
-* [OE Alliance Core](https://github.com/oe-alliance/oe-alliance-core/tree/5.4 "OE Alliance Core") - Core framework
-* [openATV 7.4](https://github.com/openatv/enigma2/tree/master "openATV 7.4") - openATV core
-* [MetrixHD](https://github.com/openatv/MetrixHD/tree/master "openATV Skin") - Default openATV skin
+* [OE Alliance Core](https://github.com/oe-alliance/oe-alliance-core/tree/5.5.1 "OE Alliance Core") - Core framework
+* [OpenATV 7.5.1](https://github.com/openatv/enigma2/tree/master "OpenATV 7.5.1") - OpenATV core
+* [MetrixHD](https://github.com/openatv/MetrixHD/tree/master "OpenATV Skin") - Default OpenATV skin
+* [OpenWebif](https://github.com/oe-alliance "OpenWebif") - OpenWebif
+* [OE Alliance Plugins](https://github.com/oe-alliance/oe-alliance-plugins "OE Alliance Plugins") - OE Alliance Plugins
+* [Enigm2 Plugins](https://github.com/oe-alliance/enigma2-plugins "Enigma2 Plugins") - Enigma2 Plugins
+* [E2OpenPlugins](https://github.com/E2OpenPlugins "E2OpenPlugins") - E2OpenPlugins
 * ...
 
 ## DOXYGEN Documentation
 
-* [openATV enigma2](https://doxy.mynonpublic.com/ "openATV enigma2") -  openATV core
+* [OpenATV enigma2](https://doxy.mynonpublic.com/ "OpenATV enigma2") -  OpenATV core
 
 # Build instructions
 
 1. Install required packages
 
     ```sh
-    sudo apt-get install -y autoconf automake bison bzip2 chrpath coreutils cpio curl cvs debianutils default-jre default-jre-headless diffstat flex g++ gawk gcc gcc-12 gcc-multilib g++-multilib gettext git gzip help2man info iputils-ping java-common libc6-dev libglib2.0-dev libncurses-dev libperl4-corelibs-perl libproc-processtable-perl libsdl1.2-dev libserf-dev libtool libxml2-utils make ncurses-bin patch perl pkg-config psmisc python3 python3-git python3-jinja2 python3-pexpect python3-pip python3-setuptools quilt socat sshpass subversion tar texi2html texinfo unzip wget xsltproc xterm xz-utils zip zlib1g-dev zstd fakeroot lz4 git-lfs
+    sudo apt-get install -y autoconf automake bison bzip2 chrpath cmake coreutils cpio curl cvs debianutils default-jre default-jre-headless diffstat flex g++ gawk gcc gcc-12 gcc-multilib g++-multilib gettext git gzip help2man info iputils-ping java-common libc6-dev libglib2.0-dev libncurses-dev libperl4-corelibs-perl libproc-processtable-perl libsdl1.2-dev libserf-dev libtool libxml2-utils make ncurses-bin patch perl pkg-config psmisc python3 python3-git python3-jinja2 python3-pexpect python3-pip python3-setuptools quilt socat sshpass subversion tar texi2html texinfo unzip wget xsltproc xterm xz-utils zip zlib1g-dev zstd fakeroot lz4 git-lfs
     ```
 
 1. Set `python3` as preferred provider for `python`
@@ -110,22 +114,22 @@
     git config --global user.name "Your Name"
     ```
 
-1. Create folder openatv7.4
+1. Create folder openatv7.5.1
 
     ```sh
-    mkdir -p openatv7.4
+    mkdir -p openatv7.5.1
     ```
 
-1. Switch to folder openatv7.4
+1. Switch to folder openatv7.5.1
 
     ```sh
-    cd openatv7.4
+    cd openatv7.5.1
     ```
 
 1. Clone oe-alliance repository
 
     ```sh
-    git clone https://github.com/oe-alliance/build-enviroment.git -b 5.4
+    git clone https://github.com/oe-alliance/build-enviroment.git -b 5.5.1
     ```
 
 1. Switch to folder build-enviroment

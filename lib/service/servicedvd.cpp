@@ -281,13 +281,11 @@ void eServiceDVD::gotMessage(int /*what*/)
 
 				int x_offset = 0, y_offset = 0, width = 720, height = 576;
 
-#ifdef DDVD_SUPPORTS_GET_BLIT_DESTINATION
 				ddvd_get_blit_destination(m_ddvdconfig, &x_offset, &y_offset, &width, &height);
 				eDebug("[eServiceDVD] DVD_SCREEN_UPDATE: values got from ddvd: %d %d %d %d", x_offset, y_offset, width, height);
 				y_offset = -y_offset;
 				width -= x_offset * 2;
 				height -= y_offset * 2;
-#endif
 				eRect dest(x_offset, y_offset, width, height);
 
 				if (dest.width() && dest.height())
@@ -702,8 +700,26 @@ std::string eServiceDVD::getInfoString(int w)
 		case sServiceref:
 			eDebug("[eServiceDVD] getInfoString ServiceRef %s", m_ref.toString().c_str());
 			return m_ref.toString();
+		case sVideoInfo:
+			{
+#ifdef DDVD_SUPPORTS_PICTURE_INFO
+			std::string videoInfo;
+			char buff[100];
+			snprintf(buff, sizeof(buff), "%d|%d|%d|%d|%d|1",
+					m_width,
+					m_height,
+					m_framerate,
+					m_progressive,
+					m_aspect
+				);
+			videoInfo = buff;
+			return videoInfo;
+#else
+			return std::string("720|576|50|1|0|1");
+#endif
+			}
 		default:
-			eDebug("[eServiceDVD] getInfoString %d unsupported", w);
+			eTrace("[eServiceDVD] getInfoString %d unsupported", w);
 	}
 	return "";
 }
@@ -796,12 +812,7 @@ RESULT eServiceDVD::enableSubtitles(iSubtitleUser *user, SubtitleTrack &track)
 	if (!m_pixmap)
 	{
 		m_pixmap = new gPixmap(size, 32, 1); /* allocate accel surface (if possible) */
-#ifdef DDVD_SUPPORTS_GET_BLIT_DESTINATION
 		ddvd_set_lfb_ex(m_ddvdconfig, (unsigned char *)m_pixmap->surface->data, size.width(), size.height(), 4, size.width()*4, 1);
-#else
-		ddvd_set_lfb(m_ddvdconfig, (unsigned char *)m_pixmap->surface->data, size.width(), size.height(), 4, size.width()*4);
-#warning please update libdreamdvd for fast scaling
-#endif
 		run(); // start the thread
 	}
 
@@ -816,27 +827,37 @@ RESULT eServiceDVD::disableSubtitles()
 	return 0;
 }
 
+/**
+ * Retrieves the list of available subtitle tracks for the current DVD.
+ * @param subtitlelist A vector to be filled with the available subtitle tracks.
+ * @return RESULT indicating success or failure.
+ */
 RESULT eServiceDVD::getSubtitleList(std::vector<struct SubtitleTrack> &subtitlelist)
 {
 	unsigned int spu_count = 0;
 	ddvd_get_spu_count(m_ddvdconfig, &spu_count);
 	eDebug("[eServiceDVD] getSubtitleList: %d spus", spu_count);
 
-	for ( unsigned int spu_id = 0; spu_id < spu_count; spu_id++ )
+	for (unsigned int spu_id = 0; spu_id < spu_count; spu_id++)
 	{
 		struct SubtitleTrack track = {};
 		uint16_t spu_lang;
+
 		ddvd_get_spu_byid(m_ddvdconfig, spu_id, &spu_lang);
-		char spu_string[3]={(char) ((spu_lang >> 8) & 0xff), (char)(spu_lang & 0xff), 0};
+		if (spu_lang == 0xFFFF)
+		{
+			eDebug("[eServiceDVD] getSubtitleList: spu_id=%d: invalid subtitle track", spu_id);
+			continue;
+		}
+
+		char spu_string[3] = {(char)((spu_lang >> 8) & 0xff), (char)(spu_lang & 0xff), 0};
 		eDebug("[eServiceDVD] getSubtitleList: spu_id=%d lang=%s", spu_id, spu_string);
 
 		track.type = 2;
 		track.pid = spu_id + 1;
 		track.page_number = 5;
 		track.magazine_number = 0;
-		if (spu_lang != 0xFFFF) {
-			track.language_code = spu_string;
-		}
+		track.language_code = spu_string;
 		subtitlelist.push_back(track);
 	}
 	return 0;

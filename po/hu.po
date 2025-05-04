@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hu_po v3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-26 16:11+0000\n"
+"POT-Creation-Date: 2024-12-31 15:16+0000\n"
 "PO-Revision-Date: 2022-03-10 14:56+0000\n"
 "Last-Translator: H. Árkosi Róbert <robreg@zsurob.hu>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/openatv/enigma2-7-0-po/hu/>\n"
@@ -97,6 +97,9 @@ msgstr " Frissítve"
 
 msgid "!! Boot loader Upgrade !!"
 msgstr "!! Bootloader frissítés !!"
+
+msgid "# = Reboot Required"
+msgstr ""
 
 msgid "%-H:%M"
 msgstr "%-H:%M"
@@ -1588,24 +1591,24 @@ msgid "A file from media is in use!"
 msgstr "Egy fájl még használatban van a hordozón!"
 
 #, python-format
-msgid "A finished PowerTimer wants to reboot your %s %s. Do that now?"
+msgid "A finished scheduled timer wants to reboot your %s %s. Do that now?"
 msgstr ""
 "A kikapcsolás időzítő újra akarja indítani a(z) %s %s készüléket.\n"
 "Engedélyezi?"
 
-msgid "A finished PowerTimer wants to restart the user interface. Do that now?"
+msgid "A finished scheduled timer wants to restart the user interface. Do that now?"
 msgstr ""
 "A kikapcsolás időzítő újra akarja indítani a kezelőfelületet.\n"
 "Engedélyezi?"
 
 #, python-format
-msgid "A finished PowerTimer wants to set your %s %s to standby. Do that now?"
+msgid "A finished scheduled timer wants to set your %s %s to standby. Do that now?"
 msgstr ""
 "A kikapcsolás időzítő készenléti állapotba\n"
 "akarja helyezni a(z) %s %s készüléket. Engedélyezi?"
 
 #, python-format
-msgid "A finished PowerTimer wants to shut down your %s %s. Do that now?"
+msgid "A finished scheduled timer wants to shut down your %s %s. Do that now?"
 msgstr ""
 "A kikapcsolás időzítő ki akarja kapcsolni a(z) %s %s készüléket.\n"
 "Engedélyezi?"
@@ -1628,6 +1631,9 @@ msgstr ""
 
 msgid "A highlight on the remote control image shows which button the help refers to. If more than one button performs the indicated function, more than one highlight will be shown. Text below the list lists the active buttons and whether the function requires a long press or SHIFT of the button(s)."
 msgstr "A távirányító képén egy kiemelés mutatja, hogy a súgó melyik gombra vonatkozik. Ha egynél több gomb hajtja végre a jelzett funkciót, egynél több kiemelés jelenik meg. A lista alatti szöveg felsorolja az aktív gombokat, és azt, hogy a funkcióhoz szükséges-e a gomb hosszan tartó megnyomása vagy a SHIFT használata."
+
+msgid "A new storage device has been connected:"
+msgstr ""
 
 #, python-format
 msgid ""
@@ -1655,7 +1661,7 @@ msgstr "Egy felvétel folyamatban van. Kérjük, állítsa le a felvételt, miel
 
 #, python-format
 msgid ""
-"A recording, recording timer or power timer is running or will begin within 15 minutes. %s extended to 30 minutes. Your %s %s will go to Deep Standby after the recording or power timer event.\n"
+"A recording, recording timer or scheduled task is running or will begin within 15 minutes. %s extended to 30 minutes. Your %s %s will go to Deep Standby after the recording or scheduled task.\n"
 "\n"
 "Go to Deep Standby now?"
 msgstr ""
@@ -1785,7 +1791,7 @@ msgstr "Streaming megszakítása.\n"
 msgid "About"
 msgstr "Névjegy"
 
-msgid "About openATV"
+msgid "About OpenATV"
 msgstr ""
 
 msgid "About to start"
@@ -1817,6 +1823,9 @@ msgstr "Be/Ki gomb hosszan lenyomva"
 
 msgid "Action on short POWER button press"
 msgstr "Be/Ki gomb röviden lenyomva"
+
+msgid "Actions"
+msgstr ""
 
 msgid "Activate"
 msgstr "Bekapcsolás"
@@ -2751,6 +2760,9 @@ msgstr "Automatikus felbontás címke"
 msgid "Automatic scan for services"
 msgstr "Automatikus keresése a csatornáknak"
 
+msgid "Automatic shares access"
+msgstr ""
+
 msgid "Automatically put the TV in standby whenever the receiver goes into standby or deep standby."
 msgstr ""
 
@@ -2837,14 +2849,23 @@ msgstr "Vissza USB"
 msgid "Back USB 3.0"
 msgstr "Vissza USB 3.0"
 
+msgid "Back USB-C"
+msgstr ""
+
 msgid "Back, inner USB"
 msgstr "Vissza, belső USB"
+
+msgid "Back, left USB"
+msgstr ""
 
 msgid "Back, lower USB"
 msgstr "Vissza, lentebbi USB"
 
 msgid "Back, outer USB"
 msgstr "Vissza, külső USB"
+
+msgid "Back, right USB"
+msgstr ""
 
 msgid "Back, upper USB"
 msgstr "Vissza, fentebbi USB"
@@ -3804,14 +3825,6 @@ msgstr "Csatornacsomagra váltás"
 msgid "Changed"
 msgstr ""
 
-#, python-format
-msgid ""
-"Changes need a system restart to take effect.\n"
-"Restart your %s %s now?"
-msgstr ""
-"A változásoknak szükségük van egy rendszer újra indításra, hogy életbe lépjenek.\n"
-"Indítsa újra a(z) %s %s készüléket most?"
-
 msgid "Channel"
 msgstr "Csatorna"
 
@@ -3947,12 +3960,6 @@ msgstr "Karaktereszköz"
 #, fuzzy
 msgid "Chechen"
 msgstr "Ellenőrzés"
-
-msgid "Check"
-msgstr "Ellenőrzés"
-
-msgid "Check HDD"
-msgstr "Merevlemez ellenőrzés"
 
 msgid "Check for PDC"
 msgstr ""
@@ -4236,6 +4243,9 @@ msgstr "TV kijelző klónozása LCD kijelzőre"
 msgid "Close"
 msgstr "Bezárás"
 
+msgid "Close CA device at programm end"
+msgstr ""
+
 msgid "Close PiP on exit"
 msgstr "Kép-a-Képben bezárása kilépéskor"
 
@@ -4255,6 +4265,12 @@ msgid "Close dialog"
 msgstr "Párbeszédpanel bezárása"
 
 msgid "Close screen"
+msgstr ""
+
+msgid "Close the Device Manager screen"
+msgstr ""
+
+msgid "Close the Device Manager screen and exit all menus"
 msgstr ""
 
 msgid "Close the Kexec MultiBoot Manager"
@@ -4580,7 +4596,7 @@ msgstr "Konfigurálja a kurzor viselkedését a csatorna kiválasztási listába
 msgid "Configure the display resolution and the font used for teletext."
 msgstr "Beállíthatja, hogy a teletexthez milyen betűtípust milyen felbontásban használ."
 
-msgid "Configure the duration in minutes before the screen saver will be displayed."
+msgid "Select the duration of inactivity before the screen saver will be displayed."
 msgstr "Állítsa be a képernyővédő időtartamát percekben."
 
 msgid "Configure the duration, in minutes, before the EnergySaver timer activates."
@@ -4967,12 +4983,6 @@ msgstr "Softcam vezérlése"
 msgid "Controlled by HDMI"
 msgstr "HDMI vezérléssel"
 
-msgid "Convert EXT3 File System to EXT4"
-msgstr "Konvertálás ext3-ról ext4-re"
-
-msgid "Convert ext3 to ext4"
-msgstr "Konvertálás ext3-ról ext4-re"
-
 msgid "Convert file system ext3 to ext4"
 msgstr "Konvertálás ext3-ról ext4-re"
 
@@ -5317,6 +5327,9 @@ msgstr ""
 msgid "Custom"
 msgstr "Egyedi"
 
+msgid "Custom mountpoint"
+msgstr ""
+
 msgid "Custom skip time for '1'/'3' buttons"
 msgstr "Ugrás az '1'/'3' gombokkal (másodperc)"
 
@@ -5346,6 +5359,9 @@ msgstr "Vágószerkesztő"
 
 msgid "Cutlist editor..."
 msgstr "Vágószerkesztő..."
+
+msgid "Cyan"
+msgstr ""
 
 msgid "Cycle PiP(zap)"
 msgstr ""
@@ -5394,6 +5410,9 @@ msgstr ""
 msgid "DNS mode"
 msgstr ""
 
+msgid "DNS name or IP address"
+msgstr ""
+
 msgid "DNS suffix"
 msgstr ""
 
@@ -5428,6 +5447,9 @@ msgstr "Felirat hosszan"
 
 msgid "DVB subtitle black transparency"
 msgstr "DVB felirat fekete-áttetszőssége"
+
+msgid "DVB subtitles color"
+msgstr ""
 
 msgid "DVB-C"
 msgstr "DVB-C"
@@ -5772,6 +5794,12 @@ msgstr "Egy extra késkeltetés megadása (milliszekundumban) a http(s) stream-e
 msgid "Define the DNS suffix."
 msgstr ""
 
+msgid "Define the custom mountpoint for the device."
+msgstr ""
+
+msgid "Define the file system mount options."
+msgstr ""
+
 msgid "Defined / Active"
 msgstr "Definiált / Aktív"
 
@@ -6042,6 +6070,9 @@ msgstr "Mélység"
 msgid "Descending"
 msgstr ""
 
+msgid "Descrambling options"
+msgstr ""
+
 msgid "Description"
 msgstr "Leírás"
 
@@ -6085,8 +6116,14 @@ msgstr ""
 msgid "Development Packages"
 msgstr ""
 
+msgid "Device"
+msgstr ""
+
 msgid "Device Manager"
 msgstr "Eszközkezelő"
+
+msgid "Device Manager Actions"
+msgstr ""
 
 msgid "Device Settings"
 msgstr "Hálózati eszközök beállítása"
@@ -6102,9 +6139,6 @@ msgstr "Eszköznév:"
 
 msgid "Device number"
 msgstr ""
-
-msgid "Device: "
-msgstr "Eszköznév: "
 
 msgid "Devices"
 msgstr "Eszközök"
@@ -6237,6 +6271,9 @@ msgstr "Digitális lekeverés letiltása"
 
 msgid "Disable intro screen"
 msgstr "Letiltja az intro képernyőt"
+
+msgid "Disable operator profiles"
+msgstr ""
 
 msgid "Disable the HDD Process on VFD."
 msgstr "A folyamatjelző sáv megjelenítése/letiltása"
@@ -7049,6 +7086,9 @@ msgstr "Automatikus gyorskeresés engedélyezése"
 msgid "Enable auto fast scan for %s"
 msgstr "Automatikus gyorskeresés engedélyezése ehhez: %s"
 
+msgid "Enable automatic shares"
+msgstr ""
+
 msgid "Enable autorefresh templates."
 msgstr ""
 
@@ -7727,7 +7767,7 @@ msgstr "Etiópia"
 msgid "Even if TV has another input active?"
 msgstr "Még akkor is, ha a TV-nek van egy másik aktív bemenete?"
 
-msgid "Even if a 'Wakeup' PowerTimer starting?"
+msgid "Even if a 'Wakeup' scheduled task starting?"
 msgstr "Még akkor is, ha elkezdődik egy 'felébresztés' időzítő?"
 
 msgid "Even if a 'Zap and Record' recording timer starting?"
@@ -8257,6 +8297,9 @@ msgstr ""
 msgid "File Commander settings"
 msgstr "File Commander beállításai"
 
+msgid "File system"
+msgstr ""
+
 msgid "File System Check"
 msgstr "Fájlrendszer ellenőrzése"
 
@@ -8286,8 +8329,8 @@ msgstr "fájlnév"
 msgid "Files/folders to exclude from backup"
 msgstr "Fájlok/mappák kizárása a mentésből"
 
-msgid "Filesystem check your hard drive"
-msgstr "A merevlemez fájlrendszerének ellenőrzése"
+msgid "Filesystem"
+msgstr ""
 
 msgid "Fill in channel EPGs from the broadcast EPG where there is no IceTV EPG for the channel"
 msgstr ""
@@ -8371,7 +8414,7 @@ msgstr ""
 msgid "Flash Image"
 msgstr "Flash lemezkép"
 
-#. TRANSLATORS: The variable is the name of a distribution.  E.g. "openATV".
+#. TRANSLATORS: The variable is the name of a distribution.  E.g. "OpenATV".
 #, python-format
 msgid "Flash Manager - %s Images"
 msgstr ""
@@ -8490,14 +8533,11 @@ msgstr "Formázás"
 msgid "Format Disk"
 msgstr ""
 
-msgid "Format HDD"
-msgstr "Merevlemez formázás"
-
 msgid "Format Storage Device"
 msgstr ""
 
-msgid "Format your hard drive"
-msgstr "A merevlemez formázása"
+msgid "Formatting storage device..."
+msgstr ""
 
 msgid "Forward Error Correction (FEC)"
 msgstr ""
@@ -8620,9 +8660,6 @@ msgstr "FullHD teszt"
 
 #, fuzzy
 msgid "G"
-msgstr "GB"
-
-msgid "GB"
 msgstr "GB"
 
 msgid "GCC version"
@@ -8842,6 +8879,9 @@ msgid "GotoX calibration"
 msgstr "Goto X kalibrálása"
 
 msgid "Grab"
+msgstr ""
+
+msgid "Graphical DVB subtitles will be displayed in the selected color, instead of the original colors."
 msgstr ""
 
 msgid "Graphical EPG"
@@ -9259,8 +9299,17 @@ msgstr "Horror"
 msgid "Horse Racing"
 msgstr "Lóverseny"
 
+msgid "Host"
+msgstr ""
+
 msgid "Hostname"
 msgstr "Gépnév"
+
+msgid "Hostname cannot be resolved to IP address!"
+msgstr ""
+
+msgid "Hostname or IP address"
+msgstr ""
 
 msgid "Hostname: "
 msgstr "Gépnév: "
@@ -9351,6 +9400,9 @@ msgstr ""
 
 msgid "IP address"
 msgstr "IP cím"
+
+msgid "IP address is invalid!"
+msgstr ""
 
 msgid "IP address of the Stream Relay server used to descramble services that can only be decrypted via Stream Relay."
 msgstr ""
@@ -9800,9 +9852,6 @@ msgstr "Kezdeti visszatekerési sebesség"
 
 msgid "Initial scroll delay"
 msgstr "Görgetés kezdeti késleltetése"
-
-msgid "Initialization"
-msgstr "Inicializálás"
 
 msgid "Initialize"
 msgstr "Inicializál"
@@ -10428,6 +10477,9 @@ msgstr "Libanon"
 msgid "Left"
 msgstr "Bal"
 
+msgid "Left USB"
+msgstr ""
+
 msgid "Left column"
 msgstr ""
 
@@ -10439,6 +10491,12 @@ msgstr ""
 
 msgid "Left from service name"
 msgstr "A csatornanév bal oldalán"
+
+msgid "Left, back USB"
+msgstr ""
+
+msgid "Left, front USB"
+msgstr ""
 
 msgid "Left, wrapped"
 msgstr "bal oldalon sortöréssel"
@@ -10797,9 +10855,6 @@ msgstr ""
 msgid "MAC-address"
 msgstr "MAC-cím"
 
-msgid "MB"
-msgstr "MB"
-
 msgid "MENU"
 msgstr ""
 
@@ -10839,6 +10894,9 @@ msgstr "Új-Kaledónia"
 
 msgid "Madagascar"
 msgstr "Madagaszkár"
+
+msgid "Magenta"
+msgstr ""
 
 msgid "Magic"
 msgstr ""
@@ -11151,6 +11209,9 @@ msgstr ""
 msgid "Mexico"
 msgstr "Mexikó"
 
+msgid "Micro SD"
+msgstr ""
+
 #, fuzzy
 msgid "Micronesia, Federated States of"
 msgstr "Mikronézia"
@@ -11305,6 +11366,9 @@ msgstr "Csatlakozás kezelő"
 msgid "Mount Menu Actions"
 msgstr ""
 
+msgid "Mount Point"
+msgstr ""
+
 msgid "Mount Settings"
 msgstr ""
 
@@ -11314,17 +11378,14 @@ msgstr "Csatlakozás beállítás"
 msgid "Mount failed"
 msgstr "Csatolás nem sikerült"
 
+msgid "Mount point"
+msgstr ""
+
 msgid "Mount root file system."
 msgstr ""
 
-msgid "Mount: "
-msgstr "Csatlakozás: "
-
 msgid "Mounts"
 msgstr "Csatlakozások"
-
-msgid "Mounts Devices"
-msgstr "Csatlakoztatott eszközők"
 
 msgid "Move"
 msgstr "Áthelyezés"
@@ -11984,6 +12045,9 @@ msgstr "Új PIN"
 msgid "New Setting DXAndy "
 msgstr "DXAndy új Beállítás "
 
+msgid "New Storage Device"
+msgstr ""
+
 msgid "New Zealand"
 msgstr "Új-Zéland"
 
@@ -12200,6 +12264,9 @@ msgstr ""
 
 msgid "No suitable sat tuner found!"
 msgstr "Nincs megfelelő műholdas tuner!"
+
+msgid "No system softcam configured!"
+msgstr ""
 
 msgid "No tags are set on these movies."
 msgstr "Ezeknek a felvételekre nincsenek metaadataik."
@@ -12569,6 +12636,12 @@ msgstr "Ki"
 msgid "Offline decode delay (ms)"
 msgstr "Offline dekódolási késleltetés (ms)"
 
+msgid "Offset CA device index"
+msgstr ""
+
+msgid "Offset and close CA device"
+msgstr ""
+
 msgid "Ojibwa"
 msgstr ""
 
@@ -12780,6 +12853,9 @@ msgid "Option to enable the Hardware Standby Timer."
 msgstr "Ezzel az opcióval tudja beállítani, hogy a Merevlemez használja a készülék készenléti időzítőjét"
 
 msgid "Optional parameter"
+msgstr ""
+
+msgid "Options"
 msgstr ""
 
 msgid "Orbital position"
@@ -13042,6 +13118,9 @@ msgstr "Parlament"
 msgid "Partition"
 msgstr ""
 
+msgid "Partition Type"
+msgstr ""
+
 msgid "Partitions"
 msgstr "Partíciók"
 
@@ -13068,6 +13147,9 @@ msgstr "Jelszó beállítása"
 
 msgid "Password changed."
 msgstr "Jelszó módosítva."
+
+msgid "Path"
+msgstr ""
 
 #, python-format
 msgid "Path '%s' missing!"
@@ -13114,6 +13196,13 @@ msgstr ""
 
 msgid "Permanently delete all recordings in the trash can?"
 msgstr "A kuka véglegesen kiüríthető?"
+
+msgid "Permanently ignore this device"
+msgstr ""
+
+#, python-format
+msgid "Permanently mount as %s"
+msgstr ""
 
 msgid "Permanently remove all deleted items"
 msgstr "Minden törölt elem végleges eltávolítása"
@@ -13546,9 +13635,6 @@ msgstr ""
 msgid "Please wait, swap is is being created. This could take a few minutes to complete."
 msgstr ""
 
-msgid "Please wait."
-msgstr "Kérjük, várjon."
-
 msgid "Please wait..."
 msgstr "Kérem, várjon..."
 
@@ -13648,6 +13734,9 @@ msgstr "Portugália"
 msgid "Portuguese"
 msgstr "Portugál"
 
+msgid "Position"
+msgstr ""
+
 msgid "Position of finished Timers in Timerlist"
 msgstr "Befejezett időzítések pozíciója az Időzítések listájában"
 
@@ -13698,30 +13787,6 @@ msgstr "LCD kijelző legyen bekapcsolva"
 
 msgid "Power threshold in mA"
 msgstr "Áram határérték (mA)"
-
-msgid "PowerTimer"
-msgstr "Kikapcsolás Időzítő"
-
-msgid "PowerTimer Actions"
-msgstr ""
-
-msgid "PowerTimer Overview"
-msgstr "Kikapcsolás Időzítő Áttekintés"
-
-msgid "PowerTimer Settings"
-msgstr ""
-
-msgid "PowerTimer Standby"
-msgstr "Kikapcsolás Időzítő Készenléti állapot"
-
-msgid "PowerTimer deep standby"
-msgstr "Kikapcsolás Időzítő Kikapcsolás"
-
-msgid "PowerTimer log"
-msgstr "PowerTimer napló"
-
-msgid "PowerTimers"
-msgstr "Kikapcsolás Időzítők"
 
 msgid "Predefined"
 msgstr "Előre definiált"
@@ -14295,8 +14360,14 @@ msgstr "Nincs besorolás"
 msgid "Re-enter new PIN"
 msgstr "Írja be újra az új PIN-kód"
 
+msgid "Read Only"
+msgstr ""
+
 msgid "Read Userdata from oscam.conf"
 msgstr "Az Oscam.conf felhasználói adatainak olvasása"
+
+msgid "Read/Write"
+msgstr ""
 
 msgid "Reader"
 msgstr "Olvasó"
@@ -14346,6 +14417,9 @@ msgstr "Biztos újra indítsam most?"
 msgid "Really shutdown now?"
 msgstr "Biztos lekapcsoljam most?"
 
+msgid "Really start Kodi and stop user interface now?"
+msgstr ""
+
 msgid "Really upgrade the front panel and reboot now?"
 msgstr "Biztos benne, hogy frissíteni szeretné az előlapi kijelzőt, majd újraindítani a készüléket?"
 
@@ -14361,6 +14435,10 @@ msgstr ""
 
 msgid "Reboot"
 msgstr "Újraindítás"
+
+#, python-format
+msgid "Reboot %s %s now?"
+msgstr ""
 
 msgid "Rec"
 msgstr "Felvétel"
@@ -14941,10 +15019,6 @@ msgstr ""
 msgid "Restart"
 msgstr "Újraindítás"
 
-#, python-format
-msgid "Restart %s %s."
-msgstr "Újraindítása a(z) %s %s készüléknek."
-
 msgid "Restart GUI"
 msgstr "Kezelőfelület (GUI) újraindítása"
 
@@ -15108,6 +15182,9 @@ msgstr "Feliratok újratördelése"
 msgid "Right"
 msgstr "Jobb"
 
+msgid "Right USB"
+msgstr ""
+
 msgid "Right column"
 msgstr ""
 
@@ -15119,6 +15196,12 @@ msgstr ""
 
 msgid "Right from service name"
 msgstr "A csatornanév jobb oldalán"
+
+msgid "Right, back USB"
+msgstr ""
+
+msgid "Right, front USB"
+msgstr ""
 
 msgid "Right, wrapped"
 msgstr "jobb oldalon sortöréssel"
@@ -15233,6 +15316,12 @@ msgstr "SAT"
 msgid "SATA"
 msgstr "Serial ATA"
 
+msgid "SATA BACK"
+msgstr ""
+
+msgid "SATA FRONT"
+msgstr ""
+
 msgid "SATPI"
 msgstr ""
 
@@ -15317,6 +15406,9 @@ msgid "Samba Client"
 msgstr ""
 
 msgid "Samba Server"
+msgstr ""
+
+msgid "Samba Settings"
 msgstr ""
 
 msgid "Same as in active"
@@ -15568,6 +15660,27 @@ msgstr ""
 msgid "Scheduled save of epg.dat"
 msgstr ""
 
+msgid "Scheduler"
+msgstr ""
+
+msgid "Scheduler Actions"
+msgstr ""
+
+msgid "Scheduler Overview"
+msgstr "Kikapcsolás Időzítő Áttekintés"
+
+msgid "Scheduler Settings"
+msgstr ""
+
+msgid "Scheduler Standby"
+msgstr "Kikapcsolás Időzítő Készenléti állapot"
+
+msgid "Scheduler deep standby"
+msgstr "Kikapcsolás Időzítő Kikapcsolás"
+
+msgid "Scheduler log"
+msgstr "PowerTimer napló"
+
 msgid "Sci-Fi"
 msgstr "Sci-Fi"
 
@@ -15743,7 +15856,7 @@ msgstr ""
 msgid "Select 'Yes' if you are using a multi-switch which requires a DiSEqC Port-A command signal. Select 'No' for all other setups."
 msgstr "Csak akkor válassza az 'igen' beállítást, ha multiswich-t használ, amelyhez DiSEqC Port-A parancs jelet igényel. Az összes többi beállításhoz válassza a 'nem' lehetőséget."
 
-msgid "Select 'Yes' if you want to wake the TV for a 'Wakeup' power timer is starting."
+msgid "Select 'Yes' if you want to wake the TV when a 'Wakeup' scheduled task is starting."
 msgstr ""
 
 msgid "Select 'Yes' if you want to wake the TV for a 'Zap and Record' recording timer is starting."
@@ -15754,6 +15867,9 @@ msgstr ""
 
 msgid "Select 'Yes' the keep the InfoBar displayed, with no timeout, while media playback is paused."
 msgstr "Ha az 'igen'-t választja, az Információs sáv folyamatosan 'szüneteltetett' állapotban marad (nincs időkorlát)."
+
+msgid "Select 'Yes' to allow each storage device detected to be automatically exported as samba share."
+msgstr ""
 
 msgid "Select 'Yes' to allow use of the seek bar to jump to a selected point within the event."
 msgstr "Ha az 'igen'-t választja, akkor a keresősáv segítségével átugorhat egy adott pontra az eseményen belül."
@@ -15845,7 +15961,7 @@ msgstr ""
 msgid "Select 'Yes' to remove all settings, tuning data, timers, resume pointers etc. Selecting this option will restore the configuration to the initial settings before any configuration settings were applied. This is the most reliable form of Factory Reset."
 msgstr ""
 
-msgid "Select 'Yes' to remove all timer configuration data. Selecting this option will clear all timers, autotimers and power timers."
+msgid "Select 'Yes' to remove all timer configuration data. Selecting this option will clear all timers, autotimers and schedules."
 msgstr ""
 
 msgid "Select 'Yes' to remove all tuning data. Selecting this option will remove all tuning and bouquet data and will make timers non functional until the receiver is retuned."
@@ -15986,9 +16102,6 @@ msgstr "Válassza a Gyors DiSEqC lehetőséget, ha a soros rendszer támogatja e
 msgid "Select Folders"
 msgstr "Válasszon mappákat"
 
-msgid "Select HDD"
-msgstr "Háttértár kiválasztása"
-
 msgid "Select Lan/Wlan"
 msgstr "Lan/Wlan választása"
 
@@ -16065,6 +16178,12 @@ msgstr "Felvétel kiválasztása"
 msgid "Select a network adapter"
 msgstr "Válasszon hálózati adaptert"
 
+msgid "Select a permanent mount point for all devices"
+msgstr ""
+
+msgid "Select a permanent mount point for the current device"
+msgstr ""
+
 msgid "Select a repository commit log to view:"
 msgstr ""
 
@@ -16094,6 +16213,9 @@ msgid "Select all lines"
 msgstr ""
 
 msgid "Select all related files"
+msgstr ""
+
+msgid "Select an action for the current device"
 msgstr ""
 
 msgid "Select an action to perform when the task has completed."
@@ -16287,6 +16409,9 @@ msgstr "Válassza ki a tunerhez hozzárendelni kívánt felhasználói sáv frek
 msgid "Select the Yes / True response"
 msgstr ""
 
+msgid "Select the access mode for the automatically exported samba shares."
+msgstr ""
+
 #, python-format
 msgid "Select the action for '%s'"
 msgstr ""
@@ -16383,6 +16508,9 @@ msgstr ""
 msgid "Select the file sort order for the %s column:"
 msgstr ""
 
+msgid "Select the file system for the device."
+msgstr ""
+
 msgid "Select the first item in list or move to the start of text"
 msgstr ""
 
@@ -16438,6 +16566,12 @@ msgstr ""
 msgid "Select the model number of your Unicable device. If the model number is not listed, set 'SCR' to 'User defined' and enter the device parameters manually according to its specifications."
 msgstr "Válassza ki az Unicable eszköz modellszámát. Ha a modellszám nem szerepel a listában, állítsa az \"SCR\" értéket \"felhasználó által definiált\" beállításra, és adja meg manuálisan az eszköz paramétereit a specifikációs lapjának megfelelően."
 
+msgid "Select the mount points"
+msgstr ""
+
+msgid "Select the mountpoint for the device."
+msgstr ""
+
 msgid "Select the movie path"
 msgstr "Válassza ki a felvételek útvonalát"
 
@@ -16448,6 +16582,10 @@ msgid ""
 "Select the network interface to be used for the Internet connection.\n"
 "\n"
 "Press OK to continue."
+msgstr ""
+
+#, python-format
+msgid "Select the new mount point for: '%s'"
 msgstr ""
 
 msgid "Select the next item in list or move the cursor right"
@@ -17165,9 +17303,6 @@ msgstr "Bemeneti eszközök beállítása"
 
 msgid "Setup MiniDLNA"
 msgstr "MiniDLNA Beállítások"
-
-msgid "Setup Mounts"
-msgstr "Csatolás Beállítások"
 
 msgid "Setup Network Services"
 msgstr "Hálózati szolgáltatás"
@@ -17909,7 +18044,7 @@ msgstr "A műholdak listájának megjelenítése"
 msgid "Show screen menu path"
 msgstr "Képernyőkímélő megjelenítése"
 
-msgid "Show screensaver"
+msgid "Show screen saver"
 msgstr "Képernyőkímélő megjelenítése"
 
 msgid "Show script messages"
@@ -18012,9 +18147,8 @@ msgstr ""
 msgid "Show the OSCam information screen"
 msgstr ""
 
-#, fuzzy
-msgid "Show the PowerTimer"
-msgstr "A Bekapcsolás időzítő mutatása..."
+msgid "Show the Scheduler"
+msgstr ""
 
 #, fuzzy
 msgid "Show the SleepTimer"
@@ -18174,6 +18308,9 @@ msgstr "Jelerősség:"
 
 msgid "Signal: "
 msgstr "Jel: "
+
+msgid "Signed by"
+msgstr ""
 
 msgid "Similar"
 msgstr "Ismétlések"
@@ -18574,7 +18711,7 @@ msgstr "Sajnálom, a %s nincs feltelepítve!"
 msgid "Sorry, no backups found!"
 msgstr "Nincs rendszerbeállítás mentés!"
 
-msgid "Sorry, no physical devices that supports SWAP attached. Can't create Swapfile on network or fat32 filesystems"
+msgid "Sorry, no physical devices that supports SWAP attached. Can't create swap file on network or FAT32 file systems"
 msgstr "Sajnáljuk, nincs olyan fizikai eszköz, amely támogatja a SWAP csatolását. Nem hozható létre Swapfile a hálózati vagy fat32 fájlrendszereken"
 
 msgid "Sorry, there was a problem:"
@@ -19147,6 +19284,9 @@ msgstr "Jan Mayen-sziget"
 msgid "Swahili"
 msgstr ""
 
+msgid "Swap"
+msgstr ""
+
 msgid "Swap File Manager"
 msgstr "Swap File Manager"
 
@@ -19288,6 +19428,9 @@ msgstr ""
 msgid "Switch to the left column"
 msgstr ""
 
+msgid "Switch to the other column"
+msgstr ""
+
 msgid "Switch to the right column"
 msgstr ""
 
@@ -19368,9 +19511,6 @@ msgstr "T2MI PLP ID"
 
 msgid "T2MI RAW Mode"
 msgstr "T2MI RAW mód"
-
-msgid "TB"
-msgstr "TB"
 
 msgid "TEXT"
 msgstr ""
@@ -19545,6 +19685,10 @@ msgstr ""
 
 #, python-format
 msgid "Temp directory (%s)"
+msgstr ""
+
+#, python-format
+msgid "Temporarily mount as %s"
 msgstr ""
 
 msgid "Temporary directory"
@@ -19929,6 +20073,10 @@ msgstr ""
 "A(z) %s %s felhasználói felülete újraindul\n"
 "a StartEnigma.py fájlban lévő hiba miatt"
 
+#, python-format
+msgid "The user interface of your %s %s will be stopped to run Kodi"
+msgstr ""
+
 msgid "The width of the picture. The input will be scaled to match this value."
 msgstr "A kép szélessége. A bemenetet a fenti értékhez igazítva skálázzák."
 
@@ -20005,9 +20153,6 @@ msgstr "Ez a(z) %s %s készülék nem képes %s adatfolyamokat dekódolni!"
 
 msgid "This DVD RW medium is already formatted - reformatting will erase all content on the disc."
 msgstr "Ez a DVD RW medium már meg van formázva - a lemez újraformázásával minden adat el fog veszni."
-
-msgid "This Device is already mounted as HDD."
-msgstr "Ez az eszköz már csatlakoztatva van Merevlemezként."
 
 msgid "This Option allows you to switch Audio to BT Speakers."
 msgstr "Ez az opció lehetővé teszi a Hang BT hangszórókra való váltását."
@@ -20620,6 +20765,9 @@ msgstr "Toggle Picture in Graphics"
 msgid "Toggle a cut mark at the current position"
 msgstr "Jelenlegi pozícióra vágási jelet tenni"
 
+msgid "Toggle a temporary mount for the current device"
+msgstr ""
+
 msgid "Toggle all related files"
 msgstr ""
 
@@ -21129,6 +21277,9 @@ msgstr "Univerzális fej"
 msgid "Unknown"
 msgstr "Ismeretlen"
 
+msgid "Unknown Devices"
+msgstr ""
+
 msgid ""
 "Unknown Error creating Skin.\n"
 "Please check after reboot MyMetrixLite-Plugin and apply your settings."
@@ -21286,9 +21437,6 @@ msgstr "Elérhető frissítések:"
 msgid "Updating"
 msgstr "Frissítés"
 
-msgid "Updating mount locations."
-msgstr "Csatlakozási helyek frissítése."
-
 msgid "Updating package list."
 msgstr ""
 
@@ -21371,6 +21519,9 @@ msgstr ""
 msgid "Use HDMI-preemphasis"
 msgstr "HDMI előerősítés használata"
 
+msgid "Use HTTPS protocol"
+msgstr ""
+
 msgid "Use Harddisk Hardware Standby Timer"
 msgstr "A merevlemez használja a készenléti időzítőt"
 
@@ -21412,9 +21563,6 @@ msgstr ""
 
 msgid "Use an alternative smaller screen."
 msgstr "Használja az alternatív képernyőt"
-
-msgid "Use as HDD"
-msgstr "Használat Merevlemezként"
 
 msgid "Use automatic mode detection"
 msgstr ""
@@ -21740,6 +21888,9 @@ msgstr "Venezuela"
 msgid "Verbose"
 msgstr ""
 
+msgid "Verify WebIf SSL certificate"
+msgstr ""
+
 msgid "Version"
 msgstr ""
 
@@ -22034,13 +22185,6 @@ msgstr "Időszinkronizálásra várás az indításkor"
 msgid "Wait please while creating swap file..."
 msgstr "Kérem várjon, mialatt a Swap fájl létrejön..."
 
-msgid "Wait please while scanning for devices..."
-msgstr "Kérem várjon, ameddig az eszközök keresése folyamatban van..."
-
-#, python-format
-msgid "Wait please while scanning your %s %s devices..."
-msgstr "Kérem várjon, ameddig a keresi a(z) %s %s készüléket..."
-
 msgid "Wait please while scanning..."
 msgstr "Kérem várjon, mialatt a keresés folyik..."
 
@@ -22154,7 +22298,7 @@ msgid "Welcome to IceTV"
 msgstr "Üdvözöljük az IceTV-ben"
 
 msgid ""
-"Welcome to openATV.\n"
+"Welcome to OpenATV.\n"
 "\n"
 "Use the UP/DOWN buttons on your remote control to select an option. Use the LEFT/RIGHT buttons to change the values of a configurable option. After that, press OK to proceed to the next screen."
 msgstr ""
@@ -22308,9 +22452,6 @@ msgstr "Ha egy csatornán egyszerre elérhető DVB-felirat és Teletext felirat 
 msgid "When enabled, graphical DVB subtitles will be displayed at their original position."
 msgstr "A DVB felirat eredeti helyen történő megjelenítése."
 
-msgid "When enabled, graphical DVB subtitles will be displayed in yellow, instead of the original color."
-msgstr "A DVB felirat átszínezése sárgára, az eredeti szín helyett."
-
 msgid "When enabled, it is possible to leave the movie player with exit."
 msgstr "Lehessen kilépni a lejátszóból az EXIT gomb megnyomásával."
 
@@ -22455,6 +22596,12 @@ msgstr "Téli sportok"
 msgid "Wipe"
 msgstr ""
 
+msgid "Wipe Storage Device"
+msgstr ""
+
+msgid "Wiping storage device..."
+msgstr ""
+
 msgid "Wireless LAN"
 msgstr "Vezeték nélküli hálózat"
 
@@ -22581,9 +22728,6 @@ msgstr "Év"
 
 msgid "Yellow"
 msgstr "Sárga"
-
-msgid "Yellow DVB subtitles"
-msgstr "DVB feliratok színe: sárga"
 
 msgid "Yemen"
 msgstr "Jemen"
@@ -24023,6 +24167,101 @@ msgstr "igen (állapotok megtartása)"
 
 msgid "®"
 msgstr "®"
+
+#~ msgid "PowerTimer"
+#~ msgstr "Kikapcsolás Időzítő"
+
+#~ msgid "PowerTimers"
+#~ msgstr "Kikapcsolás Időzítők"
+
+#, fuzzy
+#~ msgid "Show the PowerTimer"
+#~ msgstr "A Bekapcsolás időzítő mutatása..."
+
+#, python-format
+#~ msgid ""
+#~ "Changes need a system restart to take effect.\n"
+#~ "Restart your %s %s now?"
+#~ msgstr ""
+#~ "A változásoknak szükségük van egy rendszer újra indításra, hogy életbe lépjenek.\n"
+#~ "Indítsa újra a(z) %s %s készüléket most?"
+
+#~ msgid "Check"
+#~ msgstr "Ellenőrzés"
+
+#~ msgid "Check HDD"
+#~ msgstr "Merevlemez ellenőrzés"
+
+#~ msgid "Convert EXT3 File System to EXT4"
+#~ msgstr "Konvertálás ext3-ról ext4-re"
+
+#~ msgid "Convert ext3 to ext4"
+#~ msgstr "Konvertálás ext3-ról ext4-re"
+
+#~ msgid "Device: "
+#~ msgstr "Eszköznév: "
+
+#~ msgid "Filesystem check your hard drive"
+#~ msgstr "A merevlemez fájlrendszerének ellenőrzése"
+
+#~ msgid "Format HDD"
+#~ msgstr "Merevlemez formázás"
+
+#~ msgid "Format your hard drive"
+#~ msgstr "A merevlemez formázása"
+
+#~ msgid "GB"
+#~ msgstr "GB"
+
+#~ msgid "Initialization"
+#~ msgstr "Inicializálás"
+
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Mount: "
+#~ msgstr "Csatlakozás: "
+
+#~ msgid "Mounts Devices"
+#~ msgstr "Csatlakoztatott eszközők"
+
+#~ msgid "Please wait."
+#~ msgstr "Kérjük, várjon."
+
+#, python-format
+#~ msgid "Restart %s %s."
+#~ msgstr "Újraindítása a(z) %s %s készüléknek."
+
+#~ msgid "Select HDD"
+#~ msgstr "Háttértár kiválasztása"
+
+#~ msgid "Setup Mounts"
+#~ msgstr "Csatolás Beállítások"
+
+#~ msgid "TB"
+#~ msgstr "TB"
+
+#~ msgid "This Device is already mounted as HDD."
+#~ msgstr "Ez az eszköz már csatlakoztatva van Merevlemezként."
+
+#~ msgid "Updating mount locations."
+#~ msgstr "Csatlakozási helyek frissítése."
+
+#~ msgid "Use as HDD"
+#~ msgstr "Használat Merevlemezként"
+
+#~ msgid "Wait please while scanning for devices..."
+#~ msgstr "Kérem várjon, ameddig az eszközök keresése folyamatban van..."
+
+#, python-format
+#~ msgid "Wait please while scanning your %s %s devices..."
+#~ msgstr "Kérem várjon, ameddig a keresi a(z) %s %s készüléket..."
+
+#~ msgid "When enabled, graphical DVB subtitles will be displayed in yellow, instead of the original color."
+#~ msgstr "A DVB felirat átszínezése sárgára, az eredeti szín helyett."
+
+#~ msgid "Yellow DVB subtitles"
+#~ msgstr "DVB feliratok színe: sárga"
 
 #, fuzzy
 #~ msgid "E "

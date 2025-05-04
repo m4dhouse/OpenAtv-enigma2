@@ -69,10 +69,9 @@ class InfoBar(InfoBarBase, InfoBarShowHide,
 			"openIMDB": (self.openIMDB, _("Open IMDb")),
 			"showMC": (self.showMediaCenter, _("Show the media center")),
 			"openSleepTimer": (self.openSleepTimer, _("Show the SleepTimer")),
-			"openPowerTimerList": (self.openPowerTimerList, _("Show the PowerTimer")),
+			"openSchedulerList": (self.openSchedulerList, _("Show the Scheduler")),
 			"ZoomInOut": (self.ZoomInOut, _("Zoom In/Out TV")),
 			"ZoomOff": (self.ZoomOff, _("Zoom Off")),
-			"HarddiskSetup": (self.HarddiskSetup, _("Select HDD")),
 			"showWWW": (self.showPORTAL, _("Open MediaStream")),
 			"showSetup": (self.showSetup, _("Show setup")),
 			"showInformation": (self.showInformation, _("Show Information")),
@@ -280,9 +279,9 @@ class InfoBar(InfoBarBase, InfoBarShowHide,
 		from Screens.Timers import RecordTimerOverview
 		self.session.open(RecordTimerOverview)
 
-	def openPowerTimerList(self):
-		from Screens.Timers import PowerTimerOverview
-		self.session.open(PowerTimerOverview)
+	def openSchedulerList(self):
+		from Screens.Timers import SchedulerOverview
+		self.session.open(SchedulerOverview)
 
 	@staticmethod
 	def _getAutoTimerPluginFunc():
@@ -359,10 +358,6 @@ class InfoBar(InfoBarBase, InfoBarShowHide,
 			file = open('/proc/stb/vmpeg/0/zoomrate', 'w')
 			file.write(str(0))
 			file.close()
-
-	def HarddiskSetup(self):
-		from Screens.HarddiskSetup import HarddiskSelection
-		self.session.open(HarddiskSelection)
 
 	def showPORTAL(self):
 		try:

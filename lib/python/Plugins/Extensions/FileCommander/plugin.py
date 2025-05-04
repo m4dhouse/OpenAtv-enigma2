@@ -43,7 +43,7 @@ from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Tools.BoundFunction import boundFunction
 from Tools.Conversions import NumberScaler
 from Tools.Directories import SCOPE_PLUGINS, copyFile, fileReadLines, fileWriteLines, resolveFilename
-from Tools.Notifications import AddNotification
+from Tools.Notifications import AddNotification, AddPopup
 from Tools.NumericalTextInput import NumericalTextInput
 
 MODULE_NAME = __name__.split(".")[-1]
@@ -1010,7 +1010,7 @@ class FileCommander(Screen, NumericalTextInput, StatInfo):
 
 	def keyManageBookmarks(self, current):
 		bookmarks = config.plugins.FileCommander.bookmarks.value
-		order = config.misc.pluginlist.fc_bookmarks_order.value.split(",")
+		order = eval(config.misc.pluginlist.fcBookmarksOrder.value)
 		directory = current and self.sourceColumn.getCurrentDirectory() or self.sourceColumn.getPath()
 		if directory in bookmarks:
 			bookmarks.remove(directory)
@@ -1024,8 +1024,8 @@ class FileCommander(Screen, NumericalTextInput, StatInfo):
 			self.displayStatus(_("Bookmark added."))
 		config.plugins.FileCommander.bookmarks.value = bookmarks
 		config.plugins.FileCommander.bookmarks.save()
-		config.misc.pluginlist.fc_bookmarks_order.value = ",".join(order)
-		config.misc.pluginlist.fc_bookmarks_order.save()
+		config.misc.pluginlist.fcBookmarksOrder.value = str(order)
+		config.misc.pluginlist.fcBookmarksOrder.save()
 
 	def keyMediaInfo(self):
 		self.shortcutAction("mediainfo")
@@ -1576,13 +1576,13 @@ class FileCommander(Screen, NumericalTextInput, StatInfo):
 
 		bookmarks = [(x, x) for x in config.plugins.FileCommander.bookmarks.value]
 		bookmarks.insert(0, (_("Storage Devices"), None))
-		order = config.misc.pluginlist.fc_bookmarks_order.value.split(",")
+		order = eval(config.misc.pluginlist.fcBookmarksOrder.value)
 		if order and _("Storage Devices") in order:
 			order.remove(_("Storage Devices"))
 		order.insert(0, _("Storage Devices"))
-		config.misc.pluginlist.fc_bookmarks_order.value = ",".join(order)
-		config.misc.pluginlist.fc_bookmarks_order.save()
-		self.session.openWithCallback(selectBookmarkCallback, ChoiceBox, title=_("Select Bookmark"), list=bookmarks, reorderConfig="fc_bookmarks_order")
+		config.misc.pluginlist.fcBookmarksOrder.value = str(order)
+		config.misc.pluginlist.fcBookmarksOrder.save()
+		self.session.openWithCallback(selectBookmarkCallback, ChoiceBox, title=_("Select Bookmark"), list=bookmarks, reorderConfig="fcBookmarksOrder")
 
 	def keySettings(self):
 		def settingsCallback(*answer):
@@ -2051,6 +2051,8 @@ class FileCommanderArchiveExtract(FileCommanderArchiveBase):
 					self["data"].setText("\n".join([x[2:] for x in [x for x in data.split("\n") if x.startswith("- ")]]))
 
 				self.processArguments(target, ["/usr/bin/7za", "/usr/bin/7za", "x", "-ba", "-bb1", "-bd", "-y", self.path], displayData, self.updateActionMap)
+		else:
+			self.close()
 
 	def updateActionMap(self, retVal=None):
 		self["navigationActions"].setEnabled(self["data"].isNavigationNeeded())
