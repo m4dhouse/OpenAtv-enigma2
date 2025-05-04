@@ -1523,6 +1523,7 @@ def loadSingleSkinData(desktop, screenID, domSkin, pathSkin, scope=SCOPE_GUISKIN
 				style.setHeaderFont(parseFont(configList.attrib.get("headerFont", "Regular;20"), ((1, 1), (1, 1))))
 			style.setValue(eWindowStyleSkinned.valueEntryLeftOffset, parseInteger(configList.attrib.get("entryLeftOffset", "15")))
 			style.setValue(eWindowStyleSkinned.valueHeaderLeftOffset, parseInteger(configList.attrib.get("headerLeftOffset", "15")))
+			style.setValue(eWindowStyleSkinned.valueIndentSize, parseInteger(configList.attrib.get("indentSize", "20")))
 		for label in tag.findall("label"):
 			style.setLabelFont(parseFont(label.attrib.get("font", "Regular;20"), ((1, 1), (1, 1))))
 		for listBox in tag.findall("listbox"):
@@ -1872,7 +1873,7 @@ class TemplateParser():
 					return 0xff000000 | int(color[1:])
 				return parseColor(color).argb()
 			except Exception as err:
-				print("[MultiContent] Error: Resolve color '{str(err)}'!")
+				print(f"[MultiContent] Error: Resolve color '{str(err)}'!")
 			return None
 		return color
 
@@ -2214,7 +2215,8 @@ def readSkin(screen, skin, names, desktop):
 					args = {
 						"scale": context.scale,
 						"dom": widgetTemplates,
-						"size": widget.attrib.get("size")
+						"itemHeight": int(widget.attrib.get("itemHeight", 0)),
+						"itemWidth": int(widget.attrib.get("itemWidth", 0))
 					}
 					connection = converterClass(args)
 					connection.connect(source)
@@ -2231,7 +2233,7 @@ def readSkin(screen, skin, names, desktop):
 				# print(f"[Skin] DEBUG: Params='{parms}'.")
 				try:
 					converterClass = my_import(".".join(("Components", "Converter", converterType))).__dict__.get(converterType)
-				except ImportError as err:
+				except ImportError:
 					raise SkinError(f"Converter '{converterType}' not found")
 				connection = None
 				for element in source.downstream_elements:
@@ -2243,7 +2245,7 @@ def readSkin(screen, skin, names, desktop):
 				source = connection
 			try:
 				rendererClass = my_import(".".join(("Components", "Renderer", widgetRenderer))).__dict__.get(widgetRenderer)
-			except ImportError as err:
+			except ImportError:
 				raise SkinError(f"Renderer '{widgetRenderer}' not found")
 			renderer = rendererClass()  # Instantiate renderer.
 			renderer.connect(source)  # Connect to source.

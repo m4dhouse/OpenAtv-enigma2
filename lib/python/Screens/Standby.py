@@ -10,6 +10,7 @@ from Components.Harddisk import harddiskmanager
 from Components.ImportChannels import ImportChannels
 from Components.Label import Label
 import Components.RecordingConfig
+from Components.ScrambledRecordings import ScrambledRecordings
 from Components.Sources.StreamService import StreamServiceList
 from Components.SystemInfo import BoxInfo, getBoxDisplayName
 from Components.Task import job_manager
@@ -201,12 +202,21 @@ class Standby2(Screen):
 
 		self.paused_service = None
 		self.prev_running_service = None
+		self.correctChannelNumber = False
 
 		self.prev_running_service = self.session.nav.getCurrentlyPlayingServiceOrGroup()
 		service = self.prev_running_service and self.prev_running_service.toString()
 		if service:
-			if service.startswith("1:") and service.rsplit(":", 1)[1].startswith("/"):
-				self.paused_service = self.session.current_dialog
+			service = eServiceReference(service)
+			if service and service.type == eServiceReference.idDVB and service.getPath().startswith("/"):
+				if hasattr(self.session.current_dialog, "pauseService"):
+					self.paused_service = self.session.current_dialog
+				else:
+					for screen in self.session.allDialogs:
+						if screen.__class__.__name__ in ("MoviePlayer", "EMCMediaCenter"):
+							self.paused_service = screen
+							break
+			if self.paused_service:
 				self.paused_service.pauseService()
 		if not self.paused_service:
 			self.timeHandler = eDVBLocalTimeHandler.getInstance()
@@ -249,10 +259,13 @@ class Standby2(Screen):
 			service = self.prev_running_service.toString()
 			if config.servicelist.startupservice_onstandby.value:
 				self.session.nav.playService(eServiceReference(config.servicelist.startupservice.value))
-				from Screens.InfoBar import InfoBar
-				InfoBar.instance and InfoBar.instance.servicelist.correctChannelNumber()
+				self.correctChannelNumber = True
 			else:
 				self.session.nav.playService(self.prev_running_service)
+			if self.correctChannelNumber:
+				from Screens.InfoBar import InfoBar
+				InfoBar.instance and InfoBar.instance.servicelist.correctChannelNumber()
+				self.correctChannelNumber = False
 		self.session.screen["Standby"].boolean = False
 		globalActionMap.setEnabled(True)
 		for hdd in harddiskmanager.HDDList():
@@ -349,12 +362,19 @@ class TryQuitMainloop(MessageBox):
 		self.ptsmainloopvalue = retvalue
 		recordings = session.nav.getRecordings(False, Components.RecordingConfig.recType(config.recording.warn_box_restart_rec_types.getValue()))
 		jobs = len(job_manager.getPendingJobs())
+		if BoxInfo.getItem("CanDescrambleInStandby"):
+			scrambledRecordings = ScrambledRecordings()
+			scrambledList = scrambledRecordings.readList(returnLength=True)
+		else:
+			scrambledList = []
+
 		inTimeshift = Screens.InfoBar.InfoBar and Screens.InfoBar.InfoBar.instance and Screens.InfoBar.InfoBar.ptsGetTimeshiftStatus(Screens.InfoBar.InfoBar.instance)
 		self.connected = False
 		reason = ""
-		next_rec_time = -1
+		nextRecordingTime = -1
+		self.descramble = False
 		if not recordings:
-			next_rec_time = session.nav.RecordTimer.getNextRecordingTime()
+			nextRecordingTime = session.nav.RecordTimer.getNextRecordingTime()
 #		if jobs:
 #			reason = (ngettext("%d job is running in the background!", "%d jobs are running in the background!", jobs) % jobs) + '\n'
 #			if jobs == 1:
@@ -369,7 +389,7 @@ class TryQuitMainloop(MessageBox):
 			reason = _("You seem to be in time shift!") + '\n'
 			default_yes = True
 			timeout = 30
-		elif recordings or (next_rec_time > 0 and (next_rec_time - time()) < 360):
+		elif recordings or (nextRecordingTime > 0 and (nextRecordingTime - time()) < 360):
 			reason = _("Recording(s) are in progress or coming up in few seconds!") + '\n'
 			default_yes = False
 			timeout = 30
@@ -384,7 +404,24 @@ class TryQuitMainloop(MessageBox):
 			reason = _("A file from media is in use!")
 			default_yes = False
 			timeout = 30
-
+		elif jobs and retvalue in (QUIT_SHUTDOWN, QUIT_REBOOT, QUIT_KODI):
+			reason = _('%d jobs are running in the background!') % jobs
+			default_yes = False
+			timeout = 30
+		elif len(scrambledList) and retvalue == QUIT_SHUTDOWN and config.recording.standbyDescrambleShutdown.value:
+			duration = 0
+			for scrambledListItem in scrambledList:
+				duration += scrambledListItem[1]
+			count = len(scrambledList)
+			reason = [
+				ngettext("There is %d scrambled recording, which will be unscrambled during Standby.", "There are %d scrambled recordings, which will be unscrambled during Standby.", count) % count,
+				_("The process will take approximately %d minutes to complete.") % min(int(duration // 60), 2),
+				_("Select 'Yes' to shut down immediately instead of starting the descramble.")
+			]
+			reason = f"{reason[0]} {reason[1]}\n\n{reason[2]}"
+			default_yes = False
+			self.descramble = True
+			timeout = 30
 		if reason and inStandby:
 			session.nav.record_event.append(self.getRecordEvent)
 			self.skinName = ""
@@ -454,6 +491,10 @@ class TryQuitMainloop(MessageBox):
 
 			quitMainloop(self.retval)
 		else:
+			if self.descramble:
+				from Components.PvrDescrambleConvert import pvr_descramble_convert
+				if pvr_descramble_convert.scrambledRecordsLeft():
+					self.session.open(Standby2)
 			MessageBox.close(self, True)
 
 	def __onShow(self):

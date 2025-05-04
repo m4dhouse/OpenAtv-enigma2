@@ -67,11 +67,14 @@ public:
 	std::string path;
 	std::string alternativeurl;
 	std::string suburi;
+	bool isStreamRelay = false;
 #endif
 	std::string getPath() const { return path; }
 	void setPath( const std::string &n ) { path=n; }
-	void setAlternativeUrl( const std::string &n ) { alternativeurl=n; }
+	void setAlternativeUrl( const std::string &n, bool isSR = false ) { alternativeurl=n; isStreamRelay=isSR; }
 	void setSubUri( const std::string &n ) { suburi=n; }
+	bool getIsStreamRelay() const { return isStreamRelay; }
+	std::string getAlternativeUrl() const { return alternativeurl; }
 
 	unsigned int getUnsignedData(unsigned int num) const
 	{
@@ -983,6 +986,9 @@ public:
 
 		evFccFailed,
 
+		evUpdateTags,
+		evUpdateIDv3Cover,
+
 		evUser = 0x100
 	};
 };
@@ -998,11 +1004,7 @@ class iPlayableService: public iPlayableService_ENUMS, public iObject
 public:
 #ifndef SWIG
 
-#if SIGCXX_MAJOR_VERSION == 2
-	virtual RESULT connectEvent(const sigc::slot2<void,iPlayableService*,int> &event, ePtr<eConnection> &connection)=0;
-#else
 	virtual RESULT connectEvent(const sigc::slot<void(iPlayableService*,int)> &event, ePtr<eConnection> &connection)=0;
-#endif
 
 #endif
 	virtual RESULT start()=0;
@@ -1051,6 +1053,7 @@ public:
 		evPvrTuneStart,
 		evRecordAborted,
 		evGstRecordEnded,
+		evPvrEof,
 	};
 	enum {
 		NoError=0,
@@ -1061,6 +1064,7 @@ public:
 		errTuneFailed=-255,
 		errMisconfiguration = -256,
 		errNoResources = -257,
+		errNoCiConnected = -258,
 	};
 };
 
@@ -1073,11 +1077,7 @@ class iRecordableService: public iRecordableService_ENUMS, public iObject
 #endif
 public:
 #ifndef SWIG
-#if SIGCXX_MAJOR_VERSION == 2
-	virtual RESULT connectEvent(const sigc::slot2<void,iRecordableService*,int> &event, ePtr<eConnection> &connection)=0;
-#else
 	virtual RESULT connectEvent(const sigc::slot<void(iRecordableService*,int)> &event, ePtr<eConnection> &connection)=0;
-#endif
 #endif
 	virtual SWIG_VOID(RESULT) getError(int &SWIG_OUTPUT)=0;
 	virtual RESULT prepare(const char *filename, time_t begTime=-1, time_t endTime=-1, int eit_event_id=-1, const char *name=0, const char *descr=0, const char *tags=0, bool descramble = true, bool recordecm = false, int packetsize = 188)=0;
@@ -1087,6 +1087,7 @@ public:
 	virtual SWIG_VOID(RESULT) frontendInfo(ePtr<iFrontendInformation> &SWIG_OUTPUT)=0;
 	virtual SWIG_VOID(RESULT) stream(ePtr<iStreamableService> &SWIG_OUTPUT)=0;
 	virtual SWIG_VOID(RESULT) subServices(ePtr<iSubserviceList> &SWIG_OUTPUT)=0;
+	virtual SWIG_VOID(RESULT) getServiceType(int &SWIG_OUTPUT)=0;
 	virtual SWIG_VOID(RESULT) getFilenameExtension(std::string &SWIG_OUTPUT)=0;
 };
 SWIG_TEMPLATE_TYPEDEF(ePtr<iRecordableService>, iRecordableServicePtr);

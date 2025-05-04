@@ -88,7 +88,7 @@ class ImageBackup(Screen):
 		self.zipCmd = "/usr/bin/7za"
 		self.runScript = "/tmp/imagebackup.sh"
 		self.usbBin = "usb_update.bin"
-		self.separator = f"{"_" * 70}"
+		self.separator = f"{"_" * 66}"
 		self.onLayoutFinish.append(self.layoutFinished)
 		self.callLater(self.getImageList)
 
@@ -251,7 +251,7 @@ class ImageBackup(Screen):
 			cmdLines.append("\tDisplayDistro=Unknown")
 			cmdLines.append("\tImageVersion=Unknown")
 			cmdLines.append("fi")
-			cmdLines.append(f"{self.echoCmd} \"Image version $DisplayDistro $ImageVersion.\"")
+			cmdLines.append(f"{self.echoCmd} \"{_("Image version")} $DisplayDistro $ImageVersion.\"")
 			# Build the "imageversion" inventory file.
 			cmdLines.append(f"{self.echoCmd} \"[Image Version]\" > /tmp/imageversion")
 			cmdLines.append(f"{self.echoCmd} \"distro=$Distro\" >> /tmp/imageversion")
@@ -346,7 +346,9 @@ class ImageBackup(Screen):
 			# Create the kernel dump.
 			cmdLines.append(f"{self.echoCmd} \"{_("Create kernel dump.")}\"")
 			kernelFile = BoxInfo.getItem("kernelfile")
-			if MultiBoot.canMultiBoot() or mtdKernel.startswith("mmcblk0") or model in ("h8", "hzero"):
+			if boxName in ("dm820", "dm7080"):
+				cmdLines.append(f"{self.echoCmd} \"dummy file dont delete\" > {workDir}{kernelFile}")
+			elif MultiBoot.canMultiBoot() or mtdKernel.startswith("mmcblk0") or model in ("h8", "hzero"):
 				if BoxInfo.getItem("HasKexecMultiboot") or BoxInfo.getItem("HasGPT"):
 					cmdLines.append(f"{self.copyCmd} /{mtdKernel} {workDir}{kernelFile}")
 				else:

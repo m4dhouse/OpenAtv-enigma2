@@ -61,6 +61,7 @@ def InitConfig():
 		"/usr/lib/enigma2/python/Plugins/Extensions/TVSpielfilm/db", "/etc/ConfFS",
 		"/etc/rc3.d/S99tuner.sh",
 		"/usr/bin/enigma2_pre_start.sh",
+		"/var/lib/bluetooth/",
 		eEnv.resolve("${datadir}/enigma2/keymap.usr"),
 		eEnv.resolve("${datadir}/enigma2/keymap_usermod.xml")]\
 		+ eEnv_resolve_multi("${sysconfdir}/opkg/*-secret-feed.conf")\
@@ -215,7 +216,7 @@ class BackupScreen(ConfigListScreen, Screen):
 
 		if len(choices):
 			if len(choices) > 1:
-				self.session.openWithCallback(backuplocationCB, MessageBox, _("Please select medium to use as backup location"), list=choices, default=index, windowTitle=_("Backup Location"))
+				self.session.openWithCallback(backuplocationCB, MessageBox, _("Please select medium to use as backup location"), list=choices, default=index, windowTitle=_("Backup Location"), timeout=10)
 			else:
 				backuplocationCB(choices[0][1])
 		else:

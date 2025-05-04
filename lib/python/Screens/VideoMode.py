@@ -465,6 +465,9 @@ isDedicated3D = False
 def applySettings(mode=config.osd.threeDmode.value, znorm=int(config.osd.threeDznorm.value)):
 	global previous, isDedicated3D
 	mode = isDedicated3D and mode == "auto" and "sidebyside" or mode
+
+	if not BoxInfo.getItem("3DMode"):
+		return
 	if previous != (mode, znorm):
 		try:
 			previous = (mode, znorm)
@@ -544,7 +547,7 @@ class AutoVideoMode(Screen):
 
 	def VideoChanged(self):
 		if config.av.autores.value == "disabled" or getAutoresPlugin_enabled():
-			#print "[VideoMode] autoresolution is disabled - resolution not changed !"
+			#print "[VideoMode] autoresolution is disabled - resolution not changed!"
 			return
 		if self.session.nav.getCurrentlyPlayingServiceReference() and not self.session.nav.getCurrentlyPlayingServiceReference().toString().startswith("4097:"):
 			delay = config.av.autores_delay.value

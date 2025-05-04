@@ -27,7 +27,7 @@ class CronTimers(Screen):
 			mkdir("/usr/script", 0o755)
 		self.setTitle(_("Cron Manager"))
 		self.onChangedEntry = []
-		self["lab1"] = Label(_("Autostart:"))
+		self["lab1"] = Label(_("Autostart") + ":")
 		self["labactive"] = Label(_("Active"))
 		self["labdisabled"] = Label(_("Disabled"))
 		self["lab2"] = Label(_("Current Status:"))
@@ -80,7 +80,7 @@ class CronTimers(Screen):
 		elif ("wget returned 1" or "wget returned 255" or "404 Not Found") in result:
 			self.session.openWithCallback(self.installPackageFailed, MessageBox, _("Sorry feeds are down for maintenance, please try again later."), type=MessageBox.TYPE_INFO, timeout=10, close_on_any_key=True)
 		else:
-			self.session.openWithCallback(self.installPackage, MessageBox, _("Ready to install \"%s\" ?") % self.service_name, MessageBox.TYPE_YESNO)
+			self.session.openWithCallback(self.installPackage, MessageBox, _("Ready to install \"%s\"?") % self.service_name, MessageBox.TYPE_YESNO)
 
 	def installPackage(self, val):
 		if val:
@@ -111,7 +111,7 @@ class CronTimers(Screen):
 
 	def removedataAvail(self, result, retval, extra_args):
 		if result:
-			self.session.openWithCallback(self.removePackage, MessageBox, _("Ready to remove \"%s\" ?") % self.service_name)
+			self.session.openWithCallback(self.removePackage, MessageBox, _("Ready to remove \"%s\"?") % self.service_name)
 		else:
 			self.close()
 
@@ -290,13 +290,13 @@ config.crontimers.dayofmonth = NoSave(ConfigInteger(default=1, limits=(1, 31)))
 class CronTimersConfig(ConfigListScreen, Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
-		Screen.setTitle(self, _("Cron Manager"))
+		self.setTitle(_("Cron Manager"))
 		self.skinName = "Setup"
 		self.onChangedEntry = []
 		self.list = []
 		ConfigListScreen.__init__(self, self.list, session=session, on_change=self.changedEntry)
-		self["key_red"] = Label(_("Close"))
-		self["key_green"] = Label(_("Save"))
+		self["key_red"] = StaticText(_("Close"))
+		self["key_green"] = StaticText(_("Save"))
 		self["actions"] = ActionMap(["WizardActions", "ColorActions", "VirtualKeyboardActions", "MenuActions"], {
 			"red": self.close,
 			"green": self.checkentry,

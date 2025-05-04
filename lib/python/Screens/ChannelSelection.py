@@ -42,6 +42,7 @@ from Screens.PictureInPicture import PictureInPicture
 from Screens.RdsDisplay import RassInteractive
 from Screens.Screen import Screen
 from Screens.Setup import Setup
+import Screens.Standby
 from Screens.TimerEdit import TimerSanityConflict
 from Screens.TimerEntry import InstantRecordTimerEntry, TimerEntry
 from Screens.VirtualKeyBoard import VirtualKeyboard
@@ -128,6 +129,9 @@ def parseNextEvent(items, isZapTimer=False):  # IanSav: This is only used in onc
 
 
 class ChannelSelectionBase(Screen):
+	MODE_TV = 0
+	MODE_RADIO = 1
+
 	def __init__(self, session):
 		def digitHelp():
 			return _("LCN style QuickSelect entry selection") if config.usage.show_channel_jump_in_servicelist.value == "quick" else _("SMS style QuickSelect entry selection")
@@ -217,7 +221,6 @@ class ChannelSelectionBase(Screen):
 		self.baseTitle = _("Channel Selection")
 		self.function = EDIT_OFF
 		self.getBouquetMode()
-		self.subservicesBouquet = subservices_tv_ref
 		self.instanceInfoBarSubserviceSelection = None
 		self.onLayoutFinish.append(self.layoutFinished)
 		self.onShown.append(self.applyKeyMap)
@@ -294,17 +297,24 @@ class ChannelSelectionBase(Screen):
 	def moveEnd(self):  # This is used by InfoBarGenerics.
 		self.servicelist.goBottom()
 
-	def setTvMode(self):
-		self.mode = MODE_TV
-		self.servicePath = self.servicePathTV
+	def getCurrentMode(self):
+		return self.mode
+
+	def setCurrentMode(self, mode):
+		if mode != MODE_RADIO:
+			mode = MODE_TV
+		self.servicePath = self.servicePathRadio if mode == MODE_RADIO else self.servicePathTV
+		self.mode = mode
 		self.getBouquetMode()
 		self.buildTitle()
+		# modeString = {MODE_RADIO: "Radio", MODE_TV: "TV"}.get(mode)
+		# print(f"[ChannelSelection] DEBUG {modeString} Mode selected.")
+
+	def setTvMode(self):
+		self.setCurrentMode(MODE_TV)
 
 	def setRadioMode(self):
-		self.mode = MODE_RADIO
-		self.servicePath = self.servicePathRadio
-		self.getBouquetMode()
-		self.buildTitle()
+		self.setCurrentMode(MODE_RADIO)
 
 	def getBouquetMode(self):
 		if self.mode == MODE_TV:
@@ -521,7 +531,7 @@ class ChannelSelectionBase(Screen):
 							ref.setName(_("Current transponder"))
 							self.servicelist.addService(ref, beforeCurrent=True)
 							if self.getSubservices():  # Add subservices selection if available.
-								ref = eServiceReference(self.subservicesBouquet)
+								ref = eServiceReference(subservices_tv_ref)
 								ref.setName(self.getServiceName(ref))
 								self.servicelist.addService(ref, beforeCurrent=True)
 						for (service_name, service_ref) in addCableAndTerrestrialLater:
@@ -682,7 +692,7 @@ class ChannelSelectionBase(Screen):
 	def getBouquetList(self):
 		bouquets = []
 		if self.isSubservices():
- 			bouquets.append((self.getServiceName(self.subservicesBouquet), self.subservicesBouquet))
+			bouquets.append((self.getServiceName(subservices_tv_ref), subservices_tv_ref))
 		serviceHandler = eServiceCenter.getInstance()
 		if config.usage.multibouquet.value:
 			list = serviceHandler.list(self.bouquet_root)
@@ -745,7 +755,7 @@ class ChannelSelectionBase(Screen):
 		subservices = subservices or self.getSubservices(service)
 		if subservices:
 			self.clearPath()
-			self.enterPath(self.subservicesBouquet)
+			self.enterPath(subservices_tv_ref)
 			self.fillVirtualSubservices(service, subservices)
 
 	def getSubservices(self, service=None):
@@ -773,10 +783,7 @@ class ChannelSelectionBase(Screen):
 		self.setCurrentSelection(service or self.session.nav.getCurrentlyPlayingServiceReference())
 
 	def isSubservices(self, path=None):
-		if not path:  # Current
-			path = self.getRoot()
-		if path:
-			return self.subservicesBouquet.getPath() == path.getPath()
+		return subservices_tv_ref == (path or self.getRoot() or eServiceReference())
 
 	def getMutableList(self, root=eServiceReference()):  # Override for subservices
 		# ChannelContextMenu.inBouquet = True --> Wrong menu
@@ -2369,12 +2376,8 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 			iPlayableService.evStart: self.__evServiceStart,
 			iPlayableService.evEnd: self.__evServiceEnd
 		})
-		try:
-			if ChannelSelection.instance:
-				raise AssertionError("[ChannelSelection] Class InfoBar is a singleton class and just one instance of this class is allowed!")
-		except Exception:
-			pass
-		ChannelSelection.instance = self
+		if not ChannelSelection.instance:  # Use only the first instance of ChannelSelection
+			ChannelSelection.instance = self
 		self.startServiceRef = None
 		self.history_tv = []
 		self.history_radio = []
@@ -2423,8 +2426,9 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 
 	def __evServiceStart(self):
 		if self.dopipzap and hasattr(self.session, "pip"):
-			self.servicelist.setPlayableIgnoreService(self.session.pip.getCurrentServiceReference() or eServiceReference())
+			self.servicelist.setPlayableIgnoreService(self.session.pip.getCurrentService() or eServiceReference())
 		else:
+			# self.servicelist.setPlayableIgnoreService(self.session.nav.getCurrentServiceReferenceOriginal() or eServiceReference())
 			service = self.session.nav.getCurrentService()
 			if service:
 				info = service.info()
@@ -2434,7 +2438,7 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 					ref = eServiceReference(refstr)
 					if isStreamRelay:
 						if not [timer for timer in self.session.nav.RecordTimer.timer_list if timer.state == 2 and refstr == timer.service_ref]:
-							ref.setAlternativeUrl(refstr)
+							ref.setAlternativeUrl(refstr, True)
 					self.servicelist.setPlayableIgnoreService(ref)
 
 	def __evServiceEnd(self):
@@ -2486,13 +2490,28 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 				self.setModeRadio()
 		else:
 			self.setModeTv()
+
+		standbyScreen = None
+		doPlay = False
+		if self == ChannelSelection.instance and Screens.Standby.inStandby:  # Find Standby screen if already inStandby.
+			for screen in self.session.allDialogs:
+				if screen.__class__.__name__ == "Standby":
+					standbyScreen = screen
+					break
+
 		lastservice = eServiceReference(self.lastservice.value)
 		if lastservice.valid():
+			if standbyScreen:
+				standbyScreen.prev_running_service = lastservice  # Save the last service in Standby screen.
+				standbyScreen.correctChannelNumber = True
+			elif self == ChannelSelection.instance:
+				doPlay = True  # Do real playback only for the first instance and only if not in Standby
+
 			if self.isSubservices():
-				self.zap(ref=lastservice)
+				self.zap(ref=lastservice, doPlay=doPlay)
 				self.enterSubservices()
 			else:
-				self.zap()
+				self.zap(doPlay=doPlay)
 
 	def channelSelected(self):
 		ref = self.getCurrentSelection()
@@ -2581,7 +2600,7 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 		if hasattr(self.session, "pip"):
 			self.session.pip.inactive()
 
-	def zap(self, enable_pipzap=False, preview_zap=False, checkParentalControl=True, ref=None):
+	def zap(self, enable_pipzap=False, preview_zap=False, checkParentalControl=True, ref=None, doPlay=True):
 		self.curRoot = self.startRoot
 		nref = ref or self.getCurrentSelection()
 		ref = self.session.nav.getCurrentlyPlayingServiceOrGroup()
@@ -2590,14 +2609,19 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 			if ref is None or ref != nref:
 				nref = self.session.pip.resolveAlternatePipService(nref)
 				if nref and (not checkParentalControl or parentalControl.isServicePlayable(nref, boundFunction(self.zap, enable_pipzap=True, checkParentalControl=False))):
-					self.session.pip.playService(nref)
-					self.__evServiceStart()
-					self.showPipzapMessage()
+					zap_res = self.session.pip.playService(nref)
+					if zap_res == 1:
+						self.__evServiceStart()
+						self.showPipzapMessage()
+					elif zap_res == 2:
+						self.retryServicePlayTimer = eTimer()
+						self.retryServicePlayTimer.callback.append(boundFunction(self.zap, enable_pipzap=True, checkParentalControl=False))
+						self.retryServicePlayTimer.start(config.misc.softcam_streamrelay_delay.value, True)
 				else:
 					self.setStartRoot(self.curRoot)
 					self.setCurrentSelection(ref)
 		elif ref is None or ref != nref:
-			Screens.InfoBar.InfoBar.instance.checkTimeshiftRunning(boundFunction(self.zapCheckTimeshiftCallback, enable_pipzap, preview_zap, nref))
+			Screens.InfoBar.InfoBar.instance.checkTimeshiftRunning(boundFunction(self.zapCheckTimeshiftCallback, enable_pipzap, preview_zap, nref, doPlay))
 		elif not preview_zap:
 			self.lastroot.value = ""  # force save root.
 			self.saveRoot()
@@ -2609,10 +2633,11 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 			self.rootChanged = False
 			self.revertMode = None
 
-	def zapCheckTimeshiftCallback(self, enable_pipzap, preview_zap, nref, answer):
+	def zapCheckTimeshiftCallback(self, enable_pipzap, preview_zap, nref, doPlay, answer):
 		if answer:
 			self.new_service_played = True
-			self.session.nav.playService(nref)
+			if doPlay:
+				self.session.nav.playService(nref)
 			if not preview_zap:
 				self.lastroot.value = ""  # Force save root.
 				self.saveRoot()
@@ -2641,7 +2666,7 @@ class ChannelSelection(ChannelSelectionBase, ChannelSelectionEdit, ChannelSelect
 		return ret
 
 	def addToHistory(self, ref):
-		if not self.isSubservices():
+		if not self.isSubservices() or not self.history:
 			if self.delhistpoint is not None:
 				x = self.delhistpoint
 				while x <= len(self.history) - 1:
@@ -3493,6 +3518,7 @@ class ChannelSelectionSetup(Setup):
 				for index, dialog in enumerate(session.dialog_stack):
 					if isinstance(dialog[0], ChannelSelection):
 						oldDialogIndex = (index, dialog[1])
+				ChannelSelection.instance = None
 				InfoBarInstance.servicelist = session.instantiateDialog(ChannelSelection)
 				InfoBarInstance.servicelist.summaries = oldSummarys
 				InfoBarInstance.servicelist.isTmp = False

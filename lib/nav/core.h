@@ -34,7 +34,9 @@ public:
     pNavigation(int decoder = 0);
 
     RESULT playService(const eServiceReference &service);
+	RESULT setPiPService(const eServiceReference &service);
     RESULT stopService();
+	RESULT clearPiPService();
     RESULT pause(int p);
     SWIG_VOID(RESULT) getCurrentService(ePtr<iPlayableService> &SWIG_OUTPUT);
 
@@ -62,11 +64,9 @@ class eNavigation: public iObject, public sigc::trackable
 	ePtr<iServiceHandler> m_servicehandler;
 
 	ePtr<iPlayableService> m_runningService;
-#if SIGCXX_MAJOR_VERSION == 2
-	sigc::signal1<void, int> m_event;
-#else
+	eServiceReference m_runningServiceRef;
+	eServiceReference m_runningPiPServiceRef;
 	sigc::signal<void(int)> m_event;
-#endif
 	ePtr<eConnection> m_service_event_conn;
 	void serviceEvent(iPlayableService* service, int event);
 
@@ -75,11 +75,7 @@ class eNavigation: public iObject, public sigc::trackable
 	std::map<ePtr<iRecordableService>, pNavigation::RecordType, std::less<iRecordableService*> > m_recordings_types;
 	std::set<ePtr<iRecordableService>, std::less<iRecordableService*> > m_simulate_recordings;
 
-#if SIGCXX_MAJOR_VERSION == 2
-	sigc::signal2<void,ePtr<iRecordableService>,int> m_record_event;
-#else
 	sigc::signal<void(ePtr<iRecordableService>,int)> m_record_event;
-#endif
 	void recordEvent(iRecordableService* service, int event);
 
 	friend class eFCCServiceManager;
@@ -87,16 +83,15 @@ class eNavigation: public iObject, public sigc::trackable
 public:
 
 	RESULT playService(const eServiceReference &service);
-#if SIGCXX_MAJOR_VERSION == 2
-	RESULT connectEvent(const sigc::slot1<void,int> &event, ePtr<eConnection> &connection);
-	RESULT connectRecordEvent(const sigc::slot2<void,ePtr<iRecordableService>,int> &event, ePtr<eConnection> &connection);
-#else
+	RESULT setPiPService(const eServiceReference &service);
 	RESULT connectEvent(const sigc::slot<void(int)> &event, ePtr<eConnection> &connection);
 	RESULT connectRecordEvent(const sigc::slot<void(ePtr<iRecordableService>,int)> &event, ePtr<eConnection> &connection);
-#endif
 /*	int connectServiceEvent(const sigc::slot1<void,iPlayableService*,int> &event, ePtr<eConnection> &connection); */
 	RESULT getCurrentService(ePtr<iPlayableService> &service);
+	RESULT getCurrentServiceReference(eServiceReference &service);
+	RESULT getCurrentPiPServiceReference(eServiceReference &service);
 	RESULT stopService(void);
+	RESULT clearPiPService(void);
 
 	RESULT recordService(const eServiceReference &ref, ePtr<iRecordableService> &service, bool simulate, pNavigation::RecordType type);
 	RESULT stopRecordService(ePtr<iRecordableService> &service);

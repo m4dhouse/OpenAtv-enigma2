@@ -2,7 +2,7 @@ from os import remove
 from os.path import exists
 from time import ctime, time
 
-from enigma import eServiceCenter, eServiceReference, eTimer, getBestPlayableServiceReference, iPlayableService, iServiceInformation, pNavigation
+from enigma import eServiceCenter, eServiceReference, eTimer, getBestPlayableServiceReference, iPlayableService, iServiceInformation, iRecordableServicePtr, pNavigation
 
 import NavigationInstance
 import RecordTimer
@@ -29,6 +29,9 @@ MODULE_NAME = __name__.split(".")[-1]
 # TODO: Move most of the code to pNavgation and remove this stuff from python.
 #
 class Navigation:
+	playServiceExtensions = []
+	recordServiceExtensions = []
+
 	TIMER_TYPES = {
 		0: "Record-timer",
 		1: "Zap-timer",
@@ -50,6 +53,7 @@ class Navigation:
 		self.currentlyPlayingServiceReference = None
 		self.currentlyPlayingServiceOrGroup = None
 		self.currentlyPlayingService = None
+		self.originalPlayingServiceReference = None
 		Screens.Standby.TVstate()
 		self.skipWakeup = False
 		self.skipTVWakeup = False
@@ -282,37 +286,55 @@ class Navigation:
 		for x in self.record_event:
 			x(rec_service, event)
 
-	def serviceHook(self, ref):
-		wrappererror = None
-		nref = ref
-		if nref.getPath():
-			for p in plugins.getPlugins(PluginDescriptor.WHERE_PLAYSERVICE):
-				(newurl, errormsg) = p(service=nref)
-				if errormsg:
-					wrappererror = _("Error getting link via %s\n%s") % (p.name, errormsg)
-					break
-				elif newurl:
-					nref.setAlternativeUrl(newurl)
-					break
-			if wrappererror:
-				AddPopup(text=wrappererror, type=MessageBox.TYPE_ERROR, timeout=5, id="channelzapwrapper")
-		return nref, wrappererror
+	def restartService(self):
+		self.playService(self.currentlyPlayingServiceOrGroup, forceRestart=True)
 
-	def playService(self, ref, checkParentalControl=True, forceRestart=False, adjust=True, ignoreStreamRelay=False):
-		oldref = self.currentlyPlayingServiceOrGroup
-		if ref and oldref and ref == oldref and not forceRestart:
-			print("[Navigation] Ignore request to play already running service.  (1)")
-			return 1
-		print(f"[Navigation] Playing ref '{ref and ref.toString()}'.")
+	def playService(self, ref, checkParentalControl=True, forceRestart=False, adjust=True, ignoreStreamRelay=False, event=None):
+
 		if exists("/proc/stb/lcd/symbol_signal"):
 			signal = "1" if config.lcd.mode.value and ref and "0:0:0:0:0:0:0:0:0" not in ref.toString() else "0"
 			fileWriteLine("/proc/stb/lcd/symbol_signal", signal, source=MODULE_NAME)
+
+		# Some plugins send None as ref becasue want to shutdown enigma play system.
+		# So we have to stop current service if someone send None.
 		if ref is None:
 			self.stopService()
 			return 0
-		from Components.ServiceEventTracker import InfoBarCount
-		InfoBarInstance = InfoBarCount == 1 and InfoBar.instance
+
+		oldref = self.currentlyPlayingServiceOrGroup
+
+		if ref and oldref and ref == oldref and not forceRestart:
+			print("[Navigation] Ignore request to play already running service.  (1)")
+			return 1
+
+		# from Components.ServiceEventTracker import InfoBarCount
+		# InfoBarInstance = InfoBarCount == 1 and InfoBar.instance
+		InfoBarInstance = InfoBar.instance
+		isHandled = False
+
+		currentServiceSource = None
+		if InfoBarInstance:
+			currentServiceSource = InfoBarInstance.session.screen["CurrentService"]
+
+		if "%3a//" in ref.toString():
+			self.currentlyPlayingServiceReference = None
+			self.currentlyPlayingService = None
+			if currentServiceSource:
+				currentServiceSource.newService(False)
+
+		print(f"[Navigation] Playing ref '{ref and ref.toString()}'.")
+		self.currentlyPlayingServiceReference = ref
+		self.currentlyPlayingServiceOrGroup = ref
+		self.originalPlayingServiceReference = ref
+
 		isStreamRelay = False
+
+		if InfoBarInstance and currentServiceSource:
+			currentServiceSource.newService(ref)
+			InfoBarInstance.session.screen["Event_Now"].updateSource(self.currentlyPlayingServiceReference)
+			InfoBarInstance.session.screen["Event_Next"].updateSource(self.currentlyPlayingServiceReference)
+			InfoBarInstance.serviceStarted()
+
 		if not checkParentalControl or parentalControl.isServicePlayable(ref, boundFunction(self.playService, checkParentalControl=False, forceRestart=forceRestart, adjust=adjust)):
 			if ref.flags & eServiceReference.isGroup:
 				oldref = self.currentlyPlayingServiceReference or eServiceReference()
@@ -363,6 +385,10 @@ class Navigation:
 					playref, wrappererror = self.serviceHook(playref)
 					if wrappererror:
 						return 1
+
+				for f in Navigation.playServiceExtensions:
+					playref, isHandled = f(self, playref, event, InfoBarInstance)
+
 				print(f"[Navigation] Playref is '{playref.toString()}'.")
 				self.currentlyPlayingServiceOrGroup = ref
 				if InfoBarInstance and InfoBarInstance.servicelist.servicelist.setCurrent(ref, adjust):
@@ -380,9 +406,10 @@ class Navigation:
 					self.firstStart = False
 					self.retryServicePlayTimer.start(delay, True)
 					return 0
-				elif self.pnav.playService(playref):
+				elif not isHandled and self.pnav.playService(playref):
 					print(f"[Navigation] Failed to start '{playref.toString()}'.")
 					self.currentlyPlayingServiceReference = None
+					self.originalPlayingServiceReference = None
 					self.currentlyPlayingServiceOrGroup = None
 					if oldref and ("://" in oldref.getPath() or streamrelay.checkService(oldref)):
 						print("[Navigation] Streaming was active, try again.")  # Use timer to give the stream server the time to deallocate the tuner.
@@ -392,16 +419,38 @@ class Navigation:
 				self.skipServiceReferenceReset = False
 				if isStreamRelay and not self.isCurrentServiceStreamRelay:
 					self.isCurrentServiceStreamRelay = True
+				if InfoBarInstance and "%3a//" in playref.toString():
+					self.originalPlayingServiceReference = None
+					InfoBarInstance.serviceStarted()
 				return 0
 		elif oldref and InfoBarInstance and InfoBarInstance.servicelist.servicelist.setCurrent(oldref, adjust):
 			self.currentlyPlayingServiceOrGroup = InfoBarInstance.servicelist.servicelist.getCurrent()
 		return 1
+
+	def serviceHook(self, ref):
+		wrappererror = None
+		nref = ref
+		if nref.getPath():
+			for p in plugins.getPlugins(PluginDescriptor.WHERE_PLAYSERVICE):
+				(newurl, errormsg) = p(service=nref)
+				if errormsg:
+					wrappererror = _("Error getting link via %s\n%s") % (p.name, errormsg)
+					break
+				elif newurl:
+					nref.setAlternativeUrl(newurl)
+					break
+			if wrappererror:
+				AddPopup(text=wrappererror, type=MessageBox.TYPE_ERROR, timeout=5, id="channelzapwrapper")
+		return nref, wrappererror
 
 	def getCurrentlyPlayingServiceReference(self):
 		return self.currentlyPlayingServiceReference
 
 	def getCurrentlyPlayingServiceOrGroup(self):
 		return self.currentlyPlayingServiceOrGroup
+
+	def getCurrentServiceReferenceOriginal(self):
+		return self.originalPlayingServiceReference or self.currentlyPlayingServiceOrGroup
 
 	def getCurrentServiceRef(self):
 		curPlayService = self.getCurrentService()
@@ -432,6 +481,8 @@ class Navigation:
 				ref = getBestPlayableServiceReference(ref, eServiceReference(), simulate)
 			if type != (pNavigation.isPseudoRecording | pNavigation.isFromEPGrefresh):
 				ref, isStreamRelay = streamrelay.streamrelayChecker(ref)
+				for f in Navigation.recordServiceExtensions:
+					ref = f(self, ref)
 				#if not isStreamRelay:
 				#	ref, wrappererror = self.serviceHook(ref)
 			service = ref and self.pnav and self.pnav.recordService(ref, simulate, type)
@@ -439,11 +490,10 @@ class Navigation:
 				print("[Navigation] Record returned non-zero.")
 		return service
 
-	def restartService(self):
-		self.playService(self.currentlyPlayingServiceOrGroup, forceRestart=True)
-
 	def stopRecordService(self, service):
-		ret = self.pnav and self.pnav.stopRecordService(service)
+		ret = -1
+		if service and isinstance(service, iRecordableServicePtr):
+			ret = self.pnav and self.pnav.stopRecordService(service)
 		return ret
 
 	def getRecordings(self, simulate=False, type=pNavigation.isAnyRecording):

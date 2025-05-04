@@ -98,7 +98,7 @@ class OSCamGlobals():
 		ret = _("No system softcam configured!")
 		if BoxInfo.getItem("ShowOscamInfo"):
 			webif, port, api, ipv6compiled, signstatus, conffile, error = self.confPath()  # (True, 'http', '127.0.0.1', '8080', '/etc/tuxbox/config/oscam-trunk/', True, 'CN=...', 'oscam.conf', None)
-			proto, blocked = "http", False  # Assume that oscam webif is NOT blocking localhost, IPv6 is also configured if it is compiled in, and no user and password are required
+			ip, proto, blocked = "127.0.0.1", "http", False  # Assume that oscam webif is NOT blocking localhost, IPv6 is also configured if it is compiled in, and no user and password are required
 			user = pwd = None
 			conffile = "%s" % (conffile or "oscam.conf")
 			ret = _("OSCam webif disabled") if not error else error
@@ -492,9 +492,9 @@ class OSCamEntitlements(Screen, OSCamGlobals):
 				<parameter name="OSCamInfoBGcolors" value="0x10fef2e6, 0x10f0f4e5" />
 			</parameters>
 			<widget source="entitleslist" render="Listbox" position="15,165" size="1890,828" backgroundColor="#10b3b3b3" enableWrapAround="1" scrollbarMode="showOnDemand" >
-	  			<convert type="TemplatedMultiContent">
+				<convert type="TemplatedMultiContent">
 					{"templates":  # index 0 is backgroundcolor
-		  				{	"default": (36, [
+						{	"default": (36, [
 							MultiContentEntryText(pos=(0,0), size=(88,36), font=0, flags=RT_HALIGN_CENTER|RT_VALIGN_CENTER, color=0x000000, backcolor=MultiContentTemplateColor(0), text=1),  # Type
 							MultiContentEntryText(pos=(90,0), size=(103,36), font=0, flags=RT_HALIGN_CENTER|RT_VALIGN_CENTER, color=0x000000, backcolor=MultiContentTemplateColor(0), text=2),  # CAID
 							MultiContentEntryText(pos=(195,0), size=(118,36), font=0, flags=RT_HALIGN_CENTER|RT_VALIGN_CENTER, color=0x000000, backcolor=MultiContentTemplateColor(0), text=3),  # Provid
@@ -522,7 +522,7 @@ class OSCamEntitlements(Screen, OSCamGlobals):
 							MultiContentEntryText(pos=(1710,0), size=(73,36), font=0, flags=RT_HALIGN_CENTER|RT_VALIGN_CENTER, color=0x000000, backcolor=MultiContentTemplateColor(0), text=19),  # Resx
 							MultiContentEntryText(pos=(1785,0), size=(105,36), font=0, flags=RT_HALIGN_CENTER|RT_VALIGN_CENTER, color=0x000000, backcolor=MultiContentTemplateColor(0), text=20)  # Reshare
 							])
-	  					},
+						},
 						"fonts": [gFont("Regular",27)], "itemHeight":36
 					}
 				</convert>
@@ -532,13 +532,13 @@ class OSCamEntitlements(Screen, OSCamGlobals):
 			</widget>
 			<widget source="key_blue" render="Label" position="1170,1020" size="380,42" font="Regular;30" halign="left" valign="center" foregroundColor="grey" objectTypes="key_blue,StaticText">
 				<convert type="ConditionalShowHide" />
-			</widget>			
+			</widget>
 			<widget source="key_OK" render="Label" position="1395,1020" size="60,42" font="Regular;30" halign="center" valign="center" foregroundColor="black" backgroundColor="grey">
 				<convert type="ConditionalShowHide" />
-			</widget>			
+			</widget>
 			<widget source="key_detailed" render="Label" position="1470,1020" size="250,42" font="Regular;30" halign="left" valign="center" foregroundColor="grey">
 				<convert type="ConditionalShowHide" />
-			</widget>			
+			</widget>
 			<widget source="key_exit" render="Label" position="1730,1020" size="150,42" font="Regular;30" halign="center" valign="center" foregroundColor="black" backgroundColor="grey" />
 		</screen>"""
 
@@ -861,7 +861,7 @@ class OSCamInfoSetup(Setup):
 	def __init__(self, session):
 		self.status = None
 		self.oldIP = config.oscaminfo.ip.value
-		self.hostValidator = compile("(\d*[a-zA-Z]+[\.]*\d*)+$")
+		self.hostValidator = compile(r"(\d*[a-zA-Z]+[\.]*\d*)+$")
 		Setup.__init__(self, session, setup="OSCamInfoSetup")
 
 	def selectionChanged(self):

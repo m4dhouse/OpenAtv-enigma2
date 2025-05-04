@@ -50,21 +50,16 @@ RESULT eNavigation::playService(const eServiceReference &service)
 		m_runningService->connectEvent(sigc::mem_fun(*this, &eNavigation::serviceEvent), m_service_event_conn);
 		res = m_runningService->start();
 	}
+	m_runningServiceRef = service;
 	return res;
 }
-#if SIGCXX_MAJOR_VERSION == 2
-RESULT eNavigation::connectEvent(const sigc::slot1<void, int> &event, ePtr<eConnection> &connection)
+
+RESULT eNavigation::setPiPService(const eServiceReference &service)
 {
-	connection = new eConnection(this, m_event.connect(event));
+	m_runningPiPServiceRef = service;
 	return 0;
 }
 
-RESULT eNavigation::connectRecordEvent(const sigc::slot2<void, ePtr<iRecordableService>, int> &event, ePtr<eConnection> &connection)
-{
-	connection = new eConnection(this, m_record_event.connect(event));
-	return 0;
-}
-#else
 RESULT eNavigation::connectEvent(const sigc::slot<void(int)> &event, ePtr<eConnection> &connection)
 {
 	connection = new eConnection(this, m_event.connect(event));
@@ -76,11 +71,22 @@ RESULT eNavigation::connectRecordEvent(const sigc::slot<void(ePtr<iRecordableSer
 	connection = new eConnection(this, m_record_event.connect(event));
 	return 0;
 }
-#endif
 
 RESULT eNavigation::getCurrentService(ePtr<iPlayableService> &service)
 {
 	service = m_runningService;
+	return 0;
+}
+
+RESULT eNavigation::getCurrentServiceReference(eServiceReference &service)
+{
+	service = m_runningServiceRef;
+	return 0;
+}
+
+RESULT eNavigation::getCurrentPiPServiceReference(eServiceReference &service)
+{
+	service = m_runningPiPServiceRef;
 	return 0;
 }
 
@@ -92,6 +98,7 @@ RESULT eNavigation::stopService(void)
 
 	ePtr<iPlayableService> tmp = m_runningService;
 	m_runningService = 0;
+	m_runningServiceRef = eServiceReference();
 	tmp->stop();
 
 	/* send stop event */
@@ -103,6 +110,12 @@ RESULT eNavigation::stopService(void)
 #if defined(HAVE_FCC)
 	m_fccmgr && m_fccmgr->cleanupFCCService();
 #endif
+	return 0;
+}
+
+RESULT eNavigation::clearPiPService(void)
+{
+	m_runningPiPServiceRef = eServiceReference();
 	return 0;
 }
 

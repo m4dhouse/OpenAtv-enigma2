@@ -1093,7 +1093,7 @@ void eDVBSubtitleParser::subtitle_redraw(int page_id)
 								palette[i].g = std::max(std::min(((298 * y - 55 * cb - 137 * cr) / 256), 255), 0);
 							}
 
-							if (palette[i].r || palette[i].g || palette[i].b)
+							if (backgroundTransparency == -1 || palette[i].r || palette[i].g || palette[i].b)
 								palette[i].a = (entries[i].T) & 0xFF;
 							else
 								palette[i].a = backgroundTransparency;
@@ -1168,11 +1168,7 @@ int eDVBSubtitleParser::start(int pid, int composition_page_id, int ancillary_pa
 	return -1;
 }
 
-#if SIGCXX_MAJOR_VERSION == 2
-void eDVBSubtitleParser::connectNewPage(const sigc::slot1<void, const eDVBSubtitlePage&> &slot, ePtr<eConnection> &connection)
-#else
 void eDVBSubtitleParser::connectNewPage(const sigc::slot<void(const eDVBSubtitlePage&)> &slot, ePtr<eConnection> &connection)
-#endif
 {
 	connection = new eConnection(this, m_new_subtitle_page.connect(slot));
 }

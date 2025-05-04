@@ -218,9 +218,9 @@ class Session:
 			self.summary.show()
 
 	def doShutdown(self):
-		for function in self.onShutdown:
-			if callable(function):
-				function()
+		for callback in self.onShutdown:
+			if callable(callback):
+				callback()
 
 	def reloadDialogs(self):
 		for dialog in self.allDialogs:
@@ -238,7 +238,7 @@ class PowerKey:
 		globalActionMap.actions["power_down"] = self.powerdown
 		globalActionMap.actions["power_up"] = self.powerup
 		globalActionMap.actions["power_long"] = self.powerlong
-		globalActionMap.actions["deepstandby"] = self.shutdown  # Frontpanel long power button press.
+		globalActionMap.actions["deepstandby"] = self.shutdown  # Front panel long power button press.
 		globalActionMap.actions["discrete_off"] = self.standby
 		globalActionMap.actions["sleeptimer"] = self.openSleepTimer
 		globalActionMap.actions["powertimer_standby"] = self.sleepStandby
@@ -432,6 +432,8 @@ def runScreenTest():
 		runNextScreen(session, screensToRun)
 	enigma.eProfileWrite("VolumeControl Screen")
 	vol = VolumeControl(session)
+	enigma.eProfileWrite("VolumeAdjust")
+	vol = VolumeAdjust(session)
 	enigma.eProfileWrite("Processing Screen")
 	processing = Processing(session)
 	enigma.eProfileWrite("Global MessageBox Screen")
@@ -449,9 +451,6 @@ def runScreenTest():
 	initTrashcan(session)
 	enigma.eProfileWrite("VideoModeAutoStart")
 	from Screens.VideoMode import autostart
-	autostart(session)
-	enigma.eProfileWrite("VolumeAdjustAutoStart")
-	from Screens.VolumeAdjust import autostart
 	autostart(session)
 	enigma.eProfileWrite("RunReactor")
 	enigma.eProfileDone()
@@ -579,7 +578,6 @@ def runScreenTest():
 	session.nav.stopService()
 	session.nav.shutdown()
 	session.doShutdown()
-	VolumeControl.instance.saveVolumeState()
 	configfile.save()
 	from Screens.InfoBarGenerics import saveResumePoints
 	saveResumePoints()
@@ -790,7 +788,6 @@ from skin import readSkin
 enigma.eProfileWrite("InitDefaultPaths")
 from Components.config import ConfigSubsection, NoSave, configfile
 from Tools.Directories import InitDefaultPaths, SCOPE_CONFIG, SCOPE_GUISKIN, SCOPE_PLUGINS, fileUpdateLine, resolveFilename
-import Components.RecordingConfig
 InitDefaultPaths()
 
 enigma.eProfileWrite("ConfigMisc")
@@ -844,7 +841,7 @@ enigma.eProfileWrite("CIHandler")
 from Screens.Ci import CiHandler
 
 enigma.eProfileWrite("VolumeControl")
-from Components.VolumeControl import VolumeControl
+from Screens.VolumeControl import VolumeAdjust, VolumeControl
 
 enigma.eProfileWrite("Processing")
 from Screens.Processing import Processing
@@ -884,6 +881,9 @@ InitRecordingConfig()
 enigma.eProfileWrite("InitUsageConfig")
 from Components.UsageConfig import InitUsageConfig, DEFAULTKEYMAP
 InitUsageConfig()
+
+enigma.eProfileWrite("InitPvrDescrambleConvert")
+from Components.PvrDescrambleConvert import pvr_descramble_convert
 
 enigma.eProfileWrite("InitTimeZones")
 from Components.Timezones import InitTimeZones

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenATV\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-31 15:16+0000\n"
-"PO-Revision-Date: 2025-01-01 18:30+0000\n"
+"POT-Creation-Date: 2025-04-25 18:12+0000\n"
+"PO-Revision-Date: 2025-04-27 01:17+0000\n"
 "Last-Translator: tomppaa <tomzza@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/openatv/enigma2-7-0-po/fi/>\n"
 "Language: fi\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 msgid ""
 "\n"
@@ -898,6 +898,10 @@ msgstr[0] "%d Ohjelmisto jakelu lista päivitetty."
 msgstr[1] "%d Ohjelmisto valmistaja listat on päivitetty."
 
 #, python-format
+msgid "%d jobs are running in the background!"
+msgstr "%d Tehtävää on käynnissä taustalla!"
+
+#, python-format
 msgid "%d kB"
 msgstr "%d kB"
 
@@ -1138,10 +1142,6 @@ msgstr "%s %s kaukosäädin (natiivi)"
 #, python-format
 msgid "%s %sB"
 msgstr "%s %sB"
-
-#, python-format
-msgid "%s (%04o)"
-msgstr "%s (%04o)"
 
 #, python-format
 msgid "%s - Setup"
@@ -1553,6 +1553,22 @@ msgid "A file from media is in use!"
 msgstr "Mediatiedosto on käytössä!"
 
 #, python-format
+msgid ""
+"A finished record timer wants to set your\n"
+"%s %s to standby. Do that now?"
+msgstr ""
+"Juuri päättynyt ajastus haluaa sammuttaa\n"
+"%s %s:n valmiustilaan. Sammutetaanko nyt?"
+
+#, python-format
+msgid ""
+"A finished record timer wants to shut down\n"
+"your %s %s. Shutdown now?"
+msgstr ""
+"Juuri päättynyt ajastus haluaa sammuttaa\n"
+"%s %s:n virransäästötilaan. Sammutetaanko nyt?"
+
+#, python-format
 msgid "A finished scheduled timer wants to reboot your %s %s. Do that now?"
 msgstr ""
 "Valmis virta ajastus haluaa uudelleenkäynnistää\n"
@@ -1571,23 +1587,7 @@ msgstr ""
 msgid "A finished scheduled timer wants to shut down your %s %s. Do that now?"
 msgstr ""
 "Päättynyt virta ajastus haluaa sammuttaa\n"
-"%s %s:n virransäästötilaan. Sammutetaanko nyt?"
-
-#, python-format
-msgid ""
-"A finished record timer wants to set your\n"
-"%s %s to standby. Do that now?"
-msgstr ""
-"Juuri päättynyt ajastus haluaa sammuttaa\n"
 "%s %s:n valmiustilaan. Sammutetaanko nyt?"
-
-#, python-format
-msgid ""
-"A finished record timer wants to shut down\n"
-"your %s %s. Shutdown now?"
-msgstr ""
-"Juuri päättynyt ajastus haluaa sammuttaa\n"
-"%s %s:n virransäästötilaan. Sammutetaanko nyt?"
 
 msgid "A highlight on the remote control image shows which button the help refers to. If more than one button performs the indicated function, more than one highlight will be shown. Text below the list lists the active buttons and whether the function requires a long press or SHIFT of the button(s)."
 msgstr "Kaukosäätimen kuvan korostus osoittaa, mihin painikkeisiin ohje liittyy. Jos useampi kuin yksi näppäin suorittaa määritetyn toiminnon, näytössä näkyy useampi kuin yksi merkki. Luettelon alapuolella oleva teksti luettelee aktiiviset näppäimet ja osoittaa, edellyttääkö toiminto näppäimen painamista pitkään tai painikkeen painamista."
@@ -1673,7 +1673,7 @@ msgstr ""
 "voidaan yrittää uudelleen?\n"
 
 #, python-format
-msgid "A/V aspect ratio is '%s'."
+msgid "Aspect ratio set to '%s'."
 msgstr "AV kuvasuhde on %s."
 
 msgid "AAC downmix"
@@ -1697,19 +1697,22 @@ msgstr "AC3+ uudelleenpakkaus"
 msgid "AFL"
 msgstr "AFL"
 
-msgid "AI-Powered Translation color"
+msgid "AI Translation color"
 msgstr "Tekstityksen väri tekoäly avusteisessa käännöksessä"
 
-msgid "AI-Powered Translation enabled"
+msgid "AI Translation enabled"
 msgstr "Tekoäly käännös käytössä"
 
-msgid "AI-Powered Translation language"
+msgid "AI Translation language"
 msgstr "Tekoälyn käännöksen kieli"
 
-msgid "AI-Powered Translation optimization"
+msgid "AI Translation mode"
+msgstr "AI Kääntämis tila"
+
+msgid "AI Translation optimization"
 msgstr "Tekoäly käännöksen optimointi"
 
-msgid "AI-Powered Translation subscription code"
+msgid "AI Translation subscription code"
 msgstr "Tekoälyllä toimivan tekstityksen tilauskoodi"
 
 msgid "ARM"
@@ -1766,9 +1769,6 @@ msgstr "Yli 200 Mbps"
 msgid "Access point"
 msgstr "Tukiasema"
 
-msgid "Access point:"
-msgstr "Tukiasema:"
-
 msgid "Access to geolocation information requires an Internet connection."
 msgstr "Paikannustietojen käyttö edellyttää internet yhteyttä."
 
@@ -1819,6 +1819,9 @@ msgstr "Ota tekemäsi verkkoasetukset käyttöön."
 
 msgid "Activate the flash expander, save all changed settings and exit"
 msgstr "Aktivoi muistin laajennus, tallenna kaikki muutetut asetukset ja poistu"
+
+msgid "Activate this device"
+msgstr "Aktivoi tämä laite"
 
 msgid "Activate time shift End"
 msgstr "Aloita ajansiirto"
@@ -1883,6 +1886,9 @@ msgstr "Lisää uusi lähetin ryhmä"
 msgid "Add RecordTimer"
 msgstr "Lisää ajastus"
 
+msgid "Add Service"
+msgstr "Lisää Kanava"
+
 msgid "Add Service To Bouquet"
 msgstr "Lisää kanava suosikkilistalle"
 
@@ -1904,11 +1910,17 @@ msgstr "Lisää kanavanvaihto ajastus"
 msgid "Add a DNS entry"
 msgstr "Lisää DNS merkintä"
 
+msgid "Add a RADIO service to the Volume Offset list"
+msgstr "Lisää RADIO kanavan äänenvoimakkuuden siirtymälistaan"
+
 msgid "Add a RecordTimer"
 msgstr "Lisää ajastus"
 
 msgid "Add a RecordTimer for current event"
 msgstr "Lisää tallennusajastus tähän ohjelmaan"
+
+msgid "Add a TV service to the Volume Offset list"
+msgstr "Lisää TV-kanava äänenvoimakkuuden siirtymälistaan"
 
 msgid "Add a ZapTimer for current event"
 msgstr "Lisää kanavanvaihtoajastus tähän ohjelmaan"
@@ -1934,7 +1946,7 @@ msgstr "Lisää uusi ajastus"
 msgid "Add a new title"
 msgstr "Lisää uusi tallenne"
 
-msgid "Add a service to the Volume Offsets list"
+msgid "Add a service to the Volume Offset list"
 msgstr "Lisää kanavan Äänen voimakkuuden Offsetti listalle"
 
 msgid "Add a timer for the current event"
@@ -2006,7 +2018,7 @@ msgstr "Lisää kanava tähän kanavalistaan?"
 msgid "Add the current directory as a bookmark"
 msgstr "Lisää nykyinen hakemisto kirjanmerkiksi"
 
-msgid "Add the current service to the Volume Offsets list"
+msgid "Add the current/active service to the Volume Offset list"
 msgstr "Lisää nykyinen kanava Äänen voimakkuuden Offsetti listalle"
 
 msgid "Add the selected service to a bouquet or alternative"
@@ -2029,6 +2041,9 @@ msgstr "Lisää / Poista korostettu lisäosa lataus listalta"
 
 msgid "Add/Remove highlighted plugin to/from update list"
 msgstr "Lisää / Poista korostettu lisäosa päivitys listalle"
+
+msgid "Add/Remove the current service to/from the Volume Offset list"
+msgstr "Lisää/poista nykyinen kanava äänenvoimakkuuden siirtymälistaan/listasta"
 
 msgid "Adding schedule..."
 msgstr "Lisätään aikataulu..."
@@ -2319,6 +2334,10 @@ msgstr "Amlogic"
 msgid "Amlogic remote"
 msgstr "Amlogic kaukosäädin"
 
+#, python-format
+msgid "Amount %d / Success %d / Failed %d"
+msgstr "Määrä %d / Onnistui %d / Epäonnistui %d"
+
 msgid "An attempt is made to capture the current TV status. If this is not possible due to incorrect or missing status messages it may cause the receiver to respond unexpectedly. On the other hand, tries to respond better to different operating conditions."
 msgstr "TV:n nykyinen tila yritetään tallentaa. Jos tämä ei ole mahdollista virheellisten tai puuttuvien tilaviestien vuoksi, vastaanotin voi vastata odottamattomasti. Toisaalta yritetään reagoida paremmin erilaisiin käyttöolosuhteisiin."
 
@@ -2382,6 +2401,9 @@ msgstr "Arabia"
 msgid "Arabic (Egyptian)"
 msgstr "Arabia (egyptiläinen)"
 
+msgid "Arabic (Iraq)"
+msgstr "Arabia (Iraq)"
+
 msgid "Arabic (Moroccan)"
 msgstr "Arabia (Marokko)"
 
@@ -2394,7 +2416,7 @@ msgstr "Arabic (Tunisia)"
 msgid "Aragonese"
 msgstr "Aragonese"
 
-msgid "Are you ready to run the script ?"
+msgid "Are you ready to run the script?"
 msgstr "Haluatko aloittaa komentosarjan nyt?"
 
 msgid "Are you sure to cancel all changes?"
@@ -2495,9 +2517,6 @@ msgstr "Armenia"
 msgid "Artist"
 msgstr "Esittäjä"
 
-msgid "Arts & Culture"
-msgstr "Taide/Kulttuuri"
-
 msgid "Arts/Culture"
 msgstr "Taide/Kulttuuri"
 
@@ -2525,7 +2544,7 @@ msgstr "Kuvasuhde"
 msgid "Aspect Ratio Actions"
 msgstr "Kuvasuhde toiminnot"
 
-msgid "Aspect list..."
+msgid "Open Aspect Ratio Settings"
 msgstr "Näytä kuvasuhde vaihtoehdot"
 
 msgid "Aspect ratio"
@@ -2611,7 +2630,7 @@ msgstr "Äänen kielivalinta 3"
 msgid "Audio language selection 4"
 msgstr "Äänen kielivalinta 4"
 
-msgid "Audio options..."
+msgid "Open Audio options"
 msgstr "Ääni asetukset..."
 
 msgid "Australia"
@@ -2667,6 +2686,9 @@ msgstr "Automaattinen asennusloki"
 
 msgid "Auto multi-selection"
 msgstr "Automaattinen valinta"
+
+msgid "Auto show volume level"
+msgstr "Näytä äänenvoimakkuus taso automaattisesti"
 
 msgid "Auto shut down"
 msgstr "Automaattinen sammutus"
@@ -2742,9 +2764,6 @@ msgstr "Päivitä loki näyttö automaattisesti"
 
 msgid "Autostart"
 msgstr "Aut. käynn."
-
-msgid "Autostart:"
-msgstr "Aut. käynn.:"
 
 msgid "Available format variables"
 msgstr "Formaattimuuttujat"
@@ -3026,9 +3045,6 @@ msgstr "Bislama"
 msgid "Bitrate"
 msgstr "Bittinopeus"
 
-msgid "Bitrate:"
-msgstr "Bittinopeus:"
-
 msgid "Black"
 msgstr "Musta"
 
@@ -3245,9 +3261,6 @@ msgstr "Polttaa"
 msgid "Burundi"
 msgstr "Burundi"
 
-msgid "Bus: "
-msgstr "Väylä: "
-
 msgid "Business & Finance"
 msgstr "Liiketoiminta ja rahoitus"
 
@@ -3259,12 +3272,6 @@ msgstr "Virheen aikakatkaisu"
 
 msgid "ButtonSetup"
 msgstr "Näppäinmääritykset"
-
-msgid "By disk UUID"
-msgstr "Levyllä UUID"
-
-msgid "By disk label"
-msgstr "Levymerkintä"
 
 msgid "Bypass HDMI EDID Check"
 msgstr "Ohita HDMI EDID tarkistus"
@@ -3543,15 +3550,18 @@ msgid "Can't create backup directory!"
 msgstr "Ei voi luoda varmuuskopio hakemistoa!"
 
 msgid ""
-"Can't going to live TV!\n"
-"Switch to live TV and restart time shift ?"
+"Can't go to live TV!\n"
+"Switch to live TV and restart time shift?"
 msgstr ""
 "Et voi suora toistaa televisiota!\n"
 "Vaihdetaan live televisioon ja käynnistetään ajansiirto uudelleen?"
 
+msgid "Can't move to trashcan!"
+msgstr "Ei voida siirtää roskakoriin!"
+
 msgid ""
-"Can't play the next time shift file!\n"
-"Switch to live TV and restart time shift ?"
+"Can't play the next time shift buffer file!\n"
+"Switch to live TV and restart time shift?"
 msgstr ""
 "Seuraavaa ajansiirot tiedostoa ei voi toistaa!\n"
 "Vaihdetaan live-televisioon ja käynnistetään ajansiirto uudelleen?"
@@ -3607,7 +3617,7 @@ msgstr "Peruuta purkaminen"
 msgid "Cancel save time shift as movie"
 msgstr "Keskeytä ajansiirron muunto tallenteeksi"
 
-msgid "Cancel selection"
+msgid "Cancel the selection"
 msgstr "Peruuta valinta"
 
 msgid "Cancel selection and exit"
@@ -3667,19 +3677,13 @@ msgstr "Käyttäjä peruutti tehtävän"
 msgid "Cannot delete file"
 msgstr "Tiedostoa ei voi poistaa"
 
-#. TRANSLATORS: "Cannot determine (east/west) limit ..., aborting !"
+#. TRANSLATORS: "Cannot determine (east/west) limit ..., aborting!"
 #, python-format
-msgid "Cannot determine %s limit ..., aborting !"
+msgid "Cannot determine %s limit ..., aborting!"
 msgstr "Ei voida määrittää %s rajaa ..., keskeytys !"
 
-msgid "Cannot find any signal ..., aborting !"
+msgid "Cannot find any signal ..., aborting!"
 msgstr "Signaalia ei löydy... keskeytetään!"
-
-msgid "Cannot move to trash can"
-msgstr "Ei voida siirtää roskakoriin"
-
-msgid "Capacity"
-msgstr "Kapasiteetti"
 
 msgid "Cape Verde"
 msgstr "Cape Verde"
@@ -3704,6 +3708,9 @@ msgstr "Aktivoi PiP"
 
 msgid "Catalan / Valencian"
 msgstr "Catalan / Valencian"
+
+msgid "Catch Up Player Actions"
+msgstr "Soittimen toiminnot"
 
 msgid "Cayman Islands"
 msgstr "Cayman saaret"
@@ -3813,8 +3820,8 @@ msgstr "Kanavatiedot"
 msgid "Channel List"
 msgstr "Kanavalista"
 
-msgid "Channel List Menu"
-msgstr "Kanavalistan tyyppi"
+msgid "Channel Number"
+msgstr "Kanava numero"
 
 msgid "Channel Selection"
 msgstr "Kanavan valinta"
@@ -3888,17 +3895,14 @@ msgstr "Kanavan valinta:"
 msgid "Channel up"
 msgstr "Kanava ylös"
 
-msgid "Channel zap delay another button"
+msgid "Service zap other button delay"
 msgstr "Kanava vaihto viive toista näppäintä"
 
-msgid "Channel zap delay first button"
+msgid "Service zap first button delay"
 msgstr "Kanavan vaihtoviive ensimmäinen näppäin"
 
-msgid "Channel zap delay mode"
+msgid "Service zap delay mode"
 msgstr "Kanavan vaihtoviive"
-
-msgid "Channel:"
-msgstr "Kanava:"
 
 msgid "ChannelEPG Settings"
 msgstr "Kanava EPG asetukset"
@@ -3917,9 +3921,6 @@ msgstr "Osa."
 
 msgid "Chapter"
 msgstr "Kappale"
-
-msgid "Chapter:"
-msgstr "Kappale:"
 
 msgid "Character device"
 msgstr "Tallennusvälineet"
@@ -3982,6 +3983,15 @@ msgstr "Kiina"
 
 msgid "Chinese (Simplified)"
 msgstr "Kiina (yksinkertaistettu)"
+
+msgid "Chkroot Manager Actions"
+msgstr "Chkroot toiminnot"
+
+msgid "Chkroot MultiBoot Initialization in progress!"
+msgstr "Chkroot MultiBoot Alustus käynnissä!"
+
+msgid "Chkroot MultiBoot Manager"
+msgstr "Chkroot MultiBoot Hallinta"
 
 msgid "Choice Box"
 msgstr "Kortin Tiedot"
@@ -4231,6 +4241,9 @@ msgstr "Sulje valinta"
 
 msgid "Close screen"
 msgstr "Sulje näyttö"
+
+msgid "Close the Chkroot MultiBoot Manager"
+msgstr "Sulje Chkroot MultiBoot hallinta"
 
 msgid "Close the Device Manager screen"
 msgstr "Sulje Laite hallinta näyttö"
@@ -4565,9 +4578,6 @@ msgstr "Määritä kursorin toiminta kanavalistassa. Kun kanavalista avataan, vo
 msgid "Configure the display resolution and the font used for teletext."
 msgstr "Määritä näytön resoluutio ja teksti-tv:lle käytetty fontti."
 
-msgid "Select the duration of inactivity before the screen saver will be displayed."
-msgstr "Määrittää, käytetäänkö näytönsäästäjää ja jos, niin kuinka pitkän ajan kuluttua se aktivoidaan."
-
 msgid "Configure the duration, in minutes, before the EnergySaver timer activates."
 msgstr "Määritä kesto minuutteina ennen kuin energian säästötila aktivoituu."
 
@@ -4637,7 +4647,7 @@ msgstr "Määritä sijaintisi leveysaste."
 msgid "Configure the longitude of your location."
 msgstr "Määritä sijaintisi pituusaste."
 
-msgid "Configure the minimum amount of disk space to be available for recordings. When the amount of space drops below this value, deleted items will be removed from the trash can."
+msgid "Configure the minimum amount of disk space to be available for recordings. When the amount of space drops below this value, deleted items will be removed from the trashcan."
 msgstr "Määrittää vapaan levytilan vähimmäismäärän tallennuksia varten. Kun kiintolevyn vapaa levytila menee alle tämän arvon, poistetut tiedostot tyhjennetään roskakorista."
 
 msgid "Configure the minimum width before showing the 'i' icon, '0' is equal to not showing the icon at all."
@@ -4652,7 +4662,7 @@ msgstr "Määritä verkkomaski."
 msgid "Configure the network again"
 msgstr "Määritä verkko uudelleen"
 
-msgid "Configure the number of days after which items are automatically removed from the trash can."
+msgid "Configure the number of days after which items are automatically removed from the trashcan."
 msgstr "Määrittää, kuinka monen päivän jälkeen tiedostot poistetaan automaattisesti roskakorista."
 
 msgid "Configure the number of days old timers are kept before they are automatically removed from the timer list."
@@ -4845,11 +4855,17 @@ msgstr "Yhdistetty toisen virittimen kautta"
 msgid "Connected to"
 msgstr "Kytketty virittimestä"
 
+msgid "Connected transcoding, limit - no PiP!"
+msgstr "Yhdistetty transkoodaus rajattu - ei PiP!"
+
 msgid "Connected: "
 msgstr "Yhdistetty: "
 
 msgid "Connection information"
 msgstr "Yhteyden tiedot"
+
+msgid "Connector"
+msgstr "Yhdistetty"
 
 msgid "Console"
 msgstr "Konsoli"
@@ -5291,6 +5307,9 @@ msgstr ""
 
 msgid "Currently Defined Volume Offsets:"
 msgstr "Tällä hetkellä määritellyt Äänen voimakkuuden poikkeamat"
+
+msgid "Currently Remembered Volume Levels:"
+msgstr "Nykyinen muistissa oleva äänenvoimakkuus tasot:"
 
 msgid "Custom"
 msgstr "Muokattu"
@@ -5762,6 +5781,9 @@ msgstr "Määrittele tiedosto järjestelmäasetukset."
 msgid "Defined / Active"
 msgstr "Määritetty / Aktiivinen"
 
+msgid "Defined volume offset"
+msgstr "Määritetty äänenvoimakkuus"
+
 msgid "Defines how fast the time jumps are repeated. Values lower than 500ms may be problematic with NAS."
 msgstr "Määrittää, kuinka nopeasti aikahyppy toistetaan. Alle 500ms (0.5s) arvot voivat aiheuttaa ongelmia NAS-levyjen kanssa."
 
@@ -5965,9 +5987,6 @@ msgstr "Poista nykyinen aikasiirtopuskuri ja käynnistä ajansiirto uudelleen"
 msgid "Delete the currently displayed log file"
 msgstr "Poista näkyvissä oleva lokitiedosto"
 
-msgid "Delete the currently highlighted service from the Volume Offsets list"
-msgstr "Poista nykyinen korostettu kanavan äänen voimakkuuden Offsets listasta"
-
 msgid "Delete the currently selected timer"
 msgstr "Poistaaksesi vain valittu ajastus"
 
@@ -6025,6 +6044,21 @@ msgstr "Syvyys"
 
 msgid "Descending"
 msgstr "Laskeva"
+
+msgid "Descramble end time"
+msgstr "Salauksen purun päättymis aika"
+
+msgid "Descramble in Standby"
+msgstr "Salauksen purku valmiustilassa"
+
+msgid "Descramble in Standby finished"
+msgstr "Salauksen purku valmiustilassa on päättynyt"
+
+msgid "Descramble recordings before Shutdown"
+msgstr "Purkaa tallennuksen salaus ennen sammutusta"
+
+msgid "Descramble start time"
+msgstr "Salauksen purun aloitusaika"
 
 msgid "Descrambling options"
 msgstr "Salauksen purku asetukset"
@@ -6136,7 +6170,7 @@ msgstr "Sanelu"
 #, python-format
 msgid ""
 "Difference between timer begin and end must be equal or greater than %d minutes.\n"
-"End Action was disabled !"
+"End Action was disabled!"
 msgstr ""
 "Ajastimen aloitusajan ja lopetusajan välisen eron on oltava suurempi tai yhtä suuri kuin %d minuuttia.\n"
 "Lopputoiminto on poistettu käytöstä!"
@@ -6164,10 +6198,6 @@ msgstr "Hakemistot"
 
 msgid "Directory"
 msgstr "Hakemisto"
-
-#, python-format
-msgid "Directory %s does not exist."
-msgstr "Hakemistoa %s ei löydy."
 
 #, python-format
 msgid "Directory '%s' can't be linked to recordings!"
@@ -6381,15 +6411,8 @@ msgstr ""
 "Et voi palata takaisin entiseen!"
 
 #, python-format
-msgid "Do you really want to delete %s ?"
-msgstr "Haluatko varmasti poistaa %s ?"
-
-#, python-format
 msgid "Do you really want to delete '%s'?"
 msgstr "Haluatko varmasti poistaa %s?"
-
-msgid "Do you really want to delete ?"
-msgstr "Haluatko varmasti poistaa?"
 
 #, python-format
 msgid ""
@@ -6419,27 +6442,25 @@ msgstr ""
 "Haluatko varmasti alustaa laitteen?\n"
 "Kaikki laitteen tiedot menetetään!"
 
-msgid "Do you really want to move to trashcan ?"
-msgstr "Haluatko varmasti siirtää roskakoriin?"
+#, python-format
+msgid "Do you really want to move '%s' to the trashcan?"
+msgstr "Haluatko siirtää '%s' roskakoriin?"
 
 #, python-format
-msgid "Do you really want to permanently remove '%s' from trash can ?"
+msgid "Do you really want to permanently remove '%s' from the trashcan?"
 msgstr "Haluatko varmasti poistaa pysyvästi '%s' \"roskakorista?"
-
-msgid "Do you really want to permanently remove from trash can ?"
-msgstr "Haluatko varmasti poistaa pysyvästi roskakorista?"
 
 #, python-format
 msgid "Do you really want to remove directory '%s' from the disk?"
 msgstr "Haluatko poistaa levyltä hakemiston %s?"
 
 #, python-format
-msgid "Do you really want to remove the timer for %s?"
-msgstr "Haluatko poistaa ajastuksen %s?"
+msgid "Do you really want to remove the bookmark for '%s'?"
+msgstr "Haluatko poistaa kirjanmerkin %s?"
 
 #, python-format
-msgid "Do you really want to remove your bookmark for '%s'?"
-msgstr "Haluatko poistaa kirjanmerkin %s?"
+msgid "Do you really want to remove the timer for %s?"
+msgstr "Haluatko poistaa ajastuksen %s?"
 
 msgid ""
 "Do you really want to restart OSCam?\n"
@@ -6805,9 +6826,6 @@ msgstr "Ohjelmaoppaan sijainti"
 msgid "EPG only"
 msgstr "Vain EPG"
 
-msgid "EPG:"
-msgstr "EPG:"
-
 msgid "EPGSearch"
 msgstr "EPG ohjelman haku"
 
@@ -6955,8 +6973,8 @@ msgstr "Aktivoi Bluetooth Ääni"
 msgid "Enable Bouquet Edit"
 msgstr "Kanavalistojen lisäys ja poisto"
 
-msgid "Enable Dolby Digital / Dolby AC-3 offsets"
-msgstr "Ota Dolby Digital / Dolby AC-3 offsetti käyttöön"
+msgid "Enable Chkroot MultiBoot"
+msgstr "Ottaa käyttöön Chkroot MultiBoot"
 
 msgid "Enable EIT EPG"
 msgstr "Ota käyttöön EIT EPG"
@@ -7101,7 +7119,7 @@ msgid "Enable freesat EPG"
 msgstr "Ota käyttöön freesat EPG"
 
 msgid "Enable import timer from fallback tuner"
-msgstr "Tuo ajastimet etävastaaottimelta"
+msgstr "Tuo ajastimet etävastaanottimelta"
 
 msgid "Enable intro screen"
 msgstr "Aktivoi aloitusnäyttö"
@@ -7169,11 +7187,17 @@ msgstr "Aktivoi tämä vaihtoehto, jos haluat lisätä kaukosäätimen tietoja v
 msgid "Enable this option to add screen names and resolution data to the debug log file."
 msgstr "Ota tämä vaihtoehto käyttöön, jos haluat lisätä näytön nimiä ja tarkkuustietoja virheenkorjauksen lokitiedostoon."
 
+msgid "Enable this option to add storage device information detected during system boot and hot plug events to the debug log file."
+msgstr "Ota tämä asetus käyttöön lisätäksesi järjestelmän käynnistyksen ja hot plug tapahtumat debug lokitiedostoon."
+
 msgid "Enable this option to add timer debugging data to the debug log file."
 msgstr "Ota tämä vaihtoehto käyttöön, jos haluat lisätä ajastin tiedot vianmääritys lokitiedostoon."
 
 msgid "Enable this option to show all the available Information screens in the Information menu item list."
 msgstr "Aktivoi tämä vaihtoehto,Näyttäeksi kaikki käytettävissä olevat tietoruudut tieto valikossa."
+
+msgid "Enable this option to show unknown storage devices in device manager."
+msgstr "Tämän vaihtoehdon avulla näytettään tuntemattomat tallennuslaitteet laitehallinnassa."
 
 msgid "Enable this setting if your aerial system needs power."
 msgstr "Ota tämä asetus käyttöön, jos antennijärjestelmäsi tarvitsee virtaa."
@@ -7216,9 +7240,6 @@ msgstr "Suojausavain"
 
 msgid "Encryption key type"
 msgstr "Salausavaimen tyyppi"
-
-msgid "Encryption:"
-msgstr "Salaus:"
 
 msgid "End"
 msgstr "Loppu"
@@ -7332,7 +7353,7 @@ msgstr "Syötä, jos olet päiväntasaajan etelä,- tai pohjoispuolella."
 msgid "Enter if you are in the East or West hemisphere."
 msgstr "Aseta, jos olet maapallon itä,- tai länsipuolella."
 
-msgid "Enter main menu..."
+msgid "Open Main Menu"
 msgstr "Avaa päävalikko..."
 
 msgid "Enter new directory name:"
@@ -7616,6 +7637,10 @@ msgid "Error: Creating picon target directory: (%s)"
 msgstr "Virhe: Kanavalogojen kansion luominen epäonnistui: (%s)"
 
 #, python-format
+msgid "Error: Directory '%s' does not exist!"
+msgstr "Hakemistoa %s ei löydy!"
+
+#, python-format
 msgid "Error: Failed to run service scan!  (%s)"
 msgstr "Virhe: Epäonnistunut kanavien etsintä!   (%s)"
 
@@ -7822,6 +7847,9 @@ msgstr "Poistu tiedosto hallinnasta"
 msgid "Exit MAC address configuration"
 msgstr "Lopeta MAC osoitteen määritys"
 
+msgid "Exit Movie Selection"
+msgstr "Poistu tallenneluettelosta"
+
 msgid "Exit Quad Channel Selection"
 msgstr "Poistu neljän kanavan valinnasta"
 
@@ -7854,9 +7882,6 @@ msgstr "Poistu Mediasoittimesta"
 
 msgid "Exit menu"
 msgstr "Poistu valikosta"
-
-msgid "Exit movie list"
-msgstr "Poistu tallenneluettelosta"
 
 msgid "Exit movie player?"
 msgstr "Lopeta tallenteen katselu?"
@@ -8054,9 +8079,6 @@ msgstr "Epäonnistui"
 msgid "Failed to write /tmp/positionersetup.log: "
 msgstr "Kirjoittaminen /tmp/positionersetup.log:iin epäonnistui: "
 
-msgid "Failed:"
-msgstr "Epäonnistui:"
-
 msgid "Falkland Islands (Malvinas)"
 msgstr "Falklandinsaaret"
 
@@ -8065,6 +8087,9 @@ msgstr "Fallback API ei löytänyt oikeaa tulosta."
 
 msgid "Fallback Font *"
 msgstr "Toissijainen Fontti *"
+
+msgid "Fallback Remote Receiver Settings"
+msgstr "Etävastaanottimen asetukset"
 
 msgid "Fallback Timer"
 msgstr "Vara ajastin"
@@ -8089,9 +8114,6 @@ msgstr "Varaviritin DVB-C"
 
 msgid "Fallback remote receiver for DVB-T"
 msgstr "Varaviritin DVB-T"
-
-msgid "Fallback remote receiver setup"
-msgstr "Etävastaanottimen asetukset"
 
 msgid "Fallback tuner setup"
 msgstr "Etävastaanotin asetukset"
@@ -8263,16 +8285,13 @@ msgstr "Tiedostonhallinnan Tekstieditori toiminnot"
 msgid "File Commander settings"
 msgstr "File Commander Asetukset"
 
-msgid "File system"
-msgstr "Tiedostojärjestelmä"
-
 msgid "File System Check"
 msgstr "Tiedostojärjestelmän tarkistus"
 
 msgid "File System Packages"
 msgstr "Tiedostojärjestelmä paketit"
 
-msgid "File appears to be busy.\n"
+msgid "File appears to be busy!\n"
 msgstr "Tiedosto näyttää olevan käytössä.\n"
 
 msgid ""
@@ -8281,6 +8300,9 @@ msgid ""
 msgstr ""
 "Tiedostoa oscam.conf ei löytynyt.\n"
 "Syötä käyttäjänimi/salasana manuaalisesti."
+
+msgid "File system"
+msgstr "Tiedostojärjestelmä"
 
 msgid "File transfer was canceled by user!"
 msgstr "Käyttäjä peruutti tiedoston siirron!"
@@ -8293,9 +8315,6 @@ msgstr "Tiedostonimi"
 
 msgid "Files/folders to exclude from backup"
 msgstr "Poistot varmuuskopioinnista"
-
-msgid "Filesystem"
-msgstr "Tiedostojärjestelmä"
 
 msgid "Fill in channel EPGs from the broadcast EPG where there is no IceTV EPG for the channel"
 msgstr "Täytä kanavan EPG: t lähetetystä EPG: stä, jos kanavalle ei ole IceTV EPG: tä"
@@ -8526,17 +8545,11 @@ msgstr "Vapaana flash"
 msgid "Free memory"
 msgstr "Vapaa muisti"
 
-msgid "Free memory:"
-msgstr "Vapaa muisti:"
-
 msgid "Free swap"
 msgstr "Vapaa swappi"
 
 msgid "Free to Air (FTA) Service"
 msgstr "Ilmainen (FTA)"
-
-msgid "Free:"
-msgstr "Vapaana:"
 
 msgid "French"
 msgstr "Ranska"
@@ -8567,9 +8580,6 @@ msgstr "Taajuushaun askel (khz)"
 
 msgid "Frequency steps"
 msgstr "Taajuusaskel"
-
-msgid "Frequency:"
-msgstr "Taajuus:"
 
 msgid "Frequency: "
 msgstr "Taajuus: "
@@ -8722,7 +8732,7 @@ msgstr "Saksa"
 msgid "Germany"
 msgstr "Saksa"
 
-msgid "Getting Event Info failed!"
+msgid "Getting event information failed!"
 msgstr "Ohjelmatietojen haku epäonnistui!"
 
 msgid "Getting plugin information. Please wait..."
@@ -9265,9 +9275,6 @@ msgstr "Isäntänimi ei voi ratkaista IP osoitetta!"
 msgid "Hostname or IP address"
 msgstr "Isäntä tai IP-osoite"
 
-msgid "Hostname: "
-msgstr "Isäntänimi: "
-
 msgid "Hotbird 13.0e"
 msgstr "Hotbird 13.0e"
 
@@ -9574,7 +9581,7 @@ msgstr "Varmuuskopionti Toiminnot"
 
 #, python-format
 msgid "Image Backup To %s"
-msgstr "Ohjelmiston varmuuskopionti %s"
+msgstr "Varmuuskopionti %s"
 
 msgid "Image Flash Actions"
 msgstr "Ohjelmisto Päivitys Asetukset"
@@ -9584,6 +9591,9 @@ msgstr "Varmuuskopio tehty:"
 
 msgid "Image creation failed!"
 msgstr "Varmuuskopionti epäonnistui!"
+
+msgid "Image version"
+msgstr "Imagen tiedot"
 
 msgid "ImageWizard"
 msgstr "Ohjelmisto Avustaja"
@@ -9706,6 +9716,9 @@ msgstr "Sisällytä kaukosäädin tiedot"
 msgid "Include screen load data"
 msgstr "Sisällytä näytön kuormitustiedot"
 
+msgid "Include storage device data"
+msgstr "Sisältää tallennuslaitteen tiedot"
+
 msgid "Include teletext details"
 msgstr "Teksitv teksityksen yksityiskohdat"
 
@@ -9775,10 +9788,10 @@ msgstr "Tietopalkki EPG:n tila"
 msgid "InfoBar Event View Actions"
 msgstr "Tietopalkki tapahtumanäkymän toiminnot"
 
-msgid "InfoBar RDS Actions"
+msgid "RDS Actions"
 msgstr "Tietopalkki RDS Toiminnot"
 
-msgid "InfoBar Show/Hide Actions"
+msgid "Show/Hide Actions"
 msgstr "Tietopalkki Näytä/Piilota Toiminnot"
 
 msgid "InfoBar fade-out speed"
@@ -9822,6 +9835,12 @@ msgstr "Tulo"
 
 msgid "Input "
 msgstr "Tulo "
+
+msgid "Input 1"
+msgstr "Tulo 1"
+
+msgid "Input 2"
+msgstr "Tulo 2"
 
 msgid "Input Device Settings"
 msgstr "Syöttölaite Asetukset"
@@ -9946,6 +9965,9 @@ msgstr "Sisäinen"
 
 msgid "Internal Flash"
 msgstr "Sisäinen Muisti"
+
+msgid "Internal SSD"
+msgstr "Sisäinen SSD"
 
 msgid "Internal USB"
 msgstr "Sisäinen USB"
@@ -10391,6 +10413,9 @@ msgstr "Viimeksi käytetty sarake"
 msgid "Last used share: "
 msgstr "Viimeksi käytetty jako: "
 
+msgid "Last used/set volume"
+msgstr "Viimeksi käytetty/määritetty äänenvoimakkuus"
+
 msgctxt "third event: 'third' event label"
 msgid "Later"
 msgstr "Myöhemmin"
@@ -10456,7 +10481,7 @@ msgstr "Lesotho"
 msgid "Letterbox"
 msgstr "Letterbox"
 
-msgid "Letterbox zoom"
+msgid "LetterBox zoom"
 msgstr "Letterbox suurennus"
 
 msgid "Liberia"
@@ -10541,7 +10566,7 @@ msgstr "Linkitetyt otsikot ja DVD-valikko"
 msgid "Links"
 msgstr "Linkit"
 
-msgid "List EPG functions..."
+msgid "List available EPG functions"
 msgstr "Listaa EPG toiminnot"
 
 msgid "List Navigation Actions"
@@ -11008,7 +11033,7 @@ msgid "Maxdown: "
 msgstr "Maxdown: "
 
 #, python-format
-msgid "Maximum minutes to jump %d !"
+msgid "Maximum minutes to jump %d!"
 msgstr "Voit hypätä enintään %d minuuttia!"
 
 msgid "Maximum no of days"
@@ -11125,9 +11150,6 @@ msgstr "MessageBox toiminnot"
 
 msgid "Message pop up timeout"
 msgstr "Viestin ponnahdusikkunan aikakatkaisu"
-
-msgid "Message..."
-msgstr "Viesti..."
 
 msgid "Metering mode"
 msgstr "Mittaustila"
@@ -11579,20 +11601,20 @@ msgstr "Tallennukset tapahtumat näkymät"
 msgid "Movie List"
 msgstr "Tallennuslista"
 
-msgid "Movie List Actions"
+msgid "Movie Selection Actions"
 msgstr "Tallenteen valinta"
-
-msgid "Movie List Settings"
-msgstr "Tallenneluettelon asetukset"
 
 msgid "Movie Player Actions"
 msgstr "Tallennukset toiminnot"
 
+msgid "Movie Selection"
+msgstr "Tallennukset"
+
+msgid "Movie Selection Settings"
+msgstr "Tallenneluettelon asetukset"
+
 msgid "Movie playback may not use an invalid/inappropriate directory."
 msgstr "Toisto ei välttämättä käytä virheellistä/sopimatonta hakemistoa."
-
-msgid "Movie selection"
-msgstr "Tallennukset"
 
 msgid "Movie/Drama"
 msgstr "Elokuva/draama"
@@ -12049,6 +12071,9 @@ msgstr "Kiintolevyä ei löydy tai sitä ei ole alustettu!"
 msgid "No Internet connection"
 msgstr "Ei Internet yhteyttä"
 
+msgid "No Name"
+msgstr "Ei nimeä"
+
 msgid ""
 "No Settings loaded !!\n"
 "\n"
@@ -12180,7 +12205,7 @@ msgstr "softcamia ei määritetty!"
 msgid "No tags are set on these movies."
 msgstr "Näissä tallenteissa ei ole avainsanoja."
 
-msgid "No time shift found to save as recording!"
+msgid "No time shift buffer found to save as recording!"
 msgstr "Ajansiirtoa ei löytynyt tallennusmuunnosta varten!"
 
 msgid "No timeout"
@@ -12288,9 +12313,6 @@ msgstr "Ei, näytä aina ajastuslista"
 msgid "NodeID"
 msgstr "NodeID"
 
-msgid "NodeID: "
-msgstr "NodeID: "
-
 msgid "Nominate how many IP Addresses are to be checked for active connections."
 msgstr "Määritä, kuinka monta IP Osoitetta tarkistetaan aktiivisten yhteyksien varalta."
 
@@ -12381,7 +12403,7 @@ msgstr "Liian vähän levytilaa. Vapauta levytilaa ja yritä uudelleen. (%d Mt t
 
 #, python-format
 msgid ""
-"Not enough free Diskspace!\n"
+"Not enough free disk space!\n"
 "\n"
 "Filesize: %sMB\n"
 "Free Space: %sMB\n"
@@ -12425,9 +12447,6 @@ msgctxt "now/next: 'now' event label"
 msgid "Now"
 msgstr "Nyt"
 
-msgid "Now save time shift as movie and continues recording"
-msgstr "Muunna ajansiirto tallenteeksi ja jatka tallentamista"
-
 msgid "Now, use the contrast setting to turn up the brightness of the background as much as possible, but make sure that you can still see the difference between the two brightest levels of shades.If you have done that, press OK."
 msgstr "Säädä kontrastisäädöllä tausta mahdollisimman valkoiseksi. Varmista, että näet yhä kahden kirkkaimman sävyn eron. Kun olet tyytyväinen tulokseen, paina OK."
 
@@ -12437,7 +12456,7 @@ msgstr "Numero"
 msgid "Number of IP Addresses"
 msgstr "IP Osoitteiden määrä"
 
-msgid "Number of digits in channel number"
+msgid "Number of digits in service number"
 msgstr "Kanavanumerossa maksimissaan numeroita"
 
 msgid "Number of rows"
@@ -12619,7 +12638,7 @@ msgstr "Avaa"
 msgid "Open AutoTimer"
 msgstr "Automaattiajastus"
 
-msgid "Open AutoTimerlist"
+msgid "Open AutoTimer Overview"
 msgstr "Avaa Automaattiset ajastukset"
 
 msgid "Open EPGSearch"
@@ -12640,10 +12659,10 @@ msgstr "Avaa Asetukset"
 msgid "Open Similar List Channel List"
 msgstr "Avaa Samankaltaiset kanavaluettelon listat"
 
-msgid "Open Timerlist"
+msgid "Open RecordTimer Overview"
 msgstr "Näytä Ajastuslista"
 
-msgid "Open bouquetlist"
+msgid "Open Bouquet selection"
 msgstr "Näytä Suosikkilista"
 
 msgid "Open context menu"
@@ -12661,10 +12680,10 @@ msgstr "Näytä Suosikkilista"
 msgid "Open file sort menu"
 msgstr "Avaa tiedostojen lajittelu valikko"
 
-msgid "Open satellites list"
+msgid "Open Satellites selection"
 msgstr "Näytä satelliittilista"
 
-msgid "Open service list"
+msgid "Open Services / Reception selection"
 msgstr "Avaa kanavalista"
 
 msgid "Open service list and select next channel"
@@ -12818,22 +12837,22 @@ msgstr "Kokonaisedistyminen:"
 msgid "Overscan Test"
 msgstr "Yliskannau testi"
 
-msgid "Overwrite Bootlogo Files ?"
+msgid "Overwrite Bootlogo Files?"
 msgstr "Korvaa käynnistyskuva?"
 
-msgid "Overwrite Driver Files ?"
+msgid "Overwrite Driver Files?"
 msgstr "Korvaa Ajurit?"
 
-msgid "Overwrite Emu Files ?"
+msgid "Overwrite Emu Files?"
 msgstr "Korvaa Softcam tiedostot ?"
 
-msgid "Overwrite Picon Files ?"
+msgid "Overwrite Picon Files?"
 msgstr "Korvaa Kanavalogot?"
 
-msgid "Overwrite Setting Files ?"
+msgid "Overwrite Setting Files?"
 msgstr "Korvaa Asetukset?"
 
-msgid "Overwrite Spinner Files ?"
+msgid "Overwrite Spinner Files?"
 msgstr "Korvaa Spinner tiedostot ?"
 
 msgid "Overwrite bootlogo files during software upgrade?"
@@ -13028,6 +13047,12 @@ msgstr "hyväksytty"
 msgid "Pass-through"
 msgstr "Läpilooppi"
 
+msgid "Passthrough audio handling delay AC3"
+msgstr "AC3 -äänen läpiviennin käsittelyviive"
+
+msgid "Passthrough audio handling delay AC3+"
+msgstr "AC3+ -äänen läpiviennin käsittelyviive"
+
 msgid "Password"
 msgstr "Salasana"
 
@@ -13092,7 +13117,7 @@ msgstr "Suorita sen sijaan uuden ohjelmiston lataus internetistä"
 msgid "Perform the upgrade?"
 msgstr "Suoritetaanko päivitys?"
 
-msgid "Permanently delete all recordings in the trash can?"
+msgid "Permanently delete all recordings in the trashcan?"
 msgstr "Poista kaikki roskakorin tallenteet pysyvästi?"
 
 msgid "Permanently ignore this device"
@@ -13126,7 +13151,7 @@ msgstr "Filippiinit"
 msgid "PiP"
 msgstr "PiP"
 
-msgid "PiP Actions"
+msgid "Picture in Picture Actions"
 msgstr "PiP Toiminnot"
 
 msgid "PiP with OSD"
@@ -13165,7 +13190,7 @@ msgstr "Kuvatietojen toiminnot"
 msgid "Picture in EPG"
 msgstr "TV-kuva EPG:essä"
 
-msgid "Picture in Picture Setup"
+msgid "Picture in Picture Settings"
 msgstr "PiP asetukset"
 
 msgid "Picture in graphics"
@@ -13229,6 +13254,9 @@ msgstr "Toista ääni-CD."
 msgid "Play back media files"
 msgstr "Toista mediatiedostoja"
 
+msgid "Play catch up service archive"
+msgstr "Toista kanava arkisto"
+
 msgid "Play entry"
 msgstr "Toista"
 
@@ -13259,7 +13287,7 @@ msgstr "Toista seuraava (palaa aiemmalle kanavalle)"
 msgid "Play previous"
 msgstr "Toista edellinen"
 
-msgid "Play recorded movies"
+msgid "Open Movie Selection"
 msgstr "Näytä tallenteet"
 
 msgid "Play selected service in a PiP window"
@@ -13282,6 +13310,9 @@ msgstr "Toista valittu kanava"
 
 msgid "Playback Settings"
 msgstr "Toisto Asetukset"
+
+msgid "Playback Time:"
+msgstr "Toistoaika:"
 
 msgid "Playback, Recording & Time Shift"
 msgstr "Tallennus & Ajansiirto"
@@ -13342,6 +13373,9 @@ msgstr "Kirjoita uusi kansio nimi"
 
 msgid "Please enter the new file name:"
 msgstr "Kirjoita uusi tiedostonimi"
+
+msgid "Please enter the new name:"
+msgstr "Kirjoita uusi nimi:"
 
 msgid "Please enter the new tag:"
 msgstr "Syötä uusi tunniste:"
@@ -13999,9 +14033,6 @@ msgstr "Etenemispalkki/Jäljellä olevat minuutit oikealla"
 msgid "Progress info font size"
 msgstr "Etenemistiedot tekstikoko"
 
-msgid "Progress:"
-msgstr "Edistyminen:"
-
 msgid "Properties of current title"
 msgstr "Ominaisuudet"
 
@@ -14052,9 +14083,6 @@ msgstr "Palveluntarjoaja"
 
 msgid "Provider Name: "
 msgstr "Palveluntarjoajan nimi: "
-
-msgid "Provider: "
-msgstr "Palveluntarjoaja: "
 
 msgid "Providers"
 msgstr "Palveluntarjoajat"
@@ -14155,7 +14183,7 @@ msgstr "Pikavalikko"
 msgid "Quick Menu Actions"
 msgstr "Pikavalikko asetukset"
 
-msgid "Quick Menu..."
+msgid "Open QuickMenu"
 msgstr "Pikavalikko..."
 
 msgid "QuickEPG mode"
@@ -14268,12 +14296,12 @@ msgid "Reader"
 msgstr "Lukija"
 
 #, python-format
-msgid "Ready to install \"%s\" ?"
+msgid "Ready to install \"%s\"?"
 msgstr "Haluatko asentaa: \"%s\"?"
 
 #, python-format
-msgid "Ready to remove \"%s\" ?"
-msgstr "Haluatko poistaa: \"%s\" ?"
+msgid "Ready to remove \"%s\"?"
+msgstr "Haluatko poistaa: \"%s\"?"
 
 msgid "Real Life"
 msgstr "Oikea Elämä"
@@ -14381,9 +14409,6 @@ msgstr "Tallenna seuraava"
 msgid "Record now"
 msgstr "Tallenna heti"
 
-msgid "Record started! Stopping time shift now ..."
-msgstr "Tallennus alkoi! Ajansiirto pysähtyy nyt..."
-
 #, python-format
 msgid "Record time limited due to conflicting timer:%s"
 msgstr "Ajastusaika rajoitettu, ristiriita ajastukseen %s"
@@ -14439,6 +14464,9 @@ msgstr "Tallennus käynnissä"
 msgid "Recording started"
 msgstr "Tallennus alkanut"
 
+msgid "Recording started, stopping time shift now."
+msgstr "Tallennus alkoi! Ajansiirto pysähtyy nyt..."
+
 msgid "Recording stopped"
 msgstr "Tallennus keskeytetty"
 
@@ -14485,7 +14513,7 @@ msgstr "Palautus tila"
 msgid "Red"
 msgstr "Punainen"
 
-msgid "Red button..."
+msgid "RED button / HbbTV"
 msgstr "Punainen näppäin"
 
 msgid "Red colored"
@@ -15268,9 +15296,6 @@ msgstr "SSH"
 msgid "SSID"
 msgstr "SSID"
 
-msgid "SSID:"
-msgstr "SSID:"
-
 msgid "Sailing"
 msgstr "Purjehdus"
 
@@ -15449,14 +15474,17 @@ msgstr "Muunna ajansiirto tallenteeksi ja jatka tallentamista"
 msgid "Save time shift as movie and stop recording"
 msgstr "Muunna ajansiirto tallenteeksi ja lopeta tallentaminen"
 
+msgid "Save time shift buffer now and continue recording"
+msgstr "Muunna ajansiirto tallenteeksi ja jatka tallentamista"
+
 msgid "Saved lines in script messages"
 msgstr "Tallennetut rivit komentosarjaviesteissä"
 
 msgid "Saving EPG Cache..."
 msgstr "Tallennetaan kanavaoppaan välimuistiin.."
 
-msgid "Saving time shift as movie now. This might take a while!"
-msgstr "Muunnetaan ajansiirto tallennukseksi. Tämä saattaa kestää hetken!"
+msgid "Saving time shift buffer, this might take a while."
+msgstr "Muunnetaan ajansiirto tallennukseksi. Tämä saattaa kestää hetken."
 
 msgid "Saving time shift files"
 msgstr "Tallennetaan ajansiirron tiedostoja"
@@ -15531,9 +15559,6 @@ msgstr[1] "Haku valmis, löytyi %d kanavaa."
 msgid "Scanning failed!"
 msgstr "Haku epäonnistui!"
 
-msgid "Scanning..."
-msgstr "Haetaan..."
-
 #. TRANSLATORS: The receiver is performing a service scan, progress percentage is printed in '%d' (and '%%' will show a single '%' symbol).
 #, python-format
 msgid "Scanning: %d%% complete"
@@ -15583,6 +15608,9 @@ msgstr "Tiede & tekniikka"
 msgid "Scope"
 msgstr "Alue"
 
+msgid "Screen saver movement"
+msgstr "Näytönsäästäjä liikkuminen"
+
 msgid "Script Manager"
 msgstr "Komentosarjojen hallinta"
 
@@ -15601,7 +15629,7 @@ msgstr "Vieritysnopeus (ohjelmistopohjainen renderöinti)"
 msgid "Search"
 msgstr "Haku"
 
-msgid "Search IMDb for information about current event."
+msgid "Search IMDb for information about current event"
 msgstr "Hae IMDb:stä tietoja katseltavasta ohjelmasta."
 
 msgid "Search Sats"
@@ -15619,7 +15647,7 @@ msgstr "Etsi verkkojakoja"
 msgid "Search for similar events"
 msgstr "Hae samanlaisia ohjelmia"
 
-msgid "Search the epg for current event."
+msgid "Search EPG for current event"
 msgstr "Hae ohjelmaoppaasta nykyistä ohjelmaa."
 
 msgid "Search weather location ID"
@@ -15682,7 +15710,7 @@ msgstr "Etsiä eteenpäin kauan"
 msgid "Seekbar"
 msgstr "Etsi"
 
-msgid "Seekbar activation"
+msgid "SeekBar activation"
 msgstr "Hakupalkin aktivointi"
 
 msgid "Seekbar sensibility"
@@ -15704,6 +15732,9 @@ msgid "Select 'Band' if using a 'Universal' LNB, otherwise consult your LNB spec
 msgstr ""
 "Valitse 'taajuusalue', jos käytössä 'universaali' LNB, muutoin lisätiedot\n"
 "LNB:n teknisistä tiedoista."
+
+msgid "Select 'Disabled' to disable all automated volume adjustments. Select 'Defined volume offsets' to assign a specified offset to the service's volume level. Select 'Last used/set volume' to remember the volume level last used for each service."
+msgstr "Valitse 'Pois käytöstä' poistaaksesi kaikki automatisoidut äänenvoimakkuuden säädöt käytöstä. Valitse 'Määritetyt äänenvoimakkuuden siirtymät' määrittääksesi palvelun äänenvoimakkuustason siirtymän. Valitse 'Viimeksi käytetty/määritetty äänenvoimakkuus' muistaaksesi kunkin palvelun viimeksi käytetyn äänenvoimakkuustason."
 
 msgid "Select 'Enable' to start the CI+ helper."
 msgstr "Valitse 'Käytössä' Avataksesi CI+ avustajan."
@@ -15742,22 +15773,19 @@ msgstr ""
 "Valitse 'kyllä', jos tämä viritin on kytketty SCR laitteeseen toisen\n"
 "virittimen läpi, muutoin valitse 'ei'."
 
-msgid "Select 'Yes' if volume adjustments should be applied to Dolby sound tracks."
-msgstr "Valitse 'Kyllä' jos äänenvoimakkuuden säätöjä tulee soveltaa Dolby ääni raitoihin."
-
 msgid "Select 'Yes' if you are using a multi-switch which requires a DiSEqC Port-A command signal. Select 'No' for all other setups."
 msgstr ""
 "Valitse 'kyllä', jos käytät monikytkintä, joka vaatii DiSEqC portti-A\n"
 "komentosignaalin. Kaikille muille kokoonpanoille valitse 'ei'."
-
-msgid "Select 'Yes' if you want to wake the TV when a 'Wakeup' scheduled task is starting."
-msgstr "Valitse \"Kyllä\", jos haluat herätää television kun Virta ajastus käynnistyy."
 
 msgid "Select 'Yes' if you want to wake the TV for a 'Zap and Record' recording timer is starting."
 msgstr "Valitse \"Kyllä\", jos haluat herätää television kun vaihda kanavaa ja tallenna alkaa."
 
 msgid "Select 'Yes' if you want to wake the TV for a 'Zap' recording timer is starting."
 msgstr "Valitse \"Kyllä\", jos haluat herätää television Vaihda kanavaa ajastus alkaa."
+
+msgid "Select 'Yes' if you want to wake the TV when a 'Wakeup' scheduled task is starting."
+msgstr "Valitse \"Kyllä\", jos haluat herätää television kun Virta ajastus käynnistyy."
 
 msgid "Select 'Yes' the keep the InfoBar displayed, with no timeout, while media playback is paused."
 msgstr "'Kyllä' valinnalla tietopalkki näytetään, pysyvästi keskeytetyssä tilassa (ei aikakatkaisua)."
@@ -15930,6 +15958,9 @@ msgstr "Valitse \"Kyllä\" näyttämiseksi tilatut lisäosat Lataa Plugin Lisäo
 msgid "Select 'Yes' to show system plugin packages in the Download Plugins screen."
 msgstr "Valitse 'Kyllä' näyttääksesi järjestelmä lisäosat listassa."
 
+msgid "Select 'Yes' to show the 'Movie Selection' entry in the Main Menu. This can provide access to the Movie Selection screen when there is no assigned button on the remote control."
+msgstr "Valitse 'Kyllä' näyttääksesi 'Tallennukset' päävalikossa. Tämä mahdollistaa pääsyn Tallennukset valikkoon, kun kaukosäätimessä ei ole määritettyä painiketta."
+
 msgid "Select 'Yes' to show the advanced setting options."
 msgstr "Valitse 'Kyllä' näyttääksesi lisäasetukset."
 
@@ -15942,11 +15973,17 @@ msgstr "'Kyllä' valinnalla kanavalista näytetään, kun vaihdetaan radio- ja T
 msgid "Select 'Yes' to show the current directory in the list of directories. Note that File Commander must be restarted for this change to take effect."
 msgstr "Valitse 'Kyllä', jos haluat näyttää nykyisen hakemiston hakemistoluettelossa. Huomaa, että tiedostonhallinta on käynnistettävä uudelleen, jotta tämä muutos tulee voimaan."
 
+msgid "Select 'Yes' to show the volume level on any automated changes of volume level."
+msgstr "Valitse 'Kyllä' näyttääksesi äänenvoimakkuustason äänenvoimakkuuden muutoksissa."
+
 msgid "Select 'Yes' to show this plugin in the Plugin Browser."
 msgstr "Valitse \"Kyllä\" näyttääksesi tämän lisäosat valikossa."
 
 msgid "Select 'Yes' to show web link packages in the Download Plugins screen."
 msgstr "Valitse 'Kyllä' näyttääksesi Netti sivut listassa."
+
+msgid "Select 'Yes' to shut down immediately instead of starting the descramble."
+msgstr "Valitse 'Kyllä' sammuttaaksesi välittömästi sen sijaan, että aloitat salauksen purun."
 
 msgid "Select 'Yes' to split tasks into separate actions."
 msgstr "Valitse ”Kyllä” jakaaksesi tehtävät eri toimintoihin."
@@ -15971,9 +16008,6 @@ msgstr "Lisää varmuuskopioitavat tiedostot"
 
 msgid "Select AutoCam default Softcam"
 msgstr "Valitse AutoCam oletus Softcamiksi"
-
-msgid "Select Backup Location"
-msgstr "Varmuuskopion sijainti"
 
 msgid "Select Bookmark"
 msgstr "Valitse kirjanmerkki"
@@ -16086,6 +16120,12 @@ msgstr "Valitse arkiston loki tarkasteltavaksi:"
 msgid "Select a script to run:"
 msgstr "Valitse suoritettava scripti:"
 
+msgid "Select a time, when in Standby mode, after which the descramble can proceed."
+msgstr "Valitse aika, jonka kuluttua valmiustilassa salauksen purku voi jatkua."
+
+msgid "Select a time, when in Standby, before which descramble can proceed."
+msgstr "Valitse aika, jonka jälkeen valmiustilassa salauksen purku voi jatkua."
+
 msgid "Select a tuner"
 msgstr "Valitse viritin"
 
@@ -16143,6 +16183,9 @@ msgstr "Valitse varmuuskopiosta suljettavat tiedostot"
 
 msgid "Select files/folders to backup"
 msgstr "Valitse varmistettavat tiedostot/kansiot"
+
+msgid "Select how long the screen saver image will stay in the same location on the screen before it will be moved."
+msgstr "Valitse, kuinka kauan näytönsäästäjä pysyy samassa paikassa ruudulla, ennen kuin se siirretään."
 
 msgid "Select how long to display status messages."
 msgstr "Valitse, kuinka kauan tilaviestejä näytetään."
@@ -16242,7 +16285,7 @@ msgstr "Valitse lisättävä palveluntarjoaja..."
 msgid "Select refresh rate"
 msgstr "Valitse virkistystaajuus"
 
-msgid "Select seekbar to be activated by arrow L/R (long) or << >> (long)."
+msgid "Select SeekBar to be activated by arrow L/R (long) or << >> (long)."
 msgstr "Valitse hakupalkin aktivointi: kursori vasen/oikea (pitkä) tai << >> (pitkä)."
 
 msgid "Select service information to view:"
@@ -16254,7 +16297,7 @@ msgstr "Valitse lisättävä kanava..."
 msgid "Select sort method:"
 msgstr "Valitse lajittelutapa:"
 
-msgid "Select subservices"
+msgid "Open Subservices selection"
 msgstr "Valitse alipalvelu"
 
 msgid "Select system information to view:"
@@ -16401,6 +16444,9 @@ msgstr "Valitse näytön vaihtoehdot jokaiselle valikon kohteelle. Jos valikkonu
 msgid "Select the display sequence of previously visited services."
 msgstr "Valitse aiemmin katsottuijen kanavien näyttö järjestys."
 
+msgid "Select the duration of inactivity before the screen saver will be displayed."
+msgstr "Määrittää, käytetäänkö näytönsäästäjää ja jos, niin kuinka pitkän ajan kuluttua se aktivoidaan."
+
 #, python-format
 msgid "Select the file sort order for the %s column:"
 msgstr "Valitse tiedostojen lajittelujärjestys sarakkeelle %s:"
@@ -16425,6 +16471,9 @@ msgstr "Valitse korostettu image paikka ja käynnistä uudelleen"
 
 msgid "Select the initial position of the timeline marker. The marker is the vertical line drawn on the EPG that shows the current time. The larger the value the more the marker will move to the right showing more history and less of upcoming events."
 msgstr "Valitse aikajana merkin alkuasento. Merkki on EPG:hen piirretty pystysuora viiva, joka näyttää nykyisen ajan. Mitä suurempi arvo on, sitä enemmän merkki siirtyy oikealle ja näyttää enemmän historiaa ja vähemmän tulevia ohjelmia."
+
+msgid "Select the input connector you want to use."
+msgstr "Valitse tulo, jota haluat käyttää."
 
 msgid "Select the last item in list or move to the end of text"
 msgstr "Valitse listan ensimmäinen kohta tai siirry tekstin alkuun"
@@ -16694,9 +16743,6 @@ msgstr "Valitse ATSC-palveluntarjoajasi."
 msgid "Select your Language for Audio/Subtitles"
 msgstr "Valitse kieliasetukset äänelle ja tekstitykselle"
 
-msgid "Select your backup device."
-msgstr "Valitse varmuuskopio laite."
-
 msgid "Select your country. If not available select 'All'."
 msgstr "Valitse maasi, jos ei ole saatavilla valitse 'kaikki'."
 
@@ -16715,7 +16761,7 @@ msgstr "Valitse käyttämäsi aikavyöhyke tai alue."
 msgid "Select, toggle, process or edit the current entry"
 msgstr "Valitse, vaihda, käsittele tai muokkaa nykyistä merkintää"
 
-msgid "Select/Zap to selected service"
+msgid "Select/Zap to the selected service"
 msgstr "Vaihda valitulle kanavalle"
 
 #, python-format
@@ -16801,9 +16847,6 @@ msgstr "Palvelin kaatunut"
 
 msgid "Servers"
 msgstr "Palvelimet"
-
-msgid "Servers:"
-msgstr "Palvelimet:"
 
 msgid "Service"
 msgstr "Kanava"
@@ -17094,7 +17137,7 @@ msgstr "Määrittää, kuinka kauan tietopalkki näytetään kuvaruudulla."
 msgid "Set the time to hide the second infobar. The bar also disappears on pressing 'OK'."
 msgstr "Määrittää, kuinka kauan 2. tietopalkki näytetään kuvaruudulla. Sen voi piilottaa samantien painamalla 'OK'."
 
-msgid "Set the time to wait for execute the default action in shutdown, standby or restart messages, e.g. used in RecordTimer, PowerTimer, SleepTimer etc."
+msgid "Set the time to wait for execute the default action in shutdown, standby or restart messages, e.g. used in RecordTimer, Scheduler, SleepTimer etc."
 msgstr "Aseta aika joka odotettaan ennen kuin suoritettaan oletustoiminto sammutuksessa, valmiustilassa tai uudelleenkäynnistyksessä. (esim .uniajastin, ...)"
 
 msgid "Set the top left location of the busy spinner. The coordinates are scaled such that the top left is at (0,0) and the bottom right is at (1260,700). Note that the position is the top left of the spinner and not the centre of the spinner."
@@ -17102,6 +17145,10 @@ msgstr "Säädä spinnerin vasenta yläkulmaa (ruutu). Ylävasen on 0,0, alhaall
 
 msgid "Set the type of the progress indication in the channel selection screen."
 msgstr "Määritä ohjelman pituuden osoittamisen tyyppi kanavien valintalistassa."
+
+#, python-format
+msgid "Set the volume level for the '%s' service."
+msgstr "Aseta äänenvoimakkuustaso '%s' kanavalle."
 
 #, python-format
 msgid "Set the volume offset for the '%s' service."
@@ -17130,6 +17177,12 @@ msgstr "Aika asetusten määrittäminen"
 
 msgid "Set to 'Disabled' to replace underscore characters, '_', in file and directory names with spaces."
 msgstr "Jos asetus ei ole käytössä, tiedosto- ja kansionimien alaviivoja ei näytetä, ja ne korvataan välilyönneillä."
+
+msgid "Set to 'Enabled' to descramble queued scrambled recordings in Standby mode before shutting down."
+msgstr "Aseta 'Käytössä' purkaaksesi jonossa olevat salatut tallenteet valmiustilassa ennen sammutusta."
+
+msgid "Set to 'Enabled' to descramble queued scrambled recordings in Standby."
+msgstr "Aseta 'Käytössä' purkaaksesi jonossa olevat salatut tallenteet valmiustilassa."
 
 msgid "Set to 'Yes', to enable automatic recording of the background timeshift buffer."
 msgstr "Jos asetuksena on 'kyllä` valinnalla tallennus käynnistyy automaattisesti, kun vaihdat jollekin kanavalle. Näitä tallennuksia ei tarvitse erikseen muuntaa tallenteiksi vaan niistä tulee pysyviä tallenteita suoraan."
@@ -17198,9 +17251,6 @@ msgstr "Ääni asetusten määritys"
 msgid "Setup Enigma2"
 msgstr "Käyttöjärjestelmä Asetukset"
 
-msgid "Setup Harddisk"
-msgstr "Kiintolevyn asetukset"
-
 msgid "Setup Inadyn"
 msgstr "Inadyn asetukset"
 
@@ -17234,7 +17284,7 @@ msgstr "Määritä Kuva / Ääni asetukset"
 msgid "Setup Videomode"
 msgstr "Kuva asetusten määritys"
 
-msgid "Setup delay mode to zap to channels."
+msgid "Select if data entry timeouts are to be applied when entering digits into the service selection pop up screen. When a timeout is exceeded the currently entered number will be used for the service selection. The default timeouts are first digit 3 seconds, other digits 1 second."
 msgstr "Määritä vaihto viive kanaviin."
 
 msgid "Setup each tuner for your satellite system"
@@ -17430,7 +17480,7 @@ msgstr "Äänivalinta"
 msgid "Show AutoTimer List"
 msgstr "Näytä automaattiajastus luettelo"
 
-msgid "Show Box Portal"
+msgid "Open Box Portal"
 msgstr "Näytä Tallennukset"
 
 msgid "Show CCcam Info"
@@ -17457,7 +17507,7 @@ msgstr "Näytä Ajuri paketit"
 msgid "Show EPG"
 msgstr "Näytä Ohjelmaopas"
 
-msgid "Show EPG for current channel..."
+msgid "Open EPG for current service"
 msgstr "Näytä nykyisen kanavan ohjelmaopas..."
 
 msgid "Show EventView"
@@ -17466,7 +17516,7 @@ msgstr "Näytä ohjelman tiedot"
 msgid "Show Extension packages"
 msgstr "Näytä laajennuspaketit"
 
-msgid "Show Format Setup"
+msgid "Open VideoMode"
 msgstr "Näytä Muoto Asetukset"
 
 msgid "Show Graphical EPG"
@@ -17481,7 +17531,7 @@ msgstr "Näytä HDMI Ulostulo tarkuus"
 msgid "Show HDMI-Output Res"
 msgstr "Näytä HDMI Ulostulo resoluutio"
 
-msgid "Show HDMIRecord setup..."
+msgid "Open HDMIRecord Settings"
 msgstr "Näytä HDMI tallennukset asetukset..."
 
 msgid "Show InfoBar"
@@ -17502,7 +17552,7 @@ msgstr "Näytä tietopalkki kelauksien/hyppyjen aikana"
 msgid "Show InfoBar picons"
 msgstr "Näytä kanavalogot tietopalkissa"
 
-msgid "Show Information"
+msgid "Open Information menu"
 msgstr "Näytä Tietoja"
 
 msgid "Show Kernel packages"
@@ -17531,6 +17581,9 @@ msgstr "Näytä Merlin EPG Center"
 
 msgid "Show MiniTV in the Front Display"
 msgstr "Näytä tv etupaneelin näytössä"
+
+msgid "Show Movie Selection in Main Menu"
+msgstr "Näytä Tallennukset Päävalikossa"
 
 msgid "Show Movies List"
 msgstr "Näytä tallennelista"
@@ -17568,7 +17621,7 @@ msgstr "Näytät kanavalogot"
 msgid "Show Plugin Skin packages"
 msgstr "Näytä Teemat Paketit"
 
-msgid "Show RFmod setup..."
+msgid "Open RFmod Settings"
 msgstr "Näytä RFMod asetukset"
 
 msgid "Show Record Movies"
@@ -17673,6 +17726,10 @@ msgstr "Näytä avattaessa suosikkilistat"
 msgid "Show build information"
 msgstr "Näytä koontiversion tiedot"
 
+#, python-format
+msgid "Show cards with uphop %s"
+msgstr "Näytä kortit joissa ylöshyppy %s"
+
 msgid "Show channel number in InfoBar"
 msgstr "Näytä kanavanumero tietopalkissa"
 
@@ -17727,6 +17784,9 @@ msgstr "Näytä yksityiskohdat korostuneesta tehtävästä"
 msgid "Show directories first"
 msgstr "Näytä hakemistotiedot ensin"
 
+msgid "Show during operation"
+msgstr "Näytä käytön aikana"
+
 msgid "Show encryption information in the InfoBar (when supported by the skin)."
 msgstr "Kun päällä, salaustieto näytetään tietopalkissa (mikäli teema tukee tätä)."
 
@@ -17748,7 +17808,7 @@ msgstr "Näytä laajennettu ohjelmakuvaus"
 msgid "Show extension selection"
 msgstr "Näytä laajennukset"
 
-msgid "Show extensions..."
+msgid "Open Extensions"
 msgstr "Näytä laajennukset..."
 
 msgid "Show extra spacing in Information"
@@ -17836,7 +17896,7 @@ msgstr "Näytä tallennukset"
 msgid "Show multi channel EPG"
 msgstr "Näytä monikanava-EPG"
 
-msgid "Show network setup menu..."
+msgid "Open Network Settings"
 msgstr "Näytä verkon asetusvalikko"
 
 msgid "Show next commit log"
@@ -17977,13 +18037,13 @@ msgstr "Näytä kanavatyypin kuvakkeet"
 msgid "Show servicelist or movies"
 msgstr "Avaa kanavalista tai tallennukset"
 
-msgid "Show setup"
+msgid "Open Setup menu"
 msgstr "Näytä Asetukset"
 
 msgid "Show setup default value"
 msgstr "Näytä asetusten oletusarvo"
 
-msgid "Show setup menu..."
+msgid "Open Setup"
 msgstr "Näytä asetukset valikko"
 
 msgid "Show shut down menu"
@@ -18034,7 +18094,7 @@ msgstr "Näytä viesti, jos Tiedostojen hallinta ei ole käynnissä ja kaikki te
 msgid "Show the CCcam Info Screen"
 msgstr "Näytä CCcam tiedot näytön näyttäminen"
 
-msgid "Show the DreamPlex player..."
+msgid "Open DreamPlex"
 msgstr "Näytä DreamPlex soitin"
 
 msgid "Show the EIT Now/Next data in the InfoBar."
@@ -18046,13 +18106,13 @@ msgstr "Näytä Lokit asetukset näytössä"
 msgid "Show the OSCam information screen"
 msgstr "Näytä OSCam tietonäytössä"
 
-msgid "Show the Scheduler"
+msgid "Open Scheduler Overview"
 msgstr "Näytä aikataulu"
 
-msgid "Show the SleepTimer"
+msgid "Open SleepTimer Settings"
 msgstr "Näytä uniajastukset"
 
-msgid "Show the information on current event."
+msgid "Open event information"
 msgstr "Näytä tiedot katseltavasta ohjelmasta."
 
 msgid "Show the last opkg command's output"
@@ -18064,10 +18124,10 @@ msgstr "Näytä automaattiajastus luettelo."
 msgid "Show the list of timers."
 msgstr "Näytä ajastusluettelo."
 
-msgid "Show the media center"
+msgid "Open MediaCenter"
 msgstr "Avaa media keskus"
 
-msgid "Show the media player"
+msgid "Open Media Player"
 msgstr "Avaa media soitin"
 
 msgid "Show the media player..."
@@ -18076,16 +18136,16 @@ msgstr "Avaa media soitin"
 msgid "Show the plugin browser.."
 msgstr "Näytä lisäosien selain."
 
-msgid "Show the plugins"
+msgid "Open Plugin Browser"
 msgstr "Näytä lisäosat"
 
-msgid "Show the radio player"
+msgid "Open Radio bouquet selection"
 msgstr "Avaa radiosoitin"
 
 msgid "Show the task list"
 msgstr "Näytä tehtäväluettelo"
 
-msgid "Show the tv player"
+msgid "Open TV bouquet selection"
 msgstr "Näytä tv"
 
 msgid "Show time elapsed as positive"
@@ -18112,10 +18172,13 @@ msgstr "Näytä alaviivamerkit tiedoston nimissä"
 msgid "Show unknown Videoresolution as next higher or as highest screen resolution."
 msgstr "Näytä tuntemattomat videotarkkuudet seuraavalla suuremmalla tai suurimmalla tarkkuudella."
 
+msgid "Show unknown devices"
+msgstr "Näytä tuntemattomat laitteet"
+
 msgid "Show unknown video format as"
 msgstr "Näytä tuntematon videon tarkkuus muodossa"
 
-msgid "Show usage and GUI menu..."
+msgid "Open Usage and GUI Settings"
 msgstr "Näytä käyttö ja järjestelmä valikko"
 
 msgid "Show vertical Program Guide"
@@ -18196,9 +18259,6 @@ msgstr "Yhteyden laatu"
 msgid "Signal strength"
 msgstr "Signaalin voimakkuus"
 
-msgid "Signal strength:"
-msgstr "Signaalinvoimakkuus:"
-
 msgid "Signal: "
 msgstr "Signaali: "
 
@@ -18220,7 +18280,7 @@ msgstr "Yksinkertainen häivytys"
 msgid "Simple titleset (compatibility for legacy players)"
 msgstr "Suppea (yhteensopiva vanhojen soittimien kanssa)"
 
-msgid "Simple umounter mass storage device."
+msgid "Open Simple Umount"
 msgstr "Näytä tallennuslaitteet"
 
 msgid "Simple zoom"
@@ -18815,6 +18875,9 @@ msgstr "Teksti-TV"
 msgid "Start test"
 msgstr "Aloita testi"
 
+msgid "Start the Chkroot initialization"
+msgstr "Aloita Chkroot alustaminen"
+
 msgid "Start the Kexec initialization"
 msgstr "Aloita Kexec alustus"
 
@@ -18881,9 +18944,6 @@ msgstr "Näytön tila valmiustila"
 
 msgid "Status unavailable!"
 msgstr "Tila ei saatavilla!"
-
-msgid "Status:"
-msgstr "Tila:"
 
 msgid "Step"
 msgstr "Vaihe"
@@ -18960,10 +19020,10 @@ msgstr "Pysäytä päivitys, jos se on käynnissä, sitten poistu"
 msgid "Stop time shift"
 msgstr "Pysäytä ajansiirto"
 
-msgid "Stop time shift and save time shift buffer as movie"
+msgid "Stop time shift and save time shift buffer as a movie"
 msgstr "Pysäytä ajansiirto ja muunna ajansiirtoa tallenteeksi"
 
-msgid "Stop time shift and save time shift buffer as movie and start recording of current event"
+msgid "Stop time shift and save time shift buffer as a movie and start recording of current event"
 msgstr "Pysäytä ajansiirto ja muunna ajansiirtoa tallenteeksi ja aloita tallentaminen nykyinen ohjelma"
 
 msgid "Stop time shift while recording"
@@ -19134,10 +19194,10 @@ msgstr "Tekstityksen kielivalinta 4"
 msgid "Subtitle position"
 msgstr "Tekstityksen sijainti"
 
-msgid "Subtitle selection"
+msgid "Subtitle Selection"
 msgstr "Valitse tekstitys"
 
-msgid "Subtitle selection..."
+msgid "Open Subtitle options"
 msgstr "Tekstityksen valinta"
 
 msgid "Subtitles"
@@ -19251,7 +19311,7 @@ msgstr "Vaihda tiedosto-/soittoluettelon välillä"
 msgid "Switch config"
 msgstr "Vaihda asetuksia"
 
-msgid "Switch next channel"
+msgid "Zap to next service"
 msgstr "Vaihda seuraavalle kanavalle"
 
 msgid "Switch off the TV to correct input"
@@ -19287,7 +19347,7 @@ msgstr "Vaihda tiedostolistaan"
 msgid "Switch to next EPG Event"
 msgstr "Siirry seuraavaan EPG tapahtumaan"
 
-msgid "Switch to next channel in history"
+msgid "Zap to next service in the history"
 msgstr "Vaihda seuraavalle kanavalle historiassa"
 
 msgid "Switch to play list"
@@ -19296,10 +19356,10 @@ msgstr "Vaihda soittolistaan"
 msgid "Switch to previous EPG Event"
 msgstr "Siirry edelliseen EPG tapahtumaan"
 
-msgid "Switch to previous channel"
+msgid "Zap to previous service"
 msgstr "Vaihda edelliselle kanavalle"
 
-msgid "Switch to previous channel in history"
+msgid "Zap to previous service in the history"
 msgstr "Vaihda edelliselle kanavalle historiassa"
 
 msgid "Switch to the available RADIO services"
@@ -19335,7 +19395,7 @@ msgstr "Symbolinen linkki"
 msgid "Sync NTP every (minutes)"
 msgstr "Synkronoi NTP joka (minuuttia)"
 
-msgid "Sync failure moving back to origin !"
+msgid "Sync failure moving back to origin!"
 msgstr "Synkronointivirhe, palataan takaisin alkuperäiseen!"
 
 msgid "Sync mode"
@@ -19403,7 +19463,7 @@ msgstr "TMDB Haku"
 
 msgid "TRANSLATOR_INFO"
 msgstr ""
-"Suomenkielinen käännös: 1.1.2025\n"
+"Suomenkielinen käännös: 22.4.2025\n"
 "tomppaa"
 
 msgid "TS file is too large for ISO9660 level 1!"
@@ -19650,6 +19710,10 @@ msgid "The %s %s stores the EPG data every (hours)."
 msgstr "%s %s tallentaa EPG-tiedon joka (tuntia)."
 
 #, python-format
+msgid "The %s %s will reboot within 1 seconds."
+msgstr "%s %s uudelleen käynnistyy 1 sekunnin kuluttua."
+
+#, python-format
 msgid "The %s %s will reboot within 10 seconds, unless there are eMMC slots to restore. Restoring eMMC slots can take from 1 to 5 minutes per slot."
 msgstr "%s %s käynnistyy uudelleen 10 sekunnin kuluessa, ellei palautettavia eMMC-paikkoja ole. eMMC-paikkojen palauttaminen voi kestää 1-5 minuuttia per paikka."
 
@@ -19664,6 +19728,9 @@ msgstr "%s loki ei sisällä mitään tietoja."
 #, python-format
 msgid "The '%s' file can't be retrieved, please try again later."
 msgstr "Tiedostoa '%s' ei voi hakea, yritä myöhemmin uudelleen."
+
+msgid "The AI mode used for translating languages. You can choose the one that gives the most accurate translation for your target language."
+msgstr "Käytössä oleva tekoälytila kielten kääntämiseen. Voit valita sen, joka tuottaa tarkimman käännöksen kohdekielellesi."
 
 msgid "The AI-Powered Translation service will be optimized to provide the best performance based on the the Internet connection upload speed selected."
 msgstr "Tekoäly käännöksen palvelu on optimoitu tarjoamaan parhaan suorituskyvyn valitun Internet yhteyden latausnopeuden perusteella."
@@ -19807,8 +19874,8 @@ msgid "The authors are NOT RESPONSIBLE for DATA LOSS OR DAMAGE!"
 msgstr "Tekijät EIVÄT OLE VASTUUSSA TIETOJEN MENETYKSESTÄ TAI VAHINGOISTA!"
 
 msgid ""
-"The available disk space for time shift is less than specified in the settings.\n"
-"What do you want to do ?"
+"The available disk space for time shift buffer is less than specified in the settings.\n"
+"What do you want to do?"
 msgstr ""
 "Ajansiirtoon käytettävissä oleva tila on vähemmän kuin asetuksissa määritetty.\n"
 "Mitä haluat tehdä?"
@@ -19830,13 +19897,6 @@ msgstr "Varmuuskopiointi onnistui. Päivitys jatkuu eteenpäin."
 
 msgid "The bitrate of the video encoder. Larger value improves quality and increases file size."
 msgstr "Videokooderin bittinopeus. Suurempi arvo parantaa laatua ja lisää tiedostokokoa."
-
-msgid ""
-"The buffer time for time shift exceeds the specified limit in the settings.\n"
-"What do you want to do ?"
-msgstr ""
-"Ajansiirron aikapuskuri ylittää asetuksissa määritetyn rajan.\n"
-"Mitä haluat tehdä?"
 
 msgid ""
 "The channel may support VPS\n"
@@ -19919,6 +19979,10 @@ msgid "The picon directory already exists and must be removed. Do you want to pr
 msgstr "Kanavalogo hakemisto on jos olemassa ja pitää poistaa ensin. Haluatko jatkaa?"
 
 #, python-format
+msgid "The process will take approximately %d minutes to complete."
+msgstr "Prosessi vie noin %d minuuttia valmistuakseen."
+
+#, python-format
 msgid "The results have been written to %s."
 msgstr "Tulokset kirjoitettiin %s."
 
@@ -19950,6 +20014,13 @@ msgstr ""
 
 msgid "The time is multiplied by the current repeat counter."
 msgstr "Aika kerrotaan nykyisellä toistolaskurilla."
+
+msgid ""
+"The time shift buffer exceeds the limit specified in the settings.\n"
+"What do you want to do?"
+msgstr ""
+"Ajansiirron aikapuskuri ylittää asetuksissa määritetyn rajan.\n"
+"Mitä haluat tehdä?"
 
 #, python-format
 msgid "The timer file '%s' is corrupt and could not be loaded."
@@ -20028,6 +20099,12 @@ msgid "There are pending tasks:"
 msgstr "Odottavia asennuksia:"
 
 #, python-format
+msgid "There is %d scrambled recording, which will be unscrambled during Standby."
+msgid_plural "There are %d scrambled recordings, which will be unscrambled during Standby."
+msgstr[0] "On %d salattua tallennus, joka puretaan valmiustilassa."
+msgstr[1] "On %d salattua tallennetta, jotka puretaan valmiustilassa."
+
+#, python-format
 msgid "There is a risk that your %s %s will not boot or may malfunction after such a large on-line update."
 msgstr "Voi olla, että %s %s ei käynnisty tai siinä voi esiintyä toiminta häiriöitä näin suuren päivityksen jälkeen (epätodennäköistä)."
 
@@ -20035,7 +20112,7 @@ msgstr "Voi olla, että %s %s ei käynnisty tai siinä voi esiintyä toiminta h�
 msgid "There is no information to show for '%s'."
 msgstr "Ei ole mitään näytettävää tietoa \"%s\"."
 
-msgid "There is no signal to lock on !"
+msgid "There is no signal to lock on!"
 msgstr "Ei signaalia johon voisi lukittua!"
 
 msgid "There might not be enough space on the selected partition. Do you really want to continue?"
@@ -20071,7 +20148,7 @@ msgstr "Määrittää tekstikoon suhteessa teeman määritykseen. Arvo 1 suurent
 msgid "This allows you change the number of rows shown."
 msgstr "Määrittää, montako riviä näytetään."
 
-msgid "This allows you to set the number of digits to 5, if you have more than 9999 channels."
+msgid "This allows you to set the maximum number of digits in a service number, up to 5."
 msgstr "Määrittää, näytetäänkö kanavanumerossa maksimissaan 4 vai 5 numeroa (tapauksessa, jossa kanavia on enemmän kuin 9999)."
 
 msgid "This bouquet is protected by a parental control PIN!"
@@ -20151,6 +20228,9 @@ msgstr "Määrittää, kuinka jäljellä oleva/kulunut aika näytetään tallenn
 
 msgid "This option allows you choose if the display shows the time or nothing in Standby."
 msgstr "Tämä asetus määrittää kuinka aika näytetään valmiustilassa, tai ei näytetä \"ollenkaan\""
+
+msgid "This option allows you choose if the display shows the time, channel number or nothing during operation."
+msgstr "Tämän asetuksen avulla voit valita, näyttääkö näyttö ajan, kanavanumeron vai ei mitään käytön aikana."
 
 msgid "This option allows you choose the background color of transparent picons."
 msgstr "Määrittää, minkävärinen taustaväri läpinäkyville kanavalogoille asetetaan."
@@ -20597,9 +20677,6 @@ msgstr "Ajastuksien tallennushakemisto"
 msgid "Timer selection"
 msgstr "Ajastinvalinta"
 
-msgid "Timer selection..."
-msgstr "Ajastinvalinta"
-
 msgid "Timer type"
 msgstr "Ajastuksen tyyppi"
 
@@ -20649,7 +20726,7 @@ msgstr "Minne haluat purkaa tiedoston %s?"
 msgid "Today"
 msgstr "Tänään"
 
-msgid "Toggle Digital downmix..."
+msgid "Toggle Dolby Digital down mix"
 msgstr "Vaihda muunto stereoksi"
 
 msgid "Toggle HDMI-In PiP"
@@ -20679,7 +20756,7 @@ msgstr "Väliaikainen liitos nykyiselle laitteelle"
 msgid "Toggle all related files"
 msgstr "Vaihda kaikki liittyvät tiedostot"
 
-msgid "Toggle aspect ratio..."
+msgid "Cycle through the available aspect ratios"
 msgstr "Vaihda kuvasuhdetta"
 
 msgid "Toggle auto refresh On/Off"
@@ -20688,10 +20765,13 @@ msgstr "Kytke automaattinen virkistys päälle/pois"
 msgid "Toggle between bouquet/EPG lists"
 msgstr "Vaihda suosikkien ja ohjelmatietojen välillä"
 
+msgid "Toggle between the available TV and RADIO services"
+msgstr "Vaihda saatavilla olevien TV ja RADIO kanavien välillä"
+
 msgid "Toggle display of image information"
 msgstr "Vaihda kuvatietojen näyttö"
 
-msgid "Toggle display of the InfoBar"
+msgid "Cycle through the InfoBars"
 msgstr "Näytä ohjelman tiedot"
 
 msgid "Toggle display of the image status overlay"
@@ -20733,7 +20813,7 @@ msgstr "Näytä palvelu nimi näytöllä"
 msgid "Toggle the visibility of the highlighted plugin"
 msgstr "Vaihda korostetun laajennuksen näkyvyyttä"
 
-msgid "Toggles between tv and radio"
+msgid "Toggles between TV and Radio"
 msgstr "Vaihda TV-/radiotilan välillä"
 
 msgid "Togo"
@@ -20802,9 +20882,6 @@ msgstr "Transkoodaus"
 
 msgid "Transcoding"
 msgstr "Transkoodaus"
-
-msgid "Transcoding: "
-msgstr "Transkoodaus: "
 
 msgid "Translate Subs On This Service"
 msgstr "Käännös tekstitys tällä kanavalla"
@@ -21057,9 +21134,6 @@ msgstr "Laitteen tyyppi"
 msgid "Type of scan"
 msgstr "Hakutapa"
 
-msgid "Type: "
-msgstr "Tyyppi: "
-
 msgid "UBINIZE"
 msgstr "UBINIZE"
 
@@ -21245,29 +21319,9 @@ msgstr "Ei tuettu"
 msgid "Until standby/restart"
 msgstr "valmiustilaan/uudelleenkäynnistykseen asti"
 
-msgid "Unused 0x22"
-msgstr "Käyttämätön 0x22"
-
-msgid "Unused 0x52"
-msgstr "Käyttämätön 0x52"
-
-msgid "Unused 0x53"
-msgstr "Käyttämätön 0x53"
-
-msgid "Unused 0x54"
-msgstr "Käyttämätön 0x54"
-
-msgid "Unused 0x71"
-msgstr "Käyttämätön 0x71"
-
-msgid "Unused 0x72"
-msgstr "Käyttämätön 0x72"
-
-msgid "Unused 0xb1"
-msgstr "Käyttämätön 0xb1"
-
-msgid "Unused 0xb2"
-msgstr "Käyttämätön 0xb2"
+#, python-format
+msgid "Unused %s"
+msgstr "Käyttämätön %s"
 
 msgid "Unzipping Image"
 msgstr "Puretaan Ohjelmistoa"
@@ -21631,6 +21685,12 @@ msgstr "Käytetty muisti"
 msgid "Used service scan type"
 msgstr "Käytetty kanavahakutyyppi"
 
+msgid "Used to specify delay when switching between services and AC3 passthrough is enabled."
+msgstr "Käytetään määrittämään viive, kun vaihdetaan kanavien välillä ja AC3 -läpivienti on käytössä."
+
+msgid "Used to specify delay when switching between services and AC3+/Atmos passthrough is enabled."
+msgstr "Käytetään määrittämään viive, kun vaihdetaan kanavien välillä ja AC3+/Atmos -läpivienti on käytössä."
+
 msgid "Used:"
 msgstr "Käytetty:"
 
@@ -21656,10 +21716,10 @@ msgstr "Käyttäjän määrittelemä"
 msgid "User defined 0x%02x"
 msgstr "Käyttäjän määrittelemä 0x%02x"
 
-msgid "User defined delay when you press another button to zap to the channel."
+msgid "Select the delay to wait after pressing more digit buttons to select a new service."
 msgstr "Käyttäjän määrittämä viive kun painat toista näppäintä vaihtaaksesi kanavan."
 
-msgid "User defined delay when you press the first button to zap to the channel."
+msgid "Select the delay to wait after pressing the first digit button to select a new service."
 msgstr "Käyttäjä määrittää viiven kun painetaan ensimmäistä näppäintä vaihtaksesi kanavaa."
 
 msgid "User defined transponder"
@@ -21928,9 +21988,6 @@ msgstr ""
 "\n"
 "Seuraavaa tuloa kokeillaan automaattisesti 10 sekunnin kuluttua."
 
-msgid "Video: "
-msgstr "Video: "
-
 #, python-format
 msgid "Video: %s fps"
 msgstr "Video: %s fps"
@@ -21984,7 +22041,7 @@ msgstr "Tarkastele tai muokkaa tätä %s scriptiä"
 msgid "View photos..."
 msgstr "Näytä kuvia..."
 
-msgid "View teletext..."
+msgid "View Teletext"
 msgstr "Näytä tekstitv"
 
 msgid "View the archive contents"
@@ -22038,17 +22095,20 @@ msgstr "13/18V-jännite"
 msgid "Volume"
 msgstr "Äänenvoimakkuus"
 
-msgid "Volume Adjust"
-msgstr "Äänenvoimakkuuden säätö"
-
 msgid "Volume Adjust Actions"
 msgstr "Äänenvoimakkuuden säätötoiminnot"
 
 msgid "Volume Adjust Service Selection"
 msgstr "Äänenvoimakkuuden säätö valinta palvelu"
 
+msgid "Volume Adjust Service Selection Actions"
+msgstr "Äänenvoimakkuuden säätö valinta toiminnot"
+
 msgid "Volume Adjust Settings"
 msgstr "Äänenvoimakkuuden säätö asetukset"
+
+msgid "Volume adjustment mode"
+msgstr "Äänenvoimakkuuden säätö tila"
 
 msgid "Volume down"
 msgstr "Äänenvoimakkuus -"
@@ -22118,9 +22178,6 @@ msgstr "Odota, kun skannaat..."
 
 msgid "Waiting"
 msgstr "Odottaa"
-
-msgid "Waiting for mount"
-msgstr "Odotetaan liittämistä"
 
 msgid "Waiting for partition"
 msgstr "Odotetaan osiointia"
@@ -22369,7 +22426,7 @@ msgstr "Kun päällä, 4:3 kuvasuhteen kuva venytetään koko näytölle."
 msgid "When enabled, continue to the next bouquet when the last channel of the current bouquet is reached while changing channels."
 msgstr "Kun päällä, siirrytään kanavanvaihdolla suosikkilistan viimeiseltä kanavalta seuraavaan suosikkilistaan."
 
-msgid "When enabled, deleted recordings are moved to the trash can, instead of being deleted immediately."
+msgid "When enabled, deleted recordings are moved to the trashcan, instead of being deleted immediately."
 msgstr "Kun päällä, poistetut tallenteet siirretään roskakoriin, sen sijaan että ne poistettaisii välittömästi."
 
 msgid "When enabled, external subtitles will be always turned on for playback movie."
@@ -22387,7 +22444,7 @@ msgstr "Kun päällä, voit keskeyttää tallenteen katselun exit-näppäimellä
 msgid "When enabled, measure power consumption to detect when the rotor stops turning (when supported by the tuner)."
 msgstr "Kun päällä, mitataan virrankulutusta jotta voidaan havaita kun kääntömoottori pysähtyy (jos viritin tukee tätä)."
 
-msgid "When enabled, network trash cans are probed for cleaning."
+msgid "When enabled, network trashcans are probed for cleaning."
 msgstr "Kun päällä, verkkolevyjen roskakorit tutkitaan tyhjennystä varten."
 
 msgid "When enabled, number markers will be hidden."
@@ -22501,7 +22558,7 @@ msgstr "Minne haluat varmuuskopioida asetukset?"
 msgid "Where do you want to save temporary time shift recordings?"
 msgstr "Minne ajansiirron väliaikainen tiedosto tallennetaan?"
 
-msgid "Which event do you want to save permanently?"
+msgid "Which time shift buffer event do you want to save?"
 msgstr "Minkä ohjelman haluat tallentaa pysyvästi?"
 
 msgid "While available"
@@ -22766,12 +22823,12 @@ msgstr "Valitsit asetusten varmuuskopioinnin. Aloita painamalla OK näppäintä.
 msgid "You have chosen to restore the settings. Enigma2 will restart after restore. Press OK to start the restore now."
 msgstr "Valitsit asetusten palautuksen. Ohjelmisto käynnistyy uudelleen palautuksen jälkeen. Aloita painamalla OK-näppäintä."
 
-msgid "You have chosen to save the current time shift"
+msgid "You have chosen to save the current time shift buffer"
 msgstr "Olet valinnut ajansiirron muunnon tallenteeksi"
 
 msgid ""
 "You have chosen to save the current time shift event, but the event has not yet finished\n"
-"What do you want to do ?"
+"What do you want to do?"
 msgstr ""
 "Olet valinnut ajansiirron muunnon tallenteeksi, mutta ohjelma on vielä kesken\n"
 "Mitä haluat tehdä?"
@@ -22802,7 +22859,7 @@ msgstr ""
 msgid "You seem to be in time shift!"
 msgstr "Ajansiirto on päällä!"
 
-msgid "You seem to be in time shift, Do you want to leave time shift ?"
+msgid "You seem to be in time shift, do you want to leave time shift?"
 msgstr "Sinulla on ajansiirto päällä, haluatko sulkea ajansiirron?"
 
 msgid "You seem to be in time shift, the service will briefly stop as time shift stops."
@@ -22881,7 +22938,7 @@ msgstr ""
 #, python-format
 msgid ""
 "Your %s %s will be restarted after the removal of service\n"
-"Do you want to remove now ?"
+"Do you want to remove now?"
 msgstr ""
 "%s %s käynnistyy uudelleen palvelun poistamisen jälkeen\n"
 "Poistetaanko palvelu nyt?"
@@ -23064,13 +23121,7 @@ msgstr "Suurennus Toiminnot"
 msgid "Zoom In/Out TV"
 msgstr "Suurenna +/- TV"
 
-msgid "Zoom In/Out TV..."
-msgstr "Suurenna +/- TV"
-
 msgid "Zoom Off"
-msgstr "Suurennus pois"
-
-msgid "Zoom Off..."
 msgstr "Suurennus pois"
 
 msgid "Zoom from left"
@@ -23532,7 +23583,7 @@ msgstr "Hyppää luku numeron mukaan"
 msgid "languages"
 msgstr "kielet"
 
-msgid "leave movie player"
+msgid "Leave movie player"
 msgstr "poistu video soittimestä"
 
 msgid "left"
@@ -23667,9 +23718,6 @@ msgstr "Ei testattu"
 msgid "not used"
 msgstr "ei käyt"
 
-msgid "not_tested"
-msgstr "ei testattu"
-
 msgid "nothing connected"
 msgstr "ei Kytketty"
 
@@ -23678,9 +23726,6 @@ msgstr "Dl dvd levystä käytetty."
 
 msgid "of a SINGLE layer medium used."
 msgstr "dvd levystä käytetty."
-
-msgid "off"
-msgstr "pois"
 
 msgid "off or wpa2 on"
 msgstr "Pois tai WPA2 päällä"
@@ -23828,7 +23873,7 @@ msgstr "shell"
 msgid "show DVD main menu"
 msgstr "näytä DVD:n päävalikko"
 
-msgid "show EPG..."
+msgid "Open EPG"
 msgstr "Näytä EPG"
 
 msgid "show all cards"
@@ -23836,36 +23881,6 @@ msgstr "näytä kaikki kortit"
 
 msgid "show all tags"
 msgstr "näytä kaikki avainsanat"
-
-msgid "show cards with uphop 0"
-msgstr "näytä kortit jossa ylöshyppy 0"
-
-msgid "show cards with uphop 1"
-msgstr "näytä kortit jossa ylöshyppy 1"
-
-msgid "show cards with uphop 2"
-msgstr "näytä kortit jossa ylöshyppy 2"
-
-msgid "show cards with uphop 3"
-msgstr "näytä kortit jossa ylöshyppy 3"
-
-msgid "show cards with uphop 4"
-msgstr "näytä kortit jossa ylöshyppy 4"
-
-msgid "show cards with uphop 5"
-msgstr "näytä kortit jossa ylöshyppy 5"
-
-msgid "show cards with uphop 6"
-msgstr "näytä kortit jossa ylöshyppy 6"
-
-msgid "show cards with uphop 7"
-msgstr "näytä kortit jossa ylöshyppy 7"
-
-msgid "show cards with uphop 8"
-msgstr "näytä kortit jossa ylöshyppy 8"
-
-msgid "show cards with uphop 9"
-msgstr "näytä kortit jossa ylöshyppy 9"
 
 msgid "show program information..."
 msgstr "Näytä ohjelman tiedot"
@@ -23885,13 +23900,13 @@ msgstr "koko"
 msgid "skip backward"
 msgstr "siirry taaksepäin"
 
-msgid "skip backward (enter time)"
+msgid "Skip backward (enter time)"
 msgstr "siirry taaksepäin (syötä aika)"
 
 msgid "skip forward"
 msgstr "siirry eteenpäin"
 
-msgid "skip forward (enter time)"
+msgid "Skip forward (enter time)"
 msgstr "siirry eteenpäin (syötä aika)"
 
 msgid "slow"
@@ -24086,9 +24101,6 @@ msgstr[1] "%d virhettä"
 msgid "with errors"
 msgstr "virheillä"
 
-msgid "with_errors"
-msgstr "virheillä"
-
 msgid "working"
 msgstr "työskentelee"
 
@@ -24100,6 +24112,212 @@ msgstr "kyllä (pidä syötteet)"
 
 msgid "®"
 msgstr "®"
+
+#~ msgid "Access point:"
+#~ msgstr "Tukiasema:"
+
+#~ msgid "Arts & Culture"
+#~ msgstr "Taide/Kulttuuri"
+
+#~ msgid "Autostart:"
+#~ msgstr "Aut. käynn.:"
+
+#~ msgid "Bitrate:"
+#~ msgstr "Bittinopeus:"
+
+#~ msgid "Channel:"
+#~ msgstr "Kanava:"
+
+#~ msgid "Chapter:"
+#~ msgstr "Kappale:"
+
+#~ msgid "EPG:"
+#~ msgstr "EPG:"
+
+#~ msgid "Encryption:"
+#~ msgstr "Salaus:"
+
+#~ msgid "Failed:"
+#~ msgstr "Epäonnistui:"
+
+#~ msgid "Free memory:"
+#~ msgstr "Vapaa muisti:"
+
+#~ msgid "Free:"
+#~ msgstr "Vapaana:"
+
+#~ msgid "Frequency:"
+#~ msgstr "Taajuus:"
+
+#~ msgid "Hostname: "
+#~ msgstr "Isäntänimi: "
+
+#~ msgid "Message..."
+#~ msgstr "Viesti..."
+
+#~ msgid "NodeID: "
+#~ msgstr "NodeID: "
+
+#~ msgid "Progress:"
+#~ msgstr "Edistyminen:"
+
+#~ msgid "Provider: "
+#~ msgstr "Palveluntarjoaja: "
+
+#~ msgid "SSID:"
+#~ msgstr "SSID:"
+
+#~ msgid "Scanning..."
+#~ msgstr "Haetaan..."
+
+#~ msgid "Servers:"
+#~ msgstr "Palvelimet:"
+
+#~ msgid "Signal strength:"
+#~ msgstr "Signaalinvoimakkuus:"
+
+#~ msgid "Status:"
+#~ msgstr "Tila:"
+
+#~ msgid "Timer selection..."
+#~ msgstr "Ajastinvalinta"
+
+#~ msgid "Transcoding: "
+#~ msgstr "Transkoodaus: "
+
+#~ msgid "Type: "
+#~ msgstr "Tyyppi: "
+
+#~ msgid "Unused 0x22"
+#~ msgstr "Käyttämätön 0x22"
+
+#~ msgid "Unused 0x52"
+#~ msgstr "Käyttämätön 0x52"
+
+#~ msgid "Unused 0x53"
+#~ msgstr "Käyttämätön 0x53"
+
+#~ msgid "Unused 0x54"
+#~ msgstr "Käyttämätön 0x54"
+
+#~ msgid "Unused 0x71"
+#~ msgstr "Käyttämätön 0x71"
+
+#~ msgid "Unused 0x72"
+#~ msgstr "Käyttämätön 0x72"
+
+#~ msgid "Unused 0xb1"
+#~ msgstr "Käyttämätön 0xb1"
+
+#~ msgid "Unused 0xb2"
+#~ msgstr "Käyttämätön 0xb2"
+
+#~ msgid "Video: "
+#~ msgstr "Video: "
+
+#~ msgid "Zoom In/Out TV..."
+#~ msgstr "Suurenna +/- TV"
+
+#~ msgid "Zoom Off..."
+#~ msgstr "Suurennus pois"
+
+#~ msgid "not_tested"
+#~ msgstr "ei testattu"
+
+#~ msgid "show cards with uphop 0"
+#~ msgstr "näytä kortit jossa ylöshyppy 0"
+
+#~ msgid "show cards with uphop 1"
+#~ msgstr "näytä kortit jossa ylöshyppy 1"
+
+#~ msgid "show cards with uphop 2"
+#~ msgstr "näytä kortit jossa ylöshyppy 2"
+
+#~ msgid "show cards with uphop 3"
+#~ msgstr "näytä kortit jossa ylöshyppy 3"
+
+#~ msgid "show cards with uphop 4"
+#~ msgstr "näytä kortit jossa ylöshyppy 4"
+
+#~ msgid "show cards with uphop 5"
+#~ msgstr "näytä kortit jossa ylöshyppy 5"
+
+#~ msgid "show cards with uphop 6"
+#~ msgstr "näytä kortit jossa ylöshyppy 6"
+
+#~ msgid "show cards with uphop 7"
+#~ msgstr "näytä kortit jossa ylöshyppy 7"
+
+#~ msgid "show cards with uphop 8"
+#~ msgstr "näytä kortit jossa ylöshyppy 8"
+
+#~ msgid "show cards with uphop 9"
+#~ msgstr "näytä kortit jossa ylöshyppy 9"
+
+#~ msgid "with_errors"
+#~ msgstr "virheillä"
+
+#~ msgid "Delete the currently highlighted service from the Volume Offsets list"
+#~ msgstr "Poista nykyinen korostettu kanavan äänen voimakkuuden Offsets listasta"
+
+#~ msgid "Enable Dolby Digital / Dolby AC-3 offsets"
+#~ msgstr "Ota Dolby Digital / Dolby AC-3 offsetti käyttöön"
+
+#~ msgid "Select 'Yes' if volume adjustments should be applied to Dolby sound tracks."
+#~ msgstr "Valitse 'Kyllä' jos äänenvoimakkuuden säätöjä tulee soveltaa Dolby ääni raitoihin."
+
+#~ msgid "Volume Adjust"
+#~ msgstr "Äänenvoimakkuuden säätö"
+
+#~ msgid "off"
+#~ msgstr "pois"
+
+#, python-format
+#~ msgid "%s (%04o)"
+#~ msgstr "%s (%04o)"
+
+#~ msgid "Channel List Menu"
+#~ msgstr "Kanavalistan tyyppi"
+
+#~ msgid "Do you really want to delete?"
+#~ msgstr "Haluatko varmasti poistaa?"
+
+#, python-format
+#~ msgid "Do you really want to delete %s ?"
+#~ msgstr "Haluatko varmasti poistaa %s ?"
+
+#~ msgid "Do you really want to move to trashcan ?"
+#~ msgstr "Haluatko varmasti siirtää roskakoriin?"
+
+#~ msgid "Do you really want to permanently remove from trash can ?"
+#~ msgstr "Haluatko varmasti poistaa pysyvästi roskakorista?"
+
+#~ msgid "Bus: "
+#~ msgstr "Väylä: "
+
+#~ msgid "By disk UUID"
+#~ msgstr "Levyllä UUID"
+
+#~ msgid "By disk label"
+#~ msgstr "Levymerkintä"
+
+#~ msgid "Capacity"
+#~ msgstr "Kapasiteetti"
+
+#~ msgid "Filesystem"
+#~ msgstr "Tiedostojärjestelmä"
+
+#~ msgid "Select Backup Location"
+#~ msgstr "Varmuuskopion sijainti"
+
+#~ msgid "Select your backup device."
+#~ msgstr "Valitse varmuuskopio laite."
+
+#~ msgid "Setup Harddisk"
+#~ msgstr "Kiintolevyn asetukset"
+
+#~ msgid "Waiting for mount"
+#~ msgstr "Odotetaan liittämistä"
 
 #~ msgid "PowerTimer"
 #~ msgstr "Virta ajastusasetukset"
@@ -25100,14 +25318,6 @@ msgstr "®"
 
 #~ msgid "Update interval (in seconds)"
 #~ msgstr "Päivitysväli (sekuntia)"
-
-#, python-format
-#~ msgid ""
-#~ "Your %s %s will be restarted after the removal of service\n"
-#~ "Do you want to remove now?"
-#~ msgstr ""
-#~ "%s %s käynnistyy uudelleen palvelun poistamisen jälkeen\n"
-#~ "Poistetaanko palvelu nyt?"
 
 #~ msgid "Please change recording endtime"
 #~ msgstr "Aseta tallennuksen päättymisaika"
