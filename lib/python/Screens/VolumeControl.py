@@ -1,4 +1,5 @@
 from copy import deepcopy
+from html import escape, unescape
 
 from enigma import eDVBVolumecontrol, eServiceCenter, eServiceReference, eTimer, iPlayableService, iServiceInformation
 
@@ -300,7 +301,6 @@ class VolumeAdjust:
 		else:
 			VolumeAdjust.instance = self
 			self.session = session
-			self.serviceReference = None
 			self.volumeControl = eDVBVolumecontrol.getInstance()
 			config.volumeAdjust = ConfigSubsection()
 			config.volumeAdjust.adjustMode = ConfigSelection(default=self.MODE_DISABLED, choices=[
@@ -314,6 +314,7 @@ class VolumeAdjust:
 			config.volumeAdjust.mpegMax = ConfigSelectionNumber(default=100, min=10, max=100, stepwidth=5)
 			config.volumeAdjust.showVolumeBar = ConfigYesNo(default=False)
 			self.onClose = []  # This is used by ServiceEventTracker.
+			self.serviceReference = None
 			self.eventTracker = ServiceEventTracker(screen=self, eventmap={
 				iPlayableService.evStart: self.eventStart,
 				iPlayableService.evEnd: self.eventEnd,
@@ -333,15 +334,15 @@ class VolumeAdjust:
 			print(f"[VolumeControl] Volume adjustment data initialized from '{self.VOLUME_FILE}'.")
 			for offsets in volumeDom.findall("offsets"):
 				for entry in offsets.findall("offset"):
-					serviceReference = entry.get("serviceReference")
-					serviceName = entry.get("serviceName")
+					serviceReference = unescape(entry.get("serviceReference"))
+					serviceName = unescape(entry.get("serviceName"))
 					offset = int(entry.get("value", 0))
 					if serviceReference and serviceName:
 						volumeOffsets[serviceReference] = [serviceName, offset]
 			for remembered in volumeDom.findall("remembered"):
 				for entry in remembered.findall("remember"):
-					serviceReference = entry.get("serviceReference")
-					serviceName = entry.get("serviceName")
+					serviceReference = unescape(entry.get("serviceReference"))
+					serviceName = unescape(entry.get("serviceName"))
 					last = int(entry.get("value", self.DEFAULT_VOLUME))
 					if serviceReference and serviceName:
 						volumeRemembered[serviceReference] = [serviceName, last]
@@ -356,13 +357,13 @@ class VolumeAdjust:
 			xml.append("\t<offsets>")
 			for serviceReference in self.volumeOffsets.keys():
 				[serviceName, offset] = self.volumeOffsets[serviceReference]
-				xml.append(f"\t\t<offset serviceReference=\"{serviceReference}\" serviceName=\"{serviceName}\" value=\"{offset}\" />")
+				xml.append(f"\t\t<offset serviceReference=\"{escape(serviceReference)}\" serviceName=\"{escape(serviceName)}\" value=\"{offset}\" />")
 			xml.append("\t</offsets>")
 		if self.volumeRemembered:
 			xml.append("\t<remembered>")
 			for serviceReference in self.volumeRemembered.keys():
 				[serviceName, last] = self.volumeRemembered[serviceReference]
-				xml.append(f"\t\t<remember serviceReference=\"{serviceReference}\" serviceName=\"{serviceName}\" value=\"{last}\" />")
+				xml.append(f"\t\t<remember serviceReference=\"{escape(serviceReference)}\" serviceName=\"{escape(serviceName)}\" value=\"{last}\" />")
 			xml.append("\t</remembered>")
 		xml.append("</volumexml>")
 		if fileWriteLines(self.VOLUME_FILE, xml, source=MODULE_NAME):
@@ -450,6 +451,8 @@ class VolumeAdjust:
 					serviceReference = eServiceReference(info.getInfoString(serviceReference, iServiceInformation.sServiceref))  # Get eServicereference from meta file. No need to know if eServiceReference is valid.
 					serviceName = self.getServiceName(serviceReference)
 					# print(f"[VolumeControl] getPlayingServiceReference DEBUG: resolved serviceName='{serviceName}' serviceReference='{serviceReference.toString()}'.")
+		else:
+			serviceName = ""
 		return serviceReference, serviceName
 
 	def getServiceName(self, serviceReference):

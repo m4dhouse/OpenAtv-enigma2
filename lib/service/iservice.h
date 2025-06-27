@@ -424,6 +424,7 @@ public:
 
 		sGamma,
 		sVideoInfo,
+		sExtendedDescription,
 
 		sUser = 0x100
 	};
@@ -988,6 +989,7 @@ public:
 
 		evUpdateTags,
 		evUpdateIDv3Cover,
+		evGstreamerStart,
 
 		evUser = 0x100
 	};

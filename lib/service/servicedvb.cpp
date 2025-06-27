@@ -331,6 +331,7 @@ class eStaticServiceDVBPVRInformation: public iStaticServiceInformation
 	DECLARE_REF(eStaticServiceDVBPVRInformation);
 	eServiceReference m_ref;
 	eDVBMetaParser m_parser;
+	std::string m_txtdescription;
 public:
 	eStaticServiceDVBPVRInformation(const eServiceReference &ref);
 	RESULT getName(const eServiceReference &ref, std::string &name);
@@ -349,6 +350,7 @@ eStaticServiceDVBPVRInformation::eStaticServiceDVBPVRInformation(const eServiceR
 {
 	m_ref = ref;
 	m_parser.parseFile(ref.path);
+	m_txtdescription = m_parser.parseTxtFile(ref.path);
 }
 
 static bool looksLikeRecording(const std::string& n)
@@ -443,6 +445,8 @@ int eStaticServiceDVBPVRInformation::getInfo(const eServiceReference &ref, int w
 	{
 	case iServiceInformation::sDescription:
 		return iServiceInformation::resIsString;
+	case iServiceInformation::sExtendedDescription:
+		return iServiceInformation::resIsString;
 	case iServiceInformation::sServiceref:
 		return iServiceInformation::resIsString;
 	case iServiceInformation::sFileSize:
@@ -465,6 +469,8 @@ std::string eStaticServiceDVBPVRInformation::getInfoString(const eServiceReferen
 	{
 	case iServiceInformation::sDescription:
 		return m_parser.m_description;
+	case iServiceInformation::sExtendedDescription:
+		return m_txtdescription;
 	case iServiceInformation::sServiceref:
 		return m_parser.m_ref.toString();
 	case iServiceInformation::sTags:
@@ -588,6 +594,7 @@ RESULT eDVBPVRServiceOfflineOperations::getListOfFilenames(std::list<std::string
 	std::string tmp = m_ref.path;
 	tmp.erase(m_ref.path.length()-3);
 	res.push_back(tmp + ".eit");
+	res.push_back(tmp + ".txt");
 	return 0;
 }
 
