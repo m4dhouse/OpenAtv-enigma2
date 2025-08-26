@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2 Kurdish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 16:24+0000\n"
+"POT-Creation-Date: 2025-07-27 15:35+0000\n"
 "PO-Revision-Date: 2021-08-15 18:50+0000\n"
 "Last-Translator: openATV <openatv@gmail.com>\n"
 "Language-Team: Kurdish <https://hosted.weblate.org/projects/openatv/enigma2-7-0-po/ku/>\n"
@@ -95,7 +95,7 @@ msgstr "Update"
 msgid "!! Boot loader Upgrade !!"
 msgstr ""
 
-msgid "# = Reboot Required"
+msgid "# = Reboot required if this item is changed."
 msgstr ""
 
 #, fuzzy
@@ -1142,6 +1142,10 @@ msgid_plural "%d services found."
 msgstr[0] ""
 msgstr[1] ""
 
+#, python-format
+msgid "%d slots have been created on the device.\n"
+msgstr ""
+
 #, fuzzy, python-format
 msgid "%d times"
 msgstr "Vext derbas bu"
@@ -1325,6 +1329,10 @@ msgstr ""
 msgid "%s not available."
 msgstr "Update feed not available."
 
+#, python-format
+msgid "%s version"
+msgstr ""
+
 #, fuzzy, python-format
 msgid "%s%d min"
 msgstr "%d deqa"
@@ -1416,7 +1424,7 @@ msgstr "(vala)"
 msgid "(show optional DVD audio menu)"
 msgstr "(show optional DVD dengé menu)"
 
-msgid "* = Restart Required"
+msgid "* = Restart required if this item is changed."
 msgstr ""
 
 msgid "* Only available if more than one interface is active."
@@ -2346,6 +2354,9 @@ msgstr "Assigned services/provider:"
 msgid "All supported"
 msgstr "not supported"
 
+msgid "All up/down"
+msgstr ""
+
 msgid "Allocate"
 msgstr "Biqetinin"
 
@@ -2636,6 +2647,9 @@ msgstr ""
 msgid "Are you sure you want to delete this?"
 msgstr ""
 
+msgid "Are you sure you want to disable Chkroot Multiboot?"
+msgstr ""
+
 msgid "Are you sure you want to exit this wizard?"
 msgstr "Are you sure you want to exit this wizard?"
 
@@ -2706,10 +2720,10 @@ msgstr ""
 msgid "Ask user"
 msgstr "Xebatkar Pirski"
 
-msgid "Ask user (with default as 'No')"
+msgid "Ask user (with default of 'No')"
 msgstr ""
 
-msgid "Ask user (with default as 'Yes')"
+msgid "Ask user (with default of 'Yes')"
 msgstr ""
 
 #, fuzzy
@@ -2829,10 +2843,6 @@ msgstr "modé Nivisi"
 msgid "Auto"
 msgstr "Auto"
 
-#, fuzzy
-msgid "Auto Detect"
-msgstr "Deep standby"
-
 msgid "Auto Language"
 msgstr ""
 
@@ -2857,6 +2867,10 @@ msgstr "Auto chapter split every ? minutes (0=never)"
 
 #, fuzzy
 msgid "Auto deep standby"
+msgstr "Deep standby"
+
+#, fuzzy
+msgid "Auto detect"
 msgstr "Deep standby"
 
 msgid "Auto flesh"
@@ -3253,8 +3267,8 @@ msgstr "Zu leziya Bit:"
 msgid "Black"
 msgstr "black"
 
-msgid "Black Screen"
-msgstr ""
+msgid "Black screen"
+msgstr "Ekrana Reş"
 
 msgid "Black screen till locked"
 msgstr "Ekrana reş kilitke"
@@ -3265,7 +3279,7 @@ msgstr ""
 msgid "Blinking REC"
 msgstr ""
 
-msgid "Blinking REC Symbol"
+msgid "Blinking REC symbol"
 msgstr ""
 
 #, fuzzy
@@ -4027,7 +4041,7 @@ msgid "Channel 1"
 msgstr "Qanal"
 
 #, fuzzy
-msgid "Channel 1 with Prime time"
+msgid "Channel 1 with prime time"
 msgstr "Qanal Liste "
 
 #, fuzzy
@@ -4037,9 +4051,6 @@ msgstr "Qanal"
 #, fuzzy
 msgid "Channel List"
 msgstr "Qanal Liste "
-
-msgid "Channel Number"
-msgstr ""
 
 msgid "Channel Selection"
 msgstr "Channel Selection"
@@ -4109,6 +4120,9 @@ msgid "Channel list type"
 msgstr "Qanal Liste "
 
 msgid "Channel name"
+msgstr ""
+
+msgid "Channel number"
 msgstr ""
 
 #, fuzzy
@@ -4496,6 +4510,9 @@ msgstr ""
 msgid "Close the Plugin Browser screen"
 msgstr ""
 
+msgid "Close the SeekBar after returning to the starting point"
+msgstr ""
+
 msgid "Close the choice box"
 msgstr ""
 
@@ -4562,7 +4579,7 @@ msgstr "Formata Renga"
 msgid "Color space"
 msgstr "Formata Renga"
 
-msgid "Colored Text"
+msgid "Colored text"
 msgstr ""
 
 msgid "Combined"
@@ -5426,6 +5443,9 @@ msgstr ""
 msgid "Create separate radio user bouquet"
 msgstr ""
 
+msgid "Create slots for the selected device"
+msgstr ""
+
 msgid "Create swap"
 msgstr ""
 
@@ -5713,9 +5733,6 @@ msgstr ""
 
 msgid "DUAL LAYER DVD"
 msgstr "DUAL LAYER DVD"
-
-msgid "DVB API version"
-msgstr ""
 
 msgid "DVB CI Delay"
 msgstr ""
@@ -6080,6 +6097,9 @@ msgid "Define the DNS suffix."
 msgstr ""
 
 msgid "Define the custom mountpoint for the device."
+msgstr ""
+
+msgid "Define the default settings backup target location. Select 'Ask user' to prompt the user for the target location when the backup is run."
 msgstr ""
 
 msgid "Define the file system mount options."
@@ -6598,6 +6618,9 @@ msgid "Disabled PiP.\n"
 msgstr ""
 
 msgid "Disabled or WPA/WPA2"
+msgstr ""
+
+msgid "Disabling Chkroot failed!"
 msgstr ""
 
 msgid "Dish"
@@ -7643,9 +7666,6 @@ msgstr ""
 msgid "Enigma2 revision"
 msgstr ""
 
-msgid "Enigma2 version"
-msgstr ""
-
 msgid "Enigmalight"
 msgstr ""
 
@@ -8363,9 +8383,6 @@ msgstr ""
 msgid "FFmpeg is not installed so '.mvi' file actions are not available!"
 msgstr ""
 
-msgid "FFmpeg version"
-msgstr ""
-
 msgid "FIFO"
 msgstr ""
 
@@ -8990,9 +9007,6 @@ msgstr ""
 msgid "G"
 msgstr "RGB"
 
-msgid "GCC version"
-msgstr ""
-
 #, fuzzy
 msgid "GREEN button"
 msgstr "RED button / HbbTV"
@@ -9004,9 +9018,6 @@ msgid "GStreamer debug log category *"
 msgstr ""
 
 msgid "GStreamer debug log level *"
-msgstr ""
-
-msgid "GStreamer version"
 msgstr ""
 
 msgid "GUI Skin *"
@@ -9110,9 +9121,6 @@ msgid "Gibraltar"
 msgstr ""
 
 msgid "Given device id"
-msgstr ""
-
-msgid "Glibc version"
 msgstr ""
 
 msgid "Go back to the previous step"
@@ -10374,6 +10382,9 @@ msgstr ""
 msgid "Internal USB"
 msgstr ""
 
+msgid "Internal disk only"
+msgstr "Internal disk only"
+
 msgid "Internal flash"
 msgstr "Internal flash"
 
@@ -10384,9 +10395,6 @@ msgstr ""
 #, python-format
 msgid "Internal flash: %s %s as USB Recovery"
 msgstr ""
-
-msgid "Internal hdd only"
-msgstr "Internal hdd only"
 
 msgid "Internet"
 msgstr ""
@@ -10615,7 +10623,14 @@ msgstr ""
 msgid "Kernel file"
 msgstr ""
 
+msgid "Kernel partition"
+msgstr ""
+
 msgid "Kernel version"
+msgstr ""
+
+#, python-format
+msgid "Kernel%s partition"
 msgstr ""
 
 msgid "Kexec MultiBoot Actions"
@@ -10881,7 +10896,7 @@ msgid "Left column file sort"
 msgstr ""
 
 #, fuzzy
-msgid "Left from service name"
+msgid "Left of service name"
 msgstr "Service name"
 
 msgid "Left, back USB"
@@ -11179,10 +11194,10 @@ msgstr "Location"
 msgid "Logs older then the set no of days will be deleted."
 msgstr ""
 
-msgid "Long << / >>"
+msgid "Long <</>>"
 msgstr ""
 
-msgid "Long Left/Right"
+msgid "Long LEFT/RIGHT"
 msgstr ""
 
 msgid "Long filenames"
@@ -12800,10 +12815,10 @@ msgid "No, scan later manually"
 msgstr ""
 
 #, fuzzy
-msgid "No, show the Plugin Browser"
+msgid "No, show Plugin Browser"
 msgstr "Plugin browser"
 
-msgid "No, show the RecordTimer Overview"
+msgid "No, show RecordTimer Overview"
 msgstr ""
 
 msgid "NodeID"
@@ -12814,6 +12829,10 @@ msgstr ""
 
 msgid "Non-Linear"
 msgstr ""
+
+#, fuzzy
+msgid "Non-flashing"
+msgstr "NFI image flashing"
 
 msgid "None"
 msgstr "None"
@@ -12875,10 +12894,6 @@ msgstr "Not associated"
 
 msgid "Not Defined"
 msgstr ""
-
-#, fuzzy
-msgid "Not Flashing"
-msgstr "NFI image flashing"
 
 #, fuzzy
 msgid "Not Installed"
@@ -13163,9 +13178,6 @@ msgstr "Eyaré deng..."
 msgid "Open AutoTimer"
 msgstr ""
 
-msgid "Open AutoTimer OverView"
-msgstr ""
-
 #, fuzzy
 msgid "Open AutoTimer Overview"
 msgstr "Open the movie list"
@@ -13175,9 +13187,6 @@ msgid "Open Bouquet selection"
 msgstr "End Bouquet Edit"
 
 msgid "Open Box Portal"
-msgstr ""
-
-msgid "Open DreamPlex"
 msgstr ""
 
 #, fuzzy
@@ -13359,9 +13368,6 @@ msgid "OpenDNS Home"
 msgstr ""
 
 msgid "OpenPLi Packages"
-msgstr ""
-
-msgid "OpenSSL version"
 msgstr ""
 
 msgid "OpenVPN"
@@ -13815,7 +13821,7 @@ msgid "Picon Packages"
 msgstr ""
 
 #, fuzzy
-msgid "Picon and Service Name"
+msgid "Picon and service name"
 msgstr "Picon and service name"
 
 msgid "Picon install location"
@@ -14552,6 +14558,9 @@ msgstr ""
 msgid "Press the UP/DOWN buttons to select a slot and press OK or GREEN to reboot to that image. If available, YELLOW will either delete or wipe the image. A deleted image can be restored with the BLUE button. A wiped image is completely removed and cannot be restored!"
 msgstr ""
 
+msgid "Press the UP/DOWN buttons to select a slot, then press OK or GREEN to reboot into that image. If available, YELLOW will disable Multiboot, delete, or wipe the selected image. Press BLUE to add more slots."
+msgstr ""
+
 msgid "Press this button to emulate a long press on a button pressed afterwards (this also overrides any other actions assigned to emulation button)."
 msgstr ""
 
@@ -14808,9 +14817,6 @@ msgstr ""
 msgid "Python frontend for /tmp/mmi.socket"
 msgstr "Python frontend for /tmp/mmi.socket"
 
-msgid "Python version"
-msgstr ""
-
 msgid "Qatar"
 msgstr ""
 
@@ -14866,9 +14872,6 @@ msgstr ""
 msgid "QuickMenu"
 msgstr ""
 
-msgid "QuickMenu Actions"
-msgstr ""
-
 msgid "QuickMenu/Extensions"
 msgstr ""
 
@@ -14919,13 +14922,13 @@ msgstr "FEC"
 msgid "REC "
 msgstr ""
 
-msgid "REC Symbol"
-msgstr ""
-
 msgid "REC Symbol in Standby"
 msgstr ""
 
 msgid "REC Symbol in use"
+msgstr ""
+
+msgid "REC symbol"
 msgstr ""
 
 #, fuzzy
@@ -15087,7 +15090,7 @@ msgstr ""
 msgid "Record Actions"
 msgstr ""
 
-msgid "Record Icon"
+msgid "Record icon"
 msgstr ""
 
 #, fuzzy
@@ -15837,7 +15840,7 @@ msgid "Right column file sort"
 msgstr ""
 
 #, fuzzy
-msgid "Right from service name"
+msgid "Right of service name"
 msgstr "Picon and service name"
 
 msgid "Right, back USB"
@@ -16052,9 +16055,6 @@ msgid "Samba Server"
 msgstr ""
 
 msgid "Samba Settings"
-msgstr ""
-
-msgid "Samba version"
 msgstr ""
 
 msgid "Same as in active"
@@ -16323,13 +16323,13 @@ msgstr "Timer Overview"
 msgid "Scheduler Settings"
 msgstr ""
 
-msgid "Scheduler Standby"
-msgstr ""
-
 msgid "Scheduler deep standby"
 msgstr ""
 
 msgid "Scheduler log"
+msgstr ""
+
+msgid "Scheduler standby"
 msgstr ""
 
 msgid "Sci-Fi"
@@ -16365,13 +16365,6 @@ msgstr ""
 #, fuzzy
 msgid "Search"
 msgstr "Searching"
-
-#, fuzzy
-msgid "Search EPG for current event"
-msgstr "Add/remove timer for current event"
-
-msgid "Search IMDb for information about current event"
-msgstr ""
 
 msgid "Search Sats"
 msgstr ""
@@ -16426,9 +16419,8 @@ msgstr "Seek"
 msgid "Seek Actions"
 msgstr "Select location"
 
-#, fuzzy
-msgid "Seek back short"
-msgstr "Seek backward"
+msgid "Seek Bar"
+msgstr ""
 
 msgid "Seek backward"
 msgstr "Seek backward"
@@ -16439,26 +16431,21 @@ msgstr "Seek backward (enter time)"
 msgid "Seek forward"
 msgstr "Seek forward"
 
-#, fuzzy
-msgid "Seek forward  short"
-msgstr "Seek forward"
-
 msgid "Seek forward (enter time)"
 msgstr "Seek forward (enter time)"
 
 #, fuzzy
-msgid "Seek forward long"
-msgstr "Seek forward"
+msgid "SeekBar"
+msgstr "Seek"
+
+msgid "SeekBar Actions"
+msgstr ""
 
 #, fuzzy
 msgid "SeekBar activation"
 msgstr "Select location"
 
-#, fuzzy
-msgid "Seekbar"
-msgstr "Seek"
-
-msgid "Seekbar sensibility"
+msgid "SeekBar sensibility"
 msgstr ""
 
 msgid "Seeking connected events"
@@ -16531,7 +16518,7 @@ msgstr "When enabled, the infobar will be displayed when a new event starts."
 msgid "Select 'Yes' to allow each storage device detected to be automatically exported as samba share."
 msgstr ""
 
-msgid "Select 'Yes' to allow use of the seek bar to jump to a selected point within the event."
+msgid "Select 'Yes' to allow use of the SeekBar to jump to a selected point within the event."
 msgstr ""
 
 msgid "Select 'Yes' to always show the bouquet screen first when opening the channel list. Select 'No' to open the channel list using the current bouquet."
@@ -16822,6 +16809,9 @@ msgstr "Select a bouquet"
 msgid "Select a debug log file to view:"
 msgstr ""
 
+msgid "Select a device to create multiboot slots"
+msgstr ""
+
 msgid "Select a device to use as the flash expander"
 msgstr ""
 
@@ -17049,6 +17039,9 @@ msgid "Select sort method:"
 msgstr ""
 
 msgid "Select system information to view:"
+msgstr ""
+
+msgid "Select target device for slot creation"
 msgstr ""
 
 msgid "Select temporary directory sort order for the current column"
@@ -17625,18 +17618,6 @@ msgstr ""
 msgid "Service Information Actions"
 msgstr ""
 
-#, fuzzy
-msgid "Service Name"
-msgstr "Service name"
-
-#, fuzzy
-msgid "Service Number and Service Name"
-msgstr "Picon and service name"
-
-#, fuzzy
-msgid "Service Number, Picon and Service Name"
-msgstr "Picon and service name"
-
 msgid "Service Scan"
 msgstr ""
 
@@ -17691,8 +17672,16 @@ msgstr ""
 "(SID not found in PAT)"
 
 #, fuzzy
+msgid "Service number and service name"
+msgstr "Picon and service name"
+
+#, fuzzy
 msgid "Service number font size"
 msgstr "Subtitle font size"
+
+#, fuzzy
+msgid "Service number, picon and service name"
+msgstr "Picon and service name"
 
 #, fuzzy
 msgid "Service off-air"
@@ -17875,7 +17864,7 @@ msgstr ""
 msgid "Set the delay time between repeated loops, this is used by software renderer in some skins."
 msgstr ""
 
-msgid "Set the jump-size of the seekbar."
+msgid "Set the jump-size of the SeekBar."
 msgstr ""
 
 msgid "Set the number of lines to be saved for 'stout' and 'sterr' output in scripts."
@@ -18011,6 +18000,9 @@ msgstr ""
 
 msgid "Settings"
 msgstr "Settings"
+
+msgid "Settings Backup Target"
+msgstr ""
 
 msgid "Settings mode"
 msgstr "Settings mode"
@@ -19103,12 +19095,12 @@ msgstr ""
 msgid "Skin Packages"
 msgstr ""
 
-#, fuzzy
-msgid "Skin Setting"
-msgstr "Settings"
-
 msgid "Skin Settings"
 msgstr ""
+
+#, fuzzy
+msgid "Skin setting"
+msgstr "Settings"
 
 msgid "SkinSelection"
 msgstr ""
@@ -19119,6 +19111,16 @@ msgstr ""
 msgid "Skip backward"
 msgstr ""
 
+#, python-format
+msgid "Skip backward %d second"
+msgid_plural "Skip backward %d seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "Skip backward %s%%"
+msgstr ""
+
 #, fuzzy
 msgid "Skip backward (enter time)"
 msgstr "Seek backward (enter time)"
@@ -19126,7 +19128,21 @@ msgstr "Seek backward (enter time)"
 msgid "Skip empty services"
 msgstr "Skip empty services"
 
+#, python-format
+msgid "Skip for '%s' is disabled"
+msgstr ""
+
 msgid "Skip forward"
+msgstr ""
+
+#, python-format
+msgid "Skip forward %d second"
+msgid_plural "Skip forward %d seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "Skip forward %s%%"
 msgstr ""
 
 #, fuzzy
@@ -19149,6 +19165,13 @@ msgid "Skip time for '%s' button"
 msgstr ""
 
 msgid "Skip time for '%s'/'%s' buttons"
+msgstr ""
+
+#, python-format
+msgid "Skip to %s0%% position (Add %s%% on second press)"
+msgstr ""
+
+msgid "Skip to 0% (start) position"
 msgstr ""
 
 msgid "Sleep"
@@ -19264,6 +19287,9 @@ msgstr ""
 msgid "Slot '%s' %s: %s%s"
 msgstr ""
 
+msgid "Slot F: Flash Slot Image Backup (Current image)"
+msgstr ""
+
 msgid "Slot Manager"
 msgstr ""
 
@@ -19274,6 +19300,10 @@ msgid "Slot R: Root Slot Image Backup (Current image)"
 msgstr ""
 
 msgid "Slot count"
+msgstr ""
+
+#, python-format
+msgid "Slots have been extended by %d..\n"
 msgstr ""
 
 msgid "Slovak"
@@ -19717,6 +19747,9 @@ msgstr ""
 #, fuzzy
 msgid "Starts in a few seconds"
 msgstr "Start offline decode"
+
+msgid "Startup device not found!"
+msgstr ""
 
 #. TRANSLATORS: "State" is location information and not condition based information.
 msgid "State"
@@ -20556,11 +20589,6 @@ msgstr ""
 "Please install it."
 
 msgid "The DVD standard doesn't support H.264 (HDTV) video streams."
-msgstr ""
-
-msgid ""
-"The DreamPlex plugin is not installed!\n"
-"Please install it."
 msgstr ""
 
 #, fuzzy
@@ -21425,10 +21453,6 @@ msgstr "Timer edit"
 msgid "Timeline scale"
 msgstr ""
 
-#, fuzzy
-msgid "Timer Actions"
-msgstr "Timer selection"
-
 msgid "Timer Log Actions"
 msgstr ""
 
@@ -21868,6 +21892,9 @@ msgstr ""
 msgid "Tunisia"
 msgstr ""
 
+msgid "Turbo"
+msgstr ""
+
 msgid "Turbo: One reboot after flash; Fast: One reboot after flash, one reboot after restore; Slow: One reboot after flash, one reboot after restore in GUI."
 msgstr ""
 
@@ -21944,6 +21971,10 @@ msgstr ""
 
 msgid "Type of scan"
 msgstr "Type of scan"
+
+#, python-format
+msgid "UBI slot %s%s"
+msgstr ""
 
 msgid "UBINIZE"
 msgstr ""
@@ -23425,7 +23456,7 @@ msgid "With errors:"
 msgstr ""
 
 #, fuzzy
-msgid "With long OK press"
+msgid "With long OK button"
 msgstr "Long key press"
 
 msgid "With pop up"
@@ -23975,9 +24006,6 @@ msgstr "adventure/western/war"
 msgid "advertisement/shopping"
 msgstr "advertisement/shopping"
 
-msgid "all up/down"
-msgstr ""
-
 msgid "alpha then oldest"
 msgstr ""
 
@@ -24246,9 +24274,6 @@ msgstr "Failed"
 
 msgid "fashion"
 msgstr "fashion"
-
-msgid "fast"
-msgstr ""
 
 msgid "file can not displayed - file not found"
 msgstr ""
@@ -24530,9 +24555,6 @@ msgstr ""
 msgid "no storage devices found"
 msgstr "no storage devices found"
 
-msgid "normal"
-msgstr ""
-
 #, fuzzy
 msgid "not"
 msgstr "no"
@@ -24729,9 +24751,6 @@ msgstr "skip backward"
 msgid "skip forward"
 msgstr "skip forward"
 
-msgid "slow"
-msgstr ""
-
 msgid "soap/melodrama/folkloric"
 msgstr "soap/melodrama/folkloric"
 
@@ -24839,9 +24858,6 @@ msgstr ""
 msgid "tree delete"
 msgstr ""
 
-msgid "turbo"
-msgstr ""
-
 msgid "uShare"
 msgstr ""
 
@@ -24935,6 +24951,30 @@ msgstr "yes (keep feeds)"
 
 msgid "®"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Seek back short"
+#~ msgstr "Seek backward"
+
+#, fuzzy
+#~ msgid "Seek forward  short"
+#~ msgstr "Seek forward"
+
+#, fuzzy
+#~ msgid "Seek forward long"
+#~ msgstr "Seek forward"
+
+#, fuzzy
+#~ msgid "Service Name"
+#~ msgstr "Service name"
+
+#, fuzzy
+#~ msgid "Search EPG for current event"
+#~ msgstr "Add/remove timer for current event"
+
+#, fuzzy
+#~ msgid "Timer Actions"
+#~ msgstr "Timer selection"
 
 #, fuzzy
 #~ msgid "InfoBar EPG Actions"
@@ -25745,6 +25785,3 @@ msgstr ""
 
 #~ msgid "show event details"
 #~ msgstr "show event details"
-
-#~ msgid "Black screen"
-#~ msgstr "Ekrana Reş"

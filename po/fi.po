@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenATV\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 16:24+0000\n"
-"PO-Revision-Date: 2025-06-16 09:06+0000\n"
+"POT-Creation-Date: 2025-07-27 15:35+0000\n"
+"PO-Revision-Date: 2025-07-20 15:03+0000\n"
 "Last-Translator: tomppaa <tomzza@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/openatv/enigma2-7-0-po/fi/>\n"
 "Language: fi\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid ""
 "\n"
@@ -94,7 +94,7 @@ msgstr " päivitetty"
 msgid "!! Boot loader Upgrade !!"
 msgstr "!! Bootloaderi Päivitys !!"
 
-msgid "# = Reboot Required"
+msgid "# = Reboot required if this item is changed."
 msgstr "# Uudelleen käynnistys tarvitaan"
 
 msgid "%-H:%M"
@@ -1030,6 +1030,10 @@ msgstr[0] "%d kanava löyty."
 msgstr[1] "%d kanavia löydetty."
 
 #, python-format
+msgid "%d slots have been created on the device.\n"
+msgstr "%d Paikkoja on luotu laitteelle.\n"
+
+#, python-format
 msgid "%d times"
 msgstr "%d ajat"
 
@@ -1207,6 +1211,10 @@ msgid "%s not available."
 msgstr "%s ei saatavilla."
 
 #, python-format
+msgid "%s version"
+msgstr "%s versio"
+
+#, python-format
 msgid "%s%d min"
 msgstr "%s%d minuutti"
 
@@ -1296,7 +1304,7 @@ msgstr "(tyhjä)"
 msgid "(show optional DVD audio menu)"
 msgstr "(näytä DVD äänen lisävalikko)"
 
-msgid "* = Restart Required"
+msgid "* = Restart required if this item is changed."
 msgstr "* = Vaatii uudelleenkäynnistyksen"
 
 msgid "* Only available if more than one interface is active."
@@ -2195,6 +2203,9 @@ msgstr "Kaikki palveluntarjoajat"
 msgid "All supported"
 msgstr "Kaikki tuettu"
 
+msgid "All up/down"
+msgstr "kaikki ylös/alas"
+
 msgid "Allocate"
 msgstr "Varaa"
 
@@ -2468,6 +2479,9 @@ msgstr "Haluatko varmasti poistaa tämän lokin:\n"
 msgid "Are you sure you want to delete this?"
 msgstr "Haluatko varmasti poistaa tämän?"
 
+msgid "Are you sure you want to disable Chkroot Multiboot?"
+msgstr ""
+
 msgid "Are you sure you want to exit this wizard?"
 msgstr "Haluatko lopettaa avustustoiminnon?"
 
@@ -2537,10 +2551,10 @@ msgstr "Nouseva"
 msgid "Ask user"
 msgstr "Kysy käyttäjältä"
 
-msgid "Ask user (with default as 'No')"
+msgid "Ask user (with default of 'No')"
 msgstr "Kysy käyttäjältä (oletus \"ei\")"
 
-msgid "Ask user (with default as 'Yes')"
+msgid "Ask user (with default of 'Yes')"
 msgstr "Kysy käyttäjältä (oletus \"kyllä\")"
 
 msgid "Aspect"
@@ -2651,9 +2665,6 @@ msgstr "Toimintatapa"
 msgid "Auto"
 msgstr "Autom."
 
-msgid "Auto Detect"
-msgstr "Automaattinen tunnistus"
-
 msgid "Auto Language"
 msgstr "Automaattinen kieli"
 
@@ -2677,6 +2688,9 @@ msgstr "Kappalejako joka ? min välein (0=ei koskaan)"
 
 msgid "Auto deep standby"
 msgstr "Automaattinen virransäästötila"
+
+msgid "Auto detect"
+msgstr "Automaattinen tunnistus"
 
 msgid "Auto flesh"
 msgstr "Ihonvärin korostus"
@@ -3054,8 +3068,8 @@ msgstr "Bittinopeus"
 msgid "Black"
 msgstr "Musta"
 
-msgid "Black Screen"
-msgstr "Musta Ruutu"
+msgid "Black screen"
+msgstr "Musta ruutu"
 
 msgid "Black screen till locked"
 msgstr "Musta ruutu kunnes lukittu"
@@ -3066,7 +3080,7 @@ msgstr "Musta lista"
 msgid "Blinking REC"
 msgstr "Vilkkuva REC symboli"
 
-msgid "Blinking REC Symbol"
+msgid "Blinking REC symbol"
 msgstr "Vilkkuva REC-symboli"
 
 msgid "Block device"
@@ -3817,7 +3831,7 @@ msgstr "Kanava / Palvelu"
 msgid "Channel 1"
 msgstr "Kanava 1"
 
-msgid "Channel 1 with Prime time"
+msgid "Channel 1 with prime time"
 msgstr "Kanava 1 ja Paras katseluaika"
 
 msgid "Channel Info"
@@ -3825,9 +3839,6 @@ msgstr "Kanavatiedot"
 
 msgid "Channel List"
 msgstr "Kanavalista"
-
-msgid "Channel Number"
-msgstr "Kanava numero"
 
 msgid "Channel Selection"
 msgstr "Kanavan valinta"
@@ -3888,6 +3899,9 @@ msgstr "Kanavalistan tyyppi"
 
 msgid "Channel name"
 msgstr "Kanavan nimi"
+
+msgid "Channel number"
+msgstr "Kanava numero"
 
 msgid "Channel preview mode"
 msgstr "Kanavien esikatselutila"
@@ -4254,6 +4268,9 @@ msgstr "Sulje Kexec MultiBoot Manageri"
 msgid "Close the Plugin Browser screen"
 msgstr "Sulje lisäosa selain näyttö"
 
+msgid "Close the SeekBar after returning to the starting point"
+msgstr ""
+
 msgid "Close the choice box"
 msgstr "Sulje valinta ruutu"
 
@@ -4317,7 +4334,7 @@ msgstr "Väriformaatti"
 msgid "Color space"
 msgstr "Väriavaruus"
 
-msgid "Colored Text"
+msgid "Colored text"
 msgstr "Värillinen teksti"
 
 msgid "Combined"
@@ -5152,6 +5169,9 @@ msgstr "Luo pääasiallinen tiedostojärjestelmä."
 msgid "Create separate radio user bouquet"
 msgstr "Luo erillinen radio suosikkilista"
 
+msgid "Create slots for the selected device"
+msgstr "Luo paikka valitulle laitteelle"
+
 msgid "Create swap"
 msgstr "Luo vaihto"
 
@@ -5428,9 +5448,6 @@ msgstr "DTS/DTS-HD HR/DTS-HD MA/DTS:X"
 
 msgid "DUAL LAYER DVD"
 msgstr "DUAL LAYER DVD"
-
-msgid "DVB API version"
-msgstr "DVB API versio"
 
 msgid "DVB CI Delay"
 msgstr "DVB CI Viive"
@@ -5783,6 +5800,9 @@ msgstr "Aseta DNS osoite."
 
 msgid "Define the custom mountpoint for the device."
 msgstr "Määritä laitteen mukautettu liitos."
+
+msgid "Define the default settings backup target location. Select 'Ask user' to prompt the user for the target location when the backup is run."
+msgstr "Määritä oletus tallennuspaikka asetusten varmuuskopiolle. Valitse 'Kysy käyttäjältä' tallennuspaikkaa varmuuskopion suorittamisen yhteydessä."
 
 msgid "Define the file system mount options."
 msgstr "Määrittele tiedosto järjestelmäasetukset."
@@ -6293,6 +6313,9 @@ msgstr "Poista PiP Käytöstä.\n"
 msgid "Disabled or WPA/WPA2"
 msgstr "Poistettu tai WPA/WPA2"
 
+msgid "Disabling Chkroot failed!"
+msgstr ""
+
 msgid "Dish"
 msgstr "Lautasantenni"
 
@@ -6496,7 +6519,7 @@ msgid ""
 msgstr ""
 "Haluatko todella sulkea OSCam?\n"
 "\n"
-"HUOMIO: Oscamin uudelleen käynnistämiseksi on  vastaanottimen uudelleen käynnistettävä!"
+"HUOMIO: Oscamin uudelleen käynnistämiseksi on vastaanottimen uudelleen käynnistettävä!"
 
 #, python-format
 msgid "Do you really want to stop and delete the timer '%s'?"
@@ -7331,9 +7354,6 @@ msgstr "Järjestelmä tiedot"
 msgid "Enigma2 revision"
 msgstr "Järjestelmä tiedot"
 
-msgid "Enigma2 version"
-msgstr "Järjestelmä Versio"
-
 msgid "Enigmalight"
 msgstr "Enigmalight"
 
@@ -8052,9 +8072,6 @@ msgstr "FFmpeg Probe"
 msgid "FFmpeg is not installed so '.mvi' file actions are not available!"
 msgstr "FFmpeg ei ole asennettu, joten '.mvi' tiedostot eivät ole käytettävissä!"
 
-msgid "FFmpeg version"
-msgstr "FFmpeg versio"
-
 msgid "FIFO"
 msgstr "FIFO"
 
@@ -8653,9 +8670,6 @@ msgstr "FullHD Testi"
 msgid "G"
 msgstr "G"
 
-msgid "GCC version"
-msgstr "GCC versio"
-
 msgid "GREEN button"
 msgstr "Vihreä näppäin"
 
@@ -8667,9 +8681,6 @@ msgstr "GStreamerin debug loki luokka *"
 
 msgid "GStreamer debug log level *"
 msgstr "GStreamer virheenkorjauslokin taso *"
-
-msgid "GStreamer version"
-msgstr "GStreamer versio"
 
 msgid "GUI Skin *"
 msgstr "Käyttöliittymän teema *"
@@ -8767,9 +8778,6 @@ msgstr "Gibraltari"
 
 msgid "Given device id"
 msgstr "Annettu laitetunnus"
-
-msgid "Glibc version"
-msgstr "Glibc versio"
 
 msgid "Go back to the previous step"
 msgstr "Palaa edelliseen vaiheeseen"
@@ -9981,6 +9989,9 @@ msgstr "Sisäinen SSD"
 msgid "Internal USB"
 msgstr "Sisäinen USB"
 
+msgid "Internal disk only"
+msgstr "Vain sisäinen kiintolevy"
+
 msgid "Internal flash"
 msgstr "Sisäinen muisti"
 
@@ -9991,9 +10002,6 @@ msgstr "Sisäinen muisti:  %s %s "
 #, python-format
 msgid "Internal flash: %s %s as USB Recovery"
 msgstr "Sisäinen muisti: %s %s USB Palautuksena"
-
-msgid "Internal hdd only"
-msgstr "Vain sisäinen kiintolevy"
 
 msgid "Internet"
 msgstr "Internet"
@@ -10213,8 +10221,15 @@ msgstr "Kernel Paketit"
 msgid "Kernel file"
 msgstr "Kerneli tiedosto"
 
+msgid "Kernel partition"
+msgstr "Kernel osio"
+
 msgid "Kernel version"
 msgstr "Kernel tiedot"
+
+#, python-format
+msgid "Kernel%s partition"
+msgstr "Kernel%s osio"
 
 msgid "Kexec MultiBoot Actions"
 msgstr "Kexec MultiBoot Toiminnot"
@@ -10468,7 +10483,7 @@ msgstr "Vasemman sarakkeen hakemiston lajittelu"
 msgid "Left column file sort"
 msgstr "Vasemman sarakkeen tiedostolajittelu"
 
-msgid "Left from service name"
+msgid "Left of service name"
 msgstr "Kanavanimestä vasemmalle"
 
 msgid "Left, back USB"
@@ -10755,10 +10770,10 @@ msgstr "Lokien sijainti"
 msgid "Logs older then the set no of days will be deleted."
 msgstr "Vanhemmat määritetty lokit poistetaan."
 
-msgid "Long << / >>"
+msgid "Long <</>>"
 msgstr "Pitkä << / >>"
 
-msgid "Long Left/Right"
+msgid "Long LEFT/RIGHT"
 msgstr "Pitkä vasen/oikea"
 
 msgid "Long filenames"
@@ -12317,10 +12332,10 @@ msgstr "Ei koskaan"
 msgid "No, scan later manually"
 msgstr "Ei, kanavat haetaan myöhemmin manuaalisesti"
 
-msgid "No, show the Plugin Browser"
+msgid "No, show Plugin Browser"
 msgstr "Näytä lisäosien selain"
 
-msgid "No, show the RecordTimer Overview"
+msgid "No, show RecordTimer Overview"
 msgstr "Ei, näytä aina ajastuslista"
 
 msgid "NodeID"
@@ -12331,6 +12346,9 @@ msgstr "Määritä, kuinka monta IP Osoitetta tarkistetaan aktiivisten yhteyksie
 
 msgid "Non-Linear"
 msgstr "Epälineaarinen"
+
+msgid "Non-flashing"
+msgstr "Kiinteä"
 
 msgid "None"
 msgstr "Ei mitään"
@@ -12388,9 +12406,6 @@ msgstr "Ei luokiteltu"
 
 msgid "Not Defined"
 msgstr "Ei määritetty"
-
-msgid "Not Flashing"
-msgstr "Kiinteä"
 
 msgid "Not Installed"
 msgstr "Ei asennettu"
@@ -12672,9 +12687,6 @@ msgstr "Ääni asetukset"
 msgid "Open AutoTimer"
 msgstr "Automaattiajastus"
 
-msgid "Open AutoTimer OverView"
-msgstr "Avaa Automaattiset ajastukset"
-
 msgid "Open AutoTimer Overview"
 msgstr "Avaa Automaattiset ajastukset"
 
@@ -12683,9 +12695,6 @@ msgstr "Näytä Suosikkilista"
 
 msgid "Open Box Portal"
 msgstr "Näytä Tallennukset"
-
-msgid "Open DreamPlex"
-msgstr "Näytä DreamPlex soitin"
 
 msgid "Open EPG"
 msgstr "Näytä EPG"
@@ -12851,9 +12860,6 @@ msgstr "OpenDNS Koti"
 
 msgid "OpenPLi Packages"
 msgstr "OpenPLi Paketit"
-
-msgid "OpenSSL version"
-msgstr "OpenSSL versio"
 
 msgid "OpenVPN"
 msgstr "OpenVPN"
@@ -13287,7 +13293,7 @@ msgstr "Kanavalogo"
 msgid "Picon Packages"
 msgstr "Kanavalogot"
 
-msgid "Picon and Service Name"
+msgid "Picon and service name"
 msgstr "Kanavan logo ja nimi"
 
 msgid "Picon install location"
@@ -14006,6 +14012,9 @@ msgstr "Käytä tätä aluetta painamalla OK.  [%s]"
 msgid "Press the UP/DOWN buttons to select a slot and press OK or GREEN to reboot to that image. If available, YELLOW will either delete or wipe the image. A deleted image can be restored with the BLUE button. A wiped image is completely removed and cannot be restored!"
 msgstr "Paina YLÖS/ALAS painikkeita valitaksesi image paikan ja paina OK tai VIHREÄ Uudelleen käynnistääksesi kyseiseen image paikan, jos on käytettävissä, KELTAINEN Poista image paikka. Poistettua ohjelmistoa ei voi palauttaa!"
 
+msgid "Press the UP/DOWN buttons to select a slot, then press OK or GREEN to reboot into that image. If available, YELLOW will disable Multiboot, delete, or wipe the selected image. Press BLUE to add more slots."
+msgstr ""
+
 msgid "Press this button to emulate a long press on a button pressed afterwards (this also overrides any other actions assigned to emulation button)."
 msgstr "Painamalla tätä painiketta voit jäljitellä pitkään painettua painiketta myöhemmin (tämä myös ohitetaan kaikki muut emulointipainikkeelle määritetyt toiminnot)."
 
@@ -14247,9 +14256,6 @@ msgstr "Pythonin kehityspakettit"
 msgid "Python frontend for /tmp/mmi.socket"
 msgstr "Python-liittymä /tmp/mmi.socket"
 
-msgid "Python version"
-msgstr "Python versio"
-
 msgid "Qatar"
 msgstr "Qatar"
 
@@ -14301,9 +14307,6 @@ msgstr "QuickEPG:n aktivointitapa"
 msgid "QuickMenu"
 msgstr "Pikavalikko"
 
-msgid "QuickMenu Actions"
-msgstr "Pikavalikko toiminnot"
-
 msgid "QuickMenu/Extensions"
 msgstr "Pikavalikko/laajennukset"
 
@@ -14352,14 +14355,14 @@ msgstr "Tallennus"
 msgid "REC "
 msgstr "REC "
 
-msgid "REC Symbol"
-msgstr "REC symboli"
-
 msgid "REC Symbol in Standby"
 msgstr "REC symboli valmiustilassa"
 
 msgid "REC Symbol in use"
 msgstr "REC symboli käytössä"
+
+msgid "REC symbol"
+msgstr "REC symboli"
 
 msgid "RED button"
 msgstr "Punainen näppäin"
@@ -14515,7 +14518,7 @@ msgstr "Tallenna - sama kuin tallennus-näppäin"
 msgid "Record Actions"
 msgstr "Tallennus Toiminnot"
 
-msgid "Record Icon"
+msgid "Record icon"
 msgstr "Tallenus kuvake"
 
 msgid "Record next"
@@ -15231,7 +15234,7 @@ msgstr "Oikean sarakkeen hakemiston lajittelu"
 msgid "Right column file sort"
 msgstr "Oikean sarakkeen tiedosto lajittelu"
 
-msgid "Right from service name"
+msgid "Right of service name"
 msgstr "Kanavanimestä oikealle"
 
 msgid "Right, back USB"
@@ -15440,9 +15443,6 @@ msgstr "Samba Serveri"
 
 msgid "Samba Settings"
 msgstr "Samba asetukset"
-
-msgid "Samba version"
-msgstr "Samba versio"
 
 msgid "Same as in active"
 msgstr "Sama kuin aktiivinen"
@@ -15702,14 +15702,14 @@ msgstr "Virran katkaisu ajastukset"
 msgid "Scheduler Settings"
 msgstr "Virran katkaisu asetukset"
 
-msgid "Scheduler Standby"
-msgstr "Virta ajastukset Valmistila"
-
 msgid "Scheduler deep standby"
 msgstr "Virta ajastin virransäästötila"
 
 msgid "Scheduler log"
 msgstr "PowerTimer-loki"
+
+msgid "Scheduler standby"
+msgstr "Virta ajastukset Valmistila"
 
 msgid "Sci-Fi"
 msgstr "Scifi"
@@ -15743,12 +15743,6 @@ msgstr "Vieritysnopeus (ohjelmistopohjainen renderöinti)"
 
 msgid "Search"
 msgstr "Haku"
-
-msgid "Search EPG for current event"
-msgstr "Hae ohjelmaoppaasta nykyistä ohjelmaa"
-
-msgid "Search IMDb for information about current event"
-msgstr "Hae IMDb:stä tietoja katseltavasta ohjelmasta"
 
 msgid "Search Sats"
 msgstr "Etsi satelliitteja"
@@ -15801,8 +15795,8 @@ msgstr "Etsi"
 msgid "Seek Actions"
 msgstr "Haku toiminnot"
 
-msgid "Seek back short"
-msgstr "Etsi takaisin lyhyt"
+msgid "Seek Bar"
+msgstr ""
 
 msgid "Seek backward"
 msgstr "Hae taaksepäin"
@@ -15813,22 +15807,19 @@ msgstr "Hae taaksepäin (syötä aika)"
 msgid "Seek forward"
 msgstr "Hae eteenpäin"
 
-msgid "Seek forward  short"
-msgstr "Etsiä eteenpäin lyhyt"
-
 msgid "Seek forward (enter time)"
 msgstr "Hae eteenpäin (syötä aika)"
 
-msgid "Seek forward long"
-msgstr "Etsiä eteenpäin kauan"
+msgid "SeekBar"
+msgstr "Etsi"
+
+msgid "SeekBar Actions"
+msgstr ""
 
 msgid "SeekBar activation"
 msgstr "Hakupalkin aktivointi"
 
-msgid "Seekbar"
-msgstr "Etsi"
-
-msgid "Seekbar sensibility"
+msgid "SeekBar sensibility"
 msgstr "Hakupalkin hypyn pituus (sek)"
 
 msgid "Seeking connected events"
@@ -15908,7 +15899,7 @@ msgstr "'Kyllä' valinnalla tietopalkki näytetään, pysyvästi keskeytetyssä 
 msgid "Select 'Yes' to allow each storage device detected to be automatically exported as samba share."
 msgstr "Valitse 'Kyllä' salliaksesi, että jokainen tunnistettu tallennuslaite viedään automaattisesti Samba jaoksi."
 
-msgid "Select 'Yes' to allow use of the seek bar to jump to a selected point within the event."
+msgid "Select 'Yes' to allow use of the SeekBar to jump to a selected point within the event."
 msgstr "Jos asetuksena on 'kyllä ', voit käyttää hakupalkkia hypätäksesi haluttuun kohtaan ohjelmassa."
 
 msgid "Select 'Yes' to always show the bouquet screen first when opening the channel list. Select 'No' to open the channel list using the current bouquet."
@@ -16198,6 +16189,9 @@ msgstr "Valitse suosikkilista"
 msgid "Select a debug log file to view:"
 msgstr "Valitse tarkasteltava vianmäärityslokitiedosto:"
 
+msgid "Select a device to create multiboot slots"
+msgstr "Valitse laite multiboot luomista varten"
+
 msgid "Select a device to use as the flash expander"
 msgstr "Valitse laite, jota käytetään muistin laajentimena"
 
@@ -16426,6 +16420,9 @@ msgstr "Valitse lajittelutapa:"
 
 msgid "Select system information to view:"
 msgstr "Valitse tarkasteltavat järjestelmätiedot:"
+
+msgid "Select target device for slot creation"
+msgstr "Valitse kohdelaite paikan luomista varten"
 
 msgid "Select temporary directory sort order for the current column"
 msgstr "Valitse väliaikaisen hakemiston lajittelujärjestys nykyiselle sarakkeelle"
@@ -17011,15 +17008,6 @@ msgstr "Kanava tiedot"
 msgid "Service Information Actions"
 msgstr "Kanavan Tiedot Toiminnot"
 
-msgid "Service Name"
-msgstr "Kanavan nimi"
-
-msgid "Service Number and Service Name"
-msgstr "Kanavan Numero ja Palvelu Nimi"
-
-msgid "Service Number, Picon and Service Name"
-msgstr "Kanavan Numero. Logo ja Palvelu Nimi"
-
 msgid "Service Scan"
 msgstr "Kanavahaku"
 
@@ -17070,8 +17058,14 @@ msgstr ""
 "(Kanavan Service ID:tä ei löydy\n"
 "Program Association Tablesta.)"
 
+msgid "Service number and service name"
+msgstr "Kanavan Numero ja Palvelu Nimi"
+
 msgid "Service number font size"
 msgstr "Kanavanumeron tekstikoko"
+
+msgid "Service number, picon and service name"
+msgstr "Kanavan Numero. Logo ja Palvelu Nimi"
 
 msgid "Service off-air"
 msgstr "Kanavan pois päältä"
@@ -17246,7 +17240,7 @@ msgstr "Aseta oletus lajittelujärjestys."
 msgid "Set the delay time between repeated loops, this is used by software renderer in some skins."
 msgstr "Määritä toistettavien silmukoiden välinen viive, ohjelmistopohjainen renderointi käyttää tätä joissain teemoissa."
 
-msgid "Set the jump-size of the seekbar."
+msgid "Set the jump-size of the SeekBar."
 msgstr "Aseta hakupalkin hypyn pituus."
 
 msgid "Set the number of lines to be saved for 'stout' and 'sterr' output in scripts."
@@ -17385,6 +17379,9 @@ msgstr "Salasanan asettaminen on erittäin suositeltavaa, jos Vastaanotin on avo
 
 msgid "Settings"
 msgstr "Asetukset"
+
+msgid "Settings Backup Target"
+msgstr "Asetukset varmuuskopio sijainti"
 
 msgid "Settings mode"
 msgstr "Asetustila"
@@ -18422,11 +18419,11 @@ msgstr "Laajennukset plugin teemat"
 msgid "Skin Packages"
 msgstr "Teemat"
 
-msgid "Skin Setting"
-msgstr "Teeman asetus"
-
 msgid "Skin Settings"
 msgstr "Teema asetukset"
+
+msgid "Skin setting"
+msgstr "Teeman asetus"
 
 msgid "SkinSelection"
 msgstr "Teeman Valinta"
@@ -18437,14 +18434,38 @@ msgstr "Siirry taaksepäin"
 msgid "Skip backward"
 msgstr "siirry taaksepäin"
 
+#, python-format
+msgid "Skip backward %d second"
+msgid_plural "Skip backward %d seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "Skip backward %s%%"
+msgstr ""
+
 msgid "Skip backward (enter time)"
 msgstr "siirry taaksepäin (syötä aika)"
 
 msgid "Skip empty services"
 msgstr "Ohita tyhjät kanavat"
 
+#, python-format
+msgid "Skip for '%s' is disabled"
+msgstr ""
+
 msgid "Skip forward"
 msgstr "Siirry eteenpäin"
+
+#, python-format
+msgid "Skip forward %d second"
+msgid_plural "Skip forward %d seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "Skip forward %s%%"
+msgstr ""
 
 msgid "Skip forward (enter time)"
 msgstr "siirry eteenpäin (syötä aika)"
@@ -18466,6 +18487,13 @@ msgstr "Painikkeen '%s' ohitusaika"
 
 msgid "Skip time for '%s'/'%s' buttons"
 msgstr "Painikkeiden '%s'/'%s' ohitusaika"
+
+#, python-format
+msgid "Skip to %s0%% position (Add %s%% on second press)"
+msgstr ""
+
+msgid "Skip to 0% (start) position"
+msgstr ""
 
 msgid "Sleep"
 msgstr "Uniajastin"
@@ -18580,6 +18608,9 @@ msgstr "Paikka '%s' %s"
 msgid "Slot '%s' %s: %s%s"
 msgstr "Paikka '%s' %s: %s%s"
 
+msgid "Slot F: Flash Slot Image Backup (Current image)"
+msgstr ""
+
 msgid "Slot Manager"
 msgstr "Paikkojen Hallinta"
 
@@ -18591,6 +18622,10 @@ msgstr "Käynnistyspaikan Täysi Varmuuskopionti (Nykyinen ohjelmisto)"
 
 msgid "Slot count"
 msgstr "Paikkojen määrä"
+
+#, python-format
+msgid "Slots have been extended by %d..\n"
+msgstr ""
 
 msgid "Slovak"
 msgstr "Slovakia"
@@ -19019,6 +19054,9 @@ msgstr "Aloitusaika"
 
 msgid "Starts in a few seconds"
 msgstr "Alkaa 5 sekunnissa"
+
+msgid "Startup device not found!"
+msgstr ""
 
 #. TRANSLATORS: "State" is location information and not condition based information.
 msgid "State"
@@ -19551,7 +19589,7 @@ msgstr "TMDB Haku"
 
 msgid "TRANSLATOR_INFO"
 msgstr ""
-"Suomenkielinen käännös: 8.5.2025\n"
+"Suomenkielinen käännös: 8.7.2025\n"
 "tomppaa"
 
 msgid "TS file is too large for ISO9660 level 1!"
@@ -19832,13 +19870,6 @@ msgstr ""
 
 msgid "The DVD standard doesn't support H.264 (HDTV) video streams."
 msgstr "DVD-standardi ei tue H.264 (HDTV) videostriimejä."
-
-msgid ""
-"The DreamPlex plugin is not installed!\n"
-"Please install it."
-msgstr ""
-"DreamPlex-lisäosaa ei ole asennettu!\n"
-"Asenna se."
 
 msgid ""
 "The EPGSearch plugin is not installed!\n"
@@ -20726,9 +20757,6 @@ msgstr "Aikahistoria"
 msgid "Timeline scale"
 msgstr "Näytettävä aikaväli"
 
-msgid "Timer Actions"
-msgstr "Ajastin Toiminnot"
-
 msgid "Timer Log Actions"
 msgstr "Ajastimen loki toiminnot"
 
@@ -21149,6 +21177,9 @@ msgstr "Viritys alkometria"
 msgid "Tunisia"
 msgstr "Tunisia"
 
+msgid "Turbo"
+msgstr "Turbo"
+
 # SoftwareManager/plugin.py
 msgid "Turbo: One reboot after flash; Fast: One reboot after flash, one reboot after restore; Slow: One reboot after flash, one reboot after restore in GUI."
 msgstr "Turbo: Uudelleenkäynnistys päivityksen jälkeen; Nopea: Uudelleenkäynnistys päivityksen jälkeen, uudelleenkäynnistys palautumisen jälkeen; Hidas: Uudelleenkäynnistys päivityksen jälkeen, uudelleenkäynnistys palauttamisen jälkeen."
@@ -21221,6 +21252,10 @@ msgstr "Laitteen tyyppi"
 
 msgid "Type of scan"
 msgstr "Hakutapa"
+
+#, python-format
+msgid "UBI slot %s%s"
+msgstr ""
 
 msgid "UBINIZE"
 msgstr "UBINIZE"
@@ -22703,7 +22738,7 @@ msgstr "T2MI RAW moodi estettynä (oletus) voidaan käyttää yksittäis-T2MI PL
 msgid "With errors:"
 msgstr "Virheillä:"
 
-msgid "With long OK press"
+msgid "With long OK button"
 msgstr "pitkä OK painallus"
 
 msgid "With pop up"
@@ -23260,9 +23295,6 @@ msgstr "seikkailu/länkkäri/sota"
 msgid "advertisement/shopping"
 msgstr "mainos/ostos"
 
-msgid "all up/down"
-msgstr "kaikki ylös/alas"
-
 msgid "alpha then oldest"
 msgstr "Aakkosjärjestys, vanhin ensin"
 
@@ -23520,9 +23552,6 @@ msgstr "epäonnistui"
 
 msgid "fashion"
 msgstr "muoti"
-
-msgid "fast"
-msgstr "nopea"
 
 msgid "file can not displayed - file not found"
 msgstr "tiedostoa ei voida näyttää - tiedostoa ei löydy"
@@ -23794,9 +23823,6 @@ msgstr "ei korttia tai tuntematon kortti"
 msgid "no storage devices found"
 msgstr "tallennuslaitteita ei löytynyt"
 
-msgid "normal"
-msgstr "normaali"
-
 msgid "not"
 msgstr "ei"
 
@@ -23991,9 +24017,6 @@ msgstr "siirry taaksepäin"
 msgid "skip forward"
 msgstr "siirry eteenpäin"
 
-msgid "slow"
-msgstr "hidas"
-
 msgid "soap/melodrama/folkloric"
 msgstr "saippuasarja/melodraama/folkloristiikka"
 
@@ -24096,9 +24119,6 @@ msgstr "perinteinen (nopea), viritä uudelleen"
 msgid "tree delete"
 msgstr "polku poisto"
 
-msgid "turbo"
-msgstr "turbo"
-
 msgid "uShare"
 msgstr "uShare asetukset"
 
@@ -24188,6 +24208,79 @@ msgstr "kyllä (pidä syötteet)"
 
 msgid "®"
 msgstr "®"
+
+#~ msgid "Black Screen"
+#~ msgstr "Musta Ruutu"
+
+#~ msgid "Seek back short"
+#~ msgstr "Etsi takaisin lyhyt"
+
+#~ msgid "Seek forward  short"
+#~ msgstr "Etsiä eteenpäin lyhyt"
+
+#~ msgid "Seek forward long"
+#~ msgstr "Etsiä eteenpäin kauan"
+
+#~ msgid "Service Name"
+#~ msgstr "Kanavan nimi"
+
+#~ msgid "normal"
+#~ msgstr "normaali"
+
+#~ msgid "slow"
+#~ msgstr "hidas"
+
+#~ msgid "DVB API version"
+#~ msgstr "DVB API versio"
+
+#~ msgid "Enigma2 version"
+#~ msgstr "Järjestelmä Versio"
+
+#~ msgid "FFmpeg version"
+#~ msgstr "FFmpeg versio"
+
+#~ msgid "GCC version"
+#~ msgstr "GCC versio"
+
+#~ msgid "GStreamer version"
+#~ msgstr "GStreamer versio"
+
+#~ msgid "Glibc version"
+#~ msgstr "Glibc versio"
+
+#~ msgid "OpenSSL version"
+#~ msgstr "OpenSSL versio"
+
+#~ msgid "Python version"
+#~ msgstr "Python versio"
+
+#~ msgid "Samba version"
+#~ msgstr "Samba versio"
+
+#~ msgid "Open AutoTimer OverView"
+#~ msgstr "Avaa Automaattiset ajastukset"
+
+#~ msgid "Open DreamPlex"
+#~ msgstr "Näytä DreamPlex soitin"
+
+#~ msgid "QuickMenu Actions"
+#~ msgstr "Pikavalikko toiminnot"
+
+#~ msgid "Search EPG for current event"
+#~ msgstr "Hae ohjelmaoppaasta nykyistä ohjelmaa"
+
+#~ msgid "Search IMDb for information about current event"
+#~ msgstr "Hae IMDb:stä tietoja katseltavasta ohjelmasta"
+
+#~ msgid ""
+#~ "The DreamPlex plugin is not installed!\n"
+#~ "Please install it."
+#~ msgstr ""
+#~ "DreamPlex-lisäosaa ei ole asennettu!\n"
+#~ "Asenna se."
+
+#~ msgid "Timer Actions"
+#~ msgstr "Ajastin Toiminnot"
 
 #~ msgid "InfoBar EPG Actions"
 #~ msgstr "Tietopalkki EPG: toiminnot"
@@ -26220,9 +26313,6 @@ msgstr "®"
 
 #~ msgid "Add bouquet"
 #~ msgstr "Lisää uusi suosikkilista"
-
-#~ msgid "Black screen"
-#~ msgstr "Musta ruutu"
 
 #~ msgid "no"
 #~ msgstr "ei"

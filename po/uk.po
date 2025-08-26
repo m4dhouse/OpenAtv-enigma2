@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenATV\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 16:24+0000\n"
-"PO-Revision-Date: 2025-05-08 05:07+0000\n"
+"POT-Creation-Date: 2025-07-27 15:35+0000\n"
+"PO-Revision-Date: 2025-07-20 15:03+0000\n"
 "Last-Translator: kvinto <badsystem@ukr.net>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/openatv/enigma2-7-0-po/uk/>\n"
 "Language: uk\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 msgid ""
@@ -101,7 +101,7 @@ msgstr " оновлено"
 msgid "!! Boot loader Upgrade !!"
 msgstr "!! Завантажувач оновлено !!"
 
-msgid "# = Reboot Required"
+msgid "# = Reboot required if this item is changed."
 msgstr "# = Потрібне перезавантаження"
 
 msgid "%-H:%M"
@@ -1071,6 +1071,10 @@ msgstr[1] "%d канали знайдено."
 msgstr[2] "%d каналів знайдено."
 
 #, python-format
+msgid "%d slots have been created on the device.\n"
+msgstr "На пристрої створено %d слотів.\n"
+
+#, python-format
 msgid "%d times"
 msgstr "%d рази"
 
@@ -1249,6 +1253,10 @@ msgid "%s not available."
 msgstr "%s недоступний."
 
 #, python-format
+msgid "%s version"
+msgstr "Версія %s"
+
+#, python-format
 msgid "%s%d min"
 msgstr "%s%d хв"
 
@@ -1338,7 +1346,7 @@ msgstr "(відсутній)"
 msgid "(show optional DVD audio menu)"
 msgstr "(показати додаткове DVD аудіо меню)"
 
-msgid "* = Restart Required"
+msgid "* = Restart required if this item is changed."
 msgstr "* = Потрібне перезавантаження"
 
 msgid "* Only available if more than one interface is active."
@@ -2225,6 +2233,9 @@ msgstr "Всі канали провайдера"
 msgid "All supported"
 msgstr "Усі підтримуються"
 
+msgid "All up/down"
+msgstr "все вверх/вниз"
+
 msgid "Allocate"
 msgstr "Призначити"
 
@@ -2498,6 +2509,9 @@ msgstr "Ви дійсно бажаєте видалити цей лог:\n"
 msgid "Are you sure you want to delete this?"
 msgstr "Ви впевнені, що хочете видалити це?"
 
+msgid "Are you sure you want to disable Chkroot Multiboot?"
+msgstr ""
+
 msgid "Are you sure you want to exit this wizard?"
 msgstr "Ви дійсно бажаєте вийти з помічника?"
 
@@ -2567,10 +2581,10 @@ msgstr "Висхідний"
 msgid "Ask user"
 msgstr "Запитати користувача"
 
-msgid "Ask user (with default as 'No')"
+msgid "Ask user (with default of 'No')"
 msgstr "Запитати користувача (за замовчуванням 'ні')"
 
-msgid "Ask user (with default as 'Yes')"
+msgid "Ask user (with default of 'Yes')"
 msgstr "Запитати користувача (за замовчуванням 'так')"
 
 msgid "Aspect"
@@ -2681,9 +2695,6 @@ msgstr "Режим авторизації"
 msgid "Auto"
 msgstr "Авто"
 
-msgid "Auto Detect"
-msgstr "Автовизначення"
-
 msgid "Auto Language"
 msgstr "Авто мова"
 
@@ -2707,6 +2718,9 @@ msgstr "Автоматичний поділ на заголовки кожні ?
 
 msgid "Auto deep standby"
 msgstr "Авто виключення"
+
+msgid "Auto detect"
+msgstr "Автовизначення"
 
 msgid "Auto flesh"
 msgstr "Авто флеш"
@@ -3084,7 +3098,7 @@ msgstr "Бітрейт"
 msgid "Black"
 msgstr "Чорний"
 
-msgid "Black Screen"
+msgid "Black screen"
 msgstr "Чорний екран"
 
 msgid "Black screen till locked"
@@ -3096,7 +3110,7 @@ msgstr "Чорний список"
 msgid "Blinking REC"
 msgstr "Мигаючий значок Запис"
 
-msgid "Blinking REC Symbol"
+msgid "Blinking REC symbol"
 msgstr "Мигаючий значок запису"
 
 msgid "Block device"
@@ -3846,7 +3860,7 @@ msgstr "Канал / Сервіс"
 msgid "Channel 1"
 msgstr "Канал 1"
 
-msgid "Channel 1 with Prime time"
+msgid "Channel 1 with prime time"
 msgstr "Канал 1 з Прайм-тайму"
 
 msgid "Channel Info"
@@ -3854,9 +3868,6 @@ msgstr "Інформація каналу"
 
 msgid "Channel List"
 msgstr "Список каналів"
-
-msgid "Channel Number"
-msgstr "Номер Каналу"
 
 msgid "Channel Selection"
 msgstr "Вибір каналу"
@@ -3917,6 +3928,9 @@ msgstr "Тип списку каналів"
 
 msgid "Channel name"
 msgstr "Назва каналу"
+
+msgid "Channel number"
+msgstr "Номер Каналу"
 
 msgid "Channel preview mode"
 msgstr "Режим прев'ю каналу"
@@ -4284,6 +4298,9 @@ msgstr "Закрийте Kexec MultiBoot Менеджер"
 msgid "Close the Plugin Browser screen"
 msgstr "Закрийте екран браузера плагінів"
 
+msgid "Close the SeekBar after returning to the starting point"
+msgstr ""
+
 msgid "Close the choice box"
 msgstr "Закрити вікно вибору"
 
@@ -4347,7 +4364,7 @@ msgstr "Формат кольору"
 msgid "Color space"
 msgstr "Колірний простір"
 
-msgid "Colored Text"
+msgid "Colored text"
 msgstr "Кольоровий текст"
 
 msgid "Combined"
@@ -5183,6 +5200,9 @@ msgstr "Створення кореневої файлової системи в
 msgid "Create separate radio user bouquet"
 msgstr "Створити окремий фаворитний радіо-список"
 
+msgid "Create slots for the selected device"
+msgstr "Створити слоти для вибраного пристрою"
+
 msgid "Create swap"
 msgstr "Створити swap"
 
@@ -5459,9 +5479,6 @@ msgstr "DTS/DTS-HD HR/DTS-HD MA/DTS:X"
 
 msgid "DUAL LAYER DVD"
 msgstr "ДВОШАРОВИЙ DVD"
-
-msgid "DVB API version"
-msgstr "Версія DVB API"
 
 msgid "DVB CI Delay"
 msgstr "Затримка DVB CI"
@@ -5814,6 +5831,9 @@ msgstr "Визначити DNS-суфікс."
 
 msgid "Define the custom mountpoint for the device."
 msgstr "Визначте настроювану точку підключення для пристрою."
+
+msgid "Define the default settings backup target location. Select 'Ask user' to prompt the user for the target location when the backup is run."
+msgstr "Визначте цільове розташування для резервного копіювання налаштувань за замовчуванням. Виберіть 'Запитувати користувача', щоб запитувати цільове розташування під час запуску резервного копіювання."
 
 msgid "Define the file system mount options."
 msgstr "Визначте параметри монтування файлової системи."
@@ -6323,6 +6343,9 @@ msgstr "Відключення ПІП.\n"
 
 msgid "Disabled or WPA/WPA2"
 msgstr "Вимкнено, або WPA/WPA2"
+
+msgid "Disabling Chkroot failed!"
+msgstr ""
 
 msgid "Dish"
 msgstr "Антена"
@@ -7365,9 +7388,6 @@ msgstr "Інформація про Enigma2"
 msgid "Enigma2 revision"
 msgstr "Ревізія Enigma2"
 
-msgid "Enigma2 version"
-msgstr "Версія Enigma2"
-
 msgid "Enigmalight"
 msgstr "Енігма-light"
 
@@ -8086,9 +8106,6 @@ msgstr "FFmpeg Проба"
 msgid "FFmpeg is not installed so '.mvi' file actions are not available!"
 msgstr "FFmpeg не встановлено, тому дії з файлами '.mvi' недоступні!"
 
-msgid "FFmpeg version"
-msgstr "Версія FFmpeg"
-
 msgid "FIFO"
 msgstr "FIFO"
 
@@ -8687,9 +8704,6 @@ msgstr "Тест FullHD"
 msgid "G"
 msgstr "G"
 
-msgid "GCC version"
-msgstr "Версія GCC"
-
 msgid "GREEN button"
 msgstr "Зелена кнопка"
 
@@ -8701,9 +8715,6 @@ msgstr "Категорія журналу налагодження GStreamer *"
 
 msgid "GStreamer debug log level *"
 msgstr "Рівень журналу налагодження GStreamer *"
-
-msgid "GStreamer version"
-msgstr "Версія GStreamer"
 
 msgid "GUI Skin *"
 msgstr "Скін Графічного інтерфейсу *"
@@ -8801,9 +8812,6 @@ msgstr "Гібралтар"
 
 msgid "Given device id"
 msgstr "ID пристрою"
-
-msgid "Glibc version"
-msgstr "Версія Glibc"
 
 msgid "Go back to the previous step"
 msgstr "Повернутися до попереднього кроку"
@@ -10010,6 +10018,9 @@ msgstr "Внутрішній SSD"
 msgid "Internal USB"
 msgstr "Внутрішній USB"
 
+msgid "Internal disk only"
+msgstr "Тільки внутрішній жорсткий диск"
+
 msgid "Internal flash"
 msgstr "Внутрішня пам’ять"
 
@@ -10020,9 +10031,6 @@ msgstr "Внутрішня пам’ять: %s %s"
 #, python-format
 msgid "Internal flash: %s %s as USB Recovery"
 msgstr "Внутрішній пам’ять: %s %s як USB Recovery"
-
-msgid "Internal hdd only"
-msgstr "Тільки внутрішній жорсткий диск"
 
 msgid "Internet"
 msgstr "Інтернет"
@@ -10243,8 +10251,15 @@ msgstr "Пакети ядра"
 msgid "Kernel file"
 msgstr "Файл ядра"
 
+msgid "Kernel partition"
+msgstr "Розділ ядра"
+
 msgid "Kernel version"
 msgstr "Версія ядра"
+
+#, python-format
+msgid "Kernel%s partition"
+msgstr "Розділ ядра%s"
 
 msgid "Kexec MultiBoot Actions"
 msgstr "Kexec MultiBoot Дії"
@@ -10498,7 +10513,7 @@ msgstr "Сортування каталогу в лівій колонці"
 msgid "Left column file sort"
 msgstr "Сортування файлів у лівій колонці"
 
-msgid "Left from service name"
+msgid "Left of service name"
 msgstr "Ліворуч назви каналу"
 
 msgid "Left, back USB"
@@ -10786,10 +10801,10 @@ msgstr "Розташування логів"
 msgid "Logs older then the set no of days will be deleted."
 msgstr "Логи старші даної кількості днів будуть видалені."
 
-msgid "Long << / >>"
+msgid "Long <</>>"
 msgstr "Довге натиснення << / >>"
 
-msgid "Long Left/Right"
+msgid "Long LEFT/RIGHT"
 msgstr "Довге натиснення Вліво/Вправо"
 
 msgid "Long filenames"
@@ -12340,10 +12355,10 @@ msgstr "Ні, ніколи"
 msgid "No, scan later manually"
 msgstr "Ні, сканувати вручну пізніше"
 
-msgid "No, show the Plugin Browser"
+msgid "No, show Plugin Browser"
 msgstr "Ні, завжди показувати провідник плагінів"
 
-msgid "No, show the RecordTimer Overview"
+msgid "No, show RecordTimer Overview"
 msgstr "Ні, завжди показувати список таймерів"
 
 msgid "NodeID"
@@ -12354,6 +12369,9 @@ msgstr "Вкажіть, скільки IP-адрес потрібно перев
 
 msgid "Non-Linear"
 msgstr "Нелінійний"
+
+msgid "Non-flashing"
+msgstr "Не блимаюча іконка"
 
 msgid "None"
 msgstr "Нічого"
@@ -12411,9 +12429,6 @@ msgstr "Не класифіковано"
 
 msgid "Not Defined"
 msgstr "Не визначений"
-
-msgid "Not Flashing"
-msgstr "Не блимаюча іконка"
 
 msgid "Not Installed"
 msgstr "Не встановлено"
@@ -12695,9 +12710,6 @@ msgstr "Відкрити параметри аудіо"
 msgid "Open AutoTimer"
 msgstr "Відкрити автотаймер"
 
-msgid "Open AutoTimer OverView"
-msgstr "Відкрити огляд автотаймера"
-
 msgid "Open AutoTimer Overview"
 msgstr "Відкрити список автотаймера"
 
@@ -12706,9 +12718,6 @@ msgstr "Відкрити фаворитний список"
 
 msgid "Open Box Portal"
 msgstr "Показати портали тюнера"
-
-msgid "Open DreamPlex"
-msgstr "Відкрити DreamPlex"
 
 msgid "Open EPG"
 msgstr "Відкрити EPG"
@@ -12874,9 +12883,6 @@ msgstr "Домашня сторінка OpenDNS"
 
 msgid "OpenPLi Packages"
 msgstr "Пакети OpenPLi"
-
-msgid "OpenSSL version"
-msgstr "Версія OpenSSL"
 
 msgid "OpenVPN"
 msgstr "OpenVPN"
@@ -13310,7 +13316,7 @@ msgstr "Пікон"
 msgid "Picon Packages"
 msgstr "Пакети Піконів"
 
-msgid "Picon and Service Name"
+msgid "Picon and service name"
 msgstr "Пікони і Назва Каналу"
 
 msgid "Picon install location"
@@ -14031,6 +14037,9 @@ msgstr "Натисніть OK, щоб використовувати цей ре
 msgid "Press the UP/DOWN buttons to select a slot and press OK or GREEN to reboot to that image. If available, YELLOW will either delete or wipe the image. A deleted image can be restored with the BLUE button. A wiped image is completely removed and cannot be restored!"
 msgstr "Натисніть кнопки ВГОРУ/ВНИЗ, щоб вибрати слот і натисніть OK, або ЗЕЛЕНУ, щоб 'Перезавантажити' це зображення. Якщо доступний, ЖОВТА буде 'Видалити', або 'Стерти' імідж. 'Видалений' імідж можна 'відновити' за допомогою СИНЬОЇ кнопки. Повністю вилучений імідж НЕМОЖЛИВО відновити!"
 
+msgid "Press the UP/DOWN buttons to select a slot, then press OK or GREEN to reboot into that image. If available, YELLOW will disable Multiboot, delete, or wipe the selected image. Press BLUE to add more slots."
+msgstr ""
+
 msgid "Press this button to emulate a long press on a button pressed afterwards (this also overrides any other actions assigned to emulation button)."
 msgstr "Натисніть цю кнопку, щоб емулювати тривале натискання на кнопку натиснутою після (це також скасовує будь-які інші дії, призначені для кнопки емуляції)."
 
@@ -14272,9 +14281,6 @@ msgstr "Пакети розробки Python"
 msgid "Python frontend for /tmp/mmi.socket"
 msgstr "Python інтерфейс для /tmp/mmi.socket"
 
-msgid "Python version"
-msgstr "Версія Python"
-
 msgid "Qatar"
 msgstr "Катар"
 
@@ -14326,9 +14332,6 @@ msgstr "Режим швидкого ЕПГ"
 msgid "QuickMenu"
 msgstr "Швидке меню"
 
-msgid "QuickMenu Actions"
-msgstr "Дії для QuickMenu"
-
 msgid "QuickMenu/Extensions"
 msgstr "Швидке меню/Розширення"
 
@@ -14377,14 +14380,14 @@ msgstr "REC"
 msgid "REC "
 msgstr "REC "
 
-msgid "REC Symbol"
-msgstr "Значок запису"
-
 msgid "REC Symbol in Standby"
 msgstr "REC в Режимі очікування"
 
 msgid "REC Symbol in use"
 msgstr "Використовується символ REC"
+
+msgid "REC symbol"
+msgstr "Значок запису"
 
 msgid "RED button"
 msgstr "Червона кнопка"
@@ -14540,7 +14543,7 @@ msgstr "Запис - так само, як кнопка запису"
 msgid "Record Actions"
 msgstr "Запис дій"
 
-msgid "Record Icon"
+msgid "Record icon"
 msgstr "Значок запису"
 
 msgid "Record next"
@@ -15256,7 +15259,7 @@ msgstr "Правий стовпець сортування каталогу"
 msgid "Right column file sort"
 msgstr "Сортування файлів у правому стовпці"
 
-msgid "Right from service name"
+msgid "Right of service name"
 msgstr "Після назви каналу"
 
 msgid "Right, back USB"
@@ -15465,9 +15468,6 @@ msgstr "Samba Сервер"
 
 msgid "Samba Settings"
 msgstr "Налаштування Samba"
-
-msgid "Samba version"
-msgstr "Версія Самби"
 
 msgid "Same as in active"
 msgstr "Те ж, що при активності"
@@ -15730,14 +15730,14 @@ msgstr "Перегляд таймерів живлення"
 msgid "Scheduler Settings"
 msgstr "Параметри таймера живлення"
 
-msgid "Scheduler Standby"
-msgstr "Таймер живлення в режимі очікування"
-
 msgid "Scheduler deep standby"
 msgstr "Таймер живлення в режимі глибокого очікування"
 
 msgid "Scheduler log"
 msgstr "Лог мененджера живлення"
+
+msgid "Scheduler standby"
+msgstr "Таймер живлення в режимі очікування"
 
 msgid "Sci-Fi"
 msgstr "Наукова фантастика"
@@ -15771,12 +15771,6 @@ msgstr "Швидкість прокрутки (програмний рендер
 
 msgid "Search"
 msgstr "Пошук"
-
-msgid "Search EPG for current event"
-msgstr "Пошук EPG для поточної передачі"
-
-msgid "Search IMDb for information about current event"
-msgstr "Пошук інформації про поточну передачу на IMDb"
 
 msgid "Search Sats"
 msgstr "Пошук супутників"
@@ -15829,8 +15823,8 @@ msgstr "Шукати"
 msgid "Seek Actions"
 msgstr "Дії для Пошуку"
 
-msgid "Seek back short"
-msgstr "Швидкий пошук"
+msgid "Seek Bar"
+msgstr ""
 
 msgid "Seek backward"
 msgstr "Перемотка назад"
@@ -15841,22 +15835,19 @@ msgstr "Перемотати назад (введіть час)"
 msgid "Seek forward"
 msgstr "Перемотка вперед"
 
-msgid "Seek forward  short"
-msgstr "Швидкий пошук вперед"
-
 msgid "Seek forward (enter time)"
 msgstr "Перемотка вперед (введіть час)"
 
-msgid "Seek forward long"
-msgstr "Пошук вперед довго"
+msgid "SeekBar"
+msgstr "Панель пошуку"
+
+msgid "SeekBar Actions"
+msgstr ""
 
 msgid "SeekBar activation"
 msgstr "Активація Seekbar"
 
-msgid "Seekbar"
-msgstr "Панель пошуку"
-
-msgid "Seekbar sensibility"
+msgid "SeekBar sensibility"
 msgstr "Крок Seekbar"
 
 msgid "Seeking connected events"
@@ -15928,7 +15919,7 @@ msgstr "Якщо вибрано 'так', інформаційна панель 
 msgid "Select 'Yes' to allow each storage device detected to be automatically exported as samba share."
 msgstr "Виберіть 'Так', щоб кожен виявлений пристрій зберігання даних автоматично експортувався як спільний доступ до samba."
 
-msgid "Select 'Yes' to allow use of the seek bar to jump to a selected point within the event."
+msgid "Select 'Yes' to allow use of the SeekBar to jump to a selected point within the event."
 msgstr "Якщо вибрано 'так', зможете використовувати SeekBar, щоб перейти до точки з подією."
 
 msgid "Select 'Yes' to always show the bouquet screen first when opening the channel list. Select 'No' to open the channel list using the current bouquet."
@@ -16216,6 +16207,9 @@ msgstr "Вибрати фаворит"
 msgid "Select a debug log file to view:"
 msgstr "Виберіть файл журналу налагодження для перегляду:"
 
+msgid "Select a device to create multiboot slots"
+msgstr "Виберіть пристрій для створення слотів для multiboot"
+
 msgid "Select a device to use as the flash expander"
 msgstr "Виберіть пристрій, який буду використовувати, як розширювач флеш-пам’яті"
 
@@ -16442,6 +16436,9 @@ msgstr "Виберіть метод сортування:"
 
 msgid "Select system information to view:"
 msgstr "Виберіть системну інформацію для перегляду:"
+
+msgid "Select target device for slot creation"
+msgstr "Виберіть цільовий пристрій для створення слота"
 
 msgid "Select temporary directory sort order for the current column"
 msgstr "Виберіть тимчасовий порядок сортування каталогу для поточного стовпця"
@@ -17027,15 +17024,6 @@ msgstr "Інформація Каналу"
 msgid "Service Information Actions"
 msgstr "Інформаційні дії щодо каналу"
 
-msgid "Service Name"
-msgstr "Назва Каналу"
-
-msgid "Service Number and Service Name"
-msgstr "Номер каналу і Назва каналу"
-
-msgid "Service Number, Picon and Service Name"
-msgstr "Номер каналу, Пікон і Назва каналу"
-
 msgid "Service Scan"
 msgstr "Пошук Каналів"
 
@@ -17084,8 +17072,14 @@ msgstr ""
 "Канал не знайдено!\n"
 "(SID не знайдено в PAT)"
 
+msgid "Service number and service name"
+msgstr "Номер каналу і Назва каналу"
+
 msgid "Service number font size"
 msgstr "Розмір шрифту для номера каналу"
+
+msgid "Service number, picon and service name"
+msgstr "Номер каналу, Пікон і Назва каналу"
 
 msgid "Service off-air"
 msgstr "Канал поза ефіром"
@@ -17260,7 +17254,7 @@ msgstr "Встановіть метод сортування за умовчан
 msgid "Set the delay time between repeated loops, this is used by software renderer in some skins."
 msgstr "Встановіть час затримки між повтореннями, використовується програмний рендеринг в деяких скінах."
 
-msgid "Set the jump-size of the seekbar."
+msgid "Set the jump-size of the SeekBar."
 msgstr "Встановити крок переходу для Seekbar."
 
 msgid "Set the number of lines to be saved for 'stout' and 'sterr' output in scripts."
@@ -17399,6 +17393,9 @@ msgstr "Настійно рекомендується встановити па�
 
 msgid "Settings"
 msgstr "Налаштування"
+
+msgid "Settings Backup Target"
+msgstr "Налаштування резервного копіювання"
 
 msgid "Settings mode"
 msgstr "Режим Налаштування"
@@ -18436,11 +18433,11 @@ msgstr "Пакети компонентів скінів"
 msgid "Skin Packages"
 msgstr "Пакети скінів"
 
-msgid "Skin Setting"
-msgstr "Налаштування скіну"
-
 msgid "Skin Settings"
 msgstr "Вибір скіну"
+
+msgid "Skin setting"
+msgstr "Налаштування скіну"
 
 msgid "SkinSelection"
 msgstr "Вибір Скіна"
@@ -18451,14 +18448,40 @@ msgstr "Перейти назад"
 msgid "Skip backward"
 msgstr "Перейти назад"
 
+#, python-format
+msgid "Skip backward %d second"
+msgid_plural "Skip backward %d seconds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#, python-format
+msgid "Skip backward %s%%"
+msgstr ""
+
 msgid "Skip backward (enter time)"
 msgstr "перемотати назад (введіть час)"
 
 msgid "Skip empty services"
 msgstr "Пропускати порожні канали"
 
+#, python-format
+msgid "Skip for '%s' is disabled"
+msgstr ""
+
 msgid "Skip forward"
 msgstr "Перейти вперед"
+
+#, python-format
+msgid "Skip forward %d second"
+msgid_plural "Skip forward %d seconds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#, python-format
+msgid "Skip forward %s%%"
+msgstr ""
 
 msgid "Skip forward (enter time)"
 msgstr "перемотати вперед (введіть час)"
@@ -18480,6 +18503,13 @@ msgstr "Пропустити час для кнопки '%s'"
 
 msgid "Skip time for '%s'/'%s' buttons"
 msgstr "Пропустити час для кнопок '%s'/'%s'"
+
+#, python-format
+msgid "Skip to %s0%% position (Add %s%% on second press)"
+msgstr ""
+
+msgid "Skip to 0% (start) position"
+msgstr ""
 
 msgid "Sleep"
 msgstr "Очікування"
@@ -18596,6 +18626,9 @@ msgstr "Слот '%s' %s"
 msgid "Slot '%s' %s: %s%s"
 msgstr "Слот '%s' %s: %s%s"
 
+msgid "Slot F: Flash Slot Image Backup (Current image)"
+msgstr "Слот F: Резервне копіювання флеш-пам'яті (поточний імідж)"
+
 msgid "Slot Manager"
 msgstr "Менеджер слотів"
 
@@ -18607,6 +18640,10 @@ msgstr "Слот R: повна резервна копія кореневого 
 
 msgid "Slot count"
 msgstr "Кількість слотів"
+
+#, python-format
+msgid "Slots have been extended by %d..\n"
+msgstr ""
 
 msgid "Slovak"
 msgstr "Словацька"
@@ -19035,6 +19072,9 @@ msgstr "Час початку"
 
 msgid "Starts in a few seconds"
 msgstr "Починається через кілька секунд"
+
+msgid "Startup device not found!"
+msgstr ""
 
 #. TRANSLATORS: "State" is location information and not condition based information.
 msgid "State"
@@ -19566,7 +19606,7 @@ msgid "TMDB Search"
 msgstr "TMDB Пошук"
 
 msgid "TRANSLATOR_INFO"
-msgstr "Переклад: kvinto - 08.05.2025"
+msgstr "Переклад: kvinto - 19.07.2025"
 
 msgid "TS file is too large for ISO9660 level 1!"
 msgstr "TS файл занадто великий для ISO9660 рівень 1!"
@@ -19846,13 +19886,6 @@ msgstr ""
 
 msgid "The DVD standard doesn't support H.264 (HDTV) video streams."
 msgstr "Стандарт DVD не підтримує відеопотоки H.264 (HDTV)."
-
-msgid ""
-"The DreamPlex plugin is not installed!\n"
-"Please install it."
-msgstr ""
-"DreamPlex плагін не встановлено!\n"
-"Будь ласка, спочатку встановіть його."
 
 msgid ""
 "The EPGSearch plugin is not installed!\n"
@@ -20737,9 +20770,6 @@ msgstr "Часова історія"
 msgid "Timeline scale"
 msgstr "Шкала часу"
 
-msgid "Timer Actions"
-msgstr "Дія для Таймера"
-
 msgid "Timer Log Actions"
 msgstr "Дії логу таймера"
 
@@ -21160,6 +21190,9 @@ msgstr "Алгоритм налаштування"
 msgid "Tunisia"
 msgstr "Туніс"
 
+msgid "Turbo"
+msgstr "турбо"
+
 msgid "Turbo: One reboot after flash; Fast: One reboot after flash, one reboot after restore; Slow: One reboot after flash, one reboot after restore in GUI."
 msgstr "Турбо: Одне перезавантаження після перепрошивки; Швидко: Одне перезавантаження після перепрошивки, одне перезавантаження після відновлення; Повільно: Одне перезавантаження після перепрошивки, одне перезавантаження після відновлення в інтерфейсі."
 
@@ -21231,6 +21264,10 @@ msgstr "Тип пристрою"
 
 msgid "Type of scan"
 msgstr "Тип сканування"
+
+#, python-format
+msgid "UBI slot %s%s"
+msgstr "Слот UBI %s%s"
 
 msgid "UBINIZE"
 msgstr "UBINIZE"
@@ -22713,7 +22750,7 @@ msgstr "При вимкненому режимі T2MI RAW (за замовчув
 msgid "With errors:"
 msgstr "З помилками:"
 
-msgid "With long OK press"
+msgid "With long OK button"
 msgstr "довгим натисканням кнопки OK"
 
 msgid "With pop up"
@@ -23264,9 +23301,6 @@ msgstr "пригоди/вестерн/війна"
 msgid "advertisement/shopping"
 msgstr "реклама/покупки"
 
-msgid "all up/down"
-msgstr "все вверх/вниз"
-
 msgid "alpha then oldest"
 msgstr "старий алфавіт"
 
@@ -23524,9 +23558,6 @@ msgstr "невдале"
 
 msgid "fashion"
 msgstr "мода"
-
-msgid "fast"
-msgstr "швидко"
 
 msgid "file can not displayed - file not found"
 msgstr "файл не можна відображазити - файл не знайдений"
@@ -23798,9 +23829,6 @@ msgstr "відсутня або невідома карта"
 msgid "no storage devices found"
 msgstr "пристрої не знайдені"
 
-msgid "normal"
-msgstr "типовий"
-
 msgid "not"
 msgstr "не"
 
@@ -23995,9 +24023,6 @@ msgstr "перемотати назад"
 msgid "skip forward"
 msgstr "перемотати вперед"
 
-msgid "slow"
-msgstr "повільно"
-
 msgid "soap/melodrama/folkloric"
 msgstr "мило/мелодрама/фольклор"
 
@@ -24100,9 +24125,6 @@ msgstr "звичайний (швидкий), переналаштування"
 msgid "tree delete"
 msgstr "видалити дерево каталогів"
 
-msgid "turbo"
-msgstr "турбо"
-
 msgid "uShare"
 msgstr "uShare"
 
@@ -24193,6 +24215,79 @@ msgstr "так (зберігати фіди)"
 
 msgid "®"
 msgstr "®"
+
+#~ msgid "Black Screen"
+#~ msgstr "Чорний екран"
+
+#~ msgid "Seek back short"
+#~ msgstr "Швидкий пошук"
+
+#~ msgid "Seek forward  short"
+#~ msgstr "Швидкий пошук вперед"
+
+#~ msgid "Seek forward long"
+#~ msgstr "Пошук вперед довго"
+
+#~ msgid "Service Name"
+#~ msgstr "Назва Каналу"
+
+#~ msgid "normal"
+#~ msgstr "типовий"
+
+#~ msgid "slow"
+#~ msgstr "повільно"
+
+#~ msgid "DVB API version"
+#~ msgstr "Версія DVB API"
+
+#~ msgid "Enigma2 version"
+#~ msgstr "Версія Enigma2"
+
+#~ msgid "FFmpeg version"
+#~ msgstr "Версія FFmpeg"
+
+#~ msgid "GCC version"
+#~ msgstr "Версія GCC"
+
+#~ msgid "GStreamer version"
+#~ msgstr "Версія GStreamer"
+
+#~ msgid "Glibc version"
+#~ msgstr "Версія Glibc"
+
+#~ msgid "OpenSSL version"
+#~ msgstr "Версія OpenSSL"
+
+#~ msgid "Python version"
+#~ msgstr "Версія Python"
+
+#~ msgid "Samba version"
+#~ msgstr "Версія Самби"
+
+#~ msgid "Open AutoTimer OverView"
+#~ msgstr "Відкрити огляд автотаймера"
+
+#~ msgid "Open DreamPlex"
+#~ msgstr "Відкрити DreamPlex"
+
+#~ msgid "QuickMenu Actions"
+#~ msgstr "Дії для QuickMenu"
+
+#~ msgid "Search EPG for current event"
+#~ msgstr "Пошук EPG для поточної передачі"
+
+#~ msgid "Search IMDb for information about current event"
+#~ msgstr "Пошук інформації про поточну передачу на IMDb"
+
+#~ msgid ""
+#~ "The DreamPlex plugin is not installed!\n"
+#~ "Please install it."
+#~ msgstr ""
+#~ "DreamPlex плагін не встановлено!\n"
+#~ "Будь ласка, спочатку встановіть його."
+
+#~ msgid "Timer Actions"
+#~ msgstr "Дія для Таймера"
 
 #~ msgid "InfoBar EPG Actions"
 #~ msgstr "Дії для інфобару EPG"
@@ -26274,9 +26369,6 @@ msgstr "®"
 
 #~ msgid "Add bouquet"
 #~ msgstr "Додати фаворит"
-
-#~ msgid "Black screen"
-#~ msgstr "Чорний екран"
 
 #~ msgid "no"
 #~ msgstr "ні"
